@@ -39,7 +39,7 @@ def make_fits_bintable(input_filename, output_filename='multi', clobber=False):
     table_hdu = fits.BinTableHDU.from_columns(columns)
     hdu_list = fits.HDUList([primary_hdu, table_hdu])
     
-    if output_filename = 'multi':
+    if output_filename == 'multi':
         output_filename = input_filename.split('.fits')[0]+'multi.fits'
     hdu_list.writeto(output_filename, clobber=clobber)  
     
