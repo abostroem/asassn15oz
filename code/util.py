@@ -31,11 +31,11 @@ def make_fits_bintable(input_filename, output_filename='multi', clobber=False):
     wl = spectroscopy.calc_wavelength(array_HDU[0].header, pix)
     primary_hdu = fits.PrimaryHDU(header=array_HDU[0].header)
     
-    columns = fits.ColDefs([Column(wl, name='WAVELENGTH', format='E'), 
-                            Column(array_table[0,0,:], name='OPTIMAL_FLUX', format='E'),
-                            Column(array_table[1,0,:] , name='FLUX', format='E'),
-                            Column(array_table[2,0,:], name='SKY', format='E'),
-                            Column(array_table[3,0,:], name='ERROR', format='E')])
+    columns = fits.ColDefs([fits.Column(wl, name='WAVELENGTH', format='E'), 
+                            fits.Column(array_table[0,0,:], name='OPTIMAL_FLUX', format='E'),
+                            fits.Column(array_table[1,0,:] , name='FLUX', format='E'),
+                            fits.Column(array_table[2,0,:], name='SKY', format='E'),
+                            fits.Column(array_table[3,0,:], name='ERROR', format='E')])
     table_hdu = fits.BinTableHDU.from_columns(columns)
     hdu_list = fits.HDUList([primary_hdu, table_hdu])
     
