@@ -1,10 +1,11 @@
 import os
+import glob
+import shutil
 from astropy.io import fits
 from astropy.table import Table
 from astropy.time import Time
-import glob
-import shutil
 import spectroscopy
+import numpy as np
 
 
 
