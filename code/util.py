@@ -4,15 +4,9 @@ from astropy.table import Table
 from astropy.time import Time
 import glob
 import shutil
+import spectroscopy
 
-def calc_wavelength(header, pixels):
-    assert header['CTYPE1'] == 'LINEAR'
-    CRVAL1 = header['CRVAL1']
-    CRPIX1 = header['CRPIX1']
-    CD1_1 = header['CD1_1']
-    
-    wavelength = CRVAL1 + CD1_1*(pixels - CRPIX1)
-    return wavelength
+
 
 def efosc_file_info(directory, search_str = 'EFOSC*.fits'):
 	flist = glob.glob(os.path.join(directory, search_str))
@@ -29,3 +23,23 @@ def append_to_filename(search_str, new_str):
 	flist = glob.glob(search_str)
 	for ifile in flist:
 		shutil.move(ifile, ifile.replace('.fits', '_{}.fits'.format(new_str)))
+
+def make_fits_bintable(input_filename, output_filename='multi', clobber=False):
+    array_HDU = fits.open(input_filename)
+    array_table = array_HDU[0].data
+    pix = np.arange(max(array_table.shape))+1
+    wl = spectroscopy.calc_wavelength(array_HDU[0].header, pix)
+    primary_hdu = fits.PrimaryHDU(header=array_HDU[0].header)
+    
+    columns = fits.ColDefs([Column(wl, name='WAVELENGTH', format='E'), 
+                            Column(array_table[0,0,:], name='OPTIMAL_FLUX', format='E'),
+                            Column(array_table[1,0,:] , name='FLUX', format='E'),
+                            Column(array_table[2,0,:], name='SKY', format='E'),
+                            Column(array_table[3,0,:], name='ERROR', format='E')])
+    table_hdu = fits.BinTableHDU.from_columns(columns)
+    hdu_list = fits.HDUList([primary_hdu, table_hdu])
+    
+    if output_filename = 'multi':
+        output_filename = input_filename.split('.fits')[0]+'multi.fits'
+    hdu_list.writeto(output_filename, clobber=clobber)  
+    
