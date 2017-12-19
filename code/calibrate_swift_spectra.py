@@ -102,8 +102,12 @@ def calibrate_spectra(interactive=False, yoffset=None, obs_end='', bkg_lower=[No
                                 calfile=calfile,
                                 lfilt1_ext=uw1_next,
                                 lfilt2_ext=uw2_next,
+<<<<<<< HEAD
                                 offsetlimit=yoffset[obs],
                                 chatter=3)
+=======
+                                offsetlimit=yoffset[obs])
+>>>>>>> b6876f911c0553ad64999d5ce1b765365f8062c1
                         else:
                             (Y0, Y1, Y2, Y3, Y4) = getSpec(ra, dec, obsid, ext+1, 
                                                             fit_second=False, 
@@ -114,8 +118,12 @@ def calibrate_spectra(interactive=False, yoffset=None, obs_end='', bkg_lower=[No
                                                             background_upper=bkg_upper, 
                                                             calfile=calfile,
                                                             lfilt1_ext=uw1_next,
+<<<<<<< HEAD
                                                             lfilt2_ext=uw2_next,
                                                             chatter=3)
+=======
+                                                            lfilt2_ext=uw2_next)
+>>>>>>> b6876f911c0553ad64999d5ce1b765365f8062c1
                     else:
                         (Y0, Y1, Y2, Y3, Y4) = getSpec(ra, dec, obsid, ext+1, 
                                                             fit_second=False, 
@@ -126,8 +134,12 @@ def calibrate_spectra(interactive=False, yoffset=None, obs_end='', bkg_lower=[No
                                                             background_upper=bkg_upper, 
                                                             calfile=calfile,
                                                             lfilt1_ext=uw1_next,
+<<<<<<< HEAD
                                                             lfilt2_ext=uw2_next,
                                                             chatter=3)
+=======
+                                                            lfilt2_ext=uw2_next)
+>>>>>>> b6876f911c0553ad64999d5ce1b765365f8062c1
                     save_background_data(Y0, Y1, obsid, ext+1)
                     pickle_output(Y0, Y1, Y2, Y3, Y4, obsid, ext+1)
                     if interactive is True:
@@ -210,5 +222,3 @@ if __name__ == "__main__":
     #uvotgetspec.trackwidth = 1.7
     #calibrate_spectra(interactive=args.show, yoffset=yoffset, bkg_lower=[25, 75], bkg_upper=[25, 75], obs_end='_diffbkg')
     #combine_spectra()
-    
-    
