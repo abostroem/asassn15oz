@@ -1,0 +1,1719 @@
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=11,E=0.8,K=40, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=13,E=0.5,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=13,E=0.8,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=13,E=1.1,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=13,E=1.4,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=13,E=1.7,K=60, R=2400
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=13,E=1.7,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=13,E=2.0,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=15,E=0.5,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=15,E=0.8,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=15,E=1.1,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=15,E=1.4,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=15,E=1.7,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=15,E=2.0,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=16,E=0.5,K=50, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=16,E=0.5,K=60, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=16,E=0.8,K=50, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=16,E=0.8,K=60, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=16,E=1.1,K=50, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=16,E=1.1,K=60, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=16,E=1.4,K=50, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=16,E=1.4,K=60, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=16,E=1.7,K=50, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=16,E=1.7,K=60, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=16,E=2.0,K=50, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=16,E=2.0,K=60, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=17,E=0.5,K=40, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=17,E=0.5,K=50, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=17,E=0.5,K=60, R=2700
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=17,E=0.8,K=40, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=17,E=0.8,K=50, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=17,E=0.8,K=60, R=2700
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=17,E=1.1,K=40, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=17,E=1.1,K=50, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=17,E=1.1,K=60, R=2700
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=17,E=1.4,K=40, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=17,E=1.4,K=50, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=17,E=1.4,K=60, R=2700
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=17,E=1.7,K=40, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=17,E=1.7,K=50, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=17,E=1.7,K=60, R=2700
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=17,E=2.0,K=40, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=17,E=2.0,K=50, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=17,E=2.0,K=60, R=2700
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=0.5,K=40, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=0.5,K=50, R=2700
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=0.5,K=50, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=0.5,K=50, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=0.5,K=60, R=2400
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=0.5,K=60, R=2700
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=0.5,K=60, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=0.5,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=0.8,K=40, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=0.8,K=50, R=2700
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=0.8,K=50, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=0.8,K=50, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=0.8,K=60, R=2400
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=0.8,K=60, R=2700
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=0.8,K=60, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=0.8,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=1.1,K=40, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=1.1,K=50, R=2700
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=1.1,K=50, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=1.1,K=50, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=1.1,K=60, R=2400
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=1.1,K=60, R=2700
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=1.1,K=60, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=1.1,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=1.4,K=40, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=1.4,K=50, R=2700
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=1.4,K=50, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=1.4,K=50, R=3300
+Missing Mag File: NiMass=0.083,NiMix=5.0,M=18,E=1.4,K=60, R=2400
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=1.4,K=60, R=2700
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=1.4,K=60, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=1.4,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=1.7,K=40, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=1.7,K=50, R=2700
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=1.7,K=50, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=1.7,K=50, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=1.7,K=60, R=2400
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=1.7,K=60, R=2700
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=1.7,K=60, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=1.7,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=2.0,K=40, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=2.0,K=50, R=2700
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=2.0,K=50, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=2.0,K=50, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=2.0,K=60, R=2400
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=2.0,K=60, R=2700
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=2.0,K=60, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=18,E=2.0,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=0.5,K=30, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=0.5,K=35, R=2700
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=0.5,K=40, R=2400
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=0.5,K=50, R=2100
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=0.5,K=60, R=2100
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=0.8,K=30, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=0.8,K=35, R=2700
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=0.8,K=40, R=2400
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=0.8,K=50, R=2100
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=0.8,K=60, R=2100
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=1.1,K=30, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=1.1,K=35, R=2700
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=1.1,K=40, R=2400
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=1.1,K=50, R=2100
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=1.1,K=60, R=2100
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=1.4,K=30, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=1.4,K=35, R=2700
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=1.4,K=40, R=2400
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=1.4,K=50, R=2100
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=1.4,K=60, R=2100
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=1.7,K=30, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=1.7,K=35, R=2700
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=1.7,K=40, R=2400
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=1.7,K=50, R=2100
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=1.7,K=60, R=2100
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=2.0,K=30, R=3000
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=2.0,K=35, R=2700
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=2.0,K=40, R=2400
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=2.0,K=50, R=2100
+Failed (unexploded) Model: NiMass=0.083,NiMix=5.0,M=21,E=2.0,K=60, R=2100
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=11,E=0.5,K=35, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.5,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.5,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.5,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.5,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.5,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.5,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.5,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.5,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.5,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.5,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.5,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.5,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.5,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.5,K=60, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.8,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.8,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.8,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.8,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.8,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.8,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.8,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.8,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.8,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.8,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.8,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.8,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.8,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=0.8,K=60, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.1,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.1,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.1,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.1,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.1,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.1,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.1,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.1,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.1,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.1,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.1,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.1,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.1,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.1,K=60, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.4,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.4,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.4,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.4,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.4,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.4,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.4,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.4,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.4,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.4,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.4,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.4,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.4,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.4,K=60, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.7,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.7,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.7,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.7,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.7,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.7,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.7,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.7,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.7,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.7,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.7,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.7,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.7,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=1.7,K=60, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=2.0,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=2.0,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=2.0,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=2.0,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=2.0,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=2.0,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=2.0,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=2.0,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=2.0,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=2.0,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=2.0,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=2.0,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=2.0,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=11,E=2.0,K=60, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.5,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.5,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.5,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.5,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.5,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.5,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.5,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.5,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.5,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.5,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.5,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.5,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.5,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.5,K=60, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.8,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.8,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.8,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.8,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.8,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.8,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.8,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.8,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.8,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.8,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.8,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.8,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.8,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=0.8,K=60, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.1,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.1,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.1,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.1,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.1,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.1,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.1,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.1,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.1,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.1,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.1,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.1,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.1,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.1,K=60, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.4,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.4,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.4,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.4,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.4,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.4,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.4,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.4,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.4,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.4,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.4,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.4,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.4,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.4,K=60, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.7,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.7,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.7,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.7,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.7,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.7,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.7,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.7,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.7,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.7,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.7,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.7,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.7,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=1.7,K=60, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=2.0,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=2.0,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=2.0,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=2.0,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=2.0,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=2.0,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=2.0,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=2.0,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=2.0,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=2.0,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=2.0,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=2.0,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=2.0,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=13,E=2.0,K=60, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.5,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.5,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.5,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.5,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.5,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.5,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.5,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.5,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.5,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.5,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.5,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.5,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.5,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.5,K=60, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.8,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.8,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.8,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.8,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.8,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.8,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.8,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.8,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.8,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.8,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.8,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.8,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.8,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=0.8,K=60, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.1,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.1,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.1,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.1,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.1,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.1,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.1,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.1,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.1,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.1,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.1,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.1,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.1,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.1,K=60, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.4,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.4,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.4,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.4,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.4,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.4,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.4,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.4,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.4,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.4,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.4,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.4,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.4,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.4,K=60, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.7,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.7,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.7,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.7,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.7,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.7,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.7,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.7,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.7,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.7,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.7,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.7,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.7,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=1.7,K=60, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=2.0,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=2.0,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=2.0,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=2.0,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=2.0,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=2.0,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=2.0,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=2.0,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=2.0,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=2.0,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=2.0,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=2.0,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=2.0,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=15,E=2.0,K=60, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.5,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.5,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.5,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.5,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.5,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.5,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.5,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.5,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.5,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.5,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.5,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.5,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.5,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.5,K=60, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.8,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.8,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.8,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.8,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.8,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.8,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.8,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.8,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.8,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.8,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.8,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.8,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.8,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=0.8,K=60, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.1,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.1,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.1,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.1,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.1,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.1,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.1,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.1,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.1,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.1,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.1,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.1,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.1,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.1,K=60, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.4,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.4,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.4,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.4,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.4,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.4,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.4,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.4,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.4,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.4,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.4,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.4,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.4,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.4,K=60, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.7,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.7,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.7,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.7,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.7,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.7,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.7,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.7,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.7,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.7,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.7,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.7,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.7,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=1.7,K=60, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=2.0,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=2.0,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=2.0,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=2.0,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=2.0,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=2.0,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=2.0,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=2.0,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=2.0,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=2.0,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=2.0,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=2.0,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=2.0,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=16,E=2.0,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=17,E=0.5,K=40, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.5,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.5,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.5,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.5,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.5,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.5,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.5,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.5,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.5,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.5,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.5,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.5,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.5,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.5,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=17,E=0.8,K=40, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.8,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.8,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.8,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.8,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.8,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.8,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.8,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.8,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.8,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.8,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.8,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.8,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.8,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=0.8,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=17,E=1.1,K=40, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.1,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.1,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.1,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.1,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.1,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.1,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.1,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.1,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.1,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.1,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.1,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.1,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.1,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.1,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=17,E=1.4,K=40, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.4,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.4,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.4,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.4,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.4,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.4,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.4,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.4,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.4,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.4,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.4,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.4,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.4,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.4,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=17,E=1.7,K=40, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.7,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.7,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.7,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.7,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.7,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.7,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.7,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.7,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.7,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.7,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.7,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.7,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.7,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=1.7,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=17,E=2.0,K=40, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=2.0,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=2.0,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=2.0,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=2.0,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=2.0,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=2.0,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=2.0,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=2.0,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=2.0,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=2.0,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=2.0,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=2.0,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=2.0,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=17,E=2.0,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=18,E=0.5,K=40, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.5,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.5,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.5,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.5,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.5,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.5,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.5,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.5,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.5,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.5,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.5,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.5,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.5,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.5,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=18,E=0.8,K=40, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.8,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.8,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.8,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.8,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.8,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.8,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.8,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.8,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.8,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.8,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.8,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.8,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.8,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=0.8,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=18,E=1.1,K=40, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.1,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.1,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.1,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.1,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.1,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.1,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.1,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.1,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.1,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.1,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.1,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.1,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.1,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.1,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=18,E=1.4,K=40, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.4,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.4,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.4,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.4,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.4,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.4,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.4,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.4,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.4,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.4,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.4,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.4,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.4,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.4,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=18,E=1.7,K=40, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.7,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.7,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.7,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.7,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.7,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.7,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.7,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.7,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.7,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.7,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.7,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.7,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.7,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=1.7,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=18,E=2.0,K=40, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=2.0,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=2.0,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=2.0,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=2.0,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=2.0,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=2.0,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=2.0,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=2.0,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=2.0,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=2.0,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=2.0,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=2.0,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=2.0,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=18,E=2.0,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=21,E=0.5,K=30, R=3000
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=21,E=0.5,K=35, R=2700
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=21,E=0.5,K=40, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.5,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.5,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.5,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.5,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.5,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.5,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.5,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.5,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.5,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.5,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.5,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.5,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.5,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.5,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=21,E=0.8,K=30, R=3000
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=21,E=0.8,K=35, R=2700
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=21,E=0.8,K=40, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.8,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.8,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.8,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.8,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.8,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.8,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.8,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.8,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.8,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.8,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.8,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.8,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.8,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=0.8,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=21,E=1.1,K=30, R=3000
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=21,E=1.1,K=35, R=2700
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=21,E=1.1,K=40, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.1,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.1,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.1,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.1,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.1,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.1,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.1,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.1,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.1,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.1,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.1,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.1,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.1,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.1,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=21,E=1.4,K=30, R=3000
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=21,E=1.4,K=35, R=2700
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=21,E=1.4,K=40, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.4,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.4,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.4,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.4,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.4,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.4,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.4,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.4,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.4,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.4,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.4,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.4,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.4,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.4,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=21,E=1.7,K=30, R=3000
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=21,E=1.7,K=35, R=2700
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=21,E=1.7,K=40, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.7,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.7,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.7,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.7,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.7,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.7,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.7,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.7,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.7,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.7,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.7,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.7,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.7,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=1.7,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=21,E=2.0,K=30, R=3000
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=21,E=2.0,K=35, R=2700
+Failed (unexploded) Model: NiMass=0.0965,NiMix=5.0,M=21,E=2.0,K=40, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=2.0,K=50, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=2.0,K=50, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=2.0,K=50, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=2.0,K=50, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=2.0,K=50, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=2.0,K=50, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=2.0,K=50, R=3300
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=2.0,K=60, R=1500
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=2.0,K=60, R=1800
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=2.0,K=60, R=2100
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=2.0,K=60, R=2400
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=2.0,K=60, R=2700
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=2.0,K=60, R=3000
+Missing Mag File: NiMass=0.0965,NiMix=5.0,M=21,E=2.0,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.5,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.5,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.5,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.5,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.5,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.5,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.5,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.5,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.5,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.5,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.5,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.5,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.5,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.5,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.8,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.8,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.8,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.8,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.8,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.8,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.8,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.8,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.8,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.8,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.8,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.8,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.8,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=0.8,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.1,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.1,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.1,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.1,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.1,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.1,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.1,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.1,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.1,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.1,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.1,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.1,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.1,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.1,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.4,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.4,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.4,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.4,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.4,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.4,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.4,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.4,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.4,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.4,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.4,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.4,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.4,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.4,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.7,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.7,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.7,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.7,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.7,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.7,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.7,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.7,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.7,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.7,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.7,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.7,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.7,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=1.7,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=2.0,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=2.0,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=2.0,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=2.0,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=2.0,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=2.0,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=2.0,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=2.0,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=2.0,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=2.0,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=2.0,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=2.0,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=2.0,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=11,E=2.0,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.5,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.5,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.5,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.5,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.5,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.5,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.5,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.5,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.5,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.5,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.5,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.5,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.5,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.5,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.8,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.8,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.8,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.8,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.8,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.8,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.8,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.8,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.8,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.8,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.8,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.8,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.8,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=0.8,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.1,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.1,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.1,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.1,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.1,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.1,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.1,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.1,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.1,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.1,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.1,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.1,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.1,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.1,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.4,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.4,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.4,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.4,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.4,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.4,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.4,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.4,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.4,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.4,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.4,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.4,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.4,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.4,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.7,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.7,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.7,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.7,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.7,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.7,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.7,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.7,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.7,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.7,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.7,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.7,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.7,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=1.7,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=2.0,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=2.0,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=2.0,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=2.0,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=2.0,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=2.0,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=2.0,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=2.0,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=2.0,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=2.0,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=2.0,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=2.0,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=2.0,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=13,E=2.0,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.5,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.5,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.5,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.5,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.5,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.5,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.5,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.5,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.5,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.5,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.5,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.5,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.5,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.5,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.8,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.8,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.8,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.8,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.8,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.8,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.8,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.8,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.8,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.8,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.8,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.8,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.8,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=0.8,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.1,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.1,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.1,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.1,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.1,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.1,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.1,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.1,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.1,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.1,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.1,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.1,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.1,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.1,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.4,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.4,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.4,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.4,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.4,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.4,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.4,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.4,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.4,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.4,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.4,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.4,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.4,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.4,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.7,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.7,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.7,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.7,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.7,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.7,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.7,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.7,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.7,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.7,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.7,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.7,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.7,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=1.7,K=60, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=10, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=15,E=2.0,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.5,K=20, R=2100
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=16,E=0.5,K=20, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.5,K=20, R=3000
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=16,E=0.5,K=20, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.5,K=30, R=1500
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=16,E=0.5,K=30, R=2400
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=16,E=0.5,K=30, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.5,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.5,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.5,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.5,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.5,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.5,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.5,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.5,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.5,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.5,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.5,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.5,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.5,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.5,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.8,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.8,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.8,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.8,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.8,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.8,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.8,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.8,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.8,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.8,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.8,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.8,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.8,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=0.8,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.1,K=40, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.1,K=40, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.1,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.1,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.1,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.1,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.1,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.1,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.1,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.1,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.1,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.1,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.1,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.1,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.1,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.1,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.4,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.4,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.4,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.4,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.4,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.4,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.4,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.4,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.4,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.4,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.4,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.4,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.4,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.4,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.7,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.7,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.7,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.7,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.7,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.7,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.7,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.7,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.7,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.7,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.7,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.7,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.7,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=1.7,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=2.0,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=2.0,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=2.0,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=2.0,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=2.0,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=2.0,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=2.0,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=2.0,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=2.0,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=2.0,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=2.0,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=2.0,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=2.0,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=16,E=2.0,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=17,E=0.5,K=40, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.5,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.5,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.5,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.5,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.5,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.5,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.5,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.5,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.5,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.5,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.5,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.5,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.5,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.5,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=17,E=0.8,K=40, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.8,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.8,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.8,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.8,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.8,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.8,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.8,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.8,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.8,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.8,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.8,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.8,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.8,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=0.8,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=17,E=1.1,K=40, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.1,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.1,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.1,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.1,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.1,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.1,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.1,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.1,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.1,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.1,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.1,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.1,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.1,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.1,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=17,E=1.4,K=40, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.4,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.4,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.4,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.4,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.4,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.4,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.4,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.4,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.4,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.4,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.4,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.4,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.4,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.4,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=17,E=1.7,K=40, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.7,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.7,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.7,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.7,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.7,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.7,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.7,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.7,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.7,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.7,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.7,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.7,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.7,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=1.7,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=17,E=2.0,K=40, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=2.0,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=2.0,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=2.0,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=2.0,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=2.0,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=2.0,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=2.0,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=2.0,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=2.0,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=2.0,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=2.0,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=2.0,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=2.0,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=17,E=2.0,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.5,K=35, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.5,K=35, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.5,K=35, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.5,K=40, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.5,K=40, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.5,K=40, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.5,K=40, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.5,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.5,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.5,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.5,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.5,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.5,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.5,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.5,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.5,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.5,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.5,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.5,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.5,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.5,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=10, R=1800
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=10, R=2100
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=10, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=20, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=20, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=30, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=30, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=30, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=30, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=30, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=35, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=35, R=2100
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=40, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=0.8,K=60, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=20, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=30, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=30, R=1800
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=30, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=35, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=35, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=40, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=40, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=40, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=40, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=40, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=40, R=3000
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=40, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.1,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.4,K=10, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.4,K=10, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.4,K=10, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.4,K=10, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.4,K=10, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.4,K=10, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.4,K=40, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.4,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.4,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.4,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.4,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.4,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.4,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.4,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.4,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.4,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.4,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.4,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.4,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.4,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.4,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=10, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=10, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=20, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=20, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=30, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=30, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=35, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=35, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3000
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=40, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=1.7,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=10, R=1500
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=10, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=10, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=10, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=10, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1500
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=2100
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=2400
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=20, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=30, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=35, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=40, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=40, R=3000
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=40, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=18,E=2.0,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.5,K=30, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.5,K=30, R=2400
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=21,E=0.5,K=30, R=3000
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=21,E=0.5,K=35, R=2700
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=21,E=0.5,K=40, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.5,K=40, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.5,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.5,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.5,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.5,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.5,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.5,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.5,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.5,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.5,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.5,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.5,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.5,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.5,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.5,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.8,K=20, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.8,K=20, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.8,K=30, R=2100
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=21,E=0.8,K=30, R=3000
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=21,E=0.8,K=35, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.8,K=40, R=1500
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=21,E=0.8,K=40, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.8,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.8,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.8,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.8,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.8,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.8,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.8,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.8,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.8,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.8,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.8,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.8,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.8,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=0.8,K=60, R=3300
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.1,K=10, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.1,K=20, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.1,K=20, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.1,K=20, R=3300
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.1,K=30, R=3000
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.1,K=35, R=2700
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.1,K=40, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.1,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.1,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.1,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.1,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.1,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.1,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.1,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.1,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.1,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.1,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.1,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.1,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.1,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.1,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2100
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=2700
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Failed (LC too short) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=10, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=30, R=2100
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=30, R=3000
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=35, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=35, R=3300
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=40, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.4,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.7,K=10, R=2700
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.7,K=30, R=3000
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=21,E=1.7,K=35, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.7,K=40, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.7,K=40, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.7,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.7,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.7,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.7,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.7,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.7,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.7,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.7,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.7,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.7,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.7,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.7,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.7,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=1.7,K=60, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=2.0,K=10, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=2.0,K=10, R=3300
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=21,E=2.0,K=30, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=2.0,K=35, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=2.0,K=35, R=2100
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=21,E=2.0,K=35, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=2.0,K=35, R=3300
+Failed (unexploded) Model: NiMass=0.11,NiMix=5.0,M=21,E=2.0,K=40, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=2.0,K=50, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=2.0,K=50, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=2.0,K=50, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=2.0,K=50, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=2.0,K=50, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=2.0,K=50, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=2.0,K=50, R=3300
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=2.0,K=60, R=1500
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=2.0,K=60, R=1800
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=2.0,K=60, R=2100
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=2.0,K=60, R=2400
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=2.0,K=60, R=2700
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=2.0,K=60, R=3000
+Missing Mag File: NiMass=0.11,NiMix=5.0,M=21,E=2.0,K=60, R=3300
