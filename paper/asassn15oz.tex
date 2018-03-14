@@ -1,4 +1,4 @@
-\documentclass{aastex61}   	% use "amsart" instead of "article" for AMSLaTeX format
+\documentclass[preprint]{aastex61}   	% use "amsart" instead of "article" for AMSLaTeX format
 \usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
 \geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
 \usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
@@ -6,7 +6,18 @@
 \usepackage{amssymb}
 
 \usepackage{natbib}
+\usepackage{color} 
 
+\newcommand{\azaleecomment}[1]{{\color{red} [{#1}]}} 
+\newcommand{\Azalee}[1]{\azaleecomment{Azalee: #1}}
+\newcommand{\viktoriyacomment}[1]{{\color{blue} [{#1}]}} 
+\newcommand{\Viktoriya}[1]{\viktoriyacomment{Viktoriya: #1}}
+
+
+\newcommand{\msun}{M$_{\odot}$ }
+\newcommand{\msunperiod}{M$_{\odot}$}
+\newcommand{\lsun}{L$_{\odot}$}
+\newcommand{\rsun}{R$_{\odot}$}
 
 \begin{document}
 \title{ASASSN-15oz}
@@ -21,14 +32,69 @@
 \keywords{Supernovae}
 
 \section{Reddening}
-We use an X-shooter spectrum taken with the UVB and VIS arms to constrain the host galaxy
-reddening to confirm the galactic reddening using the equivalent widths of the Na I D1 and D2 lines
-($\lambda$5890, $\lambda$5896) \citep{Poznanski2012}. We find no evidence of Na I absorption at the host
-redshift and therefore assume no host absorption. By fitting gaussian profiles to the galactic Na I absorption
-we find E(B-V) = 0.12, consistent with the value given by \citet{Schlafly2011}. We adopt the \citet{Schlafly2011} 
-value of 0.08 for the analysis in this paper. 
+We use an X-shooter spectrum taken with the UVB and VIS arms to constrain the host galaxy reddening to confirm the galactic reddening using the equivalent widths of the Na I D1 and D2 lines ($\lambda$5890, $\lambda$5896) \citep{2012poznanski}. 
+We find no evidence of Na I absorption at the host redshift and therefore assume no host absorption. 
+By fitting gaussian profiles to the galactic Na I absorption we find E(B-V) = 0.12, consistent with the value given by \citet{2011schlafly}. 
+We adopt the \citet{2011schlafly}  value of 0.08 for the analysis in this paper. 
 
 %\subsection{}
+\section{Light Curve Modeling}
+We fit the light curve of ASAS-SN15oz using the Supernova Explosion Code (SNEC) \citep{2015morozova}.
+SNEC is an open source Lagrangian 1D radiation hydrodynamic code that assumes local thermodynamic equilibrium (LTE).
+Type II supernovae are well characterized by LTE from shock breakout through the fall from plateau. 
+SNEC uses a Paczy\'nski equation of state \citep{1983paczynski} solving for the ionization fractions using the Saha equations in the non-degenerate approximation \citep{2000zaghloul}. 
+Opacities are drawn from OPAL Type II opacity tables \citep{1996iglesias} at high temperature ($T=10^{4.5}-10^{8.7}$) and tables of \citet{2005ferguson} at low temperatures ($T = 10^{2.7}-10^{4.5}K$) supplemented with an opacity floor of 0.01 cm$^2$g$^{-1}$. 
+The progenitor of ASAS-SN15oz is modeled using a non-rotating solar-metalicity Red Supergiant of mass M, evolved with the {\it Kepler} code \citep{2016sukhbold}. 
+\Azalee{more citations?}. 
+Mixing of layers due to the explosion is modeled by boxcar smoothing the progenitor profile with a kernel of 0.4 \msunperiod.
+\Azalee{What does Kepler do with mass lost to stellar winds? Is it in the profile?}
+To account for the formation of the neutron star, we excise the region interior to the Si/O interface \citep{2018morozova}. 
+We model the explosion of ASAS-SN15oz using a thermal bomb with explosion energy $E_{exp}$ lasting for 1 second in the inner 0.02 \msunperiod. 
+\Viktoriya{Inner 0.02 Msun before or after the excision of the neutron star?}
+\Azalee{sort out explosion energy}
+
+SNEC does not model nuclear reaction networks, but rather takes an input a mass of ${}^{56}$Ni. 
+Given the uncertainty in the mass of ${}^{56}$Ni produced by ASAS-SN15oz we produced models for the maximum, minimum, and mean value of synthesized ${}^{56}$Ni.
+While SNEC allows for the ${}^{56}$Ni to be mixed out to different interior radii, \Viktoriya{Is this true? It seems like you get different results in the 2018 paper} find that the light curve is not very sensitive to the mixing fraction and thus we choose to keep this value fixed at 5.0 R$_{\odot}$. 
+Following \citet{2017morozova}, we explore different mass-loss scenarios by adding a constant wind density profile to RSG density profile with density K and radial extent (from the center) R.
+
+We use SNEC to find the best progenitor parameters varying the progenitor mass, explosion energy, ${}^{56}$Ni mass, CSM density, and CSM extent. 
+Table \ref{tb:param} gives the set of parameters used, resulting in over 5000 model light curves.
+\begin{table}
+\centering
+\label{tb:param}
+\begin{tabular}{|c|l|}
+\hline
+Parameter & Values \\
+\hline
+Progenitor Mass (\msunperiod) & 11, 13, 14, 16, 17, 18, 21 \\
+Explosion Energy (10$^{51}$ ergs) & 0.5, 0.8, 1.1, 1.4, 1.7, 2.0 \\
+CSM Density (10$^{17}$ cm) & 10, 20, 30, 35, 40, 50, 60 \\
+CSM Extent (100R$_{\odot}$) & 15, 18, 21, 24, 27, 30, 33 \\
+Ni Mass (\msunperiod) & 0.083, 0.0965, 0.11 \\
+\hline
+\end{tabular}
+\end{table}
+
+For ease of comparison with observations, SNEC uses the temperature at each time step to compute a blackbody spectrum, which it combines with different filter throughputs to output a light curve in sloan filters u, g, r, and i, Bessel filters U, B, V, R, and I and PanSTARRs filter z. 
+During the rise and plateau phase, a blackbody should be a good approximation to the longer wavelengths. 
+However, the absorption of short wavelengths due to absorption features and line blanketing make cause the bluer filters to be a poor representation of the observed spectrum.
+For this reason the best fit model is determined using the g, r, and i filter. 
+While we do have a V band light curve, the throughput heavily overlaps with the g and r bands and its inclusion would give more weight to these wavelengths without providing new information.
+The best fit model is determined by interpolating the well sampled model to the observed wavelengths and computing a chi-square minimization across all three filters.
+Given the uncertainty in the explosion time, we shift the model spectrum by $\pm$4 days and treat this offset as a free parameter.
+We find the light curve of ASAS-SN15oz is best characterized by M = 18 \msunperiod, E = 1.4x10$^{51}$ ergs, K = 10 g/cm, R = 2400 \rsun, mass$_{Ni}$ = 0.083, t$_{offset}$ = -4 days. 
+There is broad degeneracy in the CSM parameters, making this analysis a better estimate of the total mass loss rather than the mass-loss history. 
+Integrating the CSM density over it radial extent, we find a total mass loss of 0.62 \msunperiod. 
+
+\citet{2018morozova} find the best fit model with and without CSM as a two step process. 
+First they modeling the second half of the light curve, characterized by the S2 slope \Azalee{citation} without CSM to determine the best progenitor mass and explosion energy. 
+Then, fixing explosion energy and progenitor mass, they explore the CSM parameter space. 
+This is computationally less intensive than modeling the full parameter space and allows them to explore a finer grid of parameters.
+Given the complexity of the parameter space, we choose to model the best light curve with CSM, exploring the full set of parameters. 
+To compare our best fit model to that without CSM, we use the best fit progenitor mass and explosion energy. 
+This should be a good representation of the best fit model as we expect the light curve to be the same during the S2 slope and improved by CSM at early times during the S1 slope.
+
 
 \facility{}
 \software{Astropy}
