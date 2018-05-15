@@ -1,0 +1,330 @@
+'''
+Note: these have not been corrected for redshift!
+'''
+hbeta:
+  name: 'hbeta'
+  wmin: 4540
+  wmax: 4870
+  slope: 0.15 #A/day
+  texpl: 2457262. #JD
+  smooth_param:
+      deg: 2
+      width: 5
+  edge_param:
+      binsize: 5
+      binmax: 100
+      concavity_binsize: 20
+  directories:
+      DATA_DIR_LCO: '../data/spectra/lco'
+      DATA_DIR_EFOSC: '../data/spectra/EFOSC'
+  files:
+      - 'asassn15oz_20150904_redblu_122216.314.fits'
+      - 'asassn-15oz_20150906_redblu_105042.698a.fits'
+      - 'asassn15oz_20150907_redblu_123835.277.fits'
+      - 'asassn15oz_20150911_redblu_105336.349.fits'
+      - 'asassn15oz_20150916_redblu_120911.274.fits'
+      - 'asassn-15oz_20150920_redblu_135034.512.fits'
+      - 'asassn-15oz_20150930_redblu_122858.217.fits'
+      - 'asassn15oz_20151006_redblu_101906.800.fits'
+      - 'asassn15oz_20151014_redblu_112918.305.fits'
+      - 'asassn-15oz_20151025_redblu_102221.833.fits'
+
+hbeta_2:
+  name: 'hbeta_2'
+  wmin: 4550
+  wmax: 4840
+  slope: 0 #A/day
+  texpl: 2457262. #JD
+  smooth_param:
+      deg: 2
+      width: 5
+  edge_param:
+      binsize: 5
+      binmax: 100
+      concavity_binsize: 20
+  directories:
+      DATA_DIR_LCO: '../data/spectra/lco'
+      DATA_DIR_EFOSC: '../data/spectra/EFOSC'
+  files:
+      - 'asassn-15oz_20150924_redblu_123847.580.fits'  #poor fit to right edge
+
+hbeta_3:
+  name: 'hbeta_3'
+  wmin: 4540
+  wmax: 4870
+  slope: 0.15 #A/day
+  texpl: 2457262. #JD
+  smooth_param:
+      deg: 2
+      width: 5
+  edge_param:
+      binsize: 5
+      binmax: 100
+      concavity_binsize: 5
+  directories:
+      DATA_DIR_LCO: '../data/spectra/lco'
+      DATA_DIR_EFOSC: '../data/spectra/EFOSC'
+  files:
+      - 'tASASSN-15oz_20151003_Gr13_Free_slit1.0_57720_1_e.fits'
+      - 'tASAS-SN_15oz_20151107_Gr13_Free_slit1.5_57723_1_e.fits'
+      - 'tASAS-SN_15oz_20151118_Gr13_Free_slit1.0_57723_1_e.fits'
+      
+ScII5239:
+name: 'ScII5239'
+wmin: 4800
+wmax: 4985
+slope: 0 #A/day
+texpl: 2457262. #JD
+smooth_param:
+    deg: 2
+    width: 5
+edge_param:
+    binsize: 5
+    binmax: 100
+    concavity_binsize: 20
+directories:
+    DATA_DIR_LCO: '../data/spectra/lco'
+    DATA_DIR_EFOSC: '../data/spectra/EFOSC'
+files:
+    - 'asassn15oz_20150916_redblu_120911.274.fits'
+    - 'asassn-15oz_20150920_redblu_135034.512.fits'
+    - 'asassn-15oz_20150930_redblu_122858.217.fits'
+    - 'asassn15oz_20151006_redblu_101906.800.fits'
+    - 'asassn15oz_20151014_redblu_112918.305.fits'
+    - 'asassn-15oz_20151025_redblu_102221.833.fits' 
+
+ScII5239_2:
+name: 'ScII5239_2'
+wmin: 4800
+wmax: 4985
+slope: 0 #A/day
+texpl: 2457262. #JD
+smooth_param:
+    deg: 2
+    width: 5
+edge_param:
+    binsize: 5
+    binmax: 100
+    concavity_binsize: 5
+directories:
+    DATA_DIR_LCO: '../data/spectra/lco'
+    DATA_DIR_EFOSC: '../data/spectra/EFOSC'
+files: 
+    - 'tASASSN-15oz_20151003_Gr13_Free_slit1.0_57720_1_e.fits'
+    - 'tASAS-SN_15oz_20151107_Gr13_Free_slit1.5_57723_1_e.fits'
+    - 'tASAS-SN_15oz_20151118_Gr13_Free_slit1.0_57723_1_e.fits'     
+   
+ScII5526:
+ name: 'ScII5526'
+ wmin: 5200
+ wmax: 5470
+ slope: 0.15 #A/day
+ texpl: 2457262. #JD
+ smooth_param:
+     deg: 2
+     width: 5
+ edge_param:
+     binsize: 5
+     binmax: 100
+     concavity_binsize: 20
+ directories:
+     DATA_DIR_LCO: '../data/spectra/lco'
+     DATA_DIR_EFOSC: '../data/spectra/EFOSC'
+ files:
+     - 'asassn15oz_20150916_redblu_120911.274.fits'
+     - 'asassn-15oz_20150920_redblu_135034.512.fits'
+
+ScII5526_2:
+ name: 'ScII5526_2'
+ wmin: 5320
+ wmax: 5500
+ slope: 0.15 #A/day
+ texpl: 2457262. #JD
+ smooth_param:
+     deg: 2
+     width: 5
+ edge_param:
+     binsize: 5
+     binmax: 100
+     concavity_binsize: 20
+ directories:
+     DATA_DIR_LCO: '../data/spectra/lco'
+     DATA_DIR_EFOSC: '../data/spectra/EFOSC'
+ files:
+     - 'asassn-15oz_20150930_redblu_122858.217.fits' 
+     - 'asassn15oz_20151006_redblu_101906.800.fits'
+     - 'asassn15oz_20151014_redblu_112918.305.fits'
+     - 'asassn-15oz_20151025_redblu_102221.833.fits'
+
+ScII5526_3:
+ name: 'ScII5526_3'
+ wmin: 5320
+ wmax: 5500
+ slope: 0.15 #A/day
+ texpl: 2457262. #JD
+ smooth_param:
+     deg: 2
+     width: 5
+ edge_param:
+     binsize: 5
+     binmax: 100
+     concavity_binsize: 5
+ directories:
+     DATA_DIR_LCO: '../data/spectra/lco'
+     DATA_DIR_EFOSC: '../data/spectra/EFOSC'
+ files:
+     - 'tASASSN-15oz_20151003_Gr13_Free_slit1.0_57720_1_e.fits'
+     - 'tASAS-SN_15oz_20151107_Gr13_Free_slit1.5_57723_1_e.fits'
+     - 'tASAS-SN_15oz_20151118_Gr13_Free_slit1.0_57723_1_e.fits' 
+
+ScII5662:
+ name: 'ScII5662'
+ wmin: 5400
+ wmax: 5625
+ slope: 0 #A/day
+ texpl: 2457262. #JD
+ smooth_param:
+     deg: 2
+     width: 5
+ edge_param:
+     binsize: 5
+     binmax: 100
+     concavity_binsize: 20
+ directories:
+     DATA_DIR_LCO: '../data/spectra/lco'
+     DATA_DIR_EFOSC: '../data/spectra/EFOSC'
+ files:
+     - 'asassn15oz_20150916_redblu_120911.274.fits'
+     - 'asassn-15oz_20150920_redblu_135034.512.fits'
+     - 'asassn-15oz_20150930_redblu_122858.217.fits'
+     - 'asassn15oz_20151006_redblu_101906.800.fits'
+     - 'asassn15oz_20151014_redblu_112918.305.fits'
+     - 'asassn-15oz_20151025_redblu_102221.833.fits'      
+
+ScII5662_2:
+name: 'ScII5662_2'
+wmin: 5450
+wmax: 5650
+slope: 0 #A/day
+texpl: 2457262. #JD
+smooth_param:
+    deg: 2
+    width: 5
+edge_param:
+    binsize: 5
+    binmax: 100
+    concavity_binsize: 5
+directories:
+    DATA_DIR_LCO: '../data/spectra/lco'
+    DATA_DIR_EFOSC: '../data/spectra/EFOSC'
+files:
+    - 'tASASSN-15oz_20151003_Gr13_Free_slit1.0_57720_1_e.fits'
+    - 'tASAS-SN_15oz_20151107_Gr13_Free_slit1.5_57723_1_e.fits'
+    - 'tASAS-SN_15oz_20151118_Gr13_Free_slit1.0_57723_1_e.fits'        
+
+ScII6262:
+  name: 'ScII6262'
+  wmin: 6005
+  wmax: 6180
+  slope: 0.2 #A/day
+  texpl: 2457262. #JD
+  smooth_param:
+      deg: 2
+      width: 5
+  edge_param:
+      binsize: 5
+      binmax: 100
+      concavity_binsize: 20
+  directories:
+      DATA_DIR_LCO: '../data/spectra/lco'
+      DATA_DIR_EFOSC: '../data/spectra/EFOSC'
+  files:
+      - 'asassn15oz_20150916_redblu_120911.274.fits'
+      - 'asassn-15oz_20150920_redblu_135034.512.fits'
+      - 'asassn-15oz_20150930_redblu_122858.217.fits'
+      - 'asassn15oz_20151006_redblu_101906.800.fits'
+      - 'tASAS-SN_15oz_20151107_Gr13_Free_slit1.5_57723_1_e.fits'
+      - 'tASAS-SN_15oz_20151118_Gr13_Free_slit1.0_57723_1_e.fits' 
+      #- 'tASAS-SN_15oz_20151107_Gr13_Free_slit1.5_57723_1_e.fits' #blended
+      #- 'tASAS-SN_15oz_20151118_Gr13_Free_slit1.0_57723_1_e.fits' #blended    
+
+ScII6262_2:
+  name: 'ScII6262_2'
+  wmin: 6030
+  wmax: 6200
+  slope: 0.2 #A/day
+  texpl: 2457262. #JD
+  smooth_param:
+      deg: 2
+      width: 5
+  edge_param:
+      binsize: 5
+      binmax: 100
+      concavity_binsize: 20
+  directories:
+      DATA_DIR_LCO: '../data/spectra/lco'
+      DATA_DIR_EFOSC: '../data/spectra/EFOSC'
+  files:
+      - 'asassn15oz_20151014_redblu_112918.305.fits'
+      - 'asassn-15oz_20151025_redblu_102221.833.fits'
+
+ScII6262_3:
+ name: 'ScII6262_3'
+ wmin: 6010
+ wmax: 6200
+ slope: 0.2 #A/day
+ texpl: 2457262. #JD
+ smooth_param:
+     deg: 2
+     width: 5
+ edge_param:
+     binsize: 5
+     binmax: 100
+     concavity_binsize: 5
+ directories:
+     DATA_DIR_LCO: '../data/spectra/lco'
+     DATA_DIR_EFOSC: '../data/spectra/EFOSC'
+ files:
+     - 'tASASSN-15oz_20151003_Gr13_Free_slit1.0_57720_1_e.fits'
+    
+      
+NaI5898:
+  name: 'NaI5898'
+  wmin: 5575
+  wmax: 5845
+  slope: 0 #A/day
+  texpl: 2457262. #JD
+  smooth_param:
+      deg: 2
+      width: 5
+  edge_param:
+      binsize: 5
+      binmax: 100
+      concavity_binsize: 20
+  directories:
+      DATA_DIR_LCO: '../data/spectra/lco'
+      DATA_DIR_EFOSC: '../data/spectra/EFOSC'
+  files:
+      - 'asassn15oz_20151006_redblu_101906.800.fits'
+      - 'asassn15oz_20151014_redblu_112918.305.fits'
+      - 'asassn-15oz_20151025_redblu_102221.833.fits'  
+      
+NaI5898_2:
+  name: 'NaI5898_2'
+  wmin: 5575
+  wmax: 6000
+  slope: 0 #A/day
+  texpl: 2457262. #JD
+  smooth_param:
+      deg: 2
+      width: 5
+  edge_param:
+      binsize: 5
+      binmax: 100
+      concavity_binsize: 10
+  directories:
+      DATA_DIR_LCO: '../data/spectra/lco'
+      DATA_DIR_EFOSC: '../data/spectra/EFOSC'
+  files:
+      - 'tASAS-SN_15oz_20151107_Gr13_Free_slit1.5_57723_1_e.fits'
+      - 'tASAS-SN_15oz_20151118_Gr13_Free_slit1.0_57723_1_e.fits'   
