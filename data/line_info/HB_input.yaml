@@ -1,0 +1,52 @@
+HB:
+  continuum:
+    left: !!python/tuple
+    - !!python/object/apply:numpy.core.multiarray.scalar
+      - &id001 !!python/object/apply:numpy.dtype
+        args: [f8, 0, 1]
+        state: !!python/tuple [3, <, null, null, null, -1, -1, 0]
+      - !!binary |
+        1RfEIBQRskA=
+    - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        gYeGizkx5Dw=
+    right: !!python/tuple
+    - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        hF4ejSzuskA=
+    - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        Z0jMz6Zw5Dw=
+  feature:
+    center:
+    - !!python/tuple
+      - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          QBpkUpOgskA=
+      - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          LicvMBO22T8=
+    l_edge: !!python/tuple
+    - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        GpbEH9t4skA=
+    - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        TvFkcoKA4z8=
+    r_edge: !!python/tuple
+    - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        uBNebk7tskA=
+    - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        GNt7n1Hl7j8=
+  fit: Gaussian1D
