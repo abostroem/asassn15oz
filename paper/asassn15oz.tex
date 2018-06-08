@@ -1,8 +1,10 @@
-\documentclass[preprint]{aastex61}   	% use "amsart" instead of "article" for AMSLaTeX format
+\documentclass[preprint]{aastex61} 
+%\documentclass[twocolumn]{aastex61}   	% use "amsart" instead of "article" for AMSLaTeX format
 \usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
 \geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
 \usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
-								% TeX will automatically convert eps --> pdf in pdflatex		
+								% TeX will automatically convert eps --> pdf in pdflatex	
+\graphicspath{ {figures/} }	
 \usepackage{amssymb}
 
 \usepackage{natbib}
@@ -12,6 +14,8 @@
 \newcommand{\Azalee}[1]{\azaleecomment{Azalee: #1}}
 \newcommand{\viktoriyacomment}[1]{{\color{blue} [{#1}]}} 
 \newcommand{\Viktoriya}[1]{\viktoriyacomment{Viktoriya: #1}}
+\newcommand{\stefanocomment}[1]{{\color{cyan} [{#1}]}} 
+\newcommand{\Stefano}[1]{\stefanocomment{Stefano: #1}}
 
 
 \newcommand{\msun}{M$_{\odot}$ }
@@ -25,30 +29,115 @@
 \affil{University of California, Davis, 1 Shields Ave, Davis, CA, 95616}
 \email{kabostroem@ucdavis.edu}
 
+\author{Stefano Valenti}
+\affil{University of California, Davis, 1 Shields Ave, Davis, CA, 95616}
+
+\author{Viktoriya Morozova}
+\affil{Princeton Univeristy}
+
+\author{Assaf Horesh}
+\affil{Hebrew University of Jerusalem }
+
+\author{Samuel Wyatt}
+\affil{University of Arizona}
+
+
 \date{\today}							% Activate to display a given date or no date
 
 \begin{abstract}
 \end{abstract}
 \keywords{Supernovae}
+\section{ASAS-SN15oz}
+Supernova ASAS-SN15oz was discovered by the ASAS-SN team on August 31, 2015 and announced on September 3, 2015 \citep{2016brown}. 
+The next day Las Cumbres Observatory (LCO) confirmed its host to be HIPASS J1919-33 (z = 0.007 \Azalee{citation?}) and classified it as a type II supernova one week after explosion \citep{2016hosseinzadeh}. 
+\subsection{Explosion Epoch}
+Imaging of HIPASS J1919-33 from August 23, 2015 does not show any evidence of ASAS-SN15oz (V $>$ 17.8). 
+We take this to be a lower limit on the explosion epoch. 
+It is therefore reasonable to take as the mid-point between the non-detection and the detection as explosion date with the $1\sigma$ error being the time to the non-detection: $t_{expl} =$ 2015-08-27 $\pm 4$ days.
 
-\section{Reddening}
+\citet{2017gutierrez} found that the explosion epoch can be determined, with an average errors of 4.9 days, by fitting the blue part of the first spectrum with SNID \citep{2011blondin} and using the explosion epoch of the best fit template.
+This method relies on the existence of a template supernova that is similar in both phase and type to the object being fit.
+ASAS-SN15oz is a type IIL supernova and our first spectrum is from around maximum. 
+SNID has very few templates for type IIL supernovae, we therefore add templates for two well observed supernovae with well constrained explosion epochs: 2012A and 2013ej.
+\Azalee{make templates publicly available and link to them}
+We confirm our explosion epoch by fitting the first spectrum (2015-09-04) using SNID v. 5.0, augmenting the templates with those of \citet{2017gutierrez}, SN2012A, and SN2013ej.
+The five best fit spectra imply an explosion epoch of  2015-08-22, consistent with the range we propose based on non-detections.
+interestingly, the hydrodynamic light curve modeling also places the best fit explosion epoch on the day of the last non-detection (see Section \ref{LC}).
+
+
+\subsection{Reddening}
 We use an X-shooter spectrum taken with the UVB and VIS arms to constrain the host galaxy reddening to confirm the galactic reddening using the equivalent widths of the Na I D1 and D2 lines ($\lambda$5890, $\lambda$5896) \citep{2012poznanski}. 
 We find no evidence of Na I absorption at the host redshift and therefore assume no host absorption. 
 By fitting gaussian profiles to the galactic Na I absorption we find E(B-V) = 0.12, consistent with the value given by \citet{2011schlafly}. 
 We adopt the \citet{2011schlafly}  value of 0.08 for the analysis in this paper. 
 
+\section{Observations}
+\Azalee{Look into how people talk about telescopes vs collaborations vs instruments}
+ASAS-SN15oz was the closest type II supernova of 2015 and was observed extensively at all wavelengths. X-ray and UV imaging observations were obtained with the Swift Space Telescope during the first 80 days post-explosion.
+In addition to this observations, the Swift UV Grism captured 2 epochs of spectroscopy. 
+The optical light curve was closely monitored by the Las Cumbres Observatory (LCO) from discovery through day 400 in the filters B, V, g, r, and i. 
+Unfortunately, the supernova passed behind the sun around day 80, leaving a gap in the observations from day 86 to day 184, most notably missing the fall from plateau.
+Optical spectroscopic observations were also obtained by the LCO and the New Technology Telescope (NTT) telescope \Azalee{ePESSTO or NTT?} throughout the photospheric phase. 
+Nebular spectra were observed by the ePESSTO collaboration on the NTT telescope. 
+The ePESSTO collaboration also obtained NIR observations using the SOFI instrument (\Azalee{Where is this located}).
+A complete list of photometric observations is given in Table \ref{tab:LcObs}. 
+Spectroscopic observations are details in Table ???.
+
+\section{Light Curve} \label{LC}
+The light curve of all type IIP/IIL supernovae show an initial rise, followed by a period of 100 days during which the supernova stays the same brightness or declines linearly. 
+During this time the light curve is powered by the recombination of hydrogen in the expanding ejecta. 
+About 100 days after explosion, the recombination front passes the inner edge of the hydrogen envelope causing a sudden drop in luminosity referred to as the fall from plateau.  
+After the fall from plateau, the light curve is powered by the radioactive decay of ${}^{56}Co$.
+
+The light curve of ASAS-SN15oz shows a linear decline similar to that of other type IIL SNe. 
+The light curve reaches peak brightness in the V-band 8.25 days after explosion, one day after observations began, reaching an above average absolute magnitude of -18.05 +/- 0.025.
+The early light curve rises until around day 20 in the redder filters, flattening in the V-band and falling in the blue bands during this same period. 
+The light curve then falls in all bands for the remainder of the observations, changing slope around day 40 and again sometime after day 85, following the fall from plateau. 
+Following \citep{2014Anderson}, we fit a slope to the first steep initial decline after maximum ($s_1$) and to the second shallower slope prior to the fall from plateau ($s_2$). 
+We also fit a global decline rate, $s_{50v}$ from soon after maximum to prior to the fall from plateau.
+During the nebular phase we fit a slope to the radioactive decay tail ($s_{tail}$). 
+The slopes we fit as well as the details of the fit are summarized in table \ref{tab:slope}.
+\Azalee{significant figures?}
+\input{slopes} %created by lightcurve_characteristics.ipynb
+
+The slope of the radioactive decay tail is steeper than a pure ${}^{56}Co$ decay implying that the hydrogen envelop is not fully trapping and reprocessing the gamma rays produced by the radioactive decay.
+
+\subsection{Bolometric Luminosity}
+\Stefano{Fill in}
+\subsection{Determining the Nickel Mass}
+Following \citet{2016Valenti} we find the Nickel mass synthesized in a supernova explosion by scaling the bolometric luminosity of ASAS-Sn15oz when it is powered by ${}^{56}Co$ to that of supernova 1987A using the following relation:
+\begin{equation} \label{eqn:Ni}
+M({}^{56}Ni) = 0.075M_{\odot} \times \frac{L_{sn}(t)}{L_{87A}(t)} \Stefano{does*this*need*a*reference?}
+\end{equation}
+This method assumes that the slope of the radioactive decay tail follows that of SN1987A (i.e. complete gamma ray trapping), so that luminosity ratio is independent of the time used as long as it is during the nebular phase. 
+If the slope is steeper than that of SN1987A (i.e. incomplete gamma ray trapping) then the slope can be scaled to the bottom of the fall from plateau to get an upper limit on the Nickel mass. \Stefano{is this true?}
+Unfortunately, ASAS-SN15oz has incomplete gamma ray trapping and disappeared behind the Sun shortly before falling from plateau, re-emerging after the fall from plateau. 
+We therefore consider three scenarios and calculate the Nickel mass for each.
+First we investigate the scenario of ASAS-Sn15oz falling from plateau immediately after the last observation.
+Starting from the last observation, using the median fall from plateau slope ($w0 = -0.087$) from the 30 IIp/IIL supernovae in \citet{2016valenti}, and extrapolating the radioactive decay slope to earlier times we take the end of the fall from plateau to be when the fall from plateau (generated with $w0$ intersects the radioactive decay tail. 
+Scaling the luminosity of SN1987A to the luminosity of ASAS-SN15oz at this point, 88.38 days, gives an upper limit on the Nickel mass of $0.1 M_{\odot}$.
+To find a lower limit on the total Nickel mass we estimate the maximum plateau length using Figure 5a in \citet{2016valenti}. 
+For $s_{50V} = 1.09 mag/50$ days the maximum we find $t_{pt} =130$ days and the maximum phase at the end of the fall from plateau to be 135 days.
+Extrapolating the bolometric luminosity of the radioactive decay tail slope to this time and using equation \ref{eqn:Ni}, we find a lower limit on the Nickel mass of 0.083 $M_{\odot}$.
+Finally, we consider an intermediate Nickel mass, the mean of the upper and lower limits, 0.0965 $M_{\odot}$
+
+
+ 
 %\subsection{}
 \section{Light Curve Modeling}
+\subsection{SNEC: Supernova Explosion Code}
 We fit the light curve of ASAS-SN15oz using the Supernova Explosion Code (SNEC) \citep{2015morozova}.
 SNEC is an open source Lagrangian 1D radiation hydrodynamic code that assumes local thermodynamic equilibrium (LTE).
 Type II supernovae are well characterized by LTE from shock breakout through the fall from plateau. 
 SNEC uses a Paczy\'nski equation of state \citep{1983paczynski} solving for the ionization fractions using the Saha equations in the non-degenerate approximation \citep{2000zaghloul}. 
-Opacities are drawn from OPAL Type II opacity tables \citep{1996iglesias} at high temperature ($T=10^{4.5}-10^{8.7}$) and tables of \citet{2005ferguson} at low temperatures ($T = 10^{2.7}-10^{4.5}K$) supplemented with an opacity floor of 0.01 cm$^2$g$^{-1}$. 
+Opacities are drawn from OPAL Type II opacity tables \citep{1996iglesias} at high temperature ($T=10^{4.5}-10^{8.7}$) and tables of \citet{2005ferguson} at low temperatures ($T = 10^{2.7}-10^{4.5}K$) supplemented with an opacity flo
+or of 0.01 cm$^2$g$^{-1}$. 
 The progenitor of ASAS-SN15oz is modeled using a non-rotating solar-metalicity Red Supergiant of mass M, evolved with the {\it Kepler} code \citep{2016sukhbold}. 
 \Azalee{more citations?}. 
 Mixing of layers due to the explosion is modeled by boxcar smoothing the progenitor profile with a kernel of 0.4 \msunperiod.
 \Azalee{What does Kepler do with mass lost to stellar winds? Is it in the profile?}
 To account for the formation of the neutron star, we excise the region interior to the Si/O interface \citep{2018morozova}. 
+\subsection{SNEC modeling of ASAS-SN15oz}\label{sec:LCmodeling}
 We model the explosion of ASAS-SN15oz using a thermal bomb with explosion energy $E_{exp}$ lasting for 1 second in the inner 0.02 \msunperiod. 
 \Viktoriya{Inner 0.02 Msun before or after the excision of the neutron star?}
 \Azalee{sort out explosion energy}
@@ -62,17 +151,18 @@ We use SNEC to find the best progenitor parameters varying the progenitor mass, 
 Table \ref{tb:param} gives the set of parameters used, resulting in over 5000 model light curves.
 \begin{table}
 \centering
+\caption{The grid of parameters used by SNEC. 
+The values that best fit the data are bolded.}
 \label{tb:param}
-\begin{tabular}{|c|l|}
-\hline
+\begin{tabular}{c|c}
 Parameter & Values \\
 \hline
-Progenitor Mass (\msunperiod) & 11, 13, 14, 16, 17, 18, 21 \\
-Explosion Energy (10$^{51}$ ergs) & 0.5, 0.8, 1.1, 1.4, 1.7, 2.0 \\
-CSM Density (10$^{17}$ cm) & 10, 20, 30, 35, 40, 50, 60 \\
-CSM Extent (100R$_{\odot}$) & 15, 18, 21, 24, 27, 30, 33 \\
-Ni Mass (\msunperiod) & 0.083, 0.0965, 0.11 \\
-\hline
+Progenitor Mass (\msunperiod) & 11, 13, 14, 16, 17, {\bf 18}, 21 \\
+Explosion Energy (10$^{51}$ ergs) & 0.5, 0.8, 1.1, {\bf 1.4}, 1.7, 2.0 \\
+CSM Density (10$^{17}$ cm) & {\bf 10}, 20, 30, 35, 40, 50, 60 \\
+CSM Extent (100R$_{\odot}$) & 15, 18, 21, {\bf 24}, 27, 30, 33 \\
+Ni Mass (\msunperiod) & {\bf 0.083}, 0.0965, 0.11 \\
+
 \end{tabular}
 \end{table}
 
@@ -84,6 +174,7 @@ While we do have a V band light curve, the throughput heavily overlaps with the 
 The best fit model is determined by interpolating the well sampled model to the observed wavelengths and computing a chi-square minimization across all three filters.
 Given the uncertainty in the explosion time, we shift the model spectrum by $\pm$4 days and treat this offset as a free parameter.
 We find the light curve of ASAS-SN15oz is best characterized by M = 18 \msunperiod, E = 1.4x10$^{51}$ ergs, K = 10 g/cm, R = 2400 \rsun, mass$_{Ni}$ = 0.083, t$_{offset}$ = -4 days. 
+\subsection{Mass-loss}
 There is broad degeneracy in the CSM parameters, making this analysis a better estimate of the total mass loss rather than the mass-loss history. 
 Integrating the CSM density over it radial extent, we find a total mass loss of 0.62 \msunperiod. 
 
@@ -95,6 +186,895 @@ Given the complexity of the parameter space, we choose to model the best light c
 To compare our best fit model to that without CSM, we use the best fit progenitor mass and explosion energy. 
 This should be a good representation of the best fit model as we expect the light curve to be the same during the S2 slope and improved by CSM at early times during the S1 slope.
 
+\section{Spectra}
+\subsection{Observations}
+Optical spectroscopy was obtained with the FLOYDS spectrograph on the 2m LCO telescope at Siding Springs, Australia and the EFOSC2 spectrograph on the 3.6 m NTT telescope at La Silla, Chile. 
+One-dimensional spectra were extracted and calibrated using the FLOYDS \citep{2014valenti} and EFOSC pipelines, which string together standard IRAF extraction tasks \Stefano{What is the right way to cite this?}. 
+Figure \ref{fig:SpecAll} shows the evolution of the spectra over time, starting from a blue spectrum with broad hydrogen lines and developing metal features such as iron and scandium as the velocities decrease and the line widths narrow. More unusually (although perhaps not unusual for IIL SNe), the cachito feature \citep{2017gutierrez}, blueward of the H-$\alpha$ absorption is present in the first spectrum, growing in strength through day 20 (2015-09-16) and then decreasing in strength at later times. \Azalee{Say more here or reference future section for interpretation}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=\textwidth]{spectra_montage} %created by make_spectral_montage.ipynb
+\caption{A representative sample of the spectroscopic evolution of ASAS-SN15oz during the photospheric phase, with the earliest observation at the bottom. 
+The date of each spectrum is labeled on the right. Prominent spectral features are labeled above the latest spectrum and below the earliest spectrum. 
+These spectra are fairly typical of IIP/IIL spectra, showing a blue continuum with broad hydrogen features early and developing strong metal lines over time.
+The cachito feature is visible in the first spectrum, increasing in strength until day \~20 (2015-09-16), then decreasing until it is no longer visible on day 59 (2015-10-25).}
+\label{fig:SpecAll}
+\end{center}
+\end{figure}
+
+\subsection{Line Identification}
+Initial line identification was performed by comparing the spectra to that of supernova 1999em \citep{2001leonard}. 
+Identification was confirmed using the spectrum synthesis code Syn++ \citep{2013thomas} (parameter details in \ref{tab:syn++}. 
+%%%%%%%%%%%%%%%%%%%
+\begin{table}[htp]
+\caption{The parameters used in the Syn++ fit. 
+The opacity $\tau$ is modeled with an exponential profile with e-folding length aux, minimum velocity $v_{min}$, and maximum velocity $v_{max}$. 
+The temperature column is the Boltzmann excitation temperature.}
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c}
+Ion & log($\tau$) & $v_{min}(kkm/s)$ & $v_{max}(kkm/s)$ & aux & Temperature (kK) \\
+\hline
+  H I -$\alpha$   & .06 & 0.1 & 40.0 & 2.0 & 10.0 \\
+  H I - $\beta$   & .06 & 0.1 & 40.0 & 2.0 & 10.0 \\
+  Na II & -0.5 & 0.1 & 40.0 & 1.0 & 10.0 \\
+  O I & -0.8 & 0.1 & 40.0 & 1.0 & 10.0 \\
+  Ca II & 1.3 & 0.1 & 40.0 & 2.0 & 10.0 \\
+  Sc II & 0.1 & 0.1 & 40.0 & 1.0 & 10.0 \\
+  Ti II  & 0.3 & 0.1 & 40.0 & 1.0 & 10.0 \\
+  Fe I  &  0.3 & 0.1 & 40.0 & 1.0 & 10.0 \\
+  Fe II & 0.3 & 0.1 & 40.0 & 1.0 & 7.0 \\
+  Ba I & 0.0 & 0.1 & 40.0 & 1.0 & 10.0 \\  
+ \end{tabular}
+\end{center}
+\label{tab:syn++}
+\end{table}
+The results of the Syn++ fit can be seen in Figure \ref{fig:syn++}.
+The top plot shows the combined fit, while the contributions from the individual elements are shown in the subsequent plots below.
+Syn++ models pure resonance scattering which is a good approximation for all lines modeled except H-$\alpha$. 
+For this reason we use the H-$\beta$ line to determine the hydrogen contribution to the fit. 
+A separate fit to H-$\alpha$ is shown in the second plot of Figure \ref{fig:syn++} and the parameters are detailed in the H-$\alpha$ row of Table \ref{tab:syn++}.
+%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[height=\textheight]{syn++indiv_elements} %created by make_syn++_indiv_element_fig.ipynb
+\caption{A comparison of the model spectrum produced by Syn++ and the observed spectrum from 2015-10-06.
+The top panel shows the best fit with all elements while the remaining panels show the fit for each element individually.
+We fit H-$\alpha$ and H-$\beta$ separately as H-$\alpha$ is not well modeled by the pure resonance scattering assumed in Syn++.
+The H-$\beta$ fit is used in the combined spectrum in the top panel.}
+\label{fig:syn++}
+\end{center}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%
+\subsection{Ejecta Velocity}
+We find the velocity of lines for which individual components can be resolved using two methods (Scandium features ($\lambda$ 5526, 5662, 6262)).
+For lines that are not blended or that are dominated by the absorption of one ion, we employ the method presented in \citet{2012silverman}. 
+We eliminate large noise spikes (e.g. from cosmic rays) using a Savitzky-Golay smoothing filter \citep{1964savitzky} with a quadratic function over a binsize of 5 pixels. 
+For each line, a minimum and maximum wavelength is defined as well as a slope to account for the shifting of the feature over time as the ejecta slows. 
+A slope is then fit to small bins over this wavelength range, starting with a binsize of 5 pixels and increasing until exactly 3 changes in slope are found (at either edge of the line and the line center). 
+If the binsize reaches 40\% of the feature size, no further attempt at fitting is made. 
+The feature edges are confirmed by fitting a quadratic function to the region centered on each edge identified by the slope change with a width of 20 pixels for the FLOYDS spectra and 5 pixels for the EFOSC spectra. 
+The edge is considered successfully found if the quadratic fit is concave down. 
+The continuum is defined by a line though these end points.
+Finally, the velocity is found by fitting a cubic spline to the continuum subtracted flux between the edges using the flux errors as weights. 
+We express the uncertainty in the velocity as the velocity encompassing 34.1\% of the integrated continuum subtracted velocity.
+More than an uncertainty, this number represents the range of velocities present in the ejecta \Stefano{is this true or is it the range of LOS velocities?}.
+
+For lines that are blended (but still showed isolated absorption troughs for some features) we define the continuum as a straight line from the lowest side of the feature. 
+After dividing by the continuum, we then simultaneously fit multiple 1D Gaussian profiles to the continuum normalized spectra, requiring that each component has the same width.
+We define the velocity of a feature as the minimum of the individual Gaussian profile corresponding to that ion and the error as the standard deviation of the fit. 
+For the Ca II NIR triplet we use the additional constraint of a fixed offset between the minima of the features. 
+We use this method to fit H-$\alpha$ ($\lambda$ 6561), O I ($\lambda$ 7774), FeII ($\lambda$ 5169), and Ca II ($\lambda\lambda\lambda$ 8498, 8542, 8662). 
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{example_fits}
+\caption{An example of a fit to the multi-component Ca II NIR triplet (left) using multiple Gaussians and a single line fit (following \citet{2012silverman}, right) to the Sc II $\lambda$5662 line.
+The observed spectrum is plotted in blue.
+The continuum edges are marked with a red circle and the red dashed line connecting these points is used as the continuum. 
+The Ca II NIR triplet fit is found by simultaneously fitting 3 Gaussians with the same standard deviation and mean offsets corresponding to the expected wavelength separation of the triplet. 
+The individual Gaussians are plotting at black dotted lines and the combined fit is plotted as a solid black line. 
+The minima of the individual Gaussians is used to find the velocity of each component.
+The Sc II feature is fit with a cubic spliine. 
+The minimum of the spline is used to find the Sc II velocity.
+}
+\label{fig:VelocityFit}
+\end{center}
+\end{figure}
+
+We use both methods to fit Na I ($\lambda$ 5898) and H-$\beta$ ($\lambda$4861). 
+For Na I, we find the spline fit does not characterize the minimum of the profile well and instead use the Gaussian minimum. 
+The H-$\beta$ profile is contaminated by another feature (possibly Ti II) at later times, offsetting the minimum found using the spline fit. 
+For this reason we prefer the Gaussian fit for H-$\beta$ as well. 
+A comparison of the results of both fits for H-$\beta$ at early times finds them in good agreement, giving us confidence in the consistency of the two methods.
+
+Figure \ref{fig:velocity} shows the velocities for all good fits to the data. 
+The distribution of velocities is typical of other IIP/IIL supernovae representing the distribution of elements throughout the ejecta. 
+A comparison of the velocities derived in this paper to the average values of 122 IIP/IIL SNe described in \citet{2017gutierrez} is shown in Figure \ref{fig:VelocityCompare}. The shaded regions represent the standard deviation of the sample.
+We find throughout the ejecta above average velocities, consistent with a larger than average explosion energy \Stefano{and mass?}. 
+This is consistent with the light curve modeling (see Section \ref{sec:LCmodel})
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{line_velocity}
+\caption{The evolution of the velocity of H-$\alpha$, H-$\beta$, Na I, O I, Ca II, Sc II, and FeII over time. 
+The spread of velocities represents the different locations of the ions in the ejecta.}
+\label{fig:velocity}
+\end{center}
+\end{figure}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=\textwidth]{velocity_compare_guitierrez}
+\caption{A comparison of the velocity of ASAS-SN15oz to the mean velocity of 122 IIP/IIL supernovae \citep{2017gutierrez} for H-$\alpha$ (left), H-$\beta$ (middle), and Fe II (right).
+For all lines the velocity is about 1$\sigma$ above average. 
+Each of these line originates in a different part of the ejecta indicating that this is a global trend and the explosion energy is above average. 
+Following \citep{2012silverman} we select velocity errors of 2 $\AA$, these are contained within the symbols and so are not plotted.}
+\label{fig:VelocityCompare}
+\end{center}
+\end{figure}
+
+\subsection{Comparison to Hydrodynamic Modeling}
+To check the consistency of our photospheric modeling, we compare the photospheric velocity of the best fit SNEC model to the observed photospheric velocity of ASAS-SN15oz (see Figure \ref{fig:SNECVelocityCompare}.
+Following \citet{2014faran}, we define the photospheric velocity as that of Fe II $\lambda$5169. 
+We use the relationship between the $H-\beta$ velocity and the Fe II $\lambda$5169 velocity defined in \citet{2014faran} to infer the photospheric velocity at early times when the iron line is not yet visible.
+While there is fair agreement between the model and observe velocity at early times, the model velocity is significantly lower than the observed velocity starting around day 25.
+This behavior was previously noted by \citet{2018paxton} who find that the Fe II $\lambda$5169 line is originating above the photosphere where the Sobolov optical depth is a specific value (they find $\tau_{sob} ~1$ fits the observations well). 
+This effect becomes significant as the photosphere begins to recede around 20-30 days exactly when we see a deviation between our model and observed velocities. 
+\Azalee{decide whether to implement this or leave it as an explanation}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=\textwidth]{snec_velocity_comp}
+\caption{The model photospheric velocity computed by SNEC (blue) compared to the observed photospheric velocity (orange) taken to be the velocity of the Fe II $\lambda$5169 feature. 
+The model deviated from the observations around the time that the photosphere begins to recede into the ejecta.
+This discrepancy is likely the result of the Fe II line being produced above the ejecta at these times \citep{2018paxton}.
+}
+\label{fig:SNECVelocityCompare}
+\end{center}
+\end{figure}
+
+
+\section{Discussion: Comparison to other objects} 
+To find objects with a similar light curve to ASAS-SN15oz we compare the $s_{50V}$ slope to that of other supernovae \Stefano{how should we describe the database?}.
+SN 2016zb and SN 2015W have the best matched slopes. We compare the multi-band light curves and spectra of these objects and find them to be very similar in all respects.
+
+\Azalee{Revisit this figure. Is V-band the right one to measure both of these? how complete is the database? Consider cutting those with too large slopes}
+\begin{figure}[h!] 
+\begin{center}
+\includegraphics{slope_compare} %created by lightcurve_characteristics.ipynb
+\caption{Center: The slope of the light curve at late times, during the radioactive decay phase compared to the slope during the photospheric phase for a sample of publicly available supernova light curves.
+ASAS-SN15oz is plotted in red.
+Top (Right): A histogram of the radioactive decay (photometric) phase slopes. All measured slopes from this phase are included in the hatched sample.
+The objects for which there is both a decay phase slope and a photospheric slope are plotted in blue. The comparison of the full slope sample (hatch) to the combined slope sample (blue) gives us confidence that points we plot in the center are representative of the full sample.}
+\label{fig:SlopeComp}
+\end{center}
+\end{figure}
+
+
+%Consider making this two columns
+%Make an epoch column
+\clearpage
+\section{Observations}
+\startlongtable
+\begin{deluxetable}{cccccc} 
+\tablecolumns{6} 
+\tablecaption{ Imaging Observations \label{table:LcObs}} 
+\tablehead{ 
+\colhead{Date-Obs} & \colhead{JD} & \colhead{Apparent Magnitude} &  \colhead{Apparent Magnitude Error} & \colhead{Filter} & \colhead{Facility}\\
+} 
+\startdata 
+2015-09-04 & 2457269.68 & 14.64 & 0.02 & B & LSC 1m \\
+2015-09-04 & 2457269.68 & 14.66 & 0.02 & B & LSC 1m \\
+2015-09-04 & 2457269.69 & 14.37 & 0.02 & V & LSC 1m \\
+2015-09-04 & 2457269.69 & 14.43 & 0.01 & g & LSC 1m \\
+2015-09-04 & 2457269.69 & 14.42 & 0.01 & g & LSC 1m \\
+2015-09-04 & 2457269.70 & 14.49 & 0.01 & r & LSC 1m \\
+2015-09-04 & 2457269.70 & 14.45 & 0.01 & r & LSC 1m \\
+2015-09-04 & 2457269.70 & 14.51 & 0.01 & i & LSC 1m \\
+2015-09-04 & 2457269.70 & 14.47 & 0.01 & i & LSC 1m \\
+2015-09-04 & 2457269.93 & 14.30 & 0.06 & uvw1 & Swift \\
+2015-09-04 & 2457269.93 & 14.10 & 0.05 & u & Swift \\
+2015-09-04 & 2457269.93 & 14.73 & 0.05 & b & Swift \\
+2015-09-04 & 2457269.93 & 15.26 & 0.07 & uvw2 & Swift \\
+2015-09-04 & 2457269.93 & 14.68 & 0.05 & v & Swift \\
+2015-09-04 & 2457269.94 & 14.91 & 0.06 & uvm2 & Swift \\
+2015-09-04 & 2457270.09 & 14.60 & 0.02 & B & COJ 1m \\
+2015-09-04 & 2457270.09 & 14.64 & 0.02 & B & COJ 1m \\
+2015-09-04 & 2457270.09 & 14.46 & 0.02 & V & COJ 1m \\
+2015-09-04 & 2457270.09 & 14.46 & 0.02 & V & COJ 1m \\
+2015-09-04 & 2457270.10 & 14.50 & 0.01 & g & COJ 1m \\
+2015-09-04 & 2457270.10 & 14.51 & 0.01 & g & COJ 1m \\
+2015-09-04 & 2457270.10 & 14.44 & 0.02 & r & COJ 1m \\
+2015-09-04 & 2457270.10 & 14.46 & 0.01 & r & COJ 1m \\
+2015-09-04 & 2457270.10 & 14.47 & 0.01 & i & COJ 1m \\
+2015-09-04 & 2457270.11 & 14.47 & 0.01 & i & COJ 1m \\
+2015-09-04 & 2457270.44 & 14.71 & 0.02 & B & CPT 1m \\
+2015-09-04 & 2457270.44 & 14.71 & 0.02 & B & CPT 1m \\
+2015-09-04 & 2457270.44 & 14.62 & 0.02 & V & CPT 1m \\
+2015-09-04 & 2457270.45 & 14.51 & 0.01 & g & CPT 1m \\
+2015-09-04 & 2457270.45 & 14.54 & 0.01 & g & CPT 1m \\
+2015-09-04 & 2457270.45 & 14.50 & 0.01 & r & CPT 1m \\
+2015-09-04 & 2457270.45 & 14.52 & 0.01 & r & CPT 1m \\
+2015-09-04 & 2457270.46 & 14.57 & 0.02 & i & CPT 1m \\
+2015-09-04 & 2457270.46 & 14.60 & 0.02 & B & CPT 1m \\
+2015-09-04 & 2457270.47 & 14.59 & 0.02 & B & CPT 1m \\
+2015-09-05 & 2457270.68 & 14.73 & 0.02 & B & LSC 1m \\
+2015-09-05 & 2457270.68 & 14.73 & 0.02 & B & LSC 1m \\
+2015-09-05 & 2457270.69 & 14.48 & 0.02 & V & LSC 1m \\
+2015-09-05 & 2457270.69 & 14.52 & 0.01 & g & LSC 1m \\
+2015-09-05 & 2457270.70 & 14.48 & 0.01 & r & LSC 1m \\
+2015-09-05 & 2457270.70 & 14.40 & 0.02 & i & LSC 1m \\
+2015-09-05 & 2457270.80 & 14.41 & 0.06 & uvw1 & Swift \\
+2015-09-05 & 2457270.82 & 15.21 & 0.08 & uvw2 & Swift \\
+2015-09-05 & 2457271.10 & 14.09 & 0.12 & U & COJ 1m \\
+2015-09-05 & 2457271.10 & 14.15 & 0.12 & U & COJ 1m \\
+2015-09-05 & 2457271.10 & 14.72 & 0.02 & B & COJ 1m \\
+2015-09-05 & 2457271.11 & 14.71 & 0.02 & B & COJ 1m \\
+2015-09-05 & 2457271.11 & 14.53 & 0.02 & V & COJ 1m \\
+2015-09-05 & 2457271.11 & 14.53 & 0.02 & V & COJ 1m \\
+2015-09-05 & 2457271.11 & 14.48 & 0.01 & g & COJ 1m \\
+2015-09-05 & 2457271.11 & 14.48 & 0.01 & g & COJ 1m \\
+2015-09-05 & 2457271.12 & 14.45 & 0.01 & r & COJ 1m \\
+2015-09-05 & 2457271.12 & 14.46 & 0.01 & r & COJ 1m \\
+2015-09-05 & 2457271.12 & 15.27 & 0.08 & uvw2 & Swift \\
+2015-09-05 & 2457271.12 & 14.50 & 0.01 & i & COJ 1m \\
+2015-09-05 & 2457271.12 & 14.54 & 0.01 & i & COJ 1m \\
+2015-09-05 & 2457271.13 & 14.52 & 0.06 & uvw1 & Swift \\
+2015-09-05 & 2457271.45 & 13.99 & 0.18 & U & CPT 1m \\
+2015-09-05 & 2457271.45 & 14.15 & 0.09 & U & CPT 1m \\
+2015-09-05 & 2457271.46 & 14.69 & 0.02 & B & CPT 1m \\
+2015-09-05 & 2457271.46 & 14.71 & 0.02 & B & CPT 1m \\
+2015-09-05 & 2457271.46 & 14.51 & 0.02 & V & CPT 1m \\
+2015-09-05 & 2457271.46 & 14.52 & 0.02 & V & CPT 1m \\
+2015-09-05 & 2457271.46 & 14.50 & 0.01 & g & CPT 1m \\
+2015-09-05 & 2457271.47 & 14.49 & 0.01 & g & CPT 1m \\
+2015-09-05 & 2457271.47 & 14.42 & 0.01 & r & CPT 1m \\
+2015-09-05 & 2457271.47 & 14.43 & 0.01 & r & CPT 1m \\
+2015-09-05 & 2457271.47 & 14.45 & 0.01 & i & CPT 1m \\
+2015-09-05 & 2457271.47 & 14.47 & 0.01 & i & CPT 1m \\
+2015-09-06 & 2457272.45 & 14.15 & 0.15 & U & CPT 1m \\
+2015-09-06 & 2457272.46 & 14.72 & 0.02 & B & CPT 1m \\
+2015-09-06 & 2457272.46 & 14.50 & 0.02 & V & CPT 1m \\
+2015-09-06 & 2457272.46 & 14.51 & 0.02 & V & CPT 1m \\
+2015-09-06 & 2457272.46 & 14.51 & 0.01 & g & CPT 1m \\
+2015-09-06 & 2457272.46 & 14.51 & 0.01 & g & CPT 1m \\
+2015-09-06 & 2457272.47 & 14.43 & 0.01 & r & CPT 1m \\
+2015-09-06 & 2457272.47 & 14.44 & 0.01 & r & CPT 1m \\
+2015-09-06 & 2457272.47 & 14.51 & 0.01 & i & CPT 1m \\
+2015-09-07 & 2457273.09 & 14.74 & 0.01 & B & COJ 1m \\
+2015-09-07 & 2457273.09 & 14.73 & 0.01 & B & COJ 1m \\
+2015-09-07 & 2457273.09 & 14.52 & 0.01 & V & COJ 1m \\
+2015-09-07 & 2457273.10 & 14.49 & 0.01 & V & COJ 1m \\
+2015-09-07 & 2457273.10 & 14.50 & 0.01 & g & COJ 1m \\
+2015-09-07 & 2457273.10 & 14.48 & 0.01 & g & COJ 1m \\
+2015-09-07 & 2457273.10 & 14.45 & 0.01 & r & COJ 1m \\
+2015-09-07 & 2457273.11 & 14.44 & 0.01 & i & COJ 1m \\
+2015-09-07 & 2457273.11 & 14.46 & 0.01 & i & COJ 1m \\
+2015-09-08 & 2457274.43 & 14.51 & 0.02 & V & CPT 1m \\
+2015-09-08 & 2457274.43 & 14.21 & 0.02 & R & CPT 1m \\
+2015-09-08 & 2457274.45 & 14.67 & 0.02 & B & CPT 1m \\
+2015-09-08 & 2457274.46 & 14.82 & 0.05 & B & CPT 1m \\
+2015-09-08 & 2457274.46 & 14.45 & 0.02 & V & CPT 1m \\
+2015-09-08 & 2457274.46 & 14.53 & 0.02 & V & CPT 1m \\
+2015-09-08 & 2457274.46 & 14.57 & 0.01 & g & CPT 1m \\
+2015-09-08 & 2457274.46 & 14.59 & 0.01 & g & CPT 1m \\
+2015-09-08 & 2457274.47 & 14.42 & 0.01 & r & CPT 1m \\
+2015-09-08 & 2457274.47 & 14.43 & 0.01 & r & CPT 1m \\
+2015-09-08 & 2457274.47 & 14.48 & 0.01 & i & CPT 1m \\
+2015-09-08 & 2457274.47 & 14.50 & 0.01 & i & CPT 1m \\
+2015-09-09 & 2457275.33 & 15.22 & 0.08 & uvw1 & Swift \\
+2015-09-09 & 2457275.34 & 14.38 & 0.06 & u & Swift \\
+2015-09-09 & 2457275.34 & 14.93 & 0.06 & b & Swift \\
+2015-09-09 & 2457275.34 & 16.13 & 0.09 & uvw2 & Swift \\
+2015-09-09 & 2457275.34 & 14.62 & 0.07 & v & Swift \\
+2015-09-09 & 2457275.34 & 16.05 & 0.08 & uvm2 & Swift \\
+2015-09-10 & 2457275.74 & 16.50 & 0.12 & uvw2 & Swift \\
+2015-09-10 & 2457275.89 & 15.44 & 0.06 & uvw1 & Swift \\
+2015-09-10 & 2457275.96 & 15.42 & 0.06 & uvw1 & Swift \\
+2015-09-10 & 2457275.97 & 16.30 & 0.09 & uvw2 & Swift \\
+2015-09-10 & 2457276.06 & 14.52 & 0.27 & U & COJ 1m \\
+2015-09-10 & 2457276.07 & 14.83 & 0.02 & B & COJ 1m \\
+2015-09-10 & 2457276.08 & 14.52 & 0.02 & V & COJ 1m \\
+2015-09-10 & 2457276.08 & 14.51 & 0.02 & V & COJ 1m \\
+2015-09-10 & 2457276.08 & 14.55 & 0.01 & g & COJ 1m \\
+2015-09-10 & 2457276.08 & 14.56 & 0.01 & g & COJ 1m \\
+2015-09-10 & 2457276.08 & 14.40 & 0.01 & r & COJ 1m \\
+2015-09-10 & 2457276.09 & 14.35 & 0.01 & r & COJ 1m \\
+2015-09-10 & 2457276.09 & 14.38 & 0.01 & i & COJ 1m \\
+2015-09-10 & 2457276.09 & 14.40 & 0.01 & i & COJ 1m \\
+2015-09-11 & 2457276.88 & 14.75 & 0.05 & u & Swift \\
+2015-09-11 & 2457276.90 & 16.50 & 0.10 & uvw2 & Swift \\
+2015-09-11 & 2457277.06 & 14.79 & 0.05 & u & Swift \\
+2015-09-11 & 2457277.07 & 16.75 & 0.09 & uvw2 & Swift \\
+2015-09-12 & 2457277.70 & 15.03 & 0.02 & B & LSC 1m \\
+2015-09-12 & 2457277.70 & 14.57 & 0.01 & g & LSC 1m \\
+2015-09-12 & 2457277.71 & 14.57 & 0.01 & g & LSC 1m \\
+2015-09-12 & 2457277.71 & 14.32 & 0.01 & r & LSC 1m \\
+2015-09-12 & 2457277.71 & 14.36 & 0.01 & i & LSC 1m \\
+2015-09-14 & 2457280.41 & 15.11 & 0.02 & B & CPT 1m \\
+2015-09-14 & 2457280.41 & 15.11 & 0.02 & B & CPT 1m \\
+2015-09-14 & 2457280.41 & 14.54 & 0.02 & V & CPT 1m \\
+2015-09-14 & 2457280.41 & 14.51 & 0.07 & V & CPT 1m \\
+2015-09-14 & 2457280.41 & 14.87 & 0.07 & g & CPT 1m \\
+2015-09-14 & 2457280.42 & 14.75 & 0.02 & g & CPT 1m \\
+2015-09-14 & 2457280.45 & 15.07 & 0.04 & B & CPT 1m \\
+2015-09-15 & 2457281.27 & 15.11 & 0.02 & B & CPT 1m \\
+2015-09-15 & 2457281.27 & 15.11 & 0.02 & B & CPT 1m \\
+2015-09-15 & 2457281.27 & 14.55 & 0.02 & V & CPT 1m \\
+2015-09-15 & 2457281.27 & 14.60 & 0.02 & V & CPT 1m \\
+2015-09-15 & 2457281.27 & 14.73 & 0.02 & g & CPT 1m \\
+2015-09-15 & 2457281.28 & 14.75 & 0.02 & g & CPT 1m \\
+2015-09-15 & 2457281.28 & 14.36 & 0.02 & r & CPT 1m \\
+2015-09-15 & 2457281.28 & 14.32 & 0.02 & r & CPT 1m \\
+2015-09-15 & 2457281.28 & 14.33 & 0.01 & i & CPT 1m \\
+2015-09-15 & 2457281.29 & 14.82 & 0.23 & U & CPT 1m \\
+2015-09-15 & 2457281.30 & 14.94 & 0.17 & U & CPT 1m \\
+2015-09-15 & 2457281.30 & 15.16 & 0.02 & B & CPT 1m \\
+2015-09-15 & 2457281.30 & 15.04 & 0.03 & B & CPT 1m \\
+2015-09-15 & 2457281.30 & 14.56 & 0.02 & V & CPT 1m \\
+2015-09-15 & 2457281.31 & 14.51 & 0.03 & V & CPT 1m \\
+2015-09-15 & 2457281.31 & 14.82 & 0.02 & g & CPT 1m \\
+2015-09-15 & 2457281.31 & 14.78 & 0.02 & g & CPT 1m \\
+2015-09-15 & 2457281.31 & 14.37 & 0.02 & r & CPT 1m \\
+2015-09-15 & 2457281.32 & 14.39 & 0.02 & r & CPT 1m \\
+2015-09-15 & 2457281.32 & 14.31 & 0.02 & i & CPT 1m \\
+2015-09-15 & 2457281.32 & 14.32 & 0.01 & i & CPT 1m \\
+2015-09-15 & 2457281.38 & 16.57 & 0.10 & uvw1 & Swift \\
+2015-09-15 & 2457281.38 & 15.35 & 0.07 & u & Swift \\
+2015-09-15 & 2457281.38 & 15.31 & 0.06 & b & Swift \\
+2015-09-15 & 2457281.39 & 17.88 & 0.14 & uvw2 & Swift \\
+2015-09-15 & 2457281.39 & 14.63 & 0.06 & v & Swift \\
+2015-09-15 & 2457281.39 & 17.70 & 0.17 & uvm2 & Swift \\
+2015-09-15 & 2457281.40 & 14.56 & 0.02 & V & CPT 1m \\
+2015-09-15 & 2457281.40 & 14.15 & 0.02 & R & CPT 1m \\
+2015-09-16 & 2457281.58 & 16.41 & 0.08 & uvw1 & Swift \\
+2015-09-16 & 2457281.58 & 15.26 & 0.06 & u & Swift \\
+2015-09-16 & 2457281.58 & 15.12 & 0.05 & b & Swift \\
+2015-09-16 & 2457281.58 & 17.47 & 0.11 & uvw2 & Swift \\
+2015-09-16 & 2457281.58 & 14.62 & 0.05 & v & Swift \\
+2015-09-16 & 2457281.59 & 17.66 & 0.11 & uvm2 & Swift \\
+2015-09-16 & 2457282.24 & 14.55 & 0.02 & V & CPT 1m \\
+2015-09-16 & 2457282.25 & 14.53 & 0.02 & V & CPT 1m \\
+2015-09-16 & 2457282.25 & 14.21 & 0.02 & R & CPT 1m \\
+2015-09-16 & 2457282.25 & 15.19 & 0.02 & B & CPT 1m \\
+2015-09-17 & 2457283.04 & 14.52 & 0.02 & V & COJ 1m \\
+2015-09-17 & 2457283.04 & 14.16 & 0.02 & R & COJ 1m \\
+2015-09-17 & 2457283.05 & 15.17 & 0.02 & B & COJ 1m \\
+2015-09-18 & 2457283.95 & 14.07 & 0.03 & R & COJ 2m \\
+2015-09-18 & 2457283.95 & 13.83 & 0.06 & I & COJ 2m \\
+2015-09-18 & 2457284.00 & 14.17 & 0.03 & R & COJ 1m \\
+2015-09-18 & 2457284.00 & 15.18 & 0.05 & B & COJ 1m \\
+2015-09-19 & 2457284.90 & 16.99 & 0.08 & uvw1 & Swift \\
+2015-09-19 & 2457284.90 & 15.69 & 0.06 & u & Swift \\
+2015-09-19 & 2457284.90 & 15.38 & 0.05 & b & Swift \\
+2015-09-19 & 2457284.90 & 18.09 & 0.10 & uvw2 & Swift \\
+2015-09-19 & 2457284.90 & 14.67 & 0.04 & v & Swift \\
+2015-09-19 & 2457284.90 & 18.39 & 0.10 & uvm2 & Swift \\
+2015-09-19 & 2457285.03 & 14.61 & 0.02 & V & COJ 1m \\
+2015-09-19 & 2457285.03 & 14.16 & 0.02 & R & COJ 1m \\
+2015-09-19 & 2457285.03 & 15.26 & 0.02 & B & COJ 1m \\
+2015-09-19 & 2457285.40 & 14.94 & 0.30 & U & CPT 1m \\
+2015-09-19 & 2457285.40 & 15.36 & 0.02 & B & CPT 1m \\
+2015-09-19 & 2457285.41 & 15.36 & 0.02 & B & CPT 1m \\
+2015-09-19 & 2457285.41 & 14.60 & 0.02 & V & CPT 1m \\
+2015-09-19 & 2457285.41 & 14.62 & 0.02 & V & CPT 1m \\
+2015-09-19 & 2457285.41 & 14.90 & 0.01 & g & CPT 1m \\
+2015-09-19 & 2457285.42 & 14.93 & 0.01 & g & CPT 1m \\
+2015-09-19 & 2457285.42 & 14.35 & 0.01 & r & CPT 1m \\
+2015-09-19 & 2457285.42 & 14.35 & 0.01 & r & CPT 1m \\
+2015-09-19 & 2457285.42 & 14.33 & 0.01 & i & CPT 1m \\
+2015-09-20 & 2457285.90 & 14.51 & 0.06 & V & COJ 2m \\
+2015-09-20 & 2457285.90 & 14.10 & 0.03 & R & COJ 2m \\
+2015-09-20 & 2457285.90 & 13.84 & 0.06 & I & COJ 2m \\
+2015-09-20 & 2457286.38 & 15.41 & 0.02 & B & CPT 1m \\
+2015-09-20 & 2457286.38 & 15.42 & 0.02 & B & CPT 1m \\
+2015-09-20 & 2457286.38 & 14.65 & 0.02 & V & CPT 1m \\
+2015-09-20 & 2457286.38 & 14.62 & 0.02 & V & CPT 1m \\
+2015-09-20 & 2457286.39 & 14.95 & 0.01 & g & CPT 1m \\
+2015-09-20 & 2457286.39 & 14.95 & 0.01 & g & CPT 1m \\
+2015-09-20 & 2457286.39 & 14.35 & 0.01 & r & CPT 1m \\
+2015-09-20 & 2457286.39 & 14.35 & 0.01 & r & CPT 1m \\
+2015-09-20 & 2457286.39 & 14.32 & 0.01 & i & CPT 1m \\
+2015-09-20 & 2457286.40 & 14.33 & 0.01 & i & CPT 1m \\
+2015-09-21 & 2457286.92 & 14.51 & 0.07 & V & COJ 2m \\
+2015-09-21 & 2457286.93 & 14.10 & 0.04 & R & COJ 2m \\
+2015-09-21 & 2457286.93 & 13.86 & 0.07 & I & COJ 2m \\
+2015-09-21 & 2457287.03 & 14.62 & 0.02 & V & COJ 1m \\
+2015-09-21 & 2457287.03 & 14.20 & 0.02 & R & COJ 1m \\
+2015-09-21 & 2457287.03 & 15.45 & 0.02 & B & COJ 1m \\
+2015-09-22 & 2457288.00 & 14.61 & 0.02 & V & COJ 1m \\
+2015-09-22 & 2457288.00 & 14.22 & 0.02 & R & COJ 1m \\
+2015-09-22 & 2457288.00 & 15.48 & 0.02 & B & COJ 1m \\
+2015-09-23 & 2457288.74 & 14.62 & 0.06 & V & OGG 2m \\
+2015-09-23 & 2457288.74 & 14.14 & 0.03 & R & OGG 2m \\
+2015-09-23 & 2457289.00 & 14.68 & 0.02 & V & COJ 1m \\
+2015-09-23 & 2457289.00 & 14.24 & 0.02 & R & COJ 1m \\
+2015-09-23 & 2457289.00 & 15.51 & 0.02 & B & COJ 1m \\
+2015-09-23 & 2457289.02 & 14.58 & 0.07 & V & COJ 2m \\
+2015-09-23 & 2457289.02 & 14.15 & 0.03 & R & COJ 2m \\
+2015-09-23 & 2457289.02 & 13.86 & 0.06 & I & COJ 2m \\
+2015-09-23 & 2457289.27 & 15.54 & 0.02 & B & CPT 1m \\
+2015-09-23 & 2457289.28 & 15.54 & 0.02 & B & CPT 1m \\
+2015-09-23 & 2457289.28 & 14.63 & 0.02 & V & CPT 1m \\
+2015-09-23 & 2457289.28 & 14.63 & 0.02 & V & CPT 1m \\
+2015-09-23 & 2457289.28 & 15.12 & 0.01 & g & CPT 1m \\
+2015-09-23 & 2457289.28 & 15.06 & 0.01 & g & CPT 1m \\
+2015-09-23 & 2457289.29 & 14.38 & 0.01 & r & CPT 1m \\
+2015-09-23 & 2457289.29 & 14.38 & 0.01 & r & CPT 1m \\
+2015-09-23 & 2457289.29 & 14.35 & 0.01 & i & CPT 1m \\
+2015-09-23 & 2457289.29 & 14.34 & 0.01 & i & CPT 1m \\
+2015-09-24 & 2457290.02 & 14.72 & 0.02 & V & COJ 1m \\
+2015-09-24 & 2457290.02 & 14.21 & 0.02 & R & COJ 1m \\
+2015-09-24 & 2457290.02 & 15.65 & 0.03 & B & COJ 1m \\
+2015-09-24 & 2457290.15 & 17.55 & 0.09 & uvw1 & Swift \\
+2015-09-24 & 2457290.15 & 16.30 & 0.06 & u & Swift \\
+2015-09-24 & 2457290.15 & 15.66 & 0.05 & b & Swift \\
+2015-09-24 & 2457290.15 & 18.66 & 0.12 & uvw2 & Swift \\
+2015-09-24 & 2457290.15 & 14.77 & 0.04 & v & Swift \\
+2015-09-24 & 2457290.16 & 19.00 & 0.12 & uvm2 & Swift \\
+2015-09-25 & 2457290.88 & 14.65 & 0.08 & V & COJ 2m \\
+2015-09-25 & 2457290.88 & 14.20 & 0.03 & R & COJ 2m \\
+2015-09-25 & 2457290.88 & 13.90 & 0.07 & I & COJ 2m \\
+2015-09-26 & 2457291.88 & 14.68 & 0.07 & V & COJ 2m \\
+2015-09-26 & 2457291.88 & 14.19 & 0.03 & R & COJ 2m \\
+2015-09-26 & 2457291.91 & 14.64 & 0.07 & V & COJ 2m \\
+2015-09-26 & 2457291.91 & 14.68 & 0.07 & V & COJ 2m \\
+2015-09-26 & 2457291.92 & 14.17 & 0.03 & R & COJ 2m \\
+2015-09-26 & 2457291.92 & 13.86 & 0.06 & I & COJ 2m \\
+2015-09-26 & 2457292.00 & 14.72 & 0.02 & V & COJ 1m \\
+2015-09-26 & 2457292.00 & 14.24 & 0.02 & R & COJ 1m \\
+2015-09-26 & 2457292.00 & 15.71 & 0.02 & B & COJ 1m \\
+2015-09-26 & 2457292.02 & 14.66 & 0.07 & V & COJ 2m \\
+2015-09-26 & 2457292.02 & 14.19 & 0.03 & R & COJ 2m \\
+2015-09-26 & 2457292.03 & 13.86 & 0.06 & I & COJ 2m \\
+2015-09-27 & 2457292.98 & 15.76 & 0.02 & B & COJ 1m \\
+2015-09-27 & 2457292.99 & 15.76 & 0.02 & B & COJ 1m \\
+2015-09-27 & 2457292.99 & 14.73 & 0.02 & V & COJ 1m \\
+2015-09-27 & 2457292.99 & 14.73 & 0.02 & V & COJ 1m \\
+2015-09-27 & 2457292.99 & 15.21 & 0.01 & g & COJ 1m \\
+2015-09-27 & 2457293.00 & 15.23 & 0.01 & g & COJ 1m \\
+2015-09-27 & 2457293.00 & 14.38 & 0.01 & r & COJ 1m \\
+2015-09-27 & 2457293.00 & 14.37 & 0.01 & r & COJ 1m \\
+2015-09-27 & 2457293.00 & 14.39 & 0.01 & i & COJ 1m \\
+2015-09-27 & 2457293.00 & 14.42 & 0.01 & i & COJ 1m \\
+2015-09-27 & 2457293.01 & 14.80 & 0.02 & V & COJ 1m \\
+2015-09-27 & 2457293.01 & 14.21 & 0.02 & R & COJ 1m \\
+2015-09-27 & 2457293.01 & 15.66 & 0.03 & B & COJ 1m \\
+2015-09-28 & 2457293.71 & 17.82 & 0.10 & uvw1 & Swift \\
+2015-09-28 & 2457293.71 & 16.65 & 0.07 & u & Swift \\
+2015-09-28 & 2457293.71 & 15.92 & 0.05 & b & Swift \\
+2015-09-28 & 2457293.72 & 18.93 & 0.13 & uvw2 & Swift \\
+2015-09-28 & 2457293.72 & 14.91 & 0.05 & v & Swift \\
+2015-09-28 & 2457293.72 & 19.32 & 0.14 & uvm2 & Swift \\
+2015-09-28 & 2457293.94 & 14.71 & 0.07 & V & COJ 2m \\
+2015-09-28 & 2457293.94 & 14.23 & 0.03 & R & COJ 2m \\
+2015-09-28 & 2457293.94 & 13.94 & 0.07 & I & COJ 2m \\
+2015-09-28 & 2457294.01 & 14.78 & 0.02 & V & COJ 1m \\
+2015-09-28 & 2457294.01 & 14.26 & 0.02 & R & COJ 1m \\
+2015-09-28 & 2457294.01 & 15.71 & 0.03 & B & COJ 1m \\
+2015-09-28 & 2457294.02 & 14.74 & 0.07 & V & COJ 2m \\
+2015-09-28 & 2457294.02 & 14.19 & 0.03 & R & COJ 2m \\
+2015-09-28 & 2457294.02 & 13.95 & 0.06 & I & COJ 2m \\
+2015-10-01 & 2457296.91 & 14.86 & 0.07 & V & COJ 2m \\
+2015-10-01 & 2457296.92 & 14.28 & 0.03 & R & COJ 2m \\
+2015-10-01 & 2457296.92 & 13.93 & 0.06 & I & COJ 2m \\
+2015-10-01 & 2457297.00 & 15.95 & 0.02 & B & COJ 1m \\
+2015-10-01 & 2457297.00 & 14.88 & 0.02 & V & COJ 1m \\
+2015-10-01 & 2457297.00 & 14.86 & 0.07 & V & COJ 2m \\
+2015-10-01 & 2457297.00 & 14.28 & 0.03 & R & COJ 2m \\
+2015-10-01 & 2457297.00 & 14.30 & 0.02 & R & COJ 1m \\
+2015-10-01 & 2457297.00 & 13.93 & 0.06 & I & COJ 2m \\
+2015-10-01 & 2457297.00 & 14.03 & 0.02 & I & COJ 1m \\
+2015-10-01 & 2457297.01 & 15.95 & 0.02 & B & COJ 1m \\
+2015-10-01 & 2457297.01 & 14.88 & 0.02 & V & COJ 1m \\
+2015-10-01 & 2457297.02 & 15.94 & 0.02 & B & COJ 1m \\
+2015-10-01 & 2457297.02 & 14.34 & 0.02 & R & COJ 1m \\
+2015-10-01 & 2457297.02 & 14.05 & 0.02 & I & COJ 1m \\
+2015-10-01 & 2457297.02 & 15.95 & 0.02 & B & COJ 1m \\
+2015-10-01 & 2457297.02 & 14.88 & 0.02 & V & COJ 1m \\
+2015-10-01 & 2457297.02 & 14.89 & 0.02 & V & COJ 1m \\
+2015-10-01 & 2457297.02 & 15.34 & 0.01 & g & COJ 1m \\
+2015-10-01 & 2457297.03 & 15.35 & 0.01 & g & COJ 1m \\
+2015-10-01 & 2457297.03 & 14.49 & 0.01 & r & COJ 1m \\
+2015-10-01 & 2457297.03 & 14.48 & 0.01 & r & COJ 1m \\
+2015-10-01 & 2457297.03 & 14.44 & 0.01 & i & COJ 1m \\
+2015-10-01 & 2457297.03 & 14.43 & 0.01 & i & COJ 1m \\
+2015-10-02 & 2457298.00 & 15.97 & 0.02 & B & COJ 1m \\
+2015-10-02 & 2457298.00 & 14.86 & 0.02 & V & COJ 1m \\
+2015-10-02 & 2457298.00 & 14.34 & 0.02 & R & COJ 1m \\
+2015-10-02 & 2457298.01 & 14.04 & 0.02 & I & COJ 1m \\
+2015-10-02 & 2457298.02 & 13.95 & 0.06 & I & COJ 2m \\
+2015-10-02 & 2457298.03 & 17.94 & 0.11 & uvw1 & Swift \\
+2015-10-02 & 2457298.04 & 16.98 & 0.08 & u & Swift \\
+2015-10-02 & 2457298.04 & 16.09 & 0.05 & b & Swift \\
+2015-10-02 & 2457298.04 & 19.12 & 0.16 & uvw2 & Swift \\
+2015-10-02 & 2457298.07 & 15.06 & 0.06 & v & Swift \\
+2015-10-02 & 2457298.07 & 19.62 & 0.28 & uvm2 & Swift \\
+2015-10-03 & 2457299.00 & 14.87 & 0.07 & V & COJ 2m \\
+2015-10-03 & 2457299.00 & 14.28 & 0.04 & R & COJ 2m \\
+2015-10-03 & 2457299.00 & 15.97 & 0.02 & B & COJ 1m \\
+2015-10-03 & 2457299.00 & 13.98 & 0.06 & I & COJ 2m \\
+2015-10-03 & 2457299.01 & 14.91 & 0.02 & V & COJ 1m \\
+2015-10-03 & 2457299.01 & 14.33 & 0.02 & R & COJ 1m \\
+2015-10-03 & 2457299.01 & 14.04 & 0.02 & I & COJ 1m \\
+2015-10-04 & 2457300.00 & 14.92 & 0.07 & V & COJ 2m \\
+2015-10-04 & 2457300.00 & 14.29 & 0.03 & R & COJ 2m \\
+2015-10-04 & 2457300.00 & 14.01 & 0.06 & I & COJ 2m \\
+2015-10-04 & 2457300.00 & 14.31 & 0.08 & R & COJ 1m \\
+2015-10-04 & 2457300.01 & 14.06 & 0.03 & I & COJ 1m \\
+2015-10-05 & 2457301.00 & 15.07 & 0.03 & V & COJ 1m \\
+2015-10-05 & 2457301.00 & 15.54 & 0.02 & g & COJ 1m \\
+2015-10-05 & 2457301.00 & 15.58 & 0.02 & g & COJ 1m \\
+2015-10-05 & 2457301.00 & 14.89 & 0.07 & V & COJ 2m \\
+2015-10-05 & 2457301.00 & 14.30 & 0.03 & R & COJ 2m \\
+2015-10-05 & 2457301.00 & 14.53 & 0.01 & r & COJ 1m \\
+2015-10-05 & 2457301.00 & 13.98 & 0.06 & I & COJ 2m \\
+2015-10-05 & 2457301.00 & 14.54 & 0.01 & r & COJ 1m \\
+2015-10-05 & 2457301.01 & 14.44 & 0.02 & i & COJ 1m \\
+2015-10-05 & 2457301.01 & 14.45 & 0.01 & i & COJ 1m \\
+2015-10-06 & 2457302.00 & 14.90 & 0.02 & V & COJ 1m \\
+2015-10-06 & 2457302.00 & 14.35 & 0.02 & R & COJ 1m \\
+2015-10-06 & 2457302.01 & 13.92 & 0.02 & I & COJ 1m \\
+2015-10-06 & 2457302.03 & 14.94 & 0.06 & V & COJ 2m \\
+2015-10-06 & 2457302.03 & 14.34 & 0.03 & R & COJ 2m \\
+2015-10-06 & 2457302.03 & 14.00 & 0.06 & I & COJ 2m \\
+2015-10-07 & 2457303.00 & 14.96 & 0.03 & V & COJ 1m \\
+2015-10-07 & 2457303.00 & 14.97 & 0.07 & V & COJ 2m \\
+2015-10-07 & 2457303.00 & 14.37 & 0.03 & R & COJ 2m \\
+2015-10-07 & 2457303.26 & 19.59 & 0.33 & uvw2 & Swift \\
+2015-10-07 & 2457303.26 & 15.06 & 0.07 & v & Swift \\
+2015-10-07 & 2457303.26 & 19.81 & 0.41 & uvm2 & Swift \\
+2015-10-07 & 2457303.29 & 18.33 & 0.16 & uvw1 & Swift \\
+2015-10-07 & 2457303.29 & 17.45 & 0.12 & u & Swift \\
+2015-10-07 & 2457303.29 & 16.21 & 0.07 & b & Swift \\
+2015-10-08 & 2457304.00 & 15.05 & 0.08 & V & COJ 2m \\
+2015-10-08 & 2457304.00 & 14.39 & 0.03 & R & COJ 2m \\
+2015-10-08 & 2457304.00 & 14.00 & 0.06 & I & COJ 2m \\
+2015-10-08 & 2457304.01 & 14.11 & 0.05 & I & COJ 1m \\
+2015-10-08 & 2457304.01 & 16.25 & 0.02 & B & COJ 1m \\
+2015-10-08 & 2457304.01 & 15.04 & 0.02 & V & COJ 1m \\
+2015-10-08 & 2457304.01 & 14.46 & 0.02 & R & COJ 1m \\
+2015-10-08 & 2457304.01 & 14.10 & 0.02 & I & COJ 1m \\
+2015-10-09 & 2457305.00 & 15.01 & 0.06 & V & COJ 2m \\
+2015-10-09 & 2457305.00 & 16.19 & 0.02 & B & COJ 1m \\
+2015-10-09 & 2457305.00 & 14.35 & 0.03 & R & COJ 2m \\
+2015-10-09 & 2457305.00 & 14.03 & 0.06 & I & COJ 2m \\
+2015-10-09 & 2457305.00 & 15.05 & 0.02 & V & COJ 1m \\
+2015-10-09 & 2457305.01 & 14.43 & 0.02 & R & COJ 1m \\
+2015-10-10 & 2457306.00 & 16.28 & 0.02 & B & COJ 1m \\
+2015-10-10 & 2457306.00 & 15.07 & 0.02 & V & COJ 1m \\
+2015-10-10 & 2457306.02 & 15.12 & 0.06 & V & COJ 2m \\
+2015-10-10 & 2457306.02 & 14.42 & 0.03 & R & COJ 2m \\
+2015-10-10 & 2457306.02 & 14.04 & 0.06 & I & COJ 2m \\
+2015-10-11 & 2457307.00 & 15.08 & 0.07 & V & COJ 2m \\
+2015-10-11 & 2457307.00 & 14.42 & 0.03 & R & COJ 2m \\
+2015-10-11 & 2457307.00 & 14.05 & 0.06 & I & COJ 2m \\
+2015-10-11 & 2457307.01 & 16.41 & 0.02 & B & COJ 1m \\
+2015-10-11 & 2457307.02 & 14.00 & 0.02 & I & COJ 1m \\
+2015-10-12 & 2457308.37 & 16.37 & 0.03 & B & CPT 1m \\
+2015-10-12 & 2457308.37 & 15.08 & 0.02 & V & CPT 1m \\
+2015-10-12 & 2457308.38 & 14.49 & 0.02 & R & CPT 1m \\
+2015-10-13 & 2457308.89 & 15.13 & 0.07 & V & COJ 2m \\
+2015-10-13 & 2457308.89 & 14.46 & 0.03 & R & COJ 2m \\
+2015-10-13 & 2457308.89 & 14.10 & 0.06 & I & COJ 2m \\
+2015-10-14 & 2457309.89 & 15.16 & 0.07 & V & COJ 2m \\
+2015-10-14 & 2457309.89 & 14.49 & 0.03 & R & COJ 2m \\
+2015-10-14 & 2457309.89 & 14.13 & 0.06 & I & COJ 2m \\
+2015-10-14 & 2457309.99 & 16.51 & 0.02 & B & COJ 1m \\
+2015-10-14 & 2457310.00 & 15.17 & 0.02 & V & COJ 1m \\
+2015-10-14 & 2457310.00 & 15.16 & 0.02 & V & COJ 1m \\
+2015-10-14 & 2457310.00 & 15.76 & 0.01 & g & COJ 1m \\
+2015-10-14 & 2457310.01 & 14.69 & 0.01 & r & COJ 1m \\
+2015-10-14 & 2457310.01 & 14.61 & 0.01 & i & COJ 1m \\
+2015-10-14 & 2457310.02 & 15.17 & 0.07 & V & COJ 2m \\
+2015-10-14 & 2457310.02 & 14.50 & 0.03 & R & COJ 2m \\
+2015-10-14 & 2457310.02 & 14.08 & 0.08 & I & COJ 2m \\
+2015-10-15 & 2457311.00 & 15.21 & 0.08 & V & COJ 2m \\
+2015-10-15 & 2457311.01 & 14.46 & 0.04 & R & COJ 2m \\
+2015-10-15 & 2457311.01 & 14.16 & 0.07 & I & COJ 2m \\
+2015-10-16 & 2457311.98 & 16.48 & 0.02 & B & COJ 1m \\
+2015-10-16 & 2457311.98 & 15.21 & 0.02 & V & COJ 1m \\
+2015-10-16 & 2457311.99 & 14.52 & 0.02 & R & COJ 1m \\
+2015-10-16 & 2457311.99 & 14.22 & 0.02 & I & COJ 1m \\
+2015-10-16 & 2457312.00 & 15.18 & 0.06 & V & COJ 2m \\
+2015-10-16 & 2457312.01 & 14.47 & 0.03 & R & COJ 2m \\
+2015-10-16 & 2457312.01 & 14.08 & 0.06 & I & COJ 2m \\
+2015-10-21 & 2457317.33 & 16.66 & 0.03 & B & CPT 1m \\
+2015-10-21 & 2457317.33 & 16.62 & 0.03 & B & CPT 1m \\
+2015-10-21 & 2457317.34 & 15.30 & 0.02 & V & CPT 1m \\
+2015-10-21 & 2457317.34 & 15.30 & 0.02 & V & CPT 1m \\
+2015-10-21 & 2457317.34 & 15.94 & 0.01 & g & CPT 1m \\
+2015-10-21 & 2457317.34 & 15.93 & 0.01 & g & CPT 1m \\
+2015-10-21 & 2457317.35 & 14.82 & 0.01 & r & CPT 1m \\
+2015-10-21 & 2457317.35 & 14.80 & 0.01 & r & CPT 1m \\
+2015-10-21 & 2457317.35 & 14.71 & 0.01 & i & CPT 1m \\
+2015-10-21 & 2457317.35 & 14.74 & 0.01 & i & CPT 1m \\
+2015-10-22 & 2457317.56 & 16.70 & 0.03 & B & LSC 1m \\
+2015-10-22 & 2457317.56 & 16.72 & 0.03 & B & LSC 1m \\
+2015-10-22 & 2457317.56 & 15.35 & 0.02 & V & LSC 1m \\
+2015-10-22 & 2457317.57 & 15.34 & 0.02 & V & LSC 1m \\
+2015-10-22 & 2457317.57 & 15.98 & 0.01 & g & LSC 1m \\
+2015-10-22 & 2457317.57 & 15.99 & 0.01 & g & LSC 1m \\
+2015-10-22 & 2457317.57 & 14.82 & 0.01 & r & LSC 1m \\
+2015-10-22 & 2457317.57 & 14.81 & 0.01 & r & LSC 1m \\
+2015-10-25 & 2457321.29 & 16.66 & 0.02 & B & CPT 1m \\
+2015-10-25 & 2457321.29 & 16.65 & 0.02 & B & CPT 1m \\
+2015-10-25 & 2457321.30 & 15.37 & 0.02 & V & CPT 1m \\
+2015-10-25 & 2457321.30 & 15.37 & 0.02 & V & CPT 1m \\
+2015-10-25 & 2457321.30 & 16.01 & 0.01 & g & CPT 1m \\
+2015-10-25 & 2457321.30 & 15.99 & 0.01 & g & CPT 1m \\
+2015-10-25 & 2457321.31 & 14.80 & 0.01 & r & CPT 1m \\
+2015-10-25 & 2457321.31 & 14.82 & 0.01 & r & CPT 1m \\
+2015-10-25 & 2457321.31 & 14.74 & 0.01 & i & CPT 1m \\
+2015-10-26 & 2457321.55 & 16.65 & 0.10 & B & LSC 1m \\
+2015-10-26 & 2457321.56 & 15.41 & 0.03 & V & LSC 1m \\
+2015-10-26 & 2457321.56 & 15.35 & 0.03 & V & LSC 1m \\
+2015-10-26 & 2457321.56 & 14.85 & 0.02 & r & LSC 1m \\
+2015-10-26 & 2457321.57 & 14.74 & 0.03 & i & LSC 1m \\
+2015-10-30 & 2457325.55 & 16.82 & 0.02 & B & LSC 1m \\
+2015-10-30 & 2457325.55 & 16.80 & 0.02 & B & LSC 1m \\
+2015-10-30 & 2457325.56 & 15.51 & 0.02 & V & LSC 1m \\
+2015-10-30 & 2457325.56 & 15.50 & 0.02 & V & LSC 1m \\
+2015-10-30 & 2457325.56 & 16.10 & 0.01 & g & LSC 1m \\
+2015-10-30 & 2457325.56 & 16.10 & 0.01 & g & LSC 1m \\
+2015-10-30 & 2457325.57 & 14.90 & 0.01 & r & LSC 1m \\
+2015-10-30 & 2457325.57 & 14.88 & 0.01 & r & LSC 1m \\
+2015-10-30 & 2457325.57 & 14.84 & 0.01 & i & LSC 1m \\
+2015-10-30 & 2457325.57 & 14.84 & 0.01 & i & LSC 1m \\
+2015-11-01 & 2457327.52 & 16.91 & 0.02 & B & LSC 1m \\
+2015-11-01 & 2457327.52 & 16.89 & 0.02 & B & LSC 1m \\
+2015-11-01 & 2457327.52 & 15.54 & 0.02 & V & LSC 1m \\
+2015-11-01 & 2457327.52 & 15.53 & 0.02 & V & LSC 1m \\
+2015-11-01 & 2457327.53 & 16.89 & 0.02 & g & LSC 1m \\
+2015-11-01 & 2457327.53 & 14.93 & 0.01 & r & LSC 1m \\
+2015-11-01 & 2457327.53 & 14.94 & 0.01 & r & LSC 1m \\
+2015-11-01 & 2457327.54 & 14.89 & 0.01 & i & LSC 1m \\
+2015-11-03 & 2457329.52 & 15.63 & 0.09 & v & Swift \\
+2015-11-03 & 2457329.52 & 20.03 & 0.40 & uvm2 & Swift \\
+2015-11-03 & 2457329.61 & 18.99 & 0.21 & uvw1 & Swift \\
+2015-11-03 & 2457329.61 & 18.54 & 0.26 & u & Swift \\
+2015-11-03 & 2457329.61 & 16.98 & 0.09 & b & Swift \\
+2015-11-03 & 2457329.61 & 20.98 & 0.93 & uvw2 & Swift \\
+2015-11-04 & 2457331.29 & 16.95 & 0.02 & B & CPT 1m \\
+2015-11-04 & 2457331.30 & 16.93 & 0.03 & B & CPT 1m \\
+2015-11-04 & 2457331.30 & 15.53 & 0.02 & V & CPT 1m \\
+2015-11-04 & 2457331.30 & 15.59 & 0.02 & V & CPT 1m \\
+2015-11-04 & 2457331.30 & 16.22 & 0.01 & g & CPT 1m \\
+2015-11-04 & 2457331.31 & 16.28 & 0.01 & g & CPT 1m \\
+2015-11-04 & 2457331.31 & 15.01 & 0.01 & r & CPT 1m \\
+2015-11-04 & 2457331.31 & 15.01 & 0.01 & r & CPT 1m \\
+2015-11-04 & 2457331.31 & 14.94 & 0.01 & i & CPT 1m \\
+2015-11-04 & 2457331.31 & 14.97 & 0.01 & i & CPT 1m \\
+2015-11-06 & 2457333.01 & 19.13 & 0.23 & uvw1 & Swift \\
+2015-11-06 & 2457333.01 & 18.58 & 0.23 & u & Swift \\
+2015-11-06 & 2457333.01 & 17.07 & 0.07 & b & Swift \\
+2015-11-06 & 2457333.01 & 20.37 & 0.38 & uvw2 & Swift \\
+2015-11-06 & 2457333.01 & 15.77 & 0.07 & v & Swift \\
+2015-11-06 & 2457333.02 & 20.39 & 0.32 & uvm2 & Swift \\
+2015-11-09 & 2457335.90 & 16.99 & 0.03 & B & COJ 1m \\
+2015-11-09 & 2457335.90 & 16.99 & 0.03 & B & COJ 1m \\
+2015-11-09 & 2457335.91 & 15.66 & 0.02 & V & COJ 1m \\
+2015-11-09 & 2457335.91 & 15.67 & 0.02 & V & COJ 1m \\
+2015-11-09 & 2457335.91 & 16.34 & 0.01 & g & COJ 1m \\
+2015-11-09 & 2457335.91 & 16.35 & 0.01 & g & COJ 1m \\
+2015-11-09 & 2457335.92 & 14.99 & 0.01 & r & COJ 1m \\
+2015-11-09 & 2457335.92 & 15.00 & 0.01 & r & COJ 1m \\
+2015-11-10 & 2457336.92 & 16.97 & 0.02 & B & COJ 1m \\
+2015-11-10 & 2457336.92 & 17.02 & 0.03 & B & COJ 1m \\
+2015-11-10 & 2457336.93 & 15.68 & 0.02 & V & COJ 1m \\
+2015-11-10 & 2457336.93 & 15.64 & 0.02 & V & COJ 1m \\
+2015-11-10 & 2457336.93 & 16.31 & 0.01 & g & COJ 1m \\
+2015-11-10 & 2457336.93 & 16.32 & 0.01 & g & COJ 1m \\
+2015-11-10 & 2457336.94 & 15.01 & 0.01 & r & COJ 1m \\
+2015-11-10 & 2457336.94 & 15.04 & 0.01 & r & COJ 1m \\
+2015-11-10 & 2457336.94 & 15.01 & 0.01 & i & COJ 1m \\
+2015-11-10 & 2457336.94 & 15.02 & 0.01 & i & COJ 1m \\
+2015-11-13 & 2457339.51 & 17.14 & 0.03 & B & LSC 1m \\
+2015-11-13 & 2457339.52 & 17.12 & 0.03 & B & LSC 1m \\
+2015-11-13 & 2457339.52 & 15.79 & 0.02 & V & LSC 1m \\
+2015-11-13 & 2457339.52 & 15.73 & 0.02 & V & LSC 1m \\
+2015-11-13 & 2457339.52 & 16.42 & 0.01 & g & LSC 1m \\
+2015-11-13 & 2457339.52 & 16.37 & 0.01 & g & LSC 1m \\
+2015-11-13 & 2457339.53 & 15.03 & 0.01 & r & LSC 1m \\
+2015-11-13 & 2457339.53 & 15.05 & 0.01 & r & LSC 1m \\
+2015-11-14 & 2457340.52 & 17.08 & 0.03 & B & LSC 1m \\
+2015-11-14 & 2457340.53 & 15.78 & 0.02 & V & LSC 1m \\
+2015-11-14 & 2457340.53 & 15.79 & 0.02 & V & LSC 1m \\
+2015-11-17 & 2457344.27 & 16.49 & 0.01 & g & CPT 1m \\
+2015-11-17 & 2457344.27 & 16.50 & 0.02 & g & CPT 1m \\
+2015-11-17 & 2457344.27 & 17.19 & 0.03 & B & CPT 1m \\
+2015-11-17 & 2457344.27 & 15.12 & 0.01 & r & CPT 1m \\
+2015-11-17 & 2457344.27 & 17.20 & 0.04 & B & CPT 1m \\
+2015-11-17 & 2457344.27 & 15.14 & 0.01 & r & CPT 1m \\
+2015-11-17 & 2457344.28 & 15.16 & 0.01 & i & CPT 1m \\
+2015-11-17 & 2457344.28 & 15.80 & 0.02 & V & CPT 1m \\
+2015-11-17 & 2457344.28 & 15.16 & 0.01 & i & CPT 1m \\
+2015-11-17 & 2457344.28 & 15.81 & 0.02 & V & CPT 1m \\
+2015-11-18 & 2457345.04 & 19.58 & 0.35 & uvw1 & Swift \\
+2015-11-18 & 2457345.04 & 20.10 & 0.95 & u & Swift \\
+2015-11-18 & 2457345.04 & 17.24 & 0.08 & b & Swift \\
+2015-11-18 & 2457345.04 & 19.95 & 0.29 & uvw2 & Swift \\
+2015-11-18 & 2457345.05 & 16.03 & 0.07 & v & Swift \\
+2015-11-18 & 2457345.05 & 20.26 & 0.30 & uvm2 & Swift \\
+2015-11-22 & 2457348.91 & 17.27 & 0.06 & B & COJ 1m \\
+2015-11-22 & 2457348.91 & 17.18 & 0.05 & B & COJ 1m \\
+2016-02-27 & 2457446.27 & 19.68 & 0.20 & g & COJ 1m \\
+2016-02-27 & 2457446.27 & 17.54 & 0.04 & r & COJ 1m \\
+2016-02-27 & 2457446.27 & 18.22 & 0.14 & i & COJ 1m \\
+2016-02-27 & 2457446.28 & 17.82 & 0.09 & i & COJ 1m \\
+2016-02-27 & 2457446.28 & 18.56 & 0.13 & V & COJ 1m \\
+2016-02-27 & 2457446.28 & 18.68 & 0.14 & V & COJ 1m \\
+2016-02-29 & 2457447.62 & 19.51 & 0.21 & g & CPT 1m \\
+2016-02-29 & 2457447.62 & 19.27 & 0.12 & g & CPT 1m \\
+2016-02-29 & 2457447.62 & 17.64 & 0.03 & r & CPT 1m \\
+2016-02-29 & 2457447.62 & 17.60 & 0.04 & r & CPT 1m \\
+2016-02-29 & 2457447.62 & 17.88 & 0.06 & i & CPT 1m \\
+2016-02-29 & 2457447.63 & 17.97 & 0.08 & i & CPT 1m \\
+2016-02-29 & 2457447.63 & 18.91 & 0.15 & V & CPT 1m \\
+2016-03-03 & 2457451.27 & 19.78 & 0.30 & B & COJ 1m \\
+2016-03-03 & 2457451.27 & 18.82 & 0.10 & V & COJ 1m \\
+2016-03-03 & 2457451.27 & 18.78 & 0.10 & V & COJ 1m \\
+2016-03-04 & 2457451.61 & 17.70 & 0.07 & r & CPT 1m \\
+2016-03-04 & 2457451.61 & 19.19 & 0.27 & V & CPT 1m \\
+2016-03-04 & 2457451.62 & 18.05 & 0.14 & i & CPT 1m \\
+2016-03-08 & 2457455.88 & 20.18 & 0.18 & B & LSC 1m \\
+2016-03-08 & 2457455.88 & 20.13 & 0.18 & B & LSC 1m \\
+2016-03-08 & 2457455.88 & 18.94 & 0.07 & V & LSC 1m \\
+2016-03-08 & 2457455.89 & 18.93 & 0.07 & V & LSC 1m \\
+2016-03-08 & 2457455.89 & 19.60 & 0.07 & g & LSC 1m \\
+2016-03-08 & 2457455.89 & 19.42 & 0.06 & g & LSC 1m \\
+2016-03-08 & 2457455.89 & 17.80 & 0.04 & r & LSC 1m \\
+2016-03-08 & 2457455.90 & 17.78 & 0.04 & r & LSC 1m \\
+2016-03-08 & 2457455.90 & 18.10 & 0.06 & i & LSC 1m \\
+2016-03-08 & 2457455.90 & 18.20 & 0.07 & i & LSC 1m \\
+2016-03-09 & 2457456.87 & 20.09 & 0.06 & B & LSC 1m \\
+2016-03-09 & 2457456.88 & 20.25 & 0.06 & B & LSC 1m \\
+2016-03-09 & 2457456.88 & 19.02 & 0.03 & V & LSC 1m \\
+2016-03-09 & 2457456.88 & 18.94 & 0.03 & V & LSC 1m \\
+2016-03-09 & 2457456.88 & 19.57 & 0.03 & g & LSC 1m \\
+2016-03-09 & 2457456.89 & 19.64 & 0.03 & g & LSC 1m \\
+2016-03-09 & 2457456.89 & 17.67 & 0.01 & r & LSC 1m \\
+2016-03-09 & 2457456.89 & 17.67 & 0.01 & r & LSC 1m \\
+2016-03-09 & 2457456.90 & 18.11 & 0.02 & i & LSC 1m \\
+2016-03-21 & 2457468.86 & 20.24 & 0.11 & B & LSC 1m \\
+2016-03-21 & 2457468.87 & 19.23 & 0.05 & V & LSC 1m \\
+2016-03-21 & 2457468.87 & 19.29 & 0.05 & V & LSC 1m \\
+2016-03-21 & 2457468.87 & 19.80 & 0.04 & g & LSC 1m \\
+2016-03-21 & 2457468.88 & 19.83 & 0.05 & g & LSC 1m \\
+2016-03-21 & 2457468.88 & 17.88 & 0.02 & r & LSC 1m \\
+2016-03-21 & 2457468.88 & 17.88 & 0.02 & r & LSC 1m \\
+2016-03-21 & 2457468.89 & 18.29 & 0.04 & i & LSC 1m \\
+2016-03-21 & 2457468.89 & 18.33 & 0.03 & i & LSC 1m \\
+2016-04-02 & 2457480.78 & 20.59 & 0.15 & B & LSC 1m \\
+2016-04-02 & 2457480.79 & 20.38 & 0.12 & B & LSC 1m \\
+2016-04-02 & 2457480.79 & 19.39 & 0.06 & V & LSC 1m \\
+2016-04-02 & 2457480.79 & 19.37 & 0.06 & V & LSC 1m \\
+2016-04-02 & 2457480.80 & 19.80 & 0.05 & g & LSC 1m \\
+2016-04-02 & 2457480.80 & 19.90 & 0.06 & g & LSC 1m \\
+2016-04-02 & 2457480.81 & 18.05 & 0.02 & r & LSC 1m \\
+2016-04-02 & 2457480.81 & 18.11 & 0.02 & r & LSC 1m \\
+2016-04-02 & 2457480.82 & 18.51 & 0.04 & i & LSC 1m \\
+2016-04-02 & 2457480.82 & 18.51 & 0.04 & i & LSC 1m \\
+2016-04-13 & 2457491.85 & 20.40 & 0.08 & B & LSC 1m \\
+2016-04-13 & 2457491.86 & 20.76 & 0.08 & B & LSC 1m \\
+2016-04-13 & 2457491.86 & 19.49 & 0.04 & V & LSC 1m \\
+2016-04-13 & 2457491.87 & 19.47 & 0.05 & V & LSC 1m \\
+2016-04-13 & 2457491.87 & 20.25 & 0.04 & g & LSC 1m \\
+2016-04-13 & 2457491.88 & 20.18 & 0.04 & g & LSC 1m \\
+2016-04-13 & 2457491.88 & 18.29 & 0.02 & r & LSC 1m \\
+2016-04-13 & 2457491.88 & 18.28 & 0.02 & r & LSC 1m \\
+2016-04-13 & 2457491.89 & 18.74 & 0.03 & i & LSC 1m \\
+2016-04-13 & 2457491.89 & 18.67 & 0.03 & i & LSC 1m \\
+2016-04-16 & 2457494.88 & 20.96 & 0.09 & B & LSC 1m \\
+2016-04-16 & 2457494.88 & 20.84 & 0.08 & B & LSC 1m \\
+2016-04-16 & 2457494.89 & 19.57 & 0.03 & V & LSC 1m \\
+2016-04-16 & 2457494.89 & 19.68 & 0.04 & V & LSC 1m \\
+2016-04-16 & 2457494.89 & 20.13 & 0.03 & g & LSC 1m \\
+2016-04-16 & 2457494.90 & 20.16 & 0.03 & g & LSC 1m \\
+2016-04-16 & 2457494.90 & 18.47 & 0.02 & r & LSC 1m \\
+2016-04-16 & 2457494.91 & 18.49 & 0.02 & r & LSC 1m \\
+2016-04-16 & 2457494.91 & 18.77 & 0.02 & i & LSC 1m \\
+2016-04-16 & 2457494.92 & 18.81 & 0.03 & i & LSC 1m \\
+2016-04-27 & 2457505.73 & 20.84 & 0.24 & B & LSC 1m \\
+2016-04-27 & 2457505.74 & 20.70 & 0.18 & B & LSC 1m \\
+2016-04-27 & 2457505.74 & 19.99 & 0.12 & V & LSC 1m \\
+2016-04-27 & 2457505.75 & 19.90 & 0.09 & V & LSC 1m \\
+2016-04-27 & 2457505.75 & 20.41 & 0.14 & g & LSC 1m \\
+2016-04-27 & 2457505.76 & 20.51 & 0.15 & g & LSC 1m \\
+2016-04-27 & 2457505.76 & 18.52 & 0.03 & r & LSC 1m \\
+2016-04-27 & 2457505.76 & 18.43 & 0.04 & r & LSC 1m \\
+2016-04-27 & 2457505.77 & 19.24 & 0.09 & i & LSC 1m \\
+2016-04-27 & 2457505.77 & 19.02 & 0.09 & i & LSC 1m \\
+2016-05-14 & 2457522.69 & 20.88 & 0.16 & B & LSC 1m \\
+2016-05-14 & 2457522.69 & 20.14 & 0.16 & V & LSC 1m \\
+2016-05-14 & 2457522.70 & 20.07 & 0.10 & V & LSC 1m \\
+2016-05-14 & 2457522.70 & 20.33 & 0.08 & g & LSC 1m \\
+2016-05-14 & 2457522.71 & 20.36 & 0.06 & g & LSC 1m \\
+2016-05-14 & 2457522.71 & 18.64 & 0.03 & r & LSC 1m \\
+2016-05-14 & 2457522.72 & 18.67 & 0.02 & r & LSC 1m \\
+2016-05-14 & 2457522.72 & 19.27 & 0.05 & i & LSC 1m \\
+2016-05-14 & 2457522.72 & 19.19 & 0.04 & i & LSC 1m \\
+2016-06-09 & 2457548.82 & 21.60 & 0.19 & B & LSC 1m \\
+2016-06-09 & 2457548.83 & 21.50 & 0.15 & B & LSC 1m \\
+2016-06-09 & 2457548.83 & 20.48 & 0.08 & V & LSC 1m \\
+2016-06-09 & 2457548.84 & 20.33 & 0.13 & V & LSC 1m \\
+2016-06-10 & 2457549.86 & 21.75 & 0.15 & B & LSC 1m \\
+2016-06-10 & 2457549.86 & 21.80 & 0.20 & B & LSC 1m \\
+2016-06-10 & 2457549.87 & 20.38 & 0.08 & V & LSC 1m \\
+2016-06-10 & 2457549.87 & 20.40 & 0.06 & V & LSC 1m \\
+2016-06-10 & 2457549.88 & 20.71 & 0.05 & g & LSC 1m \\
+2016-06-10 & 2457549.88 & 20.72 & 0.05 & g & LSC 1m \\
+2016-06-10 & 2457549.89 & 18.99 & 0.02 & r & LSC 1m \\
+2016-06-10 & 2457549.89 & 19.00 & 0.02 & r & LSC 1m \\
+2016-06-10 & 2457549.89 & 19.40 & 0.05 & i & LSC 1m \\
+2016-06-10 & 2457549.90 & 19.46 & 0.04 & i & LSC 1m \\
+2016-07-06 & 2457575.78 & 21.03 & 0.16 & V & LSC 1m \\
+2016-07-06 & 2457575.79 & 20.75 & 0.09 & V & LSC 1m \\
+2016-07-06 & 2457575.79 & 21.20 & 0.08 & g & LSC 1m \\
+2016-07-06 & 2457575.79 & 21.31 & 0.08 & g & LSC 1m \\
+2016-07-06 & 2457575.80 & 19.49 & 0.02 & r & LSC 1m \\
+2016-07-06 & 2457575.80 & 19.47 & 0.03 & r & LSC 1m \\
+2016-07-06 & 2457575.81 & 19.90 & 0.07 & i & LSC 1m \\
+2016-07-06 & 2457575.81 & 19.75 & 0.06 & i & LSC 1m \\
+2016-08-01 & 2457601.79 & 20.93 & 0.21 & V & LSC 1m \\
+2016-08-01 & 2457601.80 & 21.11 & 0.16 & V & LSC 1m \\
+2016-08-01 & 2457601.80 & 21.58 & 0.12 & g & LSC 1m \\
+2016-08-01 & 2457601.81 & 21.39 & 0.11 & g & LSC 1m \\
+2016-08-01 & 2457601.81 & 19.74 & 0.04 & r & LSC 1m \\
+2016-08-01 & 2457601.81 & 19.81 & 0.05 & r & LSC 1m \\
+2016-08-01 & 2457601.82 & 19.85 & 0.08 & i & LSC 1m \\
+2016-08-01 & 2457601.82 & 20.02 & 0.10 & i & LSC 1m \\
+2016-08-27 & 2457628.29 & 21.69 & 0.21 & V & CPT 1m \\
+2016-08-27 & 2457628.29 & 21.26 & 0.17 & V & CPT 1m \\
+2016-08-27 & 2457628.30 & 21.36 & 0.08 & g & CPT 1m \\
+2016-08-27 & 2457628.30 & 21.37 & 0.10 & g & CPT 1m \\
+2016-08-27 & 2457628.31 & 20.33 & 0.06 & r & CPT 1m \\
+2016-08-27 & 2457628.31 & 20.33 & 0.05 & r & CPT 1m \\
+2016-08-27 & 2457628.31 & 20.47 & 0.07 & i & CPT 1m \\
+2016-08-27 & 2457628.32 & 20.33 & 0.08 & i & CPT 1m \\
+2016-09-23 & 2457655.04 & 22.31 & 0.34 & V & COJ 1m \\
+2016-09-23 & 2457655.04 & 21.80 & 0.26 & V & COJ 1m \\
+2016-09-23 & 2457655.05 & 22.15 & 0.18 & g & COJ 1m \\
+2016-09-23 & 2457655.05 & 22.05 & 0.16 & g & COJ 1m \\
+2016-09-23 & 2457655.06 & 20.45 & 0.06 & r & COJ 1m \\
+2016-09-23 & 2457655.06 & 20.58 & 0.07 & r & COJ 1m \\
+2016-09-23 & 2457655.06 & 20.86 & 0.12 & i & COJ 1m \\
+2016-09-23 & 2457655.07 & 20.80 & 0.12 & i & COJ 1m \\
+2016-09-26 & 2457658.03 & 22.28 & 0.51 & V & COJ 1m \\
+2016-09-26 & 2457658.03 & 21.55 & 0.25 & V & COJ 1m \\
+2016-09-26 & 2457658.04 & 21.64 & 0.19 & g & COJ 1m \\
+2016-09-26 & 2457658.04 & 21.38 & 0.15 & g & COJ 1m \\
+2016-09-26 & 2457658.05 & 20.54 & 0.11 & r & COJ 1m \\
+2016-09-26 & 2457658.06 & 20.58 & 0.18 & i & COJ 1m \\
+2016-09-26 & 2457658.06 & 20.51 & 0.17 & i & COJ 1m \\
+2016-09-27 & 2457658.98 & 21.74 & 0.33 & V & COJ 1m \\
+2016-09-27 & 2457658.99 & 20.44 & 0.12 & V & COJ 1m \\
+2016-09-27 & 2457659.01 & 20.21 & 0.09 & r & COJ 1m \\
+2016-09-29 & 2457661.36 & 21.43 & 0.32 & V & CPT 1m \\
+2016-09-29 & 2457661.36 & 21.65 & 0.26 & V & CPT 1m \\
+2016-09-29 & 2457661.37 & 22.32 & 0.24 & g & CPT 1m \\
+2016-09-29 & 2457661.37 & 22.22 & 0.55 & g & CPT 1m \\
+2016-09-29 & 2457661.38 & 20.75 & 0.15 & r & CPT 1m \\
+2016-09-29 & 2457661.38 & 20.63 & 0.09 & r & CPT 1m \\
+2016-09-29 & 2457661.39 & 20.92 & 0.23 & i & CPT 1m \\
+2016-09-29 & 2457661.39 & 20.68 & 0.15 & i & CPT 1m \\
+2016-10-01 & 2457663.37 & 20.94 & 0.21 & V & CPT 1m \\
+2016-10-01 & 2457663.37 & 21.41 & 0.30 & V & CPT 1m \\
+2016-10-02 & 2457663.62 & 22.15 & 0.25 & V & LSC 1m \\
+2016-10-02 & 2457663.62 & 21.79 & 0.20 & V & LSC 1m \\
+2016-10-02 & 2457663.63 & 22.22 & 0.19 & g & LSC 1m \\
+2016-10-02 & 2457663.63 & 22.41 & 0.24 & g & LSC 1m \\
+2016-10-02 & 2457663.64 & 20.74 & 0.10 & r & LSC 1m \\
+2016-10-02 & 2457663.64 & 20.78 & 0.09 & r & LSC 1m \\
+2016-10-02 & 2457663.65 & 21.37 & 0.29 & i & LSC 1m \\
+2016-10-02 & 2457663.65 & 20.84 & 0.15 & i & LSC 1m \\
+2017-09-17 & 2458014.40 & 21.77 & 1.06 & uvw2 & Swift \\
+2017-09-17 & 2458014.41 & 21.37 & 0.98 & uvw2 & Swift \\
+2017-09-20 & 2458017.16 & 21.39 & 0.67 & u & Swift \\
+2017-09-20 & 2458017.17 & 21.50 & 1.00 & uvw2 & Swift \\\enddata 
+\tablecomments{} 
+\end{deluxetable}
 
 \facility{}
 \software{Astropy}
