@@ -41,7 +41,7 @@ spectrum_filelist = ['asassn15oz_20150904_redblu_122216.314.fits', #0
                      'tASAS-SN_15oz_20151118_Gr13_Free_slit1.0_57723_1_e.fits'] #13
 
 for iline in line_list.keys():
-    with PdfPages(os.path.join(FIG_DIR, '{}_analysis.pdf'.format(iline))) as pdf:
+    with PdfPages(os.path.join(FIG_DIR, 'test_{}_analysis.pdf'.format(iline))) as pdf:
         print('***************** Now Fitting {} *****************'.format(iline))
         line_table = Table(names=['line', 'date'], dtype=('S15', 'S25'))
         for component in range(line_list[iline]['num_components']):
@@ -73,7 +73,41 @@ for iline in line_list.keys():
             line_table.add_row(irow)
             pdf.savefig(fig)
             plt.close()
-    
+
+for iline in line_list.keys():
+    with PdfPages(os.path.join(FIG_DIR, 'test2{}_analysis.pdf'.format(iline))) as pdf:
+        print('***************** Now Fitting {} *****************'.format(iline))
+        line_table = Table(names=['line', 'date'], dtype=('S15', 'S25'))
+        for component in range(line_list[iline]['num_components']):
+            line_table.add_column(Column(name='vel{}'.format(component), dtype='f8'))
+            line_table.add_column(Column(name='vel_err_left_{}'.format(component), dtype='f8'))
+            line_table.add_column(Column(name='vel_err_right_{}'.format(component), dtype='f8'))
+            line_table.add_column(Column(name='vel_pew_{}'.format(component), dtype='f8'))
+            line_table.add_column(Column(name='vel_pew_err{}'.format(component), dtype='f8'))
+        for spectrum_filename in np.array(spectrum_filelist)[line_list[iline]['file_indx']]:
+            print(spectrum_filename)
+            if os.path.exists(os.path.join(SPEC_DIR_LCO, spectrum_filename)):
+                filename = os.path.join(SPEC_DIR_LCO, spectrum_filename)
+                binsize=20
+            else:
+                filename = os.path.join(SPEC_DIR_EFOSC,spectrum_filename)
+                binsize=5
+            spectrum = line_analysis_BSNIP.read_iraf_spectrum(filename)
+            min_list, pew_list, fig = define_feature(spectrum, iline, binsize, absorption=True, 
+                                                  similar_widths=True, fixed_offset=True, offsets = [44, 164],
+                                                  input_filename=os.path.join(OUTPUT_DIR, 'test_{}_input.yaml'.format(iline)),
+                                                  interactive=False, input_append=False)
+            if filename.endswith('.fits'):
+                date = fits.getval(filename, 'date-obs', 0)
+            else:
+                date = input('enter date for file: {}'.format(ifile))
+
+            irow = [iline, date]
+            for imin_component, ipew_component in zip(min_list, pew_list):
+                [irow.append(icomponent) for icomponent in [imin_component[0], imin_component[1], imin_component[2], ipew_component[0], np.sqrt(ipew_component[1])]]
+            line_table.add_row(irow)
+            pdf.savefig(fig)
+            plt.close()  
 
     if os.path.exists(os.path.join(OUTPUT_DIR,'{}.tab'.format(iline))):
         if append is True:

@@ -10,7 +10,7 @@ from astropy.table import Table, Column
 import yaml
 
 from spectroscopy import calc_wavelength
-from fit_spectral_lines2 import fit_feature
+from fit_spectral_lines import fit_feature
 import line_analysis_BSNIP
 
 
@@ -67,7 +67,8 @@ for iline in line_list.keys():
                 filename = os.path.join(SPEC_DIR_EFOSC,spectrum_filename)
                 binsize=5
             spectrum = line_analysis_BSNIP.read_iraf_spectrum(filename)
-            min_list, pew_list, fig = fit_feature(spectrum, iline, binsize, absorption=True, similar_widths=True, input_filename=os.path.join(OUTPUT_DIR, '{}_input.yaml'.format(iline)))
+            spectrum.__setattr__('filename', os.path.basename(filename))
+            min_list, pew_list, fig = define_feature(spectrum, iline, binsize, absorption=True, similar_widths=True, input_filename=os.path.join(OUTPUT_DIR, '{}_input.yaml'.format(iline)))
             if filename.endswith('.fits'):
                 date = fits.getval(filename, 'date-obs', 0)
             else:
