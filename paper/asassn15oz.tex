@@ -1,5 +1,43 @@
-\documentclass[preprint]{aastex61} 
-%\documentclass[twocolumn]{aastex61}   	% use "amsart" instead of "article" for AMSLaTeX format
+% mnras_template.tex
+%
+% LaTeX template for creating an MNRAS paper
+%
+% v3.0 released 14 May 2015
+% (version numbers match those of mnras.cls)
+%
+% Copyright (C) Royal Astronomical Society 2015
+% Authors:
+% Keith T. Smith (Royal Astronomical Society)
+
+% Change log
+%
+% v3.0 May 2015
+%    Renamed to match the new package name
+%    Version number matches mnras.cls
+%    A few minor tweaks to wording
+% v1.0 September 2013
+%    Beta testing only - never publicly released
+%    First version: a simple (ish) template for creating an MNRAS paper
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Basic setup. Most papers should leave these options alone.
+\documentclass[a4paper,fleqn,usenatbib]{mnras}
+
+% MNRAS is set in Times font. If you don't have this installed (most LaTeX
+% installations will be fine) or prefer the old Computer Modern fonts, comment
+% out the following line
+\usepackage{newtxtext,newtxmath}
+% Depending on your LaTeX fonts installation, you might get better results with one of these:
+%\usepackage{mathptmx}
+%\usepackage{txfonts}
+
+% Use vector fonts, so it zooms properly in on-screen viewing software
+% Don't change these lines unless you know what you are doing
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+
+
+%%%%% AUTHORS - PLACE YOUR OWN PACKAGES HERE %%%%%
 \usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
 \geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
 \usepackage{graphicx}				% Use pdf, png, jpg, or epsÂ§ with pdflatex; use eps in DVI mode
@@ -9,6 +47,15 @@
 
 \usepackage{natbib}
 \usepackage{color} 
+\usepackage{deluxetable}
+
+\makeatletter
+\def\@to{to}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% AUTHORS - PLACE YOUR OWN COMMANDS HERE %%%%%
 
 \newcommand{\azaleecomment}[1]{{\color{red} [{#1}]}} 
 \newcommand{\Azalee}[1]{\azaleecomment{Azalee: #1}}
@@ -23,30 +70,59 @@
 \newcommand{\lsun}{L$_{\odot}$}
 \newcommand{\rsun}{R$_{\odot}$}
 
-\begin{document}
+%%%%%%%%%%%%%%%%%%% TITLE PAGE %%%%%%%%%%%%%%%%%%%
+
+% Title of the paper, and the short title which is used in the headers.
+% Keep the title short and informative.
 \title{ASASSN-15oz}
-\author{K. Azalee Bostroem}
-\affil{University of California, Davis, 1 Shields Ave, Davis, CA, 95616}
-\email{kabostroem@ucdavis.edu}
 
-\author{Stefano Valenti}
-\affil{University of California, Davis, 1 Shields Ave, Davis, CA, 95616}
+% The list of authors, and the short list which is used in the headers.
+% If you need two or more lines of authors, add an extra line using \newauthor
 
-\author{Viktoriya Morozova}
-\affil{Princeton Univeristy}
+\author[K. A. Bostroem et al.]{K. Azalee Bostroem, $^{1}$\thanks{E-mail: kabostroem@ucdavis.edu}
+Stefano Valenti,$^{1}$
+Viktoriya Morozova,$^{2}$
+Assaf Horesh,$^{3}$
+\newauthor 
+Paul Kuin,$^{4}$
+Samuel Wyatt,$^{5}$
+Anders Jerkstrand,$^{6}$
+David Sand,$^{5}$
+\\
+% List of institutions
+$^{1}$University of California, Davis, 1 Shields Ave, Davis, CA, 95616 \\
+$^{2}$Princeton University \\
+$^{3}$Hebrew University of Jerusalem \\
+$^{4}$Mullard Space Science Laboratory - University College London\ \
+$^{5}$University of Arizona \\
+$^{6}$ Max-Planck Institut für Astrophysik, Karl-Schwarzschild Str. 1, D-85748 Garching, Germany
+}
 
-\author{Assaf Horesh}
-\affil{Hebrew University of Jerusalem }
+% These dates will be filled out by the publisher
+\date{Accepted XXX. Received YYY; in original form ZZZ}
 
-\author{Samuel Wyatt}
-\affil{University of Arizona}
+% Enter the current year, for the copyright statements etc.
+\pubyear{2018}
 
+% Don't change these lines
+\begin{document}
+\label{firstpage}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}}
+\maketitle
 
-\date{\today}							% Activate to display a given date or no date
-
+% Abstract of the paper
 \begin{abstract}
 \end{abstract}
-\keywords{Supernovae}
+% Select between one and six entries from the list of approved keywords.
+% Don't make up new ones.
+\begin{keywords}
+Supernovae
+\end{keywords}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% BODY OF PAPER %%%%%%%%%%%%%%%%%%
+\section{Introduction}
 \section{ASAS-SN15oz} \label{15ozIntro}
 Supernova ASAS-SN15oz was discovered by the ASAS-SN team on August 31, 2015 and announced on September 3, 2015 \citep{2016brown}. 
 The next day Las Cumbres Observatory (LCO) confirmed its host to be HIPASS J1919-33 (z = 0.007 \Azalee{citation?}) and classified it as a type II supernova one week after explosion \citep{2016hosseinzadeh}. 
@@ -64,7 +140,6 @@ SNID has very few templates for type IIL supernovae, we therefore add templates 
 We confirm our explosion epoch by fitting the first spectrum (2015-09-04) using SNID v. 5.0, augmenting the templates with those of \citet{2017gutierrez}, SN2012A, and SN2013ej.
 The five best fit spectra imply an explosion epoch of  2015-08-22, consistent with the range we propose based on non-detections.
 interestingly, the hydrodynamic light curve modeling also places the best fit explosion epoch on the day of the last non-detection (see Section \ref{LC}).
-
 
 \subsection{Reddening}
 We use an X-shooter spectrum taken with the UVB and VIS arms to constrain the host galaxy reddening to confirm the galactic reddening using the equivalent widths of the Na I D1 and D2 lines ($\lambda$5890, $\lambda$5896) \citep{2012poznanski}. 
@@ -93,7 +168,7 @@ One-dimensional spectra were extracted and calibrated using the FLOYDS \citep{20
 Figure \ref{fig:SpecAll} shows the evolution of the spectra over time, starting from a blue spectrum with broad hydrogen lines and developing metal features such as iron and scandium as the velocities decrease and the line widths narrow. More unusually (although perhaps not unusual for IIL SNe), the cachito feature \citep{2017gutierrez}, blueward of the H-$\alpha$ absorption is present in the first spectrum, growing in strength through day 20 (2015-09-16) and then decreasing in strength at later times. \Azalee{Say more here or reference future section for interpretation} \Stefano{Is this too much interpretation for this section?}
 
 %%%%%%%%%%%%%%%%
-\begin{figure}[h!]
+\begin{figure*}
 \begin{center}
 \includegraphics[width=\textwidth]{spectra_montage} %created by make_spectral_montage.ipynb
 \caption{A representative sample of the spectroscopic evolution of ASAS-SN15oz during the photospheric phase, with the earliest observation at the bottom. 
@@ -102,7 +177,7 @@ These spectra are fairly typical of IIP/IIL spectra, showing a blue continuum wi
 The cachito feature is visible in the first spectrum, increasing in strength until day \~20 (2015-09-16), then decreasing until it is no longer visible on day 59 (2015-10-25).}
 \label{fig:SpecAll}
 \end{center}
-\end{figure}
+\end{figure*}
 %%%%%%%%%%%%%%%%
 \subsection{UV Observations}
 \textit{Swift} imaging observations were processed with aperture photometry following \citet{2009brown} employing the updated zeropoints of \citet{2010breeveld}
@@ -132,7 +207,7 @@ Each point is colored by the $S_{50V}$ slope, with shallower slopes in blue and 
 %%%%%%%%%%%%%%%%
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=\textwidth]{uv_slope_comp} %created by make_swift_color_fig.ipynb
+\includegraphics[width=\columnwidth]{uv_slope_comp} %created by make_swift_color_fig.ipynb
 \caption{The color of all type IIP/IIL supernovae observed with \textit{Swift}. Within this sample, ASAS-SN15oz shows no UV excess.}
 \label{fig:UVColor}
 \end{center}
@@ -173,8 +248,9 @@ When V-band observations extended either earlier or later than a filter, we use 
 \subsection{Determining the Nickel Mass}
 Following \citet{2016valenti} we find the Nickel mass synthesized in a supernova explosion by scaling the bolometric luminosity of ASAS-Sn15oz when it is powered by ${}^{56}Co$ to that of supernova 1987A using the following relation:
 \begin{equation} \label{eqn:Ni}
-M({}^{56}Ni) = 0.075M_{\odot} \times \frac{L_{sn}(t)}{L_{87A}(t)} \Stefano{does*this*need*a*reference?}
+M({}^{56}Ni) = 0.075M_{\odot} \times \frac{L_{sn}(t)}{L_{87A}(t)}
 \end{equation}
+\Stefano{does this need a reference?}
 This method assumes that the slope of the radioactive decay tail follows that of SN1987A (i.e. complete gamma ray trapping), so that luminosity ratio is independent of the time used as long as it is during the nebular phase. 
 If the slope is steeper than that of SN1987A (i.e. incomplete gamma ray trapping) then the slope can be scaled to the bottom of the fall from plateau to get an upper limit on the Nickel mass. \Stefano{is this true?}
 Unfortunately, ASAS-SN15oz has incomplete gamma ray trapping and disappeared behind the Sun shortly before falling from plateau, re-emerging after the fall from plateau. 
@@ -255,7 +331,7 @@ This should be a good representation of the best fit model as we expect the ligh
 Initial line identification was performed by comparing the spectra to that of supernova 1999em \citep{2001leonard}. 
 Identification was confirmed using the spectrum synthesis code Syn++ \citep{2013thomas} (parameter details in \ref{tab:syn++}. 
 %%%%%%%%%%%%%%%%%%%
-\begin{table}[htp]
+\begin{table*}
 \caption{The parameters used in the Syn++ fit. 
 The opacity $\tau$ is modeled with an exponential profile with e-folding length aux, minimum velocity $v_{min}$, and maximum velocity $v_{max}$. 
 The temperature column is the Boltzmann excitation temperature.}
@@ -276,7 +352,7 @@ Ion & log($\tau$) & $v_{min}(kkm/s)$ & $v_{max}(kkm/s)$ & aux & Temperature (kK)
  \end{tabular}
 \end{center}
 \label{tab:syn++}
-\end{table}
+\end{table*}
 %%%%%%%%%%%%%%%%
 The results of the Syn++ fit can be seen in Figure \ref{fig:syn++}.
 The top plot shows the combined fit, while the contributions from the individual elements are shown in the subsequent plots below.
@@ -284,16 +360,16 @@ Syn++ models pure resonance scattering which is a good approximation for all lin
 For this reason we use the H-$\beta$ line to determine the hydrogen contribution to the fit. 
 A separate fit to H-$\alpha$ is shown in the second plot of Figure \ref{fig:syn++} and the parameters are detailed in the H-$\alpha$ row of Table \ref{tab:syn++}.
 %%%%%%%%%%%%%%%%%%%
-\begin{figure}[htbp]
+\begin{figure*}
 \begin{center}
-\includegraphics[height=\textheight]{syn++indiv_elements} %created by make_syn++_indiv_element_fig.ipynb
+\includegraphics[height=\textwidth]{syn++indiv_elements} %created by make_syn++_indiv_element_fig.ipynb
 \caption{A comparison of the model spectrum produced by Syn++ and the observed spectrum from 2015-10-06.
 The top panel shows the best fit with all elements while the remaining panels show the fit for each element individually.
 We fit H-$\alpha$ and H-$\beta$ separately as H-$\alpha$ is not well modeled by the pure resonance scattering assumed in Syn++.
 The H-$\beta$ fit is used in the combined spectrum in the top panel.}
 \label{fig:syn++}
 \end{center}
-\end{figure}
+\end{figure*}
 %%%%%%%%%%%%%%%%%%%
 \subsection{Velocity}
 We find the velocity of lines for which individual components can be resolved using two methods (Scandium features ($\lambda$ 5526, 5662, 6262)).
@@ -315,9 +391,9 @@ We define the velocity of a feature as the minimum of the individual Gaussian pr
 For the Ca II NIR triplet we use the additional constraint of a fixed offset between the minima of the features. 
 We use this method to fit H-$\alpha$ ($\lambda$ 6561), O I ($\lambda$ 7774), FeII ($\lambda$ 5169), and Ca II ($\lambda\lambda\lambda$ 8498, 8542, 8662). 
 %%%%%%%%%%%%%%%%
-\begin{figure}[htbp]
+\begin{figure}
 \begin{center}
-\includegraphics[width=0.5\textwidth]{example_fits}
+\includegraphics[width=\columnwidth]{example_fits}
 \caption{An example of a fit to the multi-component Ca II NIR triplet (left) using multiple Gaussians and a single line fit (following \citet{2012silverman}, right) to the Sc II $\lambda$5662 line.
 The observed spectrum is plotted in blue.
 The continuum edges are marked with a red circle and the red dashed line connecting these points is used as the continuum. 
@@ -343,18 +419,18 @@ A comparison of the velocities derived in this paper to the average values of 12
 We find throughout the ejecta above average velocities, consistent with a larger than average explosion energy \Stefano{and mass?}. 
 This is consistent with the light curve modeling (see Section \ref{sec:LCmodel})
 %%%%%%%%%%%%%%%%
-\begin{figure}[htbp]
+\begin{figure}
 \begin{center}
-\includegraphics[width=0.5\textwidth]{line_velocity}
+\includegraphics[width=\columnwidth]{line_velocity}
 \caption{The evolution of the velocity of H-$\alpha$, H-$\beta$, Na I, O I, Ca II, Sc II, and FeII over time. 
 The spread of velocities represents the different locations of the ions in the ejecta.}
 \label{fig:velocity}
 \end{center}
 \end{figure}
 %%%%%%%%%%%%%%%%
-\begin{figure}[htbp]
+\begin{figure}
 \begin{center}
-\includegraphics[width=\textwidth]{velocity_compare_guitierrez}
+\includegraphics[width=\columnwidth]{velocity_compare_guitierrez}
 \caption{A comparison of the velocity of ASAS-SN15oz to the mean velocity of 122 IIP/IIL supernovae \citep{2017gutierrez} for H-$\alpha$ (left), H-$\beta$ (middle), and Fe II (right).
 For all lines the velocity is about 1$\sigma$ above average. 
 Each of these line originates in a different part of the ejecta indicating that this is a global trend and the explosion energy is above average. 
@@ -374,9 +450,9 @@ This effect becomes significant as the photosphere begins to recede around 20-30
 \Azalee{decide whether to implement this or leave it as an explanation}
 
 %%%%%%%%%%%%%%%%
-\begin{figure}[htbp]
+\begin{figure}
 \begin{center}
-\includegraphics[width=\textwidth]{snec_velocity_comp}
+\includegraphics[width=\columnwidth]{snec_velocity_comp}
 \caption{The model photospheric velocity computed by SNEC (blue) compared to the observed photospheric velocity (orange) taken to be the velocity of the Fe II $\lambda$5169 feature. 
 The model deviated from the observations around the time that the photosphere begins to recede into the ejecta.
 This discrepancy is likely the result of the Fe II line being produced above the ejecta at these times \citep{2018paxton}.
@@ -402,7 +478,7 @@ We find the [OI] strength falls between the 15 and 19 M$_\odot$ models consisten
 %%%%%%%%%%%%%%%%
 \begin{figure}[h!] 
 \begin{center}
-\includegraphics{nebular_spectra_day340} %created by make_nebular_figure.ipynb
+\includegraphics[width=\columnwidth]{nebular_spectra_day340} %created by make_nebular_figure.ipynb
 \caption{A nebular spectrum of ASAS-SN15oz from August 03, 2016 (day 340) plotted with the models of \citet{2014jerkstrand} for MZAMS = 12, 15, 19, and 25 M$_{\odot}$. 
 Most features in the observed spectrum well matched by the models. 
 The inset shows the [O I] ($\lambda\lambda6300, 6334$) feature which increases monotonically with progenitor mass. 
@@ -419,9 +495,9 @@ SN 2016zb and SN 2015W have the best matched slopes. We compare the multi-band l
 
 \Azalee{Revisit this figure. Is V-band the right one to measure both of these? how complete is the database? Consider cutting those with too large slopes}
 %%%%%%%%%%%%%%%%
-\begin{figure}[h!] 
+\begin{figure}
 \begin{center}
-\includegraphics{slope_compare} %created by lightcurve_characteristics.ipynb
+\includegraphics[width=\columnwidth]{slope_compare} %created by lightcurve_characteristics.ipynb
 \caption{Center: The slope of the light curve at late times, during the radioactive decay phase compared to the slope during the photospheric phase for a sample of publicly available supernova light curves.
 ASAS-SN15oz is plotted in red.
 Top (Right): A histogram of the radioactive decay (photometric) phase slopes. All measured slopes from this phase are included in the hatched sample.
@@ -431,21 +507,30 @@ The objects for which there is both a decay phase slope and a photospheric slope
 \end{figure}
 %%%%%%%%%%%%%%%%
 
+%\software{Astropy}
+
+\bibliographystyle{mnras}
+\bibliography{references}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% APPENDICES %%%%%%%%%%%%%%%%%%%%%
+\newpage
+\clearpage
+\appendix
 %Consider making this two columns
 %Make an epoch column
-\clearpage
-\section{Observations}
+\section{Observational Data}
 %%%%%%%%%%%%%%%%
 \input{spec_obs_tab.tex} \label{tab:SpecObs}
+\newpage
 \Azalee{Add swift XRT observations?}
-\startlongtable
 \input{ImagingObsTab} \label{tab:LcObs}
+
 %%%%%%%%%%%%%%%%
-\facility{}
-\software{Astropy}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Don't change these lines
+\bsp	% typesetting comment
+\label{lastpage}
+\end{document}
 
-\bibliographystyle{plainnat}
-\bibliography{references}
-
-
-\end{document}  
+% End of mnras_template.tex
