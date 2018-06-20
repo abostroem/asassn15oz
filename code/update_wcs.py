@@ -43,7 +43,7 @@ def fix_wcs(obsid, obj_ra, obj_dec):
                     plt.title('{}, ext={}'.format(os.path.basename(filename), iext))
                     # plot location of SN from wcs
                     img_wcs = wcs.WCS(hdr)
-                    x, y = img_wcs.all_world2pix(obj_ra, obj_dec, 1)
+                    x, y = img_wcs.all_world2pix(obj_ra, obj_dec, 0)
                     plt.plot(x, y, 'o')
                     # ask user to zoom
                     adjust_wcs = input('Zoom in on object. Would you like to adjust the WCS? (y), n ')
@@ -72,11 +72,11 @@ def fix_wcs(obsid, obj_ra, obj_dec):
                 ofile.close()
                 
 if __name__ == "__main__":
-    #obsid_list = ['00034040001', '00034040002', '00034040005', '00034040007', '00034040009', '00034040011']
+    obsid_list = ['00034040001', '00034040002', '00034040005', '00034040007', '00034040009', '00034040011']
     #obsid_list = ['00034040013', '00034040015']
     #obsid_list = ['00034040001']
-    RA = 289.860101455855
-    DEC = -33.7719418411897
+    RA = 289.889800 
+    DEC = -33.767000
     for obsid in obsid_list:
         fix_wcs(obsid, RA, DEC)
 
