@@ -81,8 +81,8 @@
 
 \author[K. A. Bostroem et al.]{K. Azalee Bostroem, $^{1}$\thanks{E-mail: kabostroem@ucdavis.edu}
 Stefano Valenti,$^{1}$
-Viktoriya Morozova,$^{2}$
-Assaf Horesh,$^{3}$
+Assaf Horesh,$^{2}$
+Viktoriya Morozova,$^{3}$
 \newauthor 
 Paul Kuin,$^{4}$
 Samuel Wyatt,$^{5}$
@@ -91,8 +91,8 @@ David Sand,$^{5}$
 \\
 % List of institutions
 $^{1}$University of California, Davis, 1 Shields Ave, Davis, CA, 95616 \\
-$^{2}$Princeton University \\
-$^{3}$Hebrew University of Jerusalem \\
+$^{2}$Hebrew University of Jerusalem \\
+$^{3}$Princeton University \\
 $^{4}$Mullard Space Science Laboratory - University College London\ \
 $^{5}$University of Arizona \\
 $^{6}$ Max-Planck Institut für Astrophysik, Karl-Schwarzschild Str. 1, D-85748 Garching, Germany
@@ -153,7 +153,7 @@ This method relies on the existence of a template supernova that is similar in b
 ASAS-SN15oz is a type IIL supernova and our first spectrum is from around maximum. 
 SNID has very few templates for type IIL supernovae, we therefore add templates for two well observed supernovae with well constrained explosion epochs: 2012A and 2013ej.
 \Azalee{make templates publicly available and link to them}
-We confirm our explosion epoch by fitting the first spectrum (2015-09-04) using SNID v. 5.0, augmenting the templates with those of \citet{2017gutierrez}, SN2012A, and SN2013ej.
+We confirm our explosion epoch by fitting the first spectrum (2015-09-04) using SNID v. 5.0, augmenting the templates with those of \citet{2017gutierrez}, SN2012A \citep{2013tomasella}, and SN2013ej \citep{2016childress,2016dhungana,2014valentiB,2015smartt}.
 The five best fit spectra imply an explosion epoch of  2015-08-22, consistent with the range we propose based on non-detections.
 interestingly, the hydrodynamic light curve modeling also places the best fit explosion epoch on the day of the last non-detection (see Section \ref{LC}).
 
@@ -164,8 +164,9 @@ We adopt the \citet{2011schlafly}  value of 0.08 for the analysis in this paper.
 %%%%%%%%%%%%%%%%% OBSERVATIONS and DATA REDUCTION %%%%%%%%%%%%%%%%%%
 \section{Observations and Data Reduction}
 \Azalee{Look into how people talk about telescopes vs collaborations vs instruments}
-ASAS-SN15oz was the closest type II supernova of 2015 and was observed extensively at all wavelengths. X-ray and UV imaging observations were obtained with the \textit{Swift} Space Telescope during the first 80 days post-explosion.
-In addition to this observations, the \textit{Swift} UV Grism captured two epochs of spectroscopy (although only one had enough signal to extract). 
+ASAS-SN15oz was the closest type II supernova of 2015 and was observed extensively at all wavelengths. 
+The majority of our observations were provided by the Las Cumbres Observatory (LCO) Supernova Key Project (2014-2017) and the Public ESO Spectroscopic Survey for Transients (PESSTO). 
+We supplemented these observations with dedicated projects in the X-ray and UV with \textit{Swift} (1114241, PI: Valenti) and in the radio with the VLA (VLA/15B-362, PI: Valenti). 
 The photometric and spectroscopic data reduction are defined in the next sections. 
 A complete list of photometric observations is given in Table \ref{tab:LcObs}.  
 Spectroscopic observations are detailed in Table \ref{tab:SpecObs}.
@@ -173,41 +174,43 @@ Spectroscopic observations are detailed in Table \ref{tab:SpecObs}.
 \subsection{Optical}
 The optical light curve was closely monitored by the Las Cumbres Observatory (LCO) from discovery through day 400 in the filters B, V, g, r, and i. 
 Unfortunately, the supernova passed behind the sun around day 80, leaving a gap in the observations from day 86 to day 184, most notably missing the fall from plateau.
-LCO observations were reduced with the LCO imaging pipeline \Stefano{lcogtsnpipe? citation - Valenti, 2016?}. 
+Figure \ref{fig:LC} shows the complete light curve.
+LCO observations were reduced with the LCO imaging pipeline, lcogtsnpipe \ref{2016valenti}. 
 This pipeline employs PSF photometry, removing background contamination by fitting a low order polynomial to the host galaxy.
 Instrument magnitudes are converted to absolute magnitudes using the APASS system \footnote{https://www.aavso.org/apass} converting B and V to the Landolt magnitude system (Vega magnitudes) and g, r, and i to the sloan magnitude system (AB magnitudes). 
 
-Nebular spectra were observed by the ePESSTO collaboration on the NTT telescope. 
-Optical spectroscopy was obtained with the FLOYDS spectrograph on the 2m LCO telescope at Siding Springs, Australia and the EFOSC2 spectrograph on the 3.6 m NTT telescope at La Silla, Chile. 
+
+Extensive optical spectroscopy was obtained during the photospheric phase with the FLOYDS spectrograph on the 2m LCO telescope at Siding Springs, Australia as part of the LCO Supernova Key Project and the EFOSC2 spectrograph on the 3.6 m NTT telescope at La Silla, Chile as part of the PESSTO Project. 
+The PESSTO project also contributed late time nebular spectra were observed on the NTT telescope. 
 One-dimensional spectra were extracted and calibrated using the FLOYDS \citep{2014valenti} and EFOSC pipelines, which string together standard IRAF extraction tasks \Stefano{What is the right way to cite this?}. 
-Figure \ref{fig:SpecAll} shows the evolution of the spectra over time, starting from a blue spectrum with broad hydrogen lines and developing metal features such as iron and scandium as the velocities decrease and the line widths narrow. More unusually (although perhaps not unusual for IIL SNe), the cachito feature \citep{2017gutierrez}, blueward of the H-$\alpha$ absorption is present in the first spectrum, growing in strength through day 20 (2015-09-16) and then decreasing in strength at later times. \Azalee{Say more here or reference future section for interpretation} \Stefano{Is this too much interpretation for this section?}
-\Azalee{Add Light Curve Figure}
+Figure \ref{fig:SpecAll} shows the evolution of the spectra over time, starting from a blue spectrum with broad hydrogen lines and developing metal features such as iron and scandium as the velocities decrease and the line widths narrow. 
+More unusually, the cachito feature \citep{2017gutierrez}, blueward of the H-$\alpha$ absorption is present in the first spectrum, growing in strength through day 20 (2015-09-16) and then decreasing in strength at later times. \Azalee{Say more here or reference future section for interpretation} \Stefano{Is this too much interpretation for this section?}
 %=======================
-\begin{figure*}
+\begin{figure}
 \begin{center}
-\includegraphics[width=\textwidth]{spectra_montage} %created by make_spectral_montage.ipynb
-\caption{A representative sample of the spectroscopic evolution of ASAS-SN15oz during the photospheric phase, with the earliest observation at the bottom. 
-The date of each spectrum is labeled on the right. Prominent spectral features are labeled above the latest spectrum and below the earliest spectrum. 
-These spectra are fairly typical of IIP/IIL spectra, showing a blue continuum with broad hydrogen features early and developing strong metal lines over time.
-The cachito feature is visible in the first spectrum, increasing in strength until day \~20 (2015-09-16), then decreasing until it is no longer visible on day 59 (2015-10-25).}
-\label{fig:SpecAll}
+\includegraphics[width=\columnwidth]{lightcurve_snec} %PLACEHOLDER
+\caption{The multi-band optical light curve of ASAS-SN15oz. 
+The observations are shown as circles and the best fit SNEC model is shown with and without CSM (solid and dashed lines respectively).
+We require CSM to fit the light curve at early times. 
+We expect the blue filters to be affected by line blanketing and attribute the overestimate of the model flux in the g-band to this effect.}
+\label{fig:LC}
 \end{center}
-\end{figure*}
+\end{figure}
 %-----------------------------------------
 %%%%%%%%%%%%%%%%% 
 \subsection{UV and X-Ray Observations}
-\textit{Swift} imaging observations were processed with aperture photometry following \citet{2009brown} employing the updated zeropoints of \citet{2010breeveld}
-\textit{Swift} UV grism observations were taken at two roll angles and extracted using the UVOTPY pipeline \citep{2014kuin}. 
+UV and X-Ray imaging observations were obtained concurrently with \textit{Swift} programs 1114241 and XXXXXXX through 2015-11-18.
+In addition to the imaging observations, two epochs of \textit{Swift} grism observations were taken under program 1114241. \Stefano{is this too repetitive with the intro to the observations section}.
+Imaging observations were processed with aperture photometry following \citet{2009brown} employing the updated zeropoints of \citet{2010breeveld}.
+UV grism observations were taken at two roll angles and extracted using the UVOTPY pipeline \citep{2014kuin}. 
 There is a nearby star coincident with the supernova at one roll angle and just above it at another roll angle.
 Although we tried custom extractions using different extraction box height and TRUVOT \citep{2015smitka} we were unable to produce a better calibration than the default pipeline. 
-Two epoch were taken, however, only one has sufficient S/N to be extracted. 
-UV spectra presented in this paper are average of the first epoch weighted by the error. 
+Although two epoch were taken, only the first one has sufficient S/N to be extracted. 
 
-We observed ASASSN-15oz with $\textit{Swift}$/XRT starting on 2015-09-04 and continuing until 2015-11-18 for a total of 35939.68 exposure seconds at 21 observations during the period. 
-We used a section of the field of view that did not have any x-ray sources as a background. 
-With this data we get  limiting count rate (assuming an 18'' radius) of 7.234x10$^{-4}$ counts s$^{-1}$. 
-Assuming a power-law model with a photon index of two with Galactic absorption 6.18x$10^{20}$ cm$^{-2}$ \citep{2005kalberla}, this corresponds to an unabsorbed flux of 2.208x10$^{-14}$ erg cm$^{-2}$ s$^{-1}$ (0.4-5 keV) and a luminosity of approximately 3.72x10$^{39}$erg s$^{-1}$ at 30 Mpc.
-\Stefano{Where should we put the Swift spectrum}
+An upper limit in the X-ray observations was determined using aperture photometry.
+Images were background subtracted using an aperture in a blank part of the image and measured fluxes were converted from counts to luminosity assuming a power-law model with a photon index of two.
+We find a limiting count rate (inside an 18'' aperture) of  7.234x10$^{-4}$ counts s$^{-1}$.
+Assuming Galactic absorption of 6.18x$10^{20}$ cm$^{-2}$ \citep{2005kalberla}, this corresponds to an unabsorbed flux of 2.208x10$^{-14}$ erg cm$^{-2}$ s$^{-1}$ (0.4-5 keV) and a luminosity of approximately 3.72x10$^{39}$erg s$^{-1}$ at 30 Mpc.
 %%%%%%%%%%%%%%%%% 
 \subsection{IR Observations}
 \Azalee{Have Dave write a paragraph? Spectrum in Cachito section?}
@@ -365,6 +368,8 @@ Introductory words here...
 \subsection{UV and X-Ray}
 The \textit{Swift} grism observations show no sign of the narrow emission lines typically associated with strong interaction.
 This is supported by a lack of UV continuum excess at any epoch. 
+%UV spectrum presented in this paper are average of the first epoch weighted by the error. 
+\Azalee{Add Swift Spectra Figure}
 Figure \ref{fig:UVColor} shows a comparison of the UV color of ASAS-SN15oz to that of all other type IIP/IIL supernovae with \textit{Swift} observations.
 Each point is colored by the $S_{50V}$ slope, with shallower slopes in blue and steeper slopes in red. 
 \Stefano{do we want to say something here about how we expect UV excess from interaction but it could be absorbed by the line blanketing?}
@@ -529,7 +534,8 @@ The objects for which there is both a decay phase slope and a photospheric slope
 \end{center}
 \end{figure}
 %-----------------------------------------
-
+\section*{Acknowlegments}
+This work is based (in part) on observations collected at the European Organization for Astronomical Research in the Southern Hemisphere, Chile as part of PESSTO, (the Public ESO Spectroscopic Survey for Transient Objects Survey) ESO program 188.D-3003, 191.D-0935, 197.D-1075.
 %\software{Astropy}
 
 \bibliographystyle{mnras}
