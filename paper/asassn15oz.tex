@@ -112,8 +112,9 @@ $^{6}$ Max-Planck Institut für Astrophysik, Karl-Schwarzschild Str. 1, D-85748 G
 
 % Abstract of the paper
 \begin{abstract}
+
+Single, hydrogen-rich, core collapse supernovae typically divided into three classes: IIP, with a 100 day plateau following maximum light, IIL, showing a linearly declining light curve following maximum light, and IIn which show narrow emission lines in their spectra. These classification are indicative of the characteristics of the late stage evolution of the hydrogen envelope of the progenitor star. The plateau is explained by recombination through a thick envelope, the linear decline with recombination through a thinner envelope, and IIn with strong interaction with circumstellar material lost prior to explosion. For this reason, we generally do not consider interaction when modeling IIP and IIL supernovae. However, recent hydrodynamic modeling of IIP and IIL supernovae has been unable to reproduce the early (~30 days post explosion) light curve without the introduction of circumstellar material. One explanation for the smaller hydrogen envelope in IIL supernovae is mass loss, which would lead to circumstellar material. This makes IIL supernovae ideal for understanding whether IIP and IIL supernovae experience interaction. We test this hypothesis on ASASSN-15oz, a type IIL supernova and the closest type II supernova in 2015. With extensive follow-up in the x-ray, UV, optical, IR, and radio we search for signs of interaction. Interestingly, we find evidence of interaction in the radio and optical, but only upper limits in the X-ray and UV, leading to questions about universality of these indicators.
 \end{abstract}
-Single, hydrogen-rich, core collapse supernovae typically divided into three classes: IIP, with a 100 day plateau following maximum light, IIL, showing a linearly declining light curve following maximum light, and IIn which show narrow emission lines in their spectra. These classification are indicative of the characteristics of the late stage evolution of the hydrogen envelope of the progenitor star. The plateau is explained by recombination through a thick envelope, the linear decline with recombination through a thinner envelope, and IIn with strong interaction with circumstellar material lost prior to explosion. For this reason, we generally do not consider interaction when modeling IIP and IIL supernovae. However, recent hydrodynamic modeling of IIP and IIL supernovae has been unable to reproduce the early (~30 days post explosion) light curve without the introduction of circumstellar material. One explanation for the smaller hydrogen envelope in IIL supernovae is mass loss, which would lead to circumstellar material. This makes IIL supernovae ideal for understanding whether IIP and IIL supernovae experience interaction. We test this hypothesis on ASAS-SN15oz, a type IIL supernova and the closest type II supernova in 2015. With extensive follow-up in the x-ray, UV, optical, IR, and radio we search for signs of interaction. Interestingly, we find evidence of interaction in the radio and optical, but only upper limits in the X-ray and UV, leading to questions about universality of these indicators.
 % Select between one and six entries from the list of approved keywords.
 % Don't make up new ones.
 \begin{keywords}
@@ -141,20 +142,20 @@ In the next section we will ...
 
 %%%%%%%%%%%%%%%%% SN PARAMETERS %%%%%%%%%%%%%%%%%%
 \section{Supernova Parameters} \label{15ozIntro}
-Supernova ASAS-SN15oz was discovered by the ASAS-SN team on August 31, 2015 and announced on September 3, 2015 \citep{2016brown}. 
+Supernova ASASSN-15oz was discovered by the ASAS-SN team on August 31, 2015 and announced on September 3, 2015 \citep{2016brown}. 
 The next day Las Cumbres Observatory (LCO) classified it as a type II supernova one week after explosion \citep{2016hosseinzadeh}. 
 \Azalee{Define distance modulus}
 
-Imaging of HIPASS J1919-33 from August 23, 2015 does not show any evidence of ASAS-SN15oz (V $>$ 17.8). 
+Imaging of HIPASS J1919-33 from August 23, 2015 does not show any evidence of ASASSN-15oz (V $>$ 17.8). 
 We take this to be a lower limit on the explosion epoch. 
 It is therefore reasonable to take as the mid-point between the non-detection and the detection as explosion date with the $1\sigma$ error being the time to the non-detection: $t_{expl} =$ 2015-08-27 $\pm 4$ days.
 
 \citet{2017gutierrez} found that the explosion epoch can be determined, with an average errors of 4.9 days, by fitting the blue part of the first spectrum with SNID \citep{2011blondin} and using the explosion epoch of the best fit template.
 This method relies on the existence of a template supernova that is similar in both phase and type to the object being fit.
-ASAS-SN15oz is a type IIL supernova and our first spectrum is from around maximum. 
+ASASSN-15oz is a type IIL supernova and our first spectrum is from around maximum. 
 SNID has very few templates for type IIL supernovae, we therefore add templates for two well observed supernovae with well constrained explosion epochs: 2012A and 2013ej.
 \Azalee{make templates publicly available and link to them}
-We confirm our explosion epoch by fitting the first spectrum (2015-09-04) using SNID v. 5.0, augmenting the templates with those of \citet{2017gutierrez}, SN2012A \citep{2013tomasella}, and SN2013ej \citep{2016childress,2016dhungana,2014valentiB,2015smartt}.
+We confirm our explosion epoch by fitting the first spectrum (2015-09-04) using SNID v. 5.0, augmenting the templates with those of \citet{2017gutierrez}, SN2012A \citep{2013tomasella}, and SN2013ej \citep{2016childress,2016dhungana,2014valenti,2015smartt}.
 The five best fit spectra imply an explosion epoch of  2015-08-22, consistent with the range we propose based on non-detections.
 interestingly, the hydrodynamic light curve modeling also places the best fit explosion epoch on the day of the last non-detection (see Section \ref{LC}).
 
@@ -165,7 +166,7 @@ We adopt the \citet{2011schlafly}  value of 0.08 for the analysis in this paper.
 %%%%%%%%%%%%%%%%% OBSERVATIONS and DATA REDUCTION %%%%%%%%%%%%%%%%%%
 \section{Observations and Data Reduction}
 \Azalee{Look into how people talk about telescopes vs collaborations vs instruments}
-ASAS-SN15oz was the closest type II supernova of 2015 and was observed extensively at all wavelengths. 
+ASASSN-15oz was the closest type II supernova of 2015 and was observed extensively at all wavelengths. 
 The majority of our observations were provided by the Las Cumbres Observatory (LCO) Supernova Key Project (2014-2017) and the Public ESO Spectroscopic Survey for Transients (PESSTO). 
 We supplemented these observations with dedicated projects in the X-ray and UV with \textit{Swift} (1114241, PI: Valenti) and in the radio with the VLA (VLA/15B-362, PI: Valenti). 
 The photometric and spectroscopic data reduction are defined in the next sections. 
@@ -179,25 +180,23 @@ Figure \ref{fig:LC} shows the complete light curve.
 LCO observations were reduced with the LCO imaging pipeline, lcogtsnpipe \ref{2016valenti}. 
 This pipeline employs PSF photometry, removing background contamination by fitting a low order polynomial to the host galaxy.
 Instrument magnitudes are converted to absolute magnitudes using the APASS system \footnote{https://www.aavso.org/apass} converting B and V to the Landolt magnitude system (Vega magnitudes) and g, r, and i to the sloan magnitude system (AB magnitudes). 
-
-
+%=======================
+\begin{figure}
+\begin{center}
+\includegraphics[width=\columnwidth]{full_lc}
+\caption{The complete optical and UV light curve of ASASSN-15oz expressed as apparent magnitude (+offset) vs days since explosion. 
+Each color corresponds to a single filter, labeled in the legend. 
+The Swift filters are denoted with an "s" in the name (e.g. us) for the optical filters and a "uw" in the name for UV filters.
+Each filter has been shifted by a global offset (denoted in the legend) for viewing purposes.}
+\label{fig:LC}
+\end{center}
+\end{figure}
+%-----------------------------------------
 Extensive optical spectroscopy was obtained during the photospheric phase with the FLOYDS spectrograph on the 2m LCO telescope at Siding Springs, Australia as part of the LCO Supernova Key Project and the EFOSC2 spectrograph on the 3.6 m NTT telescope at La Silla, Chile as part of the PESSTO Project. 
 The PESSTO project also contributed late time nebular spectra were observed on the NTT telescope. 
 One-dimensional spectra were extracted and calibrated using the FLOYDS \citep{2014valenti} and EFOSC pipelines, which string together standard IRAF extraction tasks \Stefano{What is the right way to cite this?}. 
 Figure \ref{fig:SpecAll} shows the evolution of the spectra over time, starting from a blue spectrum with broad hydrogen lines and developing metal features such as iron and scandium as the velocities decrease and the line widths narrow. 
 More unusually, the cachito feature \citep{2017gutierrez}, blueward of the H-$\alpha$ absorption is present in the first spectrum, growing in strength through day 20 (2015-09-16) and then decreasing in strength at later times. \Azalee{Say more here or reference future section for interpretation} \Stefano{Is this too much interpretation for this section?}
-%=======================
-\begin{figure}
-\begin{center}
-\includegraphics[width=\columnwidth]{lightcurve_snec} %PLACEHOLDER
-\caption{The multi-band optical light curve of ASAS-SN15oz. 
-The observations are shown as circles and the best fit SNEC model is shown with and without CSM (solid and dashed lines respectively).
-We require CSM to fit the light curve at early times. 
-We expect the blue filters to be affected by line blanketing and attribute the overestimate of the model flux in the g-band to this effect.}
-\label{fig:LC}
-\end{center}
-\end{figure}
-%-----------------------------------------
 %%%%%%%%%%%%%%%%% 
 \subsection{UV and X-Ray Observations}\label{SecSwift}
 UV and X-Ray imaging observations were obtained concurrently with \textit{Swift} programs 1114241 and XXXXXXX through 2015-11-18.
@@ -205,11 +204,11 @@ In addition to the imaging observations, two epochs of \textit{Swift} grism obse
 Imaging observations were processed with aperture photometry following \citet{2009brown} employing the updated zeropoints of \citet{2010breeveld}.
 UV grism observations were taken at two roll angles and extracted using the UVOTPY pipeline \citep{2014kuin}. 
 There is a nearby star coincident with the supernova at one roll angle and just above it at another roll angle.
-Although we tried custom extractions using different extraction box height and TRUVOT \citep{2015smitka} we were unable to produce a better calibration than the default pipeline. 
-Although two epoch were taken, only the first one has sufficient S/N to be extracted. 
+Although we tried custom extractions using different extraction box height and template subtraction using TRUVOT \citep{2015smitka} we were unable to produce a better calibration than the default pipeline. 
+Due to the distance of the ASASSN-15oz, only the first of the two spectroscopic epochs has sufficient S/N to be extracted. 
 
 An upper limit in the X-ray was determined using aperture photometry .
-An 18" aperture was used to integrate around the location of ASAS-SN15oz. 
+An 18" aperture was used to integrate around the location of ASASSN-15oz. 
 The background was removed using an aperture in a blank part of the image and measured fluxes were converted from counts to luminosity assuming a power-law model with a photon index of two.
 %%%%%%%%%%%%%%%%% 
 \subsection{IR Observations}
@@ -224,7 +223,7 @@ During this time the light curve is powered by the radioactive decay of ${}^{56}
 About 100 days after explosion, the recombination front passes the inner edge of the hydrogen envelope causing a sudden drop in luminosity referred to as the fall from plateau.  
 After the fall from plateau, light curve declines linearly, following the ${}^{56}$Co decay.
 
-The light curve of ASAS-SN15oz shows a linear decline similar to that of other type IIL SNe. 
+The light curve of ASASSN-15oz shows a linear decline similar to that of other type IIL SNe. 
 The light curve reaches peak brightness in the V-band 8.25 days after explosion, one day after observations began, reaching an above average absolute magnitude of -18.05 +/- 0.025.
 The early light curve rises until around day 20 in the redder filters, flattening in the V-band and falling in the blue bands during this same period. 
 The light curve then falls in all bands for the remainder of the observations, changing slope around day 40 and again sometime after day 85, following the fall from plateau. 
@@ -247,6 +246,7 @@ When V-band observations extended either earlier or later than a filter, we use 
 %%%%%%%%%%%%%%%%% SPECTROSCOPIC EVOLUTION%%%%%%%%%%%%%%%%%%
 \section{Spectroscopic Evolution}
 %%%%%%%%%%%%%%%%
+\subsection{Optical Evolution}
 Initial line identification was performed by comparing the spectra to that of supernova 1999em \citep{2001leonard}. 
 Identification was confirmed using the spectrum synthesis code Syn++ \citep{2013thomas} (parameter details in \ref{tab:syn++}. 
 %=======================
@@ -331,7 +331,7 @@ The spread of velocities represents the different locations of the ions in the e
 \begin{figure*}
 \begin{center}
 \includegraphics[width=\textwidth]{velocity_compare_guitierrez}
-\caption{A comparison of the velocity of ASAS-SN15oz to the mean velocity of 122 IIP/IIL supernovae \citep{2017gutierrez} for H-$\alpha$ (left), H-$\beta$ (middle), and Fe II (right).
+\caption{A comparison of the velocity of ASASSN-15oz to the mean velocity of 122 IIP/IIL supernovae \citep{2017gutierrez} for H-$\alpha$ (left), H-$\beta$ (middle), and Fe II (right).
 For all lines the velocity is about 1$\sigma$ above average. 
 Each of these line originates in a different part of the ejecta indicating that this is a global trend and the explosion energy is above average. 
 Following \citep{2012silverman} we select velocity errors of 2 $\AA$, these are contained within the symbols and so are not plotted.}
@@ -340,6 +340,21 @@ Following \citep{2012silverman} we select velocity errors of 2 $\AA$, these are 
 \end{figure*}
 %-----------------------------------------
 \Azalee{High velocity core --> less gamma ray trapping (Jerkstrand 2011)}
+\subsection{Infrared Evolution}
+%=======================
+\begin{figure*}
+\begin{center}
+\includegraphics[width=\textwidth]{ir_spec_montage_log}
+\caption{The spectral evolution of the infrared data during the photospheric phase. 
+The spectral evolution mirrors in the IR mirrors the optical evolution.
+The first spectrum (dark blue) taken 8 days post-explosion shows broad hydrogen features.
+The later spectra at day 38 (cyan) and and 43 (green) reveal the development metal lines.
+Regions of severe sky contamination are marked with grey boxes.}
+\label{fig:VelocityCompare}
+\end{center}
+\end{figure*}
+%-----------------------------------------
+
 %%%%%%%%%%%%%%%%% EVIDENCE FOR INTERACTION%%%%%%%%%%%%%%%%%%
 \section{Evidence for interaction}
 Introductory words here...
@@ -351,14 +366,25 @@ Assuming Galactic absorption of 6.18x$10^{20}$ cm$^{-2}$ \citep{2005kalberla}, t
 The \textit{Swift} grism observations show no sign of the narrow emission lines typically associated with strong interaction.
 This is supported by a lack of UV continuum excess at any epoch. 
 %UV spectrum presented in this paper are average of the first epoch weighted by the error. 
-\Azalee{Add Swift Spectra Figure}
-Figure \ref{fig:UVColor} shows a comparison of the UV color of ASAS-SN15oz to that of all other type IIP/IIL supernovae with \textit{Swift} observations.
+%=======================
+\begin{figure*}
+\begin{center}
+\includegraphics[width=\textwidth]{swift_spectra} %created by make_swift_color_fig.ipynb
+\caption{The Swift UV spectrum from 2015-09-05 (day 9). 
+The top panel shows the spectrum taken with a roll angle of PA=248, the middle panel shows the spectrum taken with a roll angle of PA=260, and the bottom panel shows the weighted average of the flux at each roll angle.
+These spectra are not template subtracted, thus most of the features are zeroth order images of other objects in the field.
+The lack of narrow line emission indicates a lack of strong interaction.}
+\label{fig:SwiftSpectrum}
+\end{center}
+\end{figure*}
+%-----------------------------------------
+Figure \ref{fig:UVColor} shows a comparison of the UV color of ASASSN-15oz to that of all other type IIP/IIL supernovae with \textit{Swift} observations.
 Each point is colored by the $S_{50V}$ slope, with shallower slopes in blue and steeper slopes in red. 
 %=======================
 \begin{figure}
 \begin{center}
 \includegraphics[width=\columnwidth]{uv_slope_comp} %created by make_swift_color_fig.ipynb
-\caption{The color of all type IIP/IIL supernovae observed with \textit{Swift}. Within this sample, ASAS-SN15oz shows no UV excess.}
+\caption{The color of all type IIP/IIL supernovae observed with \textit{Swift}. Within this sample, ASASSN-15oz shows no UV excess.}
 \label{fig:UVColor}
 \end{center}
 \end{figure}
@@ -368,15 +394,42 @@ The non-detection in the X-ray disfavors strong interaction, although at this de
 \subsection{Radio}
 {\bf ***Assaf, please put your analysis here***}
 %%%%%%%%%%%%%%%%
-\subsection{Cachito Analysis?}
+\subsection{Cachito Analysis}
+\Azalee{Elaborate on why we think this is Si and not high velocity hydrogen}
+
+%=======================
+\begin{figure}
+\begin{center}
+\includegraphics[width=\columnwidth]{cachito_evolution}
+\caption{The evolution of the cachito feature (center panel) over time. 
+The feature is visible bluewards of H-$\alpha$  in the first spectrum, 8 days post explosion.
+It further increase in strength for the next 10 days, then decreases until it is barely visible at 60 days post explosion.
+This evolution is counter to the evolution described in \citet{2007chugai} in which the high velocity hydrogen feature becomes visible around day 40, making it unlikely that it is high velocity hydrogen.
+There is no evidence of a high velocity hydrogen feature in H-$\beta$ (left panel) although this is not surprising given the low opacities predicted by \citet{2007chugai}.
+The high velocity HeI ($\lambda=10830$) feature also predicted by the models of \citet{2007chugai} is too heavily blended with the Paschen-$\gamma$ and C I lines to be identifiable.}
+\label{fig:CachitoEvolve}
+\end{center}
+\end{figure}
+%-----------------------------------------
+%=======================
+\begin{figure}
+\begin{center}
+\includegraphics[width=\columnwidth]{cachito_fe_vel_comp}
+\caption{A comparison of the velocity of the Cachito feature if it is Si II ($\lambda=6355$) (blue triangles) and the velocity of the metals in the ejecta as characterized by the FeII $\lambda=5169$ lines (orange circles).
+The velocities are the same indicating that this line is likely due to Si II rather than high velocity hydrogen in the circumstellar medium.}
+\label{fig:SiVelocity}
+\end{center}
+\end{figure}
+%-----------------------------------------
+
 %%%%%%%%%%%%%%%%% LIGHT CURVE MODELING%%%%%%%%%%%%%%%%%%
 \section{Light Curve Modeling with SNEC}
-We fit the light curve of ASAS-SN15oz using the Supernova Explosion Code (SNEC) \citep{2015morozova}.
+We fit the light curve of ASASSN-15oz using the Supernova Explosion Code (SNEC) \citep{2015morozova}.
 SNEC is an open source Lagrangian 1D radiation hydrodynamic code that assumes local thermodynamic equilibrium (LTE).
 Type II supernovae are well characterized by LTE from shock breakout through the fall from plateau. 
 SNEC uses a Paczy\'nski equation of state \citep{1983paczynski} solving for the ionization fractions using the Saha equations in the non-degenerate approximation \citep{2000zaghloul}. 
 Opacities are drawn from OPAL Type II opacity tables \citep{1996iglesias} at high temperature ($T=10^{4.5}-10^{8.7}$) and tables of \citet{2005ferguson} at low temperatures ($T = 10^{2.7}-10^{4.5}K$) supplemented with an opacity floor of 0.01 cm$^2$g$^{-1}$. 
-The progenitor of ASAS-SN15oz is modeled using a non-rotating solar-metalicity Red Supergiant of mass M, evolved with the {\it Kepler} code \citep{2016sukhbold}. 
+The progenitor of ASASSN-15oz is modeled using a non-rotating solar-metalicity Red Supergiant of mass M, evolved with the {\it Kepler} code \citep{2016sukhbold}. 
 \Azalee{more citations?}. 
 Mixing of layers due to the explosion is modeled by boxcar smoothing the progenitor profile with a kernel of 0.4 \msunperiod.
 \Azalee{What does Kepler do with mass lost to stellar winds? Is it in the profile?}
@@ -390,13 +443,13 @@ where $\dot{M}$ is the wind mass-loss rate, $v_{wind}$ is the wind velocity.
 This approximation allows us to parameterize the CSM with two parameters, K and $R_{ext}$, the radial extent of the CSM.
 
 %%%%%%%%%%%%%%%%
-\subsection{SNEC modeling of ASAS-SN15oz}\label{sec:LCmodeling}
-We model the explosion of ASAS-SN15oz using a thermal bomb with explosion energy $E_{exp}$ lasting for 1 second in the inner 0.02 \msunperiod. 
+\subsection{SNEC modeling of ASASSN-15oz}\label{sec:LCmodeling}
+We model the explosion of ASASSN-15oz using a thermal bomb with explosion energy $E_{exp}$ lasting for 1 second in the inner 0.02 \msunperiod. 
 \Viktoriya{Inner 0.02 Msun before or after the excision of the neutron star?}
 \Azalee{sort out explosion energy}
 
 SNEC does not model nuclear reaction networks, but rather takes an input a mass of ${}^{56}$Ni. 
-Given the uncertainty in the mass of ${}^{56}$Ni produced by ASAS-SN15oz we produced models for the maximum, minimum, and mean value of synthesized ${}^{56}$Ni (see Section \label{SecNi}).
+Given the uncertainty in the mass of ${}^{56}$Ni produced by ASASSN-15oz we produced models for the maximum, minimum, and mean value of synthesized ${}^{56}$Ni (see Section \label{SecNi}).
 While SNEC allows for the ${}^{56}$Ni to be mixed out to different interior radii, \Viktoriya{Is this true? It seems like you get different results in the 2018 paper} find that the light curve is not very sensitive to the mixing fraction and thus we choose to keep this value fixed at 5.0 R$_{\odot}$. 
 Following \citet{2017morozova}, we explore different mass-loss scenarios by adding a constant wind density profile to RSG density profile with density K and radial extent (from the center) R.
 
@@ -421,22 +474,22 @@ Ni Mass (\msunperiod) & {\bf 0.08}, 0.95, 0.11 \\
 %-----------------------------------------
 For ease of comparison with observations, SNEC uses the temperature at each time step to compute a blackbody spectrum, which it combines with different filter throughputs to output a light curve in sloan filters u, g, r, and i, Bessel filters U, B, V, R, and I and PanSTARRs filter z. 
 During the rise and plateau phase, a blackbody should be a good approximation to the longer wavelengths. 
-However, line blanketing make cause the bluer filters to be a poor representation of the observed spectrum \citep{2009kasen}.
+However, line blanketing make cause the bluer filters to be a poor representation of the observed spectrum \citep{2009kasen,2005dessart}.
 For this reason the best fit model is determined using the g, r, and i filter. 
 While we do have a V band light curve, the throughput heavily overlaps with the g and r bands and its inclusion would give more weight to these wavelengths without providing new information.
 The best fit model is determined by interpolating the well sampled model to the observed wavelengths and computing a chi-square minimization across all three filters.
 Given the uncertainty in the explosion time, we shift the model spectrum by $\pm$4 days and treat this offset as a free parameter.
-We find the light curve of ASAS-SN15oz is best characterized by M = 18 \msunperiod, E = 1.4x10$^{51}$ ergs, K = 10 g/cm, R = 2400 \rsun, mass$_{Ni}$ = 0.083, t$_{offset}$ = -4 days.
-This model is shown with and without CSM interaction in Figure \ref{fig:LC}. 
+We find the light curve of ASASSN-15oz is best characterized by M = 18 \msunperiod, E = 1.4x10$^{51}$ ergs, K = 10 g/cm, R = 2400 \rsun, mass$_{Ni}$ = 0.083, t$_{offset}$ = -4 days.
+This model is shown with and without CSM interaction in Figure \ref{fig:snecLC}. 
 %=======================
 \begin{figure}
 \begin{center}
 \includegraphics[width=\columnwidth]{lightcurve_snec} %PLACEHOLDER
-\caption{The multi-band optical light curve of ASAS-SN15oz. 
+\caption{The multi-band optical light curve of ASASSN-15oz. 
 The observations are shown as circles and the best fit SNEC model is shown with and without CSM (solid and dashed lines respectively).
 We require CSM to fit the light curve at early times. 
 We expect the blue filters to be affected by line blanketing and attribute the overestimate of the model flux in the g-band to this effect.}
-\label{fig:LC}
+\label{fig:snecLC}
 \end{center}
 \end{figure}
 %-----------------------------------------
@@ -454,7 +507,7 @@ To compare our best fit model to that without CSM, we use the best fit progenito
 This should be a good representation of the best fit model as we expect the light curve to be the same during the S2 slope and improved by CSM at early times during the S1 slope.
 %%%%%%%%%%%%%%%%
 \subsection{Comparison of Observed and Modeled Ejecta Velocity}
-To check the consistency of our photospheric modeling, we compare the photospheric velocity of the best fit SNEC model to the observed photospheric velocity of ASAS-SN15oz (see Figure \ref{fig:SNECVelocityCompare}.
+To check the consistency of our photospheric modeling, we compare the photospheric velocity of the best fit SNEC model to the observed photospheric velocity of ASASSN-15oz (see Figure \ref{fig:SNECVelocityCompare}.
 Following \citet{2014faran}, we define the photospheric velocity as that of Fe II $\lambda$5169. 
 We use the relationship between the $H-\beta$ velocity and the Fe II $\lambda$5169 velocity defined in \citet{2014faran} to infer the photospheric velocity at early times when the iron line is not yet visible.
 While there is fair agreement between the model and observe velocity at early times, the model velocity is significantly lower than the observed velocity starting around day 25.
@@ -478,50 +531,72 @@ This discrepancy is likely the result of the Fe II line being produced above the
 Intro text here...
 %%%%%%%%%%%%%%%%
 \subsection{Determining the Nickel Mass}\label{SecNi}
-Following \citet{2016valenti} we find the Nickel mass synthesized in a supernova explosion by scaling the bolometric luminosity of ASAS-Sn15oz when it is powered by ${}^{56}Co$ to that of supernova 1987A using the following relation:
+Following \citet{2016valenti} we find the Nickel mass synthesized in a supernova explosion by scaling the bolometric luminosity of ASASSN-15oz when it is powered by ${}^{56}Co$ to that of supernova 1987A using the following relation:
 \begin{equation} \label{eqn:Ni}
 M({}^{56}Ni) = 0.075M_{\odot} \times \frac{L_{sn}(t)}{L_{87A}(t)}
 \end{equation}
 \Stefano{does this need a reference?}
-This method assumes that either the slope of the radioactive decay tail follows that of SN1987A (i.e. complete gamma ray trapping) or that the bolometric luminosity immediately after the fall from plateau is known. 
-Since neither of these is true for ASAS-SN15oz we consider the maximum and minimum Nickel mass allowed by the observations. 
-An upper limit on the Nickel mass can be obtains if ASAS-SN15oz fell from plateau immediately after our last photospheric point.
-For this case, we construct an artificial fall from plateau starting at the last photospheric point and using the median fall from plateau slope ($w0 = -0.087$) from the 30 IIp/IIL supernovae in \citet{2016valenti}.
-A Nickel mass of $0.1 M_{\odot}$ is found using the bolometric luminosity at 86 days, the intersection of the fall from plateau and the extrapolated radioactive tail.
-To find a lower limit on the total Nickel mass we estimate the maximum plateau length using Figure 5a in \citet{2016valenti}. 
-Given the slope of ASAS-SN15oz ($s_{50V} = 1.09 mag/50$ days), the maximum time to the end of the fall from plateau is 135 days$t_{pt} =130$ days and the maximum phase at the end of the fall from plateau to be 135 days.
-Extrapolating the bolometric luminosity of the radioactive decay tail slope to this time and using equation \ref{eqn:Ni}, we find a lower limit on the Nickel mass of 0.08 $M_{\odot}$.
-Finally, we consider an intermediate Nickel mass, the mean of the upper and lower limits, 0.11 $M_{\odot}$.
-%%%%%%%%%%%%%%%%
-\subsection{Progenitor Mass from Nebular Spectra}
-Nebular observations, taken 200-500 days post-explosion when the eject is transparent, show no continuum and strong emission lines. 
-The flux of these lines is used to determine the mass of each element present in the ejecta.
-The mass of each element is directly related to the mass of the progenitor star. 
-Specifically, simulations of supernovae explosions, show that the oxygen mass monotonically increases with progenitor mass \citep{2007woosley}.
-Consequently, the [OI] flux ($\lambda\lambda6300, 6334$) can be measured and mapped to progenitor mass using spectral synthesis codes.
-
-We compare the nebular spectra of ASAS-SN15oz, observed between April 11, 2016 and September 19, 2016 (227 - 388 days post explosion) to the models presented in \citet{2014jerkstrand} for 12, 15, 19, and 25 M$_{\odot}$ progenitors (MZAMS).
-Starting with the explosion models from \citet{2007woosley}, the ejecta is divided into zones based on chemical composition and the evolution of the spectrum is found by modeling the gamma ray transport and deposition, non-thermal electron degradation, NLTE ionization and excitation, and Monte Carlo radiative transfer.
-Figure \ref{fig:neb} shows the August 3, 2016 observation and the models, scaled to the observations over the full wavelength range.
-\Azalee{Figure out scaling and write about findings}
-The [OI] lines are displayed in the inset figure. 
-We find the [OI] strength falls between the 15 and 19 M$_\odot$ models consistent with the 18 M$_{\odot}$ found by modeling the light curve.
+This method assumes that there is complete gamma ray trapping for at least some of the radioactive decay tail (i.e. that the slope is consistent with that expected from ${}^{56}$Co decay).
+Since there is not complete trapping for any part of the observed radioactive decay tail of ASASSN-15oz, we consider the maximum and minimum Nickel mass allowed by the observations. 
+For both cases we assume that the fall from plateau takes 20 days based on light curves fits presented in \citet{2016valenti}. 
+An upper limit on the Nickel mass can be obtains if ASASSN-15oz fell from plateau immediately after the last photospheric point.
+For this case, we construct an artificial fall from plateau, lasting 20 days, and terminating at a fit to the radioactive decay tail, extrapolated to earlier times.
+Using this light curve (see top panel of Figure \ref{fig:Ni}) and assuming complete trapping at the end of the fall from plateau, we calculate a Nickel mass of 0.1 \msun by scaling the luminosity at 102 days.
+To find the lower limit, we estimate a conservative value of the time to the middle of the fall from plateau ($t_{pt}$) to be 125 days from Figure 5a in \citet{2016valenti}.
+Using this $t_{pt}$ and a 20 day fall from plateau, we calculate the fall from plateau to end 135 days after explosion and extrapolate the tail fit to this phase (see lower panel of Figure \ref{fig:Ni}). \Stefano{should we mention the time frame over which we fit the slope?} 
+Again, assuming complete trapping at the beginning of the radioactive decay tail, we compute a Nickel mass of 0.08 \msun by scaling the luminosity at 135 days.
+Finally, we consider an intermediate Nickel mass, the mean of the upper and lower limits, 0.95 \msunperiod.
 %=======================
 \begin{figure}
 \begin{center}
-\includegraphics[width=\columnwidth]{nebular_spectra_day340} %created by make_nebular_figure.ipynb
-\caption{A nebular spectrum of ASAS-SN15oz from August 03, 2016 (day 340) plotted with the models of \citet{2014jerkstrand} for MZAMS = 12, 15, 19, and 25 M$_{\odot}$. 
+\includegraphics[width=\columnwidth]{ni_mass_lc} %created by make_ni_figure.ipynb
+\caption{The artificial light curve of ASASSN-15oz for the shortest (top) and longest (bottom) plateau lengths. 
+The grey points represent the bolometric luminosity while the solid blue line represents a fit to the s2 data, the yellow line the artificial fall from plateau, and the red line is a fit to the radioactive decay tail.
+The green star marks the point to which the light curve of SN 1987A is scaled to derive a nickel mass. 
+Plotted as a cyan dashed line is the slope of the radioactive decay tail if there was complete trapping.
+An upper limit on the Nickel mass of 0.1 \msun is derived from the light curve in the top plot while a lower limit of 0.08 \msun is derived from the lower plot. }
+\label{fig:Ni}
+\end{center}
+\end{figure}
+%-----------------------------------------
+%%%%%%%%%%%%%%%%
+\subsection{Progenitor Mass from Nebular Spectra}
+Around 200 days the supernova ejecta becomes optically transparent, revealing the inner core. 
+At this time the spectra are nebular, showing strong emission lines and no continuum (see Figure \ref{fig:neb}).
+Analysis of the spectra at this time can constrain the geometry of the explosion as well as the abundance of different elements.
+In particular, spectral modeling of this stage is a powerful tool to constrain the nature of the progenitor.
+\citet{2012jerkstrand}, \citet{2013dessart}, and \citet{2014jerkstrand} have shown that the intensity of a few lines are sensitive to the mass of the progenitor.
+Specifically, there is a tight monotonic correlation between the strength of the [OI] ($\lambda\lambda6300, 6334$) line and the mass of the progenitor.
+This is because [OI] is more isolated and less sensitive to the explosive nucleosynthesis of the supernova than the other lines and thus reflects the oxygen abundance of the progenitor which has been shown to correlate well with progenitor mass. \Stefano{Which Wheeler paper did you want to cite here?}
+
+\citet{2014jerkstrand} modeled nebular spectra for 12, 15, 19, and 25 M$_{\odot}$ progenitors (MZAMS).
+Starting with the explosion models from \citet{2007woosley}, the ejecta is divided into zones based on chemical composition and the evolution of the spectrum is found by modeling the gamma ray transport and deposition, non-thermal electron degradation, NLTE ionization and excitation, and Monte Carlo radiative transfer.
+
+Nebular spectra of ASASSN-15oz, were taken on April 11, 2016 (day 228), August 03, 2016 (day 340), and September 19, 2016 (day 388) of which the first two were high enough S/N to model.
+In Figure \ref{fig:neb} we compare the first two observations to the different mass models, scaling the models to the observations over the full wavelength range. 
+A zoom in on the [OI] lines are displayed in the inset figure. We find the [OI] strength falls between the 15 and 19 M$_\odot$ models consistent with the 18 M$_{\odot}$ found by modeling the light curve.
+
+Following \citet{2018jerkstrand}, the scaling combined with the equation for the luminosity of the Cobalt decay (equation 6 of \citet{2012jerkstrand} yields the Nickel mass (assuming complete trapping): \begin{equation}
+\frac{F_{obs}}{F_{mod}} = \frac{d_{mod}^{2}}{d_{obs}^{2}}\frac{(M_{56,Ni}){}_{obs}}{(M_{56, Ni}){}_{mod}}exp\left(\frac{t_{mod} - t_{obs}}{111.4}\right)
+\end{equation}
+Where $F_{obs}$ and $F_{mod}$ are the observed and model flux, $d_{obs}$ and $d_{mod}$ the observed and model distance, $M_{56, Ni}{}_{obs}$ and $M_{56, Ni}{}_{mod}$ are the observed and model Nickel mass, and $t_{obs}$ and $t_{mod}$ are epoch of the observation and the model.
+Using this relation we find a Nickel mass of 0.02 \msunperiod.
+Given the constraints placed on the Nickel mass in Section \ref{SecNi} and the fact the ASASSN-15oz has incomplete gamma ray trapping, we find this scaling reasonable but cannot use it to set further limits on the Nickel mass.  
+%=======================
+\begin{figure}
+\begin{center}
+\includegraphics[width=\columnwidth]{nebular_spectra_OI} %created by make_nebular_figure.ipynb
+\caption{A nebular spectrum of ASASSN-15oz from April 11, 2015 (day 228; top) and August 03, 2016 (day 340; bottom) plotted with the scaled models of \citet{2014jerkstrand} for MZAMS = 12, 15, 19, and 25 M$_{\odot}$. 
 Most features in the observed spectrum well matched by the models. 
-The inset shows the [O I] ($\lambda\lambda6300, 6334$) feature which increases monotonically with progenitor mass. 
-The [O I] flux falls between the 15 and 19 M$_{\odot}$ models pointing to a progenitor in this mass range. 
-This is consistent with the results of the light curve modeling which found an 18 M$_{\odot}$ progenitor.}
+The inset shows the [O I] ($\lambda\lambda6300, 6334$) doublet, the strength of which increases monotonically with progenitor mass. 
+The [O I] flux falls between the 15 and 19 M$_{\odot}$ models, consistent the 18 M$_{\odot}$ progenitor mass found using light curve modeling.}
 \label{fig:neb}
 \end{center}
 \end{figure}
 %-----------------------------------------
 %%%%%%%%%%%%%%%%% DISCUSSION %%%%%%%%%%%%%%%%%%%%%
-\section{Discussion: Comparison to other objects} \label{SecComp}
-To find objects with a similar light curve to ASAS-SN15oz we compare the $s_{50V}$ slope to that of other supernovae \Stefano{how should we describe the database?}.
+\section{Discussion and Summary} \label{SecComp}
+To find objects with a similar light curve to ASASSN-15oz we compare the $s_{50V}$ slope to that of other supernovae \Stefano{how should we describe the database?}.
 SN 2016zb and SN 2015W have the best matched slopes. We compare the multi-band light curves and spectra of these objects and find them to be very similar in all respects.
 
 \Azalee{Revisit this figure. Is V-band the right one to measure both of these? how complete is the database? Consider cutting those with too large slopes}
@@ -530,7 +605,7 @@ SN 2016zb and SN 2015W have the best matched slopes. We compare the multi-band l
 \begin{center}
 \includegraphics[width=\columnwidth]{slope_compare} %created by lightcurve_characteristics.ipynb
 \caption{Center: The slope of the light curve at late times, during the radioactive decay phase compared to the slope during the photospheric phase for a sample of publicly available supernova light curves.
-ASAS-SN15oz is plotted in red.
+ASASSN-15oz is plotted in red.
 Top (Right): A histogram of the radioactive decay (photometric) phase slopes. All measured slopes from this phase are included in the hatched sample.
 The objects for which there is both a decay phase slope and a photospheric slope are plotted in blue. The comparison of the full slope sample (hatch) to the combined slope sample (blue) gives us confidence that points we plot in the center are representative of the full sample.}
 \label{fig:SlopeComp}
