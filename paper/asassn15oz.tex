@@ -177,7 +177,7 @@ Spectroscopic observations are detailed in Table \ref{tab:SpecObs}.
 The optical light curve was closely monitored by the Las Cumbres Observatory (LCO) from discovery through day 400 in the filters B, V, g, r, and i. 
 Unfortunately, the supernova passed behind the sun around day 80, leaving a gap in the observations from day 86 to day 184, most notably missing the fall from plateau.
 Figure \ref{fig:LC} shows the complete light curve.
-LCO observations were reduced with the LCO imaging pipeline, lcogtsnpipe \ref{2016valenti}. 
+LCO observations were reduced with the LCO imaging pipeline, lcogtsnpipe \citep{2016valenti}. 
 This pipeline employs PSF photometry, removing background contamination by fitting a low order polynomial to the host galaxy.
 Instrument magnitudes are converted to absolute magnitudes using the APASS system \footnote{https://www.aavso.org/apass} converting B and V to the Landolt magnitude system (Vega magnitudes) and g, r, and i to the sloan magnitude system (AB magnitudes). 
 %=======================
@@ -197,6 +197,15 @@ The PESSTO project also contributed late time nebular spectra were observed on t
 One-dimensional spectra were extracted and calibrated using the FLOYDS \citep{2014valenti} and EFOSC pipelines, which string together standard IRAF extraction tasks \Stefano{What is the right way to cite this?}. 
 Figure \ref{fig:SpecAll} shows the evolution of the spectra over time, starting from a blue spectrum with broad hydrogen lines and developing metal features such as iron and scandium as the velocities decrease and the line widths narrow. 
 More unusually, the cachito feature \citep{2017gutierrez}, blueward of the H-$\alpha$ absorption is present in the first spectrum, growing in strength through day 20 (2015-09-16) and then decreasing in strength at later times. \Azalee{Say more here or reference future section for interpretation} \Stefano{Is this too much interpretation for this section?}
+%=======================
+\begin{figure}
+\begin{center}
+\includegraphics[width=\columnwidth]{spectra_montage}
+\caption{\Azalee{write something here}}
+\label{fig:SpecAll}
+\end{center}
+\end{figure}
+%-----------------------------------------
 %%%%%%%%%%%%%%%%% 
 \subsection{UV and X-Ray Observations}\label{SecSwift}
 UV and X-Ray imaging observations were obtained concurrently with \textit{Swift} programs 1114241 and XXXXXXX through 2015-11-18.
@@ -316,7 +325,7 @@ Figure \ref{fig:velocity} shows the velocities for all good fits to the data.
 The distribution of velocities is typical of other IIP/IIL supernovae representing the distribution of elements throughout the ejecta. 
 A comparison of the velocities derived in this paper to the average values of 122 IIP/IIL SNe described in \citet{2017gutierrez} is shown in Figure \ref{fig:VelocityCompare}. The shaded regions represent the standard deviation of the sample.
 We find throughout the ejecta above average velocities, consistent with a larger than average explosion energy \Stefano{and mass?}. 
-This is consistent with the light curve modeling (see Section \ref{sec:LCmodel})
+This is consistent with the light curve modeling (see Section \ref{sec:LCmodeling})
 %=======================
 \begin{figure}
 \begin{center}
@@ -350,7 +359,7 @@ The spectral evolution mirrors in the IR mirrors the optical evolution.
 The first spectrum (dark blue) taken 8 days post-explosion shows broad hydrogen features.
 The later spectra at day 38 (cyan) and and 43 (green) reveal the development metal lines.
 Regions of severe sky contamination are marked with grey boxes.}
-\label{fig:VelocityCompare}
+\label{fig:IRmontage}
 \end{center}
 \end{figure*}
 %-----------------------------------------
@@ -395,21 +404,44 @@ The non-detection in the X-ray disfavors strong interaction, although at this de
 {\bf ***Assaf, please put your analysis here***}
 %%%%%%%%%%%%%%%%
 \subsection{Cachito Analysis}
-\Azalee{Elaborate on why we think this is Si and not high velocity hydrogen} See Figures \ref{fig:CachitoEvolve} and \ref{fig:SiVelocity}.
+\Stefano{Mention Pooly 2002 here?}
+\citet{2007chugai} proposed a high velocity Hydrogen and Helium line produced by interaction the supernova ejecta with a stellar wind. 
+According to their model, a notch on the blue side of the H-$\alpha$ profile should appear 40-80 days post explosion.
+Although they could contrive a model with the introduction of a cold dense shell in which a similar notch was visible in H-$\beta$ their simplest model did not showed H-$\beta$ due to its low opacity in the wind.
+They do however, predict absorption in HeI $\lambda10830$ 20-60 days post explosion, a line that is only excited when wind is present. 
+
+A feature blueward of H-$\alpha$ is often present in type II SNe, however, it is unclear if this feature is due to high velocity hydrogen or to Si II ($\lambda$=6355)
+and has thus been named the cachito feature to avoid association with a particular species.
+\citet{2017gutierrez} searched for this feature in 122 type II SNe. 
+They find the cachito feature in 70 SNe in their sample and divide the detections in early phase detections (phase < 40 days) and late phase detections (phase > 40 days).
+The velocities of the cachito feature observed in the early sample are most often well matched to the FeII velocity if interpreted as SiII. 
+For this reason, detection earlier than 30 days are interpreted as SiII.
+At late times, however, it is challenging to interpret the cachito feature as anything other than Hydrogen due to the temperatures required to excite SiII.
+
+Figure \ref{fig:CachitoEvolve} shows the time evolution of the region surrounding H-$\alpha$ (left panel), H-$\beta$ (middle panel), and HeI (right panel).
+H-$\alpha$ and H-$\beta$ are marked with a brick dotted line in the left and middle panels, respectively.
+The dashed line in the left panel marks the location of the Cachito feature and in the middle panel, the expected location of the cachito feature in H-$\beta$.
+The time of expected CSM interaction is marked in grey.
+ASASSN-15oz shows a strong cachito feature in the first spectrum, 8 days post explosion. 
+This feature strengthens until about day 15 and then fades until it is no longer visible at day 60. 
+We find no evidence for a high velocity feature in H-$\beta$ nor HeI.
+The HeI feature is fully blended with CI ( $\lambda 10691$ ) and Paschen-$\gamma$ and if it is present, it is impossible to identify or deblend.
 %=======================
 \begin{figure}
 \begin{center}
 \includegraphics[width=\columnwidth]{cachito_evolution}
-\caption{The evolution of the cachito feature (center panel) over time. 
-The feature is visible bluewards of H-$\alpha$  in the first spectrum, 8 days post explosion.
+\caption{The evolution of the cachito feature (left panel; dashed line) over time. 
+The feature is visible bluewards of H-$\alpha$ (left panel; H-$\alpha$ marked with dotted line)  in the first spectrum , 8 days post explosion.
 It further increase in strength for the next 10 days, then decreases until it is barely visible at 60 days post explosion.
 This evolution is counter to the evolution described in \citet{2007chugai} in which the high velocity hydrogen feature becomes visible around day 40, making it unlikely that it is high velocity hydrogen.
-There is no evidence of a high velocity hydrogen feature in H-$\beta$ (left panel) although this is not surprising given the low opacities predicted by \citet{2007chugai}.
+There is no evidence of a high velocity hydrogen feature in H-$\beta$ (center panel; H-$\beta$ marked with dotted line; cachito velocity marked with dashed line) although this is not surprising given the low opacities predicted by \citet{2007chugai}.
 The high velocity HeI ($\lambda=10830$) feature also predicted by the models of \citet{2007chugai} is too heavily blended with the Paschen-$\gamma$ and C I lines to be identifiable.}
 \label{fig:CachitoEvolve}
 \end{center}
 \end{figure}
 %-----------------------------------------
+A comparison of the cachito velocity, when interpreted as SiII compared to the FeII velocity is plotted in Figure \ref{fig:SiVelocity}.
+We find excellent agreement between the two velocities strengthening our conclusion that this feature is due to SiII rather than high velocity hydrogen.
 %=======================
 \begin{figure}
 \begin{center}
@@ -448,7 +480,7 @@ We model the explosion of ASASSN-15oz using a thermal bomb with explosion energy
 \Azalee{sort out explosion energy}
 
 SNEC does not model nuclear reaction networks, but rather takes an input a mass of ${}^{56}$Ni. 
-Given the uncertainty in the mass of ${}^{56}$Ni produced by ASASSN-15oz we produced models for the maximum, minimum, and mean value of synthesized ${}^{56}$Ni (see Section \label{SecNi}).
+Given the uncertainty in the mass of ${}^{56}$Ni produced by ASASSN-15oz we produced models for the maximum, minimum, and mean value of synthesized ${}^{56}$Ni (see Section \ref{SecNi}).
 While SNEC allows for the ${}^{56}$Ni to be mixed out to different interior radii, \Viktoriya{Is this true? It seems like you get different results in the 2018 paper} find that the light curve is not very sensitive to the mixing fraction and thus we choose to keep this value fixed at 5.0 R$_{\odot}$. 
 Following \citet{2017morozova}, we explore different mass-loss scenarios by adding a constant wind density profile to RSG density profile with density K and radial extent (from the center) R.
 
