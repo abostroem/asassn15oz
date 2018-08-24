@@ -126,19 +126,50 @@ Supernovae
 %%%%%%%%%%%%%%%%% BODY OF PAPER %%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%% INTRODUCTION %%%%%%%%%%%%%%%%%%
 \section{Introduction}
-We know that massive stars that retain at least partially the hydrogen layer at the moment of the explosions ends their life as SNe II. 
-However we are still missing a complete picture to explain they diversity in luminosity (5 orders of magnitudes at maximum), the diversity in the light curve shape (linear vs plateau). 
-In the lat few years the organization of type II in two classes IIP and IIl has been also questioned. 
-With few authors supporting a clear separation and other supporting a continuum class that includes IIP and IIL. 
-In addition it has always been hard to reproduce with hydrodynamic calculation the lsteep decline visible in SNe IIL-like objects. 
-Recently there have bee more and more evidences of the presence of some interaction in the early phase of SNe II and in particular in SNe IIL. 
-Morozova was recently able to reproduce those light curve with an extended envelope with which the SN interact soon after the explosion. 
-Evidence of some material left before the explosion have been also found with the presence of narrow lines in the first spectra few hours to days after the explosion. 
+Stars greater than 8 \msun end their lives as core-collapse supernovae (CCSN). 
+With the energy of a galaxy of stars, these explosions are easily identified by comparing new images to previous images.
+However, while we observe the supernova phase frequently, it is challenging to connect the supernova observations to their progenitor star.
+This is due in part to uncertainties in the late stages of the evolution of massive stars and in part to the challenges of modeling the complex physics of the supernova explosion and the expansion of the eject.
 
-Here we present the study of ASASSN-15oz a type IIl-like SN for which we were able to collect an extended set of data from the X-ray to the radio. 
-We will use these data to investigate the presence of interaction ?.
+One of the biggest challenges in connecting supernova observations to their progenitors is understanding the mass-loss of massive stars.
+Supernova without hydrogen in their spectra are thought to come from binary systems. 
+Although a companion has not been detected (is this true?), there are some stars moving at high velocity that could be the supernova companion that was kicked out due to the explosion (cite Lennon? I think this was a GAIA result).
+The supernova that show hydrogen in their spectra throughout their evolution (type II) are currently attributed to single star progenitors.
+These supernova generally increase in brightness for a week and then decline linearly for $\sim$100 days, a period referred to as the photospheric phase, before dropping dramatically onto another linear decline, called the nebular phase.
+However, within this general shape there is a great diversity in rise times, length of the photospheric phase, height of the drop to the nebular phase, and slopes of each decline. 
+In fact, the there are two classes of supernova, defined based on the light curve shape during the photospheric phase.
+Those that stay at constant brightness, creating a plateau, are called type IIP supernovae, while those that decline linearly are referred to at type IIL supernovae. 
+This difference in light curve shape has been attributed to a difference in the amount of hydrogen in the outer envelope: IIL supernovae having a thinner envelope. 
+The most natural mechanism for this is through mass-loss due to stellar winds. 
+This view is supported by the apparent continuum of light curves found between the two classes (cite a paper here?).
+However, it is also commonly assumed that both IIL and IIP supernovae are not interacting with any circumstellar material (CSM), an assumption at odds with the idea of late stage mass-loss.
 
-In the next section we will ...
+Recently, hydrodynamic light curve modeling of type IIP/IIL supernovae have required some amount of CSM to reproduce the slope of the light curve during the first 30-40 days (cite Viktoriya and MESA/STELLA paper) for most supernovae.
+Additionally, narrow emission lines in the spectra of some supernovae taken a few hours to days after explosion provide more evidence of interaction with CSM. 
+However, a comprehensive search for signs of interaction at all wavelengths, including those most commonly associated with interaction: X-ray and Radio, has not been done. 
+Here we present the study of ASASSN-15oz, a type IIL supernova, for which we were able to collect and extensive set of data ranging from the X-ray to the Radio, and search for signs of interaction is CSM.
+This interaction should be easiest to detect in type IIL supernovae as they have more of their hydrogen envelope than IIP supernovae.
+In Section \ref{15ozIntro} we present the explosion parameters of ASASSN-15oz.
+In Section \ref{sec:Obs} we present the data collected at all wavelengths.
+The photometric and spectroscopic evolution are described in Sections \ref{sec:LCEvolve} and \ref{sec:SpecEvolve}, respectively.
+Section \ref{sec:Interaction} describes our search for interaction, including extensive hydrodynamic light curve modeling.
+Finally, we present a comparison to other objects and conclusions in \ref{SecComp}.
+
+\Stefano{should I say something about if there's no CSM?}
+
+%We know that massive stars that retain at least partially the hydrogen layer at the moment of the explosions ends their life as SNe II. 
+%However we are still missing a complete picture to explain they diversity in luminosity (5 orders of magnitudes at maximum), the diversity in the light curve shape (linear vs plateau). 
+%In the lat few years the organization of type II in two classes IIP and IIl has been also questioned. 
+%With few authors supporting a clear separation and other supporting a continuum class that includes IIP and IIL. 
+%In addition it has always been hard to reproduce with hydrodynamic calculation the lsteep decline visible in SNe IIL-like objects. 
+%Recently there have bee more and more evidences of the presence of some interaction in the early phase of SNe II and in particular in SNe IIL. 
+%Morozova was recently able to reproduce those light curve with an extended envelope with which the SN interact soon after the explosion. 
+%Evidence of some material left before the explosion have been also found with the presence of narrow lines in the first spectra few hours to days after the explosion. 
+%
+%Here we present the study of ASASSN-15oz a type IIl-like SN for which we were able to collect an extended set of data from the X-ray to the radio. 
+%We will use these data to investigate the presence of interaction ?.
+%
+%In the next section we will ...
 
 %%%%%%%%%%%%%%%%% SN PARAMETERS %%%%%%%%%%%%%%%%%%
 \section{Supernova Parameters} \label{15ozIntro}
@@ -157,15 +188,14 @@ SNID has very few templates for type IIL supernovae, we therefore add templates 
 \Azalee{make templates publicly available and link to them}
 We confirm our explosion epoch by fitting the first spectrum (2015-09-04) using SNID v. 5.0, augmenting the templates with those of \citet{2017gutierrez}, SN2012A \citep{2013tomasella}, and SN2013ej \citep{2016childress,2016dhungana,2014valenti,2015smartt}.
 The five best fit spectra imply an explosion epoch of  2015-08-22, consistent with the range we propose based on non-detections.
-interestingly, the hydrodynamic light curve modeling also places the best fit explosion epoch on the day of the last non-detection (see Section \ref{LC}).
+interestingly, the hydrodynamic light curve modeling also places the best fit explosion epoch on the day of the last non-detection (see Section \ref{LCEvolve}).
 
 We use an X-shooter spectrum taken with the UVB and VIS arms to constrain the host galaxy reddening to confirm the galactic reddening using the equivalent widths of the Na I D1 and D2 lines ($\lambda$5890, $\lambda$5896) \citep{2012poznanski}. 
 We find no evidence of Na I absorption at the host redshift and therefore assume no host absorption. 
 By fitting gaussian profiles to the galactic Na I absorption we find E(B-V) = 0.12, consistent with the value given by \citet{2011schlafly}. 
 We adopt the \citet{2011schlafly}  value of 0.08 for the analysis in this paper. 
 %%%%%%%%%%%%%%%%% OBSERVATIONS and DATA REDUCTION %%%%%%%%%%%%%%%%%%
-\section{Observations and Data Reduction}
-\Azalee{Look into how people talk about telescopes vs collaborations vs instruments}
+\section{Observations and Data Reduction} \label{sec:Obs}
 ASASSN-15oz was the closest type II supernova of 2015 and was observed extensively at all wavelengths. 
 The majority of our observations were provided by the Las Cumbres Observatory (LCO) Supernova Key Project (2014-2017) and the Public ESO Spectroscopic Survey for Transients (PESSTO). 
 We supplemented these observations with dedicated projects in the X-ray and UV with \textit{Swift} (1114241, PI: Valenti) and in the radio with the VLA (VLA/15B-362, PI: Valenti). 
@@ -186,7 +216,7 @@ Instrument magnitudes are converted to absolute magnitudes using the APASS syste
 \includegraphics[width=\columnwidth]{full_lc}
 \caption{The complete optical and UV light curve of ASASSN-15oz expressed as apparent magnitude (+offset) vs days since explosion. 
 Each color corresponds to a single filter, labeled in the legend. 
-The Swift filters are denoted with an "s" in the name (e.g. us) for the optical filters and a "uw" in the name for UV filters.
+The optical Swift filters are denoted with an "s" in the name (e.g. us).
 Each filter has been shifted by a global offset (denoted in the legend) for viewing purposes.}
 \label{fig:LC}
 \end{center}
@@ -226,7 +256,7 @@ The background was removed using an aperture in a blank part of the image and me
 \subsection{Radio Observations}
 {\bf ***Assaf, please put your analysis here***}
 %%%%%%%%%%%%%%%%% LIGHT CURVE EVOLUTION %%%%%%%%%%%%%%%%%%
-\section{Light Curve Evolution} \label{LC}
+\section{Light Curve Evolution} \label{sec:LCEvolve}
 The light curve of all type IIP/IIL supernovae show an initial rise, followed by a period of 100 days during which the supernova stays the same brightness or declines linearly. 
 During this time the light curve is powered by the radioactive decay of ${}^{56}$Ni and the expansion of the ejecta approximately balances the receding Hydrogen recombination front, leading to a close to constant photospheric radius. 
 About 100 days after explosion, the recombination front passes the inner edge of the hydrogen envelope causing a sudden drop in luminosity referred to as the fall from plateau.  
@@ -253,7 +283,7 @@ Finally, the flux is converted to a luminosity using the distance modulus (Secti
 We use  the U, B, g, V, r, R, i, I to calculate the bolometric luminosity at the V-band cadence.
 When V-band observations extended either earlier or later than a filter, we use the color with the neighboring filter to extrapolate the flux.
 %%%%%%%%%%%%%%%%% SPECTROSCOPIC EVOLUTION%%%%%%%%%%%%%%%%%%
-\section{Spectroscopic Evolution}
+\section{Spectroscopic Evolution} \label{sec:SpecEvolve}
 %%%%%%%%%%%%%%%%
 \subsection{Optical Evolution}
 Initial line identification was performed by comparing the spectra to that of supernova 1999em \citep{2001leonard}. 
@@ -365,7 +395,7 @@ Regions of severe sky contamination are marked with grey boxes.}
 %-----------------------------------------
 
 %%%%%%%%%%%%%%%%% EVIDENCE FOR INTERACTION%%%%%%%%%%%%%%%%%%
-\section{Evidence for interaction}
+\section{Evidence for interaction} \label{sec:Interaction}
 Introductory words here...
 %%%%%%%%%%%%%%%%
 \subsection{UV and X-Ray}
@@ -381,7 +411,7 @@ This is supported by a lack of UV continuum excess at any epoch.
 \includegraphics[width=\textwidth]{swift_spectra} %created by make_swift_color_fig.ipynb
 \caption{The Swift UV spectrum from 2015-09-05 (day 9). 
 The top panel shows the spectrum taken with a roll angle of PA=248, the middle panel shows the spectrum taken with a roll angle of PA=260, and the bottom panel shows the weighted average of the flux at each roll angle.
-These spectra are not template subtracted, thus most of the features are zeroth order images of other objects in the field.
+These spectra are not template subtracted, therefore the spectra show residuals from zeroth order light. These features can be identified as being in the spectrum of one roll angle but not the other.
 The lack of narrow line emission indicates a lack of strong interaction.}
 \label{fig:SwiftSpectrum}
 \end{center}
@@ -404,19 +434,17 @@ The non-detection in the X-ray disfavors strong interaction, although at this de
 {\bf ***Assaf, please put your analysis here***}
 %%%%%%%%%%%%%%%%
 \subsection{Cachito Analysis}
-\Stefano{Mention Pooly 2002 here?}
 \citet{2007chugai} proposed a high velocity Hydrogen and Helium line produced by interaction the supernova ejecta with a stellar wind. 
 According to their model, a notch on the blue side of the H-$\alpha$ profile should appear 40-80 days post explosion.
 Although they could contrive a model with the introduction of a cold dense shell in which a similar notch was visible in H-$\beta$ their simplest model did not showed H-$\beta$ due to its low opacity in the wind.
 They do however, predict absorption in HeI $\lambda10830$ 20-60 days post explosion, a line that is only excited when wind is present. 
 
 A feature blueward of H-$\alpha$ is often present in type II SNe, however, it is unclear if this feature is due to high velocity hydrogen or to Si II ($\lambda$=6355)
-and has thus been named the cachito feature to avoid association with a particular species.
+and has thus we follow \citet{2017Gutierrez} in calling it the cachito feature to avoid association with a particular species.
 \citet{2017gutierrez} searched for this feature in 122 type II SNe. 
 They find the cachito feature in 70 SNe in their sample and divide the detections in early phase detections (phase < 40 days) and late phase detections (phase > 40 days).
 The velocities of the cachito feature observed in the early sample are most often well matched to the FeII velocity if interpreted as SiII. 
-For this reason, detection earlier than 30 days are interpreted as SiII.
-At late times, however, it is challenging to interpret the cachito feature as anything other than Hydrogen due to the temperatures required to excite SiII.
+For this reason, they interpret the cachito feature in the early sample as SiII and at late times as high velocity Hydrogen.
 
 Figure \ref{fig:CachitoEvolve} shows the time evolution of the region surrounding H-$\alpha$ (left panel), H-$\beta$ (middle panel), and HeI (right panel).
 H-$\alpha$ and H-$\beta$ are marked with a brick dotted line in the left and middle panels, respectively.
