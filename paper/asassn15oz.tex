@@ -174,14 +174,14 @@ SNID has very few templates for type IIL supernovae, we therefore add templates 
 \Azalee{make templates publicly available and link to them}
 We confirm our explosion epoch by fitting the first spectrum (2015-09-04) using SNID v. 5.0, augmenting the templates with those of \citet{2017gutierrez}, SN2012A \citep{2013tomasella}, and SN2013ej \citep{2016childress,2016dhungana,2014valenti,2015smartt}.
 The five best fit spectra imply an explosion epoch of  2015-08-22, consistent with the range we propose based on non-detections.
-interestingly, the hydrodynamic light curve modeling also places the best fit explosion epoch on the day of the last non-detection (see Section \ref{LC}).
+interestingly, the hydrodynamic light curve modeling also places the best fit explosion epoch on the day of the last non-detection (see Section \ref{LCEvolve}).
 
 We use an X-shooter spectrum taken with the UVB and VIS arms to constrain the host galaxy reddening to confirm the galactic reddening using the equivalent widths of the Na I D1 and D2 lines ($\lambda$5890, $\lambda$5896) \citep{2012poznanski}. 
 We find no evidence of Na I absorption at the host redshift and therefore assume no host absorption. 
 By fitting gaussian profiles to the galactic Na I absorption we find E(B-V) = 0.12, consistent with the value given by \citet{2011schlafly}. 
 We adopt the \citet{2011schlafly}  value of 0.08 for the analysis in this paper. 
 %%%%%%%%%%%%%%%%% OBSERVATIONS and DATA REDUCTION %%%%%%%%%%%%%%%%%%
-\section{Observations and Data Reduction}
+\section{Observations and Data Reduction}  \label{sec:Obs}
 \Azalee{Look into how people talk about telescopes vs collaborations vs instruments}
 ASASSN-15oz was the closest type II supernova of 2015 and was observed extensively at all wavelengths. 
 The majority of our observations were provided by the Las Cumbres Observatory (LCO) Supernova Key Project (2014-2017) and the Public ESO Spectroscopic Survey for Transients (PESSTO). 
@@ -203,7 +203,7 @@ Instrument magnitudes are converted to absolute magnitudes using the APASS syste
 \includegraphics[width=\columnwidth]{full_lc}
 \caption{The complete optical and UV light curve of ASASSN-15oz expressed as apparent magnitude (+offset) vs days since explosion. 
 Each color corresponds to a single filter, labeled in the legend. 
-The Swift filters are denoted with an "s" in the name (e.g. us) for the optical filters and a "uw" in the name for UV filters.
+The optical Swift filters are denoted with an "s" in the name (e.g. us).
 Each filter has been shifted by a global offset (denoted in the legend) for viewing purposes.}
 \label{fig:LC}
 \end{center}
@@ -246,7 +246,7 @@ One NIR spectrum was obtained from the 3.0-m NASA Infrared Telescope Facility (I
 \subsection{Radio Observations}
 {\bf ***Assaf, please put your analysis here***}
 %%%%%%%%%%%%%%%%% LIGHT CURVE EVOLUTION %%%%%%%%%%%%%%%%%%
-\section{Light Curve Evolution} \label{LC}
+\section{Light Curve Evolution} \label{sec:LCEvolve}
 The light curve of all type IIP/IIL supernovae show an initial rise, followed by a period of 100 days during which the supernova stays the same brightness or declines linearly. 
 During this time the light curve is powered by the radioactive decay of ${}^{56}$Ni and the expansion of the ejecta approximately balances the receding Hydrogen recombination front, leading to a close to constant photospheric radius. 
 About 100 days after explosion, the recombination front passes the inner edge of the hydrogen envelope causing a sudden drop in luminosity referred to as the fall from plateau.  
@@ -273,7 +273,7 @@ Finally, the flux is converted to a luminosity using the distance modulus (Secti
 We use  the U, B, g, V, r, R, i, I to calculate the bolometric luminosity at the V-band cadence.
 When V-band observations extended either earlier or later than a filter, we use the color with the neighboring filter to extrapolate the flux.
 %%%%%%%%%%%%%%%%% SPECTROSCOPIC EVOLUTION%%%%%%%%%%%%%%%%%%
-\section{Spectroscopic Evolution}
+\section{Spectroscopic Evolution} \label{sec:SpecEvolve}
 %%%%%%%%%%%%%%%%
 \subsection{Optical Evolution}
 Initial line identification was performed by comparing the spectra to that of supernova 1999em \citep{2001leonard}. 
@@ -385,7 +385,7 @@ Regions of severe sky contamination are marked with grey boxes.}
 %-----------------------------------------
 
 %%%%%%%%%%%%%%%%% EVIDENCE FOR INTERACTION%%%%%%%%%%%%%%%%%%
-\section{Evidence for interaction}
+\section{Evidence for interaction} \label{sec:Interaction}
 Introductory words here...
 %%%%%%%%%%%%%%%%
 \subsection{UV and X-Ray}
@@ -401,7 +401,7 @@ This is supported by a lack of UV continuum excess at any epoch.
 \includegraphics[width=\textwidth]{swift_spectra} %created by make_swift_color_fig.ipynb
 \caption{The Swift UV spectrum from 2015-09-05 (day 9). 
 The top panel shows the spectrum taken with a roll angle of PA=248, the middle panel shows the spectrum taken with a roll angle of PA=260, and the bottom panel shows the weighted average of the flux at each roll angle.
-These spectra are not template subtracted, thus most of the features are zeroth order images of other objects in the field.
+These spectra are not template subtracted, therefore the spectra show residuals from zeroth order light. These features can be identified as being in the spectrum of one roll angle but not the other.
 The lack of narrow line emission indicates a lack of strong interaction.}
 \label{fig:SwiftSpectrum}
 \end{center}
@@ -435,9 +435,7 @@ and has thus been named the cachito feature to avoid association with a particul
 \citet{2017gutierrez} searched for this feature in 122 type II SNe. 
 They find the cachito feature in 70 SNe in their sample and divide the detections in early phase detections (phase < 40 days) and late phase detections (phase > 40 days).
 The velocities of the cachito feature observed in the early sample are most often well matched to the FeII velocity if interpreted as SiII. 
-For this reason, detection earlier than 30 days are interpreted as SiII.
-At late times, however, it is challenging to interpret the cachito feature as anything other than Hydrogen due to the temperatures required to excite SiII.
-
+For this reason, they interpret the cachito feature in the early sample as SiII and at late times as high velocity Hydrogen.
 Figure \ref{fig:CachitoEvolve} shows the time evolution of the region surrounding H-$\alpha$ (left panel), H-$\beta$ (middle panel), and HeI (right panel).
 H-$\alpha$ and H-$\beta$ are marked with a brick dotted line in the left and middle panels, respectively.
 The dashed line in the left panel marks the location of the Cachito feature and in the middle panel, the expected location of the cachito feature in H-$\beta$.
