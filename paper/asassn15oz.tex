@@ -134,7 +134,8 @@ This is due in part to uncertainties in the late stages of the evolution of mass
 \Azalee{Figure out how to weave this into the next paragraph: This interaction should be easiest to detect in type IIL supernovae as they have more of their hydrogen envelope than IIP supernovae.}
 One of the biggest challenges in connecting supernova observations to their progenitors is understanding the mass-loss of massive stars.
 The supernova that show hydrogen in their spectra throughout their evolution (type II) are currently attributed to single star progenitors (need citation).
-These supernova generally increase in brightness for a week and then decline linearly for $\sim$80 days, a period referred to as the photospheric phase, before dropping dramatically onto another linear decline, called the nebular phase (cite: Barbon, 1979, ). \Stefano{include a phase of decline between max and plateau?} {\color{blue} (not needed)}.
+These supernova generally increase in brightness for a week and then decline linearly for $\sim$80 days, a period referred to as the photospheric phase, before dropping dramatically onto another linear decline, called the nebular phase (cite: Barbon, 1979, ). 
+%\Stefano{include a phase of decline between max and plateau?} {\color{blue} (not needed)}.
 However, within this general shape there is a great diversity in rise times, length of the photospheric phase, height of the drop to the nebular phase, and slopes of each decline (see for example Bertaud, 1941 (103), Minkowski 1964, Anderson, 2014, Valenti 2017). 
 In fact, the there are two classes of type II supernova, defined based on the light curve shape during the photospheric phase.
 Those that stay at constant brightness, creating a plateau, are called type IIP supernovae, while those that decline linearly are referred to at type IIL supernovae (cite: Barbon, 1979). 
@@ -156,12 +157,12 @@ Section \ref{sec:Interaction} describes our search for interaction, including ex
 Finally, we present a comparison to other objects and conclusions in \ref{SecComp}.
 \Stefano{should I say something about if there's no CSM?}
 
-
 %%%%%%%%%%%%%%%%% SN PARAMETERS %%%%%%%%%%%%%%%%%%
 \section{Supernova Parameters} \label{15ozIntro}
 Supernova ASASSN-15oz was discovered by the ASAS-SN team on August 31, 2015 and announced on September 3, 2015 \citep{2016brown}. 
 The next day Las Cumbres Observatory (LCO) classified it as a type II supernova one week after explosion \citep{2016hosseinzadeh}. 
-\Azalee{Define distance modulus}
+We use a distance modulus to the host galaxy, HIPASS J1919-33 we use the Hubble Flow Distance Modulus $\mu=32.3\pm 0.02$ with H$_{0}$=73 km/s/Mpc corrected for Virgo infall.
+\Stefano{cite NED?}
 
 Imaging of HIPASS J1919-33 from August 23, 2015 does not show any evidence of ASASSN-15oz (V $>$ 17.8). 
 We take this to be a lower limit on the explosion epoch. 
@@ -174,7 +175,7 @@ SNID has very few templates for type IIL supernovae, we therefore add templates 
 \Azalee{make templates publicly available and link to them}
 We confirm our explosion epoch by fitting the first spectrum (2015-09-04) using SNID v. 5.0, augmenting the templates with those of \citet{2017gutierrez}, SN2012A \citep{2013tomasella}, and SN2013ej \citep{2016childress,2016dhungana,2014valenti,2015smartt}.
 The five best fit spectra imply an explosion epoch of  2015-08-22, consistent with the range we propose based on non-detections.
-interestingly, the hydrodynamic light curve modeling also places the best fit explosion epoch on the day of the last non-detection (see Section \ref{LCEvolve}).
+interestingly, the hydrodynamic light curve modeling also places the best fit explosion epoch on the day of the last non-detection (see Section \ref{sec:LCEvolve}).
 
 We use an X-shooter spectrum taken with the UVB and VIS arms to constrain the host galaxy reddening to confirm the galactic reddening using the equivalent widths of the Na I D1 and D2 lines ($\lambda$5890, $\lambda$5896) \citep{2012poznanski}. 
 We find no evidence of Na I absorption at the host redshift and therefore assume no host absorption. 
@@ -182,7 +183,7 @@ By fitting gaussian profiles to the galactic Na I absorption we find E(B-V) = 0.
 We adopt the \citet{2011schlafly}  value of 0.08 for the analysis in this paper. 
 %%%%%%%%%%%%%%%%% OBSERVATIONS and DATA REDUCTION %%%%%%%%%%%%%%%%%%
 \section{Observations and Data Reduction}  \label{sec:Obs}
-\Azalee{Look into how people talk about telescopes vs collaborations vs instruments}
+%\Azalee{Look into how people talk about telescopes vs collaborations vs instruments}
 ASASSN-15oz was the closest type II supernova of 2015 and was observed extensively at all wavelengths. 
 The majority of our observations were provided by the Las Cumbres Observatory (LCO) Supernova Key Project (2014-2017) and the Public ESO Spectroscopic Survey for Transients (PESSTO). 
 We supplemented these observations with dedicated projects in the X-ray and UV with \textit{Swift} (1114241, PI: Valenti) and in the radio with the VLA (VLA/15B-362, PI: Valenti). 
@@ -210,10 +211,11 @@ Each filter has been shifted by a global offset (denoted in the legend) for view
 \end{figure}
 %-----------------------------------------
 Extensive optical spectroscopy was obtained during the photospheric phase with the FLOYDS spectrograph on the 2m LCO telescope at Siding Springs, Australia as part of the LCO Supernova Key Project and the EFOSC2 spectrograph on the 3.6 m NTT telescope at La Silla, Chile as part of the PESSTO Project. 
-The PESSTO project also contributed late time nebular spectra were observed on the NTT telescope. 
-One-dimensional spectra were extracted and calibrated using the FLOYDS \citep{2014valenti} and EFOSC pipelines {\color{blue} cite http://adsabs.harvard.edu/abs/2015A\%26A...579A..40S }, which string together standard IRAF extraction tasks \Stefano{What is the right way to cite this?}. 
+The PESSTO project also contributed late time nebular spectra that were observed with EFOSC2. 
+One-dimensional spectra were extracted and calibrated using the FLOYDS \citep{2014valenti} and EFOSC tasks in the PESSTO pipeline \citep{2015smartt}. 
+\Stefano{Look up language: which string together standard IRAF extraction tasks}. 
 Figure \ref{fig:SpecAll} shows the evolution of the spectra over time, starting from a blue spectrum with broad hydrogen lines and developing metal features such as iron and scandium as the velocities decrease and the line widths narrow. 
-More unusually, the cachito feature \citep{2017gutierrez}, blueward of the H-$\alpha$ absorption is present in the first spectrum, growing in strength through day 20 (2015-09-16) and then decreasing in strength at later times. \Azalee{Say more here or reference future section for interpretation} \Stefano{Is this too much interpretation for this section?}
+%More unusually, the cachito feature \citep{2017gutierrez}, blueward of the H-$\alpha$ absorption is present in the first spectrum, growing in strength through day 20 (2015-09-16) and then decreasing in strength at later times. \Azalee{Say more here or reference future section for interpretation} \Stefano{Is this too much interpretation for this section?}
 %=======================
 \begin{figure}
 \begin{center}
