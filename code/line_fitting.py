@@ -10,7 +10,7 @@ from astropy.table import Table, Column
 import yaml
 
 from spectroscopy import calc_wavelength
-from fit_spectral_lines import fit_feature
+from fit_spectral_lines import define_feature
 import line_analysis_BSNIP
 
 
@@ -21,18 +21,22 @@ OUTPUT_DIR = '../data/line_info'
 
 append = False
 
-line_list = {'FeII_multi':{'num_components':2, 
-                           'file_indx': np.int_(np.arange(3,14))},
-             'HA-cachito':{'num_components':2,
+# line_list = {'FeII_multi':{'num_components':2, 
+#                            'file_indx': np.int_(np.arange(3,14))},
+#              'HA-cachito':{'num_components':2,
+#                             'file_indx': np.int_(np.arange(0,14))},
+#              'HB':{'num_components':1,
+#                             'file_indx': np.int_(np.arange(0,14))},
+#              'NaI':{'num_components':1,
+#                             'file_indx': np.int_(np.arange(9,14))}, 
+#              'OI':{'num_components': 1,
+#                             'file_indx': np.int_(np.arange(5,14))}
+#              } 
+line_list = {'HA':{'num_components':1,
                             'file_indx': np.int_(np.arange(0,14))},
-             'HB':{'num_components':1,
-                            'file_indx': np.int_(np.arange(0,14))},
-             'NaI':{'num_components':1,
-                            'file_indx': np.int_(np.arange(9,14))}, 
-             'OI':{'num_components': 1,
-                            'file_indx': np.int_(np.arange(5,14))}
-             } 
-
+             'cachito':{'num_components':1,
+                            'file_indx': np.int_(np.arange(0,14))}}
+                             
 spectrum_filelist = ['asassn15oz_20150904_redblu_122216.314.fits', #0
                      'asassn-15oz_20150906_redblu_105042.698a.fits', #1 The other spectrum from this night is with a worse sensitivity function --> lower S/N
                      'asassn15oz_20150907_redblu_123835.277.fits', #2
@@ -68,7 +72,17 @@ for iline in line_list.keys():
                 binsize=5
             spectrum = line_analysis_BSNIP.read_iraf_spectrum(filename)
             spectrum.__setattr__('filename', os.path.basename(filename))
-            min_list, pew_list, fig = define_feature(spectrum, iline, binsize, absorption=True, similar_widths=True, input_filename=os.path.join(OUTPUT_DIR, '{}_input.yaml'.format(iline)))
+            if iline == 'HA-cachito':
+                similar_widths=False
+                search_range=20
+            else:
+                similar_widths=True
+                search_range=None
+            min_list, pew_list, fig = define_feature(spectrum, iline,
+                                                     absorption=True, 
+                                                     similar_widths=similar_widths, 
+                                                     search_range=search_range,
+                                                     input_filename=os.path.join(OUTPUT_DIR, '{}_input.yaml'.format(iline)))
             if filename.endswith('.fits'):
                 date = fits.getval(filename, 'date-obs', 0)
             else:
@@ -78,6 +92,7 @@ for iline in line_list.keys():
             for imin_component, ipew_component in zip(min_list, pew_list):
                 [irow.append(icomponent) for icomponent in [imin_component[0], imin_component[1], imin_component[2], ipew_component[0], np.sqrt(ipew_component[1])]]
             line_table.add_row(irow)
+            fig.suptitle('{}'.format(date))
             pdf.savefig(fig)
             plt.close()
     
