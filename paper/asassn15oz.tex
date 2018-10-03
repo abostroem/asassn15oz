@@ -46,7 +46,7 @@
 \usepackage{amssymb}
 
 \usepackage{natbib}
-\usepackage{color} 
+\usepackage[usenames, dvipsnames]{color} 
 \usepackage{deluxetable}
 \usepackage{cancel}
 
@@ -62,7 +62,7 @@
 \newcommand{\Azalee}[1]{\azaleecomment{Azalee: #1}}
 \newcommand{\viktoriyacomment}[1]{{\color{blue} [{#1}]}} 
 \newcommand{\Viktoriya}[1]{\viktoriyacomment{Viktoriya: #1}}
-\newcommand{\stefanocomment}[1]{{\color{cyan} [{#1}]}} 
+\newcommand{\stefanocomment}[1]{{\color{ForestGreen} [{#1}]}} 
 \newcommand{\Stefano}[1]{\stefanocomment{Stefano: #1}}
 
 
@@ -186,6 +186,38 @@ We use an X-shooter spectrum taken with the UVB and VIS arms to constrain the ho
 We find no evidence of Na I absorption at the host redshift and therefore assume no host absorption. 
 By fitting gaussian profiles to the galactic Na I absorption we find E(B-V) = 0.12, consistent with the value given by \citet{2011schlafly}. 
 We adopt the \citet{2011schlafly}  value of 0.08 for the analysis in this paper. 
+
+\subsection{Determining the Nickel Mass}\label{SecNi}
+\Stefano{should I remove this subsection or make sections for explosion epoch and dust?}
+Following \citet{2016valenti} we find the Nickel mass synthesized in a supernova explosion by scaling the bolometric luminosity of ASASSN-15oz when it is powered by ${}^{56}Co$ to that of supernova 1987A using the following relation:
+\begin{equation} \label{eqn:Ni}
+M({}^{56}Ni) = 0.075M_{\odot} \times \frac{L_{sn}(t)}{L_{87A}(t)}
+\end{equation}
+\Stefano{does this need a reference?}
+This method assumes that there is complete gamma ray trapping for at least some of the radioactive decay tail (i.e. that the slope is consistent with that expected from ${}^{56}$Co decay).
+Since there is not complete trapping for any part of the observed radioactive decay tail of ASASSN-15oz, we consider the maximum and minimum Nickel mass allowed by the observations. 
+For both cases we assume that the fall from plateau takes 20 days based on light curves fits presented in \citet{2016valenti}. 
+An upper limit on the Nickel mass can be obtains if ASASSN-15oz fell from plateau immediately after the last photospheric point.
+For this case, we construct an artificial fall from plateau, lasting 20 days, and terminating at a fit to the radioactive decay tail, extrapolated to earlier times.
+Using this light curve (see top panel of Figure \ref{fig:Ni}) and assuming complete trapping at the end of the fall from plateau, we calculate a Nickel mass of 0.1 \msun by scaling the luminosity at 102 days.
+To find the lower limit, we estimate a conservative value of the time to the middle of the fall from plateau ($t_{pt}$) to be 125 days from Figure 5a in \citet{2016valenti}.
+Using this $t_{pt}$ and a 20 day fall from plateau, we calculate the fall from plateau to end 135 days after explosion and extrapolate the tail fit to this phase (see lower panel of Figure \ref{fig:Ni}). \Stefano{should we mention the time frame over which we fit the slope?} 
+Again, assuming complete trapping at the beginning of the radioactive decay tail, we compute a Nickel mass of 0.08 \msun by scaling the luminosity at 135 days.
+Finally, we consider an intermediate Nickel mass, the mean of the upper and lower limits, 0.95 \msunperiod.
+%=======================
+\begin{figure}
+\begin{center}
+\includegraphics[width=\columnwidth]{ni_mass_lc} %created by make_ni_figure.ipynb
+\caption{The artificial light curve of ASASSN-15oz for the shortest (top) and longest (bottom) plateau lengths. 
+The grey points represent the bolometric luminosity while the solid blue line represents a fit to the s2 data, the yellow line the artificial fall from plateau, and the red line is a fit to the radioactive decay tail.
+The green star marks the point to which the light curve of SN 1987A is scaled to derive a nickel mass. 
+Plotted as a cyan dashed line is the slope of the radioactive decay tail if there was complete trapping.
+An upper limit on the Nickel mass of 0.1 \msun is derived from the light curve in the top plot while a lower limit of 0.08 \msun is derived from the lower plot. }
+\label{fig:Ni}
+\end{center}
+\end{figure}
+%-----------------------------------------
+
 %%%%%%%%%%%%%%%%% OBSERVATIONS and DATA REDUCTION %%%%%%%%%%%%%%%%%%
 \section{Observations and Data Reduction}  \label{sec:Obs}
 %\Azalee{Look into how people talk about telescopes vs collaborations vs instruments}
@@ -291,8 +323,8 @@ The flux density is calculated from the apparent magnitude at the effective wave
 Finally, the flux is converted to a luminosity using the distance modulus (Section \ref{15ozIntro}). 
 We use  the U, B, g, V, r, R, i, I to calculate the bolometric luminosity at the V-band cadence.
 When V-band observations extended either earlier or later than a filter, we use the color with the neighboring filter to extrapolate the flux.
-%%%%%%%%%%%%%%%%% SPECTROSCOPIC EVOLUTION%%%%%%%%%%%%%%%%%%
-\section{Spectroscopic Evolution} \label{sec:SpecEvolve}
+%%%%%%%%%%%%%%%%% SPECTROSCOPIC Analysis%%%%%%%%%%%%%%%%%%
+\section{Spectroscopic Analysis} \label{sec:SpecEvolve}
 \Stefano{Should I have citations in this intro? Am I promising too much analysis that I'm not doing?}
 The spectroscopic evolution of a SNe during the photospheric phase provides insight into details of the SN ejecta.
 The changes in velocity and the individual line profiles describe the geometry and energetics of the ejecta. 
@@ -408,6 +440,41 @@ Regions of severe sky contamination are marked with grey boxes.}
 \end{center}
 \end{figure*}
 %-----------------------------------------
+%%%%%%%%%%%%%%%%
+\subsection{Progenitor Mass from Nebular Spectra} \label{sec:nebular}
+Around 200 days the supernova ejecta becomes optically transparent, revealing the inner core. 
+At this time the spectra are nebular, showing strong emission lines and no continuum (see Figure \ref{fig:neb}).
+Analysis of the spectra at this time can constrain the geometry of the explosion as well as the abundance of different elements.
+In particular, spectral modeling of this stage is a powerful tool to constrain the nature of the progenitor.
+\citet{2012jerkstrand}, \citet{2013dessart}, and \citet{2014jerkstrand} have shown that the intensity of a few lines are sensitive to the mass of the progenitor.
+Specifically, there is a tight monotonic correlation between the strength of the [OI] ($\lambda\lambda6300, 6334$) line and the mass of the progenitor.
+This is because [OI] is more isolated and less sensitive to the explosive nucleosynthesis of the supernova than the other lines and thus reflects the oxygen abundance of the progenitor which has been shown to correlate well with progenitor mass. \Stefano{Which Wheeler paper did you want to cite here?}
+
+\citet{2014jerkstrand} modeled nebular spectra for 12, 15, 19, and 25 M$_{\odot}$ progenitors (MZAMS).
+Starting with the explosion models from \citet{2007woosley}, the ejecta is divided into zones based on chemical composition and the evolution of the spectrum is found by modeling the gamma ray transport and deposition, non-thermal electron degradation, NLTE ionization and excitation, and Monte Carlo radiative transfer.
+
+Nebular spectra of ASASSN-15oz, were taken on April 11, 2016 (day 228), August 03, 2016 (day 340), and September 19, 2016 (day 388) of which the first two were high enough S/N to model.
+In Figure \ref{fig:neb} we compare the first two observations to the different mass models, scaling the models to the observations over the full wavelength range. 
+A zoom in on the [OI] lines are displayed in the inset figure. We find the [OI] strength falls between the 15 and 19 M$_\odot$ models consistent with the 18 M$_{\odot}$ found by modeling the light curve.
+
+Following \citet{2018jerkstrand}, the scaling combined with the equation for the luminosity of the Cobalt decay (equation 6 of \citet{2012jerkstrand} yields the Nickel mass (assuming complete trapping): \begin{equation}
+\frac{F_{obs}}{F_{mod}} = \frac{d_{mod}^{2}}{d_{obs}^{2}}\frac{(M_{56,Ni}){}_{obs}}{(M_{56, Ni}){}_{mod}}exp\left(\frac{t_{mod} - t_{obs}}{111.4}\right)
+\end{equation}
+Where $F_{obs}$ and $F_{mod}$ are the observed and model flux, $d_{obs}$ and $d_{mod}$ the observed and model distance, $M_{56, Ni}{}_{obs}$ and $M_{56, Ni}{}_{mod}$ are the observed and model Nickel mass, and $t_{obs}$ and $t_{mod}$ are epoch of the observation and the model.
+Using this relation we find a Nickel mass of 0.02 \msunperiod.
+Given the constraints placed on the Nickel mass in Section \ref{SecNi} and the fact the ASASSN-15oz has incomplete gamma ray trapping, we find this scaling reasonable but cannot use it to set further limits on the Nickel mass.  
+%=======================
+\begin{figure}
+\begin{center}
+\includegraphics[width=\columnwidth]{nebular_spectra_OI} %created by make_nebular_figure.ipynb
+\caption{A nebular spectrum of ASASSN-15oz from April 11, 2015 (day 228; top) and August 03, 2016 (day 340; bottom) plotted with the scaled models of \citet{2014jerkstrand} for MZAMS = 12, 15, 19, and 25 M$_{\odot}$. 
+Most features in the observed spectrum well matched by the models. 
+The inset shows the [O I] ($\lambda\lambda6300, 6334$) doublet, the strength of which increases monotonically with progenitor mass. 
+The [O I] flux falls between the 15 and 19 M$_{\odot}$ models, consistent the 18 M$_{\odot}$ progenitor mass found using light curve modeling.}
+\label{fig:neb}
+\end{center}
+\end{figure}
+%-----------------------------------------
 %%%%%%%%%%%%%%%%% EVIDENCE FOR INTERACTION%%%%%%%%%%%%%%%%%%
 \section{Evidence for interaction} \label{sec:Interaction}
 Although it is well known that massive stars undergo significant mass-loss during their lives, the details of this mass-loss (timing, quantity) is not well understood.
@@ -516,9 +583,7 @@ The velocities are the same indicating that this line is likely due to Si II rat
 \end{center}
 \end{figure}
 %-----------------------------------------
-
-%%%%%%%%%%%%%%%%% LIGHT CURVE MODELING%%%%%%%%%%%%%%%%%%
-\section{Light Curve Modeling with SNEC}
+\subsection{Light Curve Modeling with SNEC}\label{sec:LCmodeling}
 We fit the light curve of ASASSN-15oz using the Supernova Explosion Code (SNEC) \citep{2015morozova}.
 SNEC is an open source Lagrangian 1D radiation hydrodynamic code that employs flux-limited radiation diffusion and assumes local thermodynamic equilibrium (LTE).
 Recently, Paxton et al. 2018 demonstrated that Type II supernovae are well characterized by the radiation diffusion approximation from shock breakout through the fall from plateau.
@@ -543,8 +608,6 @@ We explore variations in circumstellar material due to this enhanced mass-loss b
 where $\dot{M}$ is the wind mass-loss rate, $v_{wind}$ is the wind velocity. 
 This approximation allows us to parameterize the CSM with two parameters, K and $R_{ext}$, the radial extent of the CSM.
 
-%%%%%%%%%%%%%%%%
-\subsection{SNEC modeling of ASASSN-15oz}\label{sec:LCmodeling}
 To account for the formation of the neutron star, we excise the inner $1.4\,M_{\odot}$ of the progenitor models prior to the explosion. 
 After that, we model the explosion of ASASSN-15oz using a thermal bomb with explosion energy $E_{exp}$ lasting for 1 second in the inner 0.02 \msunperiod. 
 When computing the amount of energy injected in the form of a thermal bomb, SNEC automatically takes into account the total initial (negative, mostly gravitational) energy of the models. 
@@ -575,6 +638,14 @@ Ni Mass (\msunperiod) & {\bf 0.08}, 0.095, 0.11 \\
 \end{tabular}
 \end{table}
 %-----------------------------------------
+\citet{2018morozova} find the best fit model with and without CSM as a two step process. 
+First they modeling the second half of the light curve, characterized by the S2 slope \Azalee{citation} without CSM to determine the best progenitor mass and explosion energy. 
+Then, fixing explosion energy and progenitor mass, they explore the CSM parameter space. 
+This is computationally less intensive than modeling the full parameter space and allows them to explore a finer grid of parameters.
+Given the complexity of the parameter space, we choose to model the best light curve with CSM, exploring the full set of parameters. 
+To compare our best fit model to that without CSM, we use the best fit progenitor mass and explosion energy. 
+This should be a good representation of the best fit model as we expect the light curve to be the same during the S2 slope and improved by CSM at early times during the S1 slope.
+
 For ease of comparison with observations, SNEC uses the photospheric temperature at each time step to compute a blackbody spectrum, which it combines with different filter throughputs to output a light curve in sloan filters u, g, r, and i, Bessel filters U, B, V, R, and I and PanSTARRs filter z. 
 During the rise and plateau phase, a blackbody should be a good approximation to the longer wavelengths. 
 However, line blanketing make cause the bluer filters to be a poor representation of the observed spectrum \citep{2009kasen,2005dessart}.
@@ -596,18 +667,16 @@ We expect the blue filters to be affected by line blanketing and attribute the o
 \end{center}
 \end{figure}
 %-----------------------------------------
-%%%%%%%%%%%%%%%%
-\subsection{Mass-loss}
 There is broad degeneracy in the CSM parameters, making this analysis a better estimate of the total mass loss rather than the mass-loss history. 
 Integrating the CSM density over it radial extent, we find a total mass loss of 0.62 \msunperiod. 
 
-\citet{2018morozova} find the best fit model with and without CSM as a two step process. 
-First they modeling the second half of the light curve, characterized by the S2 slope \Azalee{citation} without CSM to determine the best progenitor mass and explosion energy. 
-Then, fixing explosion energy and progenitor mass, they explore the CSM parameter space. 
-This is computationally less intensive than modeling the full parameter space and allows them to explore a finer grid of parameters.
-Given the complexity of the parameter space, we choose to model the best light curve with CSM, exploring the full set of parameters. 
-To compare our best fit model to that without CSM, we use the best fit progenitor mass and explosion energy. 
-This should be a good representation of the best fit model as we expect the light curve to be the same during the S2 slope and improved by CSM at early times during the S1 slope.
+%%%%%%%%%%%%%%%%% DISCUSSION %%%%%%%%%%%%%%%%%%%%%
+\section{Discussion and Summary} \label{SecComp}
+To find objects with a similar light curve to ASASSN-15oz we compare the $s_{50V}$ slope to that of other supernovae \Stefano{how should we describe the database?}.
+SN 2016zb and SN 2015W have the best matched slopes. We compare the multi-band light curves and spectra of these objects and find them to be very similar in all respects.
+
+\Azalee{Revisit this figure. Is V-band the right one to measure both of these? how complete is the database? Consider cutting those with too large slopes}
+
 %%%%%%%%%%%%%%%%
 \subsection{Comparison of Observed and Modeled Ejecta Velocity}
 To check the consistency of our photospheric modeling, we compare the photospheric velocity of the best fit SNEC model to the observed photospheric velocity of ASASSN-15oz (see Figure \ref{fig:SNECVelocityCompare}.
@@ -629,80 +698,6 @@ This discrepancy is likely the result of the Fe II line being produced above the
 \end{center}
 \end{figure}
 %-----------------------------------------
-%%%%%%%%%%%%%%%%% PHYSICAL PARAMETERS %%%%%%%%%%%%%%%%%%%%%
-\section{Physical Parameters of ASAS-SN 15oz}
-Intro text here...
-%%%%%%%%%%%%%%%%
-\subsection{Determining the Nickel Mass}\label{SecNi}
-Following \citet{2016valenti} we find the Nickel mass synthesized in a supernova explosion by scaling the bolometric luminosity of ASASSN-15oz when it is powered by ${}^{56}Co$ to that of supernova 1987A using the following relation:
-\begin{equation} \label{eqn:Ni}
-M({}^{56}Ni) = 0.075M_{\odot} \times \frac{L_{sn}(t)}{L_{87A}(t)}
-\end{equation}
-\Stefano{does this need a reference?}
-This method assumes that there is complete gamma ray trapping for at least some of the radioactive decay tail (i.e. that the slope is consistent with that expected from ${}^{56}$Co decay).
-Since there is not complete trapping for any part of the observed radioactive decay tail of ASASSN-15oz, we consider the maximum and minimum Nickel mass allowed by the observations. 
-For both cases we assume that the fall from plateau takes 20 days based on light curves fits presented in \citet{2016valenti}. 
-An upper limit on the Nickel mass can be obtains if ASASSN-15oz fell from plateau immediately after the last photospheric point.
-For this case, we construct an artificial fall from plateau, lasting 20 days, and terminating at a fit to the radioactive decay tail, extrapolated to earlier times.
-Using this light curve (see top panel of Figure \ref{fig:Ni}) and assuming complete trapping at the end of the fall from plateau, we calculate a Nickel mass of 0.1 \msun by scaling the luminosity at 102 days.
-To find the lower limit, we estimate a conservative value of the time to the middle of the fall from plateau ($t_{pt}$) to be 125 days from Figure 5a in \citet{2016valenti}.
-Using this $t_{pt}$ and a 20 day fall from plateau, we calculate the fall from plateau to end 135 days after explosion and extrapolate the tail fit to this phase (see lower panel of Figure \ref{fig:Ni}). \Stefano{should we mention the time frame over which we fit the slope?} 
-Again, assuming complete trapping at the beginning of the radioactive decay tail, we compute a Nickel mass of 0.08 \msun by scaling the luminosity at 135 days.
-Finally, we consider an intermediate Nickel mass, the mean of the upper and lower limits, 0.95 \msunperiod.
-%=======================
-\begin{figure}
-\begin{center}
-\includegraphics[width=\columnwidth]{ni_mass_lc} %created by make_ni_figure.ipynb
-\caption{The artificial light curve of ASASSN-15oz for the shortest (top) and longest (bottom) plateau lengths. 
-The grey points represent the bolometric luminosity while the solid blue line represents a fit to the s2 data, the yellow line the artificial fall from plateau, and the red line is a fit to the radioactive decay tail.
-The green star marks the point to which the light curve of SN 1987A is scaled to derive a nickel mass. 
-Plotted as a cyan dashed line is the slope of the radioactive decay tail if there was complete trapping.
-An upper limit on the Nickel mass of 0.1 \msun is derived from the light curve in the top plot while a lower limit of 0.08 \msun is derived from the lower plot. }
-\label{fig:Ni}
-\end{center}
-\end{figure}
-%-----------------------------------------
-%%%%%%%%%%%%%%%%
-\subsection{Progenitor Mass from Nebular Spectra} \label{sec:nebular}
-Around 200 days the supernova ejecta becomes optically transparent, revealing the inner core. 
-At this time the spectra are nebular, showing strong emission lines and no continuum (see Figure \ref{fig:neb}).
-Analysis of the spectra at this time can constrain the geometry of the explosion as well as the abundance of different elements.
-In particular, spectral modeling of this stage is a powerful tool to constrain the nature of the progenitor.
-\citet{2012jerkstrand}, \citet{2013dessart}, and \citet{2014jerkstrand} have shown that the intensity of a few lines are sensitive to the mass of the progenitor.
-Specifically, there is a tight monotonic correlation between the strength of the [OI] ($\lambda\lambda6300, 6334$) line and the mass of the progenitor.
-This is because [OI] is more isolated and less sensitive to the explosive nucleosynthesis of the supernova than the other lines and thus reflects the oxygen abundance of the progenitor which has been shown to correlate well with progenitor mass. \Stefano{Which Wheeler paper did you want to cite here?}
-
-\citet{2014jerkstrand} modeled nebular spectra for 12, 15, 19, and 25 M$_{\odot}$ progenitors (MZAMS).
-Starting with the explosion models from \citet{2007woosley}, the ejecta is divided into zones based on chemical composition and the evolution of the spectrum is found by modeling the gamma ray transport and deposition, non-thermal electron degradation, NLTE ionization and excitation, and Monte Carlo radiative transfer.
-
-Nebular spectra of ASASSN-15oz, were taken on April 11, 2016 (day 228), August 03, 2016 (day 340), and September 19, 2016 (day 388) of which the first two were high enough S/N to model.
-In Figure \ref{fig:neb} we compare the first two observations to the different mass models, scaling the models to the observations over the full wavelength range. 
-A zoom in on the [OI] lines are displayed in the inset figure. We find the [OI] strength falls between the 15 and 19 M$_\odot$ models consistent with the 18 M$_{\odot}$ found by modeling the light curve.
-
-Following \citet{2018jerkstrand}, the scaling combined with the equation for the luminosity of the Cobalt decay (equation 6 of \citet{2012jerkstrand} yields the Nickel mass (assuming complete trapping): \begin{equation}
-\frac{F_{obs}}{F_{mod}} = \frac{d_{mod}^{2}}{d_{obs}^{2}}\frac{(M_{56,Ni}){}_{obs}}{(M_{56, Ni}){}_{mod}}exp\left(\frac{t_{mod} - t_{obs}}{111.4}\right)
-\end{equation}
-Where $F_{obs}$ and $F_{mod}$ are the observed and model flux, $d_{obs}$ and $d_{mod}$ the observed and model distance, $M_{56, Ni}{}_{obs}$ and $M_{56, Ni}{}_{mod}$ are the observed and model Nickel mass, and $t_{obs}$ and $t_{mod}$ are epoch of the observation and the model.
-Using this relation we find a Nickel mass of 0.02 \msunperiod.
-Given the constraints placed on the Nickel mass in Section \ref{SecNi} and the fact the ASASSN-15oz has incomplete gamma ray trapping, we find this scaling reasonable but cannot use it to set further limits on the Nickel mass.  
-%=======================
-\begin{figure}
-\begin{center}
-\includegraphics[width=\columnwidth]{nebular_spectra_OI} %created by make_nebular_figure.ipynb
-\caption{A nebular spectrum of ASASSN-15oz from April 11, 2015 (day 228; top) and August 03, 2016 (day 340; bottom) plotted with the scaled models of \citet{2014jerkstrand} for MZAMS = 12, 15, 19, and 25 M$_{\odot}$. 
-Most features in the observed spectrum well matched by the models. 
-The inset shows the [O I] ($\lambda\lambda6300, 6334$) doublet, the strength of which increases monotonically with progenitor mass. 
-The [O I] flux falls between the 15 and 19 M$_{\odot}$ models, consistent the 18 M$_{\odot}$ progenitor mass found using light curve modeling.}
-\label{fig:neb}
-\end{center}
-\end{figure}
-%-----------------------------------------
-%%%%%%%%%%%%%%%%% DISCUSSION %%%%%%%%%%%%%%%%%%%%%
-\section{Discussion and Summary} \label{SecComp}
-To find objects with a similar light curve to ASASSN-15oz we compare the $s_{50V}$ slope to that of other supernovae \Stefano{how should we describe the database?}.
-SN 2016zb and SN 2015W have the best matched slopes. We compare the multi-band light curves and spectra of these objects and find them to be very similar in all respects.
-
-\Azalee{Revisit this figure. Is V-band the right one to measure both of these? how complete is the database? Consider cutting those with too large slopes}
 
 High velocity consistent with a larger than average explosion energy \Stefano{and mass?}. 
 High velocity is consistent with the light curve modeling (see Section \ref{sec:LCmodeling}).
