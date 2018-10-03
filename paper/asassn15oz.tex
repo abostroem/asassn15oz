@@ -48,6 +48,7 @@
 \usepackage{natbib}
 \usepackage{color} 
 \usepackage{deluxetable}
+\usepackage{cancel}
 
 \makeatletter
 \def\@to{to}
@@ -125,6 +126,11 @@ Supernovae
 
 %%%%%%%%%%%%%%%%% BODY OF PAPER %%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%% INTRODUCTION %%%%%%%%%%%%%%%%%%
+\clearpage
+\begin{itemize}
+\item \Azalee{Cite Instruments}
+\item \Azalee{Variations in level of detail in the descriptions of data reduction}
+\end{itemize}
 \section{Introduction}
 ({\color{blue} I would start directly with massive star hydrogen rich SNe II) instead of CC SNe in general (you do not speak about stripped envelope right?)} 
 Stars greater than 8 \msun end their lives as spectacularly bright core-collapse supernovae (CCSN). 
@@ -172,7 +178,6 @@ It is therefore reasonable to take as the mid-point between the non-detection an
 This method relies on the existence of a template supernova that is similar in both phase and type to the object being fit.
 ASASSN-15oz is a type IIL supernova and our first spectrum is from around maximum. 
 SNID has very few templates for type IIL supernovae, we therefore add templates for two well observed supernovae with well constrained explosion epochs: 2012A and 2013ej.
-\Azalee{make templates publicly available and link to them}
 We confirm our explosion epoch by fitting the first spectrum (2015-09-04) using SNID v. 5.0, augmenting the templates with those of \citet{2017gutierrez}, SN2012A \citep{2013tomasella}, and SN2013ej \citep{2016childress,2016dhungana,2014valenti,2015smartt}.
 The five best fit spectra imply an explosion epoch of  2015-08-22, consistent with the range we propose based on non-detections.
 interestingly, the hydrodynamic light curve modeling also places the best fit explosion epoch on the day of the last non-detection (see Section \ref{sec:LCEvolve}).
@@ -213,22 +218,27 @@ Each filter has been shifted by a global offset (denoted in the legend) for view
 Extensive optical spectroscopy was obtained during the photospheric phase with the FLOYDS spectrograph on the 2m LCO telescope at Siding Springs, Australia as part of the LCO Supernova Key Project and the EFOSC2 spectrograph on the 3.6 m NTT telescope at La Silla, Chile as part of the PESSTO Project. 
 The PESSTO project also contributed late time nebular spectra that were observed with EFOSC2. 
 One-dimensional spectra were extracted and calibrated using the FLOYDS \citep{2014valenti} and EFOSC tasks in the PESSTO pipeline \citep{2015smartt}. 
-\Stefano{Look up language: which string together standard IRAF extraction tasks}. 
+Both of these pipelines combine IRAF tasks to bias subtract and flat field the data and locate, extract, wavelength calibrate, and flux calibrate the spectrum.
+\Stefano{Should I put (maybe in an appendix) which standard I used for which night?}
 Figure \ref{fig:SpecAll} shows the evolution of the spectra over time, starting from a blue spectrum with broad hydrogen lines and developing metal features such as iron and scandium as the velocities decrease and the line widths narrow. 
 %More unusually, the cachito feature \citep{2017gutierrez}, blueward of the H-$\alpha$ absorption is present in the first spectrum, growing in strength through day 20 (2015-09-16) and then decreasing in strength at later times. \Azalee{Say more here or reference future section for interpretation} \Stefano{Is this too much interpretation for this section?}
 %=======================
 \begin{figure}
 \begin{center}
 \includegraphics[width=\columnwidth]{spectra_montage}
-\caption{\Azalee{write something here}}
+\caption{The photospheric spectral evolution of ASASSN-15oz with the earliest spectrum on the bottom.
+The first spectrum taken near maximum light shows hydrogen features (identified at the bottom of the figure).
+At this early phase, the cachito feature (see Section \ref{sec:cachito}) is already visible. 
+Over time the cachito feature fades while the hydrogen emission grows and metal lines become visible and grow in strength. 
+These lines are identified in the top spectrum. }
 \label{fig:SpecAll}
 \end{center}
 \end{figure}
 %-----------------------------------------
 %%%%%%%%%%%%%%%%% 
 \subsection{UV and X-Ray Observations}\label{SecSwift}
-UV and X-Ray imaging observations were obtained concurrently with \textit{Swift} programs 1114241 and XXXXXXX through 2015-11-18.
-In addition to the imaging observations, two epochs of \textit{Swift} grism observations were taken under program 1114241. \Stefano{is this too repetitive with the intro to the observations section}.
+UV and X-Ray imaging observations were obtained concurrently with \textit{Swift} programs 1114241 and XXXXXXX from 2015-09-05 through 2015-11-18.
+In addition to the imaging observations, two epochs of \textit{Swift} grism observations were taken under program 1114241. 
 Imaging observations were processed with aperture photometry following \citet{2009brown} employing the updated zeropoints of \citet{2010breeveld}.
 UV grism observations were taken at two roll angles and extracted using the UVOTPY pipeline \citep{2014kuin}. 
 There is a nearby star coincident with the supernova at one roll angle and just above it at another roll angle.
@@ -240,13 +250,20 @@ An 18" aperture was used to integrate around the location of ASASSN-15oz.
 The background was removed using an aperture in a blank part of the image and measured fluxes were converted from counts to luminosity assuming a power-law model with a photon index of two.
 %%%%%%%%%%%%%%%%% 
 \subsection{NIR Observations}
-\Azalee{Have Dave and Stefano write a paragraph?}
+ASASSN-15oz was observed in the near infra-red (NIR) on September 05, 2015 and October 05, 2015 with the SOFI instrument and on October 10, 2015 with the SpeX instrument  \citep{2003rayner}.
+Reduced spectra are shown in Figure \ref{fig:IRmontage}
 
-One NIR spectrum was obtained from the 3.0-m NASA Infrared Telescope Facility (IRTF) with SpeX \citep{Rayner03}.  The data were taken in so-called SXD mode, where the spectrum is cross-dispersed to obtain wavelength coverage from $\sim$0.8--2.4 $\mu$m in a single exposure, spread over six orders.  All observations were taken with the slit aligned along the parallactic angle, and we employed a classic ABBA technique for improved sky subtraction.  An A0V star was observed adjacent in time to the science observations for flux and telluric calibration.  The spectrum was reduced in a standard way using the publicly available {\sc Spextool} software package \citep{Cushing04} and corrections for telluric absorption utilized {\sc XTELLCOR} \citep{Vacca03} and the A0V star observations.
+The SpeX instrument is part of the 3.0-m NASA Infrared Telescope Facility (IRTF).  
+The data were taken in so-called SXD mode, where the spectrum is cross-dispersed to obtain wavelength coverage from $\sim$0.8--2.4 $\mu$m in a single exposure, spread over six orders.  
+All observations were taken with the slit aligned along the parallactic angle, and we employed a classic ABBA technique for improved sky subtraction.  
+An A0V star was observed adjacent in time to the science observations for flux and telluric calibration.  
+The spectrum was reduced in a standard way using the publicly available {\sc Spextool} software package \citep{2004cushing} and corrections for telluric absorption utilized {\sc XTELLCOR} \citep{2003vacca} and the A0V star observations.
 
+The SOFI instrument is mounted on the NTT telescope and observations were obtained through the PESSTO collaboration. 
+These spectra, taken on (day 8 and 38, respectively), were reduced with the SOFI pipeline in the PESSTO package \citep{2015smartt}.
 %%%%%%%%%%%%%%%%% 
 \subsection{Radio Observations}
-{\bf ***Assaf, please put your analysis here***}
+We observed ASASSN\,15oz using the Jansky Very Large Array (VLA) on 2015 September 24 and October 08. In both of the observations we used J1924-2914 and 3C48 as a phase calibrator and a flux calibrator, respectively. We used the Common Astronomy Software Applications (CASA) standard packages and pipelines to perform the data calibration and imaging. The SN was detected in both observation with the following flux measurements: September 24 - $120\pm 23\,\mu$Jy at $4.8$\,GHz (C-band) and a $3\,\sigma$ non null detection limit at $22$\,GHz (K-band); October 08 -  $210\pm 21\,\mu$Jy at $4.8$\,GHz (C-band) and a $80\pm 17\,\mu$Jy at $15$\,GHz (KU-band). 
 %%%%%%%%%%%%%%%%% LIGHT CURVE EVOLUTION %%%%%%%%%%%%%%%%%%
 \section{Light Curve Evolution} \label{sec:LCEvolve}
 The light curve of all type IIP/IIL supernovae show an initial rise, followed by a period of 100 days during which the supernova stays the same brightness or declines linearly. 
@@ -276,6 +293,11 @@ We use  the U, B, g, V, r, R, i, I to calculate the bolometric luminosity at the
 When V-band observations extended either earlier or later than a filter, we use the color with the neighboring filter to extrapolate the flux.
 %%%%%%%%%%%%%%%%% SPECTROSCOPIC EVOLUTION%%%%%%%%%%%%%%%%%%
 \section{Spectroscopic Evolution} \label{sec:SpecEvolve}
+\Stefano{Should I have citations in this intro? Am I promising too much analysis that I'm not doing?}
+The spectroscopic evolution of a SNe during the photospheric phase provides insight into details of the SN ejecta.
+The changes in velocity and the individual line profiles describe the geometry and energetics of the ejecta. 
+The presence of different species at different times is gives information about the chemical composition, temperature, and density of the ejecta.
+In this section we analyze optical and NIR spectra taken throughout the photospheric phase.
 %%%%%%%%%%%%%%%%
 \subsection{Optical Evolution}
 Initial line identification was performed by comparing the spectra to that of supernova 1999em \citep{2001leonard}. 
@@ -332,7 +354,6 @@ Since each single line is formed in an extended region of the ejecta, this repre
 For lines that are blended (but still showed isolated absorption troughs for some features) we define the continuum as a straight line from the lowest side of the feature. 
 After dividing by the continuum, we then simultaneously fit multiple 1D Gaussian profiles to the continuum normalized spectra. 
 For blended features originating in the same part of the ejecta, we require that each component has the same width.
-%requiring that each component has the same width.
 We define the velocity of a feature as the minimum of the individual Gaussian profile corresponding to that ion and the error as the standard deviation of the fit. 
 For the Ca II NIR triplet we use the additional constraint of a fixed offset between the minima of the features. 
 We use this method to fit H-$\alpha$ ($\lambda$ 6561), O I ($\lambda$ 7774), FeII ($\lambda$ 5169), and Ca II ($\lambda\lambda\lambda$ 8498, 8542, 8662). 
@@ -345,9 +366,9 @@ A comparison of the results of both fits for H-$\beta$ at early times finds them
 
 Figure \ref{fig:velocity} shows the velocities for all good fits to the data. 
 The distribution of velocities is typical of other IIP/IIL supernovae representing the distribution of elements throughout the ejecta. 
-A comparison of the velocities derived in this paper to the average values of 122 IIP/IIL SNe described in \citet{2017gutierrez} is shown in Figure \ref{fig:VelocityCompare}. The shaded regions represent the standard deviation of the sample.
-We find throughout the ejecta above average velocities, consistent with a larger than average explosion energy \Stefano{and mass?}. 
-This is consistent with the light curve modeling (see Section \ref{sec:LCmodeling})
+A comparison of the velocities derived in this paper to the average values of 122 IIP/IIL SNe described in \citet{2017gutierrez} is shown in Figure \ref{fig:VelocityCompare}. 
+The shaded regions represent the standard deviation of the sample.
+We find throughout the ejecta above average velocities.
 %=======================
 \begin{figure}
 \begin{center}
@@ -370,8 +391,10 @@ Following \citep{2012silverman} we select velocity errors of 2 $\AA$, these are 
 \end{center}
 \end{figure*}
 %-----------------------------------------
-\Azalee{High velocity core --> less gamma ray trapping (Jerkstrand 2011)}
 \subsection{Infrared Evolution}
+Line identification was performed by comparing the NIR SOFI and SpeX spectra to those in \citet{2015valenti} and \citet{2018tomasella}.
+The first spectrum taken 8 days post explosion (September 05, 2018) follows the optical showing strong Paschen series lines.
+The later spectra, taken $\sim$40 days post explosion also mirror the optical evolution, developing metal lines as the ejecta slows and cools.
 %=======================
 \begin{figure*}
 \begin{center}
@@ -385,18 +408,30 @@ Regions of severe sky contamination are marked with grey boxes.}
 \end{center}
 \end{figure*}
 %-----------------------------------------
-
 %%%%%%%%%%%%%%%%% EVIDENCE FOR INTERACTION%%%%%%%%%%%%%%%%%%
 \section{Evidence for interaction} \label{sec:Interaction}
-Introductory words here...
+Although it is well known that massive stars undergo significant mass-loss during their lives, the details of this mass-loss (timing, quantity) is not well understood.
+The location and density of circumstellar material around a star record the amount of mass lost at different times during a star's evolution. 
+As the supernova shock passes through this material, it provides a unique probe of this material and thus the mass-loss of the progenitor.
+The mass loss of stars with dense CSM (e.g. type IIn SNe) that show strong evidence of interaction such as narrow emission lines in photospheric spectra or irregular photometric brightening is often studied,, the mass-loss of SNe with lower density CSM is often ignored.
+In the few cases that interaction is seen in type IIP/IIL SNe, incomplete data results in a single indication of interaction (e.g. optical light curve shape or radio emission).
+The linear shape of the light curve of type IIL SNe is best explained by a thin hydrogen envelope on the progenitor, implying that IIL Sne should undergo more mass-loss than IIP SNe.
+ASASSN-15oz, a type IIL SNe with photometric and spectroscopic observations from the X-ray through the radio is the ideal SNe on which to study the importance of mass-loss for IIP and IIL SNe and if different observational signatures of interaction are consistent with each other. \Stefano{is there a better way to say this?}
+In this section we analyze the evidence for interaction at different wavelengths.
 %%%%%%%%%%%%%%%%
 \subsection{UV and X-Ray}
-From the \textit{Swift} X-Ray observations, we find a limiting count rate of  7.234x10$^{-4}$ counts s$^{-1}$.
+There is no detection in any of the \textit{Swift} X-ray observation. 
+To determine an upper limit, we sum all observations and find a limiting count rate of  7.234x10$^{-4}$ counts s$^{-1}$.
 Assuming Galactic absorption of 6.18x$10^{20}$ cm$^{-2}$ \citep{2005kalberla}, this corresponds to an unabsorbed flux of 2.208x10$^{-14}$ erg cm$^{-2}$ s$^{-1}$ (0.4-5 keV) and a luminosity of approximately 3.72x10$^{39}$erg s$^{-1}$ at 30 Mpc.
+
+We compare this luminosity to the model of SN 1999em in \citet{2004chugai} which has similar progenitor and explosion parameters. 
+They model the interaction as an infinitely thin double-shock structure \citep{1982chevalier, 1985nadyozhin} composed of a forward shock propagating into the surrounding gas and reverse shock propagating backwards into the SN ejecta, towards its core.
+\citet{2004chugai} find that the reverse shock dominates the X-ray observations for a mass loss rate of $10^{-6}$\msun/yr and a wind velocity of $10$km/s producing luminosities between $10^{38}$ and $10^{39}$ ergs/s. 
+The forward shock produces luminosities comparable to the reverse shock in the first 10 days and decreasing to below $10^{34}$ ergs/s by day 100.  
+Our upper limit above both the forward and reverse shock suggests that either these cannonical wind parameters must be adjusted or that a new model is needed. \Stefano{is there a better conclusion to draw?}
 
 The \textit{Swift} grism observations show no sign of the narrow emission lines typically associated with strong interaction.
 This is supported by a lack of UV continuum excess at any epoch. 
-%UV spectrum presented in this paper are average of the first epoch weighted by the error. 
 %=======================
 \begin{figure*}
 \begin{center}
@@ -420,12 +455,21 @@ Each point is colored by the $S_{50V}$ slope, with shallower slopes in blue and 
 \end{center}
 \end{figure}
 %-----------------------------------------
-The non-detection in the X-ray disfavors strong interaction, although at this depth, weak interaction is still allowed. \Azalee{Look into different X-ray measurements}
 %%%%%%%%%%%%%%%%
 \subsection{Radio}
-{\bf ***Assaf, please put your analysis here***}
+The origin of radio emission from SN can be explained by interaction of the SN ejecta with the CSM. 
+This interaction leads to a shockwave traveling via the CSM that in turn accelerates electrons and enhances magnetic fields and thus synchrotron emission ensues \citep{1982chevalier,1998chevalier, 2002weiler, 2006chevalier}. 
+We use the \citet{1998chevalier} formalism to model the radio measurements of ASASSN 15oz. 
+
+The \citet{1998chevalier} model assumes synchrotron self absorption (SSA). 
+In such a model the radio emission peaks at a frequency below which the emission is \cancel{optically} strongly absorbed by SSA. 
+Above that frequency the emission becomes optically thin. 
+As the shockwave progress outwards to lower CSM densities, the SSA optical depth drops and the peak of the radio {\color{magenta}emission moves to} lower and lower frequencies. 
+We use Equation 1 from \citet{1998chevalier} to model the radio dataset and derive the following properties: the shockwave velocity (assuming constant velocity) is $\approx 1.4$\,km\,s$^{-1}$. 
+The CSM surrounding the SN is assumed to be created by a stellar wind from the progenitor prior to explosion with a mass-loss rate of $\dot{M}$ $\approx 0.9\times 10^{-6}$\,M$_{\odot}$\,yr$^{-1}$ for a wind velocity of $100$\,km\,s$^{-1}$. 
+Note that the constraint is on the radiation between the wind mass-loss rate and the wind velocity and this the mass-loss rate should be scaled according to the chosen model wind velocity. 
 %%%%%%%%%%%%%%%%
-\subsection{Cachito Analysis}
+\subsection{Cachito Analysis} \label{sec:cachito}
 \Stefano{Mention Pooly 2002 here?}
 \citet{2007chugai} proposed a high velocity Hydrogen and Helium line produced by interaction the supernova ejecta with a stellar wind. 
 According to their model, a notch on the blue side of the H-$\alpha$ profile should appear 40-80 days post explosion.
@@ -619,7 +663,7 @@ An upper limit on the Nickel mass of 0.1 \msun is derived from the light curve i
 \end{figure}
 %-----------------------------------------
 %%%%%%%%%%%%%%%%
-\subsection{Progenitor Mass from Nebular Spectra}
+\subsection{Progenitor Mass from Nebular Spectra} \label{sec:nebular}
 Around 200 days the supernova ejecta becomes optically transparent, revealing the inner core. 
 At this time the spectra are nebular, showing strong emission lines and no continuum (see Figure \ref{fig:neb}).
 Analysis of the spectra at this time can constrain the geometry of the explosion as well as the abundance of different elements.
@@ -659,6 +703,10 @@ To find objects with a similar light curve to ASASSN-15oz we compare the $s_{50V
 SN 2016zb and SN 2015W have the best matched slopes. We compare the multi-band light curves and spectra of these objects and find them to be very similar in all respects.
 
 \Azalee{Revisit this figure. Is V-band the right one to measure both of these? how complete is the database? Consider cutting those with too large slopes}
+
+High velocity consistent with a larger than average explosion energy \Stefano{and mass?}. 
+High velocity is consistent with the light curve modeling (see Section \ref{sec:LCmodeling}).
+We also find incomplete gamma ray trapping during the nebular phase (see Section \ref{sec:LCEvolve}) which is anticipated in supernovae with high core velocity \ref{2011jerkstrand}.
 %=======================
 \begin{figure}
 \begin{center}
