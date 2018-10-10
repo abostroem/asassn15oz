@@ -162,7 +162,6 @@ The photometric and spectroscopic evolution are described in Sections \ref{sec:L
 Section \ref{sec:Interaction} describes our search for interaction, including extensive hydrodynamic light curve modeling.
 Finally, we present a comparison to other objects and conclusions in \ref{SecComp}.
 \Stefano{should I say something about if there's no CSM?}
-
 %%%%%%%%%%%%%%%%% SN PARAMETERS %%%%%%%%%%%%%%%%%%
 \section{Supernova Parameters} \label{15ozIntro}
 Supernova ASASSN-15oz was discovered by the ASAS-SN team on August 31, 2015 and announced on September 3, 2015 \citep{2016brown}. 
@@ -183,9 +182,20 @@ The five best fit spectra imply an explosion epoch of  2015-08-22, consistent wi
 interestingly, the hydrodynamic light curve modeling also places the best fit explosion epoch on the day of the last non-detection (see Section \ref{sec:LCEvolve}).
 
 We use an X-shooter spectrum taken with the UVB and VIS arms to constrain the host galaxy reddening to confirm the galactic reddening using the equivalent widths of the Na I D1 and D2 lines ($\lambda$5890, $\lambda$5896) \citep{2012poznanski}. 
-We find no evidence of Na I absorption at the host redshift and therefore assume no host absorption. 
+We find no evidence of Na I absorption at the host redshift and therefore assume no host absorption (see Figure \ref{fig:extinction}). 
 By fitting gaussian profiles to the galactic Na I absorption we find E(B-V) = 0.12, consistent with the value given by \citet{2011schlafly}. 
 We adopt the \citet{2011schlafly}  value of 0.08 for the analysis in this paper. 
+%=======================
+\begin{figure}
+\begin{center}
+\includegraphics[width=\columnwidth]{extinction} %created by make_no_extinction_plot.ipynb
+\caption{The Na I D1 and D2 lines in high resolution X-shooter spectrum from September 21, 2015 for galactic and host absorption.
+The galactic profiles are consistent with the galactic extinction on \citet{2011schlafly} while the absence of absorption at the host redshift is interpreted as a lack of dust in the host galaxy. 
+\Stefano{is this too strong a statement?}}
+\label{fig:extinction}
+\end{center}
+\end{figure}
+%-----------------------------------------
 
 \subsection{Determining the Nickel Mass}\label{SecNi}
 \Stefano{should I remove this subsection or make sections for explosion epoch and dust?}
@@ -491,11 +501,11 @@ There is no detection in any of the \textit{Swift} X-ray observation.
 To determine an upper limit, we sum all observations and find a limiting count rate of  7.234x10$^{-4}$ counts s$^{-1}$.
 Assuming Galactic absorption of 6.18x$10^{20}$ cm$^{-2}$ \citep{2005kalberla}, this corresponds to an unabsorbed flux of 2.208x10$^{-14}$ erg cm$^{-2}$ s$^{-1}$ (0.4-5 keV) and a luminosity of approximately 3.72x10$^{39}$erg s$^{-1}$ at 30 Mpc.
 
-We compare this luminosity to the model of SN 1999em in \citet{2004chugai} which has similar progenitor and explosion parameters. 
+We compare this luminosity to the model of SN 1999em in \citet{2007chugai} which has similar progenitor and explosion parameters. 
 They model the interaction as an infinitely thin double-shock structure \citep{1982chevalier, 1985nadyozhin} composed of a forward shock propagating into the surrounding gas and reverse shock propagating backwards into the SN ejecta, towards its core.
-\citet{2004chugai} find that the reverse shock dominates the X-ray observations for a mass loss rate of $10^{-6}$\msun/yr and a wind velocity of $10$km/s producing luminosities between $10^{38}$ and $10^{39}$ ergs/s. 
+\citet{2007chugai} find that the reverse shock dominates the X-ray observations for a mass loss rate of $10^{-6}$\msun/yr and a wind velocity of $10$km/s producing luminosities between $10^{38}$ and $10^{39}$ ergs/s. 
 The forward shock produces luminosities comparable to the reverse shock in the first 10 days and decreasing to below $10^{34}$ ergs/s by day 100.  
-Our upper limit above both the forward and reverse shock suggests that either these cannonical wind parameters must be adjusted or that a new model is needed. \Stefano{is there a better conclusion to draw?}
+Our non-detection is at the upper limit of this range, making it plausible that if there is X-ray flux, it is below our detection limits.
 
 The \textit{Swift} grism observations show no sign of the narrow emission lines typically associated with strong interaction.
 This is supported by a lack of UV continuum excess at any epoch. 
@@ -511,17 +521,7 @@ The lack of narrow line emission indicates a lack of strong interaction.}
 \end{center}
 \end{figure*}
 %-----------------------------------------
-Figure \ref{fig:UVColor} shows a comparison of the UV color of ASASSN-15oz to that of all other type IIP/IIL supernovae with \textit{Swift} observations.
-Each point is colored by the $S_{50V}$ slope, with shallower slopes in blue and steeper slopes in red. 
-%=======================
-\begin{figure}
-\begin{center}
-\includegraphics[width=\columnwidth]{uv_slope_comp} %created by make_swift_color_fig.ipynb
-\caption{The color of all type IIP/IIL supernovae observed with \textit{Swift}. Within this sample, ASASSN-15oz shows no UV excess.}
-\label{fig:UVColor}
-\end{center}
-\end{figure}
-%-----------------------------------------
+
 %%%%%%%%%%%%%%%%
 \subsection{Radio}
 The origin of radio emission from SN can be explained by interaction of the SN ejecta with the CSM. 
@@ -670,26 +670,20 @@ We expect the blue filters to be affected by line blanketing and attribute the o
 There is broad degeneracy in the CSM parameters, making this analysis a better estimate of the total mass loss rather than the mass-loss history. 
 Integrating the CSM density over it radial extent, we find a total mass loss of 0.62 \msunperiod. 
 
-%%%%%%%%%%%%%%%%% DISCUSSION %%%%%%%%%%%%%%%%%%%%%
-\section{Discussion and Summary} \label{SecComp}
-To find objects with a similar light curve to ASASSN-15oz we compare the $s_{50V}$ slope to that of other supernovae \Stefano{how should we describe the database?}.
-SN 2016zb and SN 2015W have the best matched slopes. We compare the multi-band light curves and spectra of these objects and find them to be very similar in all respects.
-
-\Azalee{Revisit this figure. Is V-band the right one to measure both of these? how complete is the database? Consider cutting those with too large slopes}
-
-%%%%%%%%%%%%%%%%
-\subsection{Comparison of Observed and Modeled Ejecta Velocity}
-To check the consistency of our photospheric modeling, we compare the photospheric velocity of the best fit SNEC model to the observed photospheric velocity of ASASSN-15oz (see Figure \ref{fig:SNECVelocityCompare}.
+%SNEC velocity
+Towards a consistent picture of the supernova explosion, we also verified that the parameters we found from the light curve modeling were in agreement with the interpretation of other observables.
+The high velocity derived from the spectroscopy is consistent with the large mass and explosion energy found by the light curve fitting.
+It is also compatible with the incomplete gamma ray trapping, which is expected in supernovae with high core velocities \citep{2011jerkstrand}.
+Figure \ref{fig:SNECVelocityCompare} shows a comparison of the photospheric velocity of the best fit SNEC model to the observed photospheric velocity of ASASSN-15oz.
 Following \citet{2014faran}, we define the photospheric velocity as that of Fe II $\lambda$5169. 
 We use the relationship between the $H-\beta$ velocity and the Fe II $\lambda$5169 velocity defined in \citet{2014faran} to infer the photospheric velocity at early times when the iron line is not yet visible.
 While there is fair agreement between the model and observe velocity at early times, the model velocity is significantly lower than the observed velocity starting around day 25.
-This behavior was previously noted by \citet{2018paxton} who find that the Fe II $\lambda$5169 line is originating above the photosphere where the Sobolov optical depth is a specific value (they find $\tau_{sob} \sim1$ fits the observations well). 
-This effect becomes significant as the photosphere begins to recede around 20-30 days exactly when we see a deviation between our model and observed velocities. 
-\Azalee{decide whether to implement this or leave it as an explanation}
+\Viktoriya{This behavior was previously noted by \citet{2018paxton} who find that the Fe II $\lambda$5169 line is originating above the photosphere where the Sobolov optical depth is a specific value (they find $\tau_{sob} \sim1$ fits the observations well). 
+This effect becomes significant as the photosphere begins to recede around 20-30 days exactly when we see a deviation between our model and observed velocities. }
 %=======================
 \begin{figure}
 \begin{center}
-\includegraphics[width=\columnwidth]{snec_velocity_comp}
+\includegraphics[width=\columnwidth]{snec_velocity_comp} %WHERE DID THIS COME FROM?
 \caption{The model photospheric velocity computed by SNEC (blue) compared to the observed photospheric velocity (orange) taken to be the velocity of the Fe II $\lambda$5169 feature. 
 The model deviated from the observations around the time that the photosphere begins to recede into the ejecta.
 This discrepancy is likely the result of the Fe II line being produced above the ejecta at these times \citep{2018paxton}.
@@ -697,11 +691,23 @@ This discrepancy is likely the result of the Fe II line being produced above the
 \label{fig:SNECVelocityCompare}
 \end{center}
 \end{figure}
-%-----------------------------------------
 
-High velocity consistent with a larger than average explosion energy \Stefano{and mass?}. 
-High velocity is consistent with the light curve modeling (see Section \ref{sec:LCmodeling}).
-We also find incomplete gamma ray trapping during the nebular phase (see Section \ref{sec:LCEvolve}) which is anticipated in supernovae with high core velocity \ref{2011jerkstrand}.
+%%%%%%%%%%%%%%%%% DISCUSSION %%%%%%%%%%%%%%%%%%%%%
+\section{Discussion} \label{SecComp}
+It is useful to compare observations of ASASSN-15oz to those of other type IIP/IIL SNe to place our observations in the broader context of the SN field.
+We start by looking for similar objects in our photometric and spectroscopic database, SNDAVIS \footnote{http://dark.physics.ucdavis.edu/sndavis/transient}. 
+Although we identified SN 2016zb and 2015W based only on their $s_{50V}$ slope, they are surprisingly similar both photometrically and spectroscopically. 
+Notably, the cachito feature is present in all three SNe and shows similar time evolution.
+\Stefano{Should we even include this paragraph?}
+
+%Slopes
+To better understand the relationship between the photospheric slope and the radioactive decay slope and the physical mechanism for both, we compare the photospheric phase slope ($s_{50V}$) with the radioactive decay slope (Figure \ref{fig:SlopeComp}) for all SNe in our database with both slopes measured.
+We compare this sample to all SNe in the database with either slope measured to ensure our sample is representative of the population.
+The steepness of the photospheric slope in a type II light curve can be explained by the hydrogen recombination front receding faster than the ejecta expansion, implying a progenitor with a thinner hydrogen envelope.
+The slope of the radioactive decay tail is determined by the fraction of gamma rays trapped and reprocessed by this same hydrogen envelope.
+Thus a thicker envelope should trap more gamma rays and those SNe with smaller photospheric slopes should have the same radioactive decay slope, representing complete gamma ray trapping.
+This, indeed is what we see in Figure \ref{fig:SlopeComp}, that there is a correlation between photospheric and radioactive decay phase slopes.
+\Stefano{I removed anything with an error greater than 0.25 (mag/50d), snhunt. is that too much data cleaning?}
 %=======================
 \begin{figure}
 \begin{center}
@@ -714,6 +720,61 @@ The objects for which there is both a decay phase slope and a photospheric slope
 \end{center}
 \end{figure}
 %-----------------------------------------
+
+%UV Excess
+We also used the SNDAVIS database to search for a correlation between UV excess and light curve slope. 
+If, in fact, the diversity in light curve shapes is due to mass loss and the interaction is strong enough to produce a UV excess, then those SNe with a steeper slope, should have lost more mass, and therefore should be more UV bright.
+This should be most prominent during the first 30 days, when the CSM has the greatest affect on the light curve.
+We explore this by plotting UV color {\it Swift} UVW2 - V over the first 30 days of evolution for eight SNe in our database with both {\it Swift} photometry and $s_{50V}$ measurements (Figure \ref{fig:UVColor}). 
+The symbols for each SNe are colored by the V-band slope at 50 days. 
+Although a wide range of slopes are represented, no correlation between UV excess and slope is observed.
+We interpret this as an indication that the CSM interaction is not strong enough to produce UV excess.
+%=======================
+\begin{figure}
+\begin{center}
+\includegraphics[width=\columnwidth]{uv_slope_comp} %created by make_swift_color_fig.ipynb
+\caption{Figure \ref{fig:UVColor} shows a comparison of the UV color of ASASSN-15oz to that of all other type IIP/IIL supernovae with \textit{Swift} observations.
+Each point is colored by the $S_{50V}$ slope, with shallower slopes in blue and steeper slopes in red. 
+Based on this data, there is no relationship between UV excess and slope.}
+\label{fig:UVColor}
+\end{center}
+\end{figure}
+%-----------------------------------------
+
+%X-ray
+To gain more insight into the X-ray upper limit, we compare the ASASSN-15oz upper limit with published X-ray observations of type IIP/IIL SNe found in the SNaX database \citep{2017ross} (see Figure \ref{fig:xray}).
+We find our upper limit is above all other detection and upper limits of IIP/IIL SNe in the database.
+This further suggests that deeper observations would be needed to detect the X-ray flux of ASASSN-15oz.
+%=======================
+\begin{figure}
+\begin{center}
+\includegraphics[width=\columnwidth]{xray_comp} %created by make_xray_comparison.ipynb
+\caption{The X-ray luminosity of all published SNe found in the SNaX database. 
+Type IIP SNe are shown with square symbols while type IIL SNe are shown with circular symbols and the upper limit of ASASSN-15oz is marked with a star.
+All detections from type IIP/IIL SNe are below the upper limit derived in this paper, implying that deeper observations would be required to detect the X-ray flux.}
+\label{fig:xray}
+\end{center}
+\end{figure}
+%-----------------------------------------
+
+%Interaction model
+Having analyzed individual observations for CSM interaction, we now turn to finding a unified model.
+We derived mass loss parameters from both the light curve modeling with SNEC  and the radio observation modeling.
+From the opical light curve we found the a compact CSM with a density of K = 10x10$^{17}$ g/cm extending to a radius of R = 2400 \rsun. 
+Assuming a typical of RSG wind velocity of 10 km/s, the CSM density required to fit the optical component implies a mass-loss rate of 0.19 \msun/yr.
+This is significantly higher than radio mass-loss rate which is consistent with the typical RSG mass-loss rate of $10^{-4} $- $10^{-6}$ \msun/yr, although not inconsistent with late stage mass-loss scenarios (e.g. \citet{2012quatert,2014shiode,2017fuller, 2017yaron}).
+These discrepant values can be reconciled by considering the origin of the radiation we are observing.
+The excess luminosity seen in the optical light curve is due to radiation diffusion from the shocked CSM that is behind the forward shock and is only visible after shock breakout.
+The radio luminosity on the other hand, is created by the deceleration of electrons due to the shock's interaction with the CSM.
+It is therefore representative of the shock's location at the time of the observation.
+Our observations can then be explained by a long period of average mass-loss, followed by a short period of extreme mass-loss.
+Morozova \& Stone (submitted) modeled this scenario to reproduce both the optical light curves and the X-ray observations of SN 2013ej.
+The X-ray luminosity observed for 2013ej is below our detection limits and therefore, with a similar model for ASASSN-15oz we would not expect an X-ray detection.
+This scenario also supports our lack of narrow emission in our optical and NIR spectra as at the time of these observations the CSM in front of the shock was too low in density.
+Finally, it is possible that the CSM interaction is not strong enough to produce a UV excess. \Stefano{is this true - we see U band excess in the SNEC LC, but we said that we don't trust those wavelengths b/c of line blanketing - can we say we don't expect the CSM interaction to be strong enough when we possibly see it in the model LCs?}
+%-----------------------------------------
+\section{Summary}
+%%%%%%%%%%%%%%%%
 \section*{Acknowlegments}
 This work is based (in part) on observations collected at the European Organization for Astronomical Research in the Southern Hemisphere, Chile as part of PESSTO, (the Public ESO Spectroscopic Survey for Transient Objects Survey) ESO program 188.D-3003, 191.D-0935, 197.D-1075.
 %\software{Astropy}
