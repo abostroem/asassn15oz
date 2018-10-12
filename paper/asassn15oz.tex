@@ -265,17 +265,19 @@ Both of these pipelines combine IRAF tasks to bias subtract and flat field the d
 Figure \ref{fig:SpecAll} shows the evolution of the spectra over time, starting from a blue spectrum with broad hydrogen lines and developing metal features such as iron and scandium as the velocities decrease and the line widths narrow. 
 %More unusually, the cachito feature \citep{2017gutierrez}, blueward of the H-$\alpha$ absorption is present in the first spectrum, growing in strength through day 20 (2015-09-16) and then decreasing in strength at later times. \Azalee{Say more here or reference future section for interpretation} \Stefano{Is this too much interpretation for this section?}
 %=======================
-\begin{figure}
+\begin{figure*}
 \begin{center}
-\includegraphics[width=\columnwidth]{spectra_montage}
+\includegraphics[width=\textwidth]{spectra_montage}
 \caption{The photospheric spectral evolution of ASASSN-15oz with the earliest spectrum on the bottom.
 The first spectrum taken near maximum light shows hydrogen features (identified at the bottom of the figure).
 At this early phase, the cachito feature (see Section \ref{sec:cachito}) is already visible. 
 Over time the cachito feature fades while the hydrogen emission grows and metal lines become visible and grow in strength. 
-These lines are identified in the top spectrum. }
+These lines are identified in the top spectrum. 
+\Stefano{The IR equivalent of this plot has wavelengths listed. However, its challenging to have wavelengths for the optical since they are often a complex of multiple blended lines. 
+Should I remove the wavelengths from the IR plot?}}
 \label{fig:SpecAll}
 \end{center}
-\end{figure}
+\end{figure*}
 %-----------------------------------------
 %%%%%%%%%%%%%%%%% 
 \subsection{UV and X-Ray Observations}\label{SecSwift}
@@ -341,7 +343,7 @@ The changes in velocity and the individual line profiles describe the geometry a
 The presence of different species at different times is gives information about the chemical composition, temperature, and density of the ejecta.
 In this section we analyze optical and NIR spectra taken throughout the photospheric phase.
 %%%%%%%%%%%%%%%%
-\subsection{Optical Evolution}
+\subsection{Optical Evolution} \label{OpticalEvolve}
 Initial line identification was performed by comparing the spectra to that of supernova 1999em \citep{2001leonard}. 
 Identification was confirmed using the spectrum synthesis code Syn++ \citep{2013thomas} (parameter details in \ref{tab:syn++}. 
 %=======================
@@ -507,8 +509,7 @@ They model the interaction as an infinitely thin double-shock structure \citep{1
 The forward shock produces luminosities comparable to the reverse shock in the first 10 days and decreasing to below $10^{34}$ ergs/s by day 100.  
 Our non-detection is at the upper limit of this range, making it plausible that if there is X-ray flux, it is below our detection limits.
 
-The \textit{Swift} grism observations show no sign of the narrow emission lines typically associated with strong interaction.
-This is supported by a lack of UV continuum excess at any epoch. 
+The \textit{Swift} grism observations show no sign of the narrow emission lines typically associated with strong interaction (CSM densities $> 10^{-4}$ g/cm; \citet{2012kiewe})
 %=======================
 \begin{figure*}
 \begin{center}
@@ -691,23 +692,39 @@ This discrepancy is likely the result of the Fe II line being produced above the
 \label{fig:SNECVelocityCompare}
 \end{center}
 \end{figure}
-
+%-----------------------------------------
 %%%%%%%%%%%%%%%%% DISCUSSION %%%%%%%%%%%%%%%%%%%%%
 \section{Discussion} \label{SecComp}
-It is useful to compare observations of ASASSN-15oz to those of other type IIP/IIL SNe to place our observations in the broader context of the SN field.
-We start by looking for similar objects in our photometric and spectroscopic database, SNDAVIS \footnote{http://dark.physics.ucdavis.edu/sndavis/transient}. 
-Although we identified SN 2016zb and 2015W based only on their $s_{50V}$ slope, they are surprisingly similar both photometrically and spectroscopically. 
-Notably, the cachito feature is present in all three SNe and shows similar time evolution.
-\Stefano{Should we even include this paragraph?}
+It is useful to compare observations of ASASSN-15oz to those of other type IIP/IIL SNe to understand if it is a typical IIL SN or a unique event.
+Although they are part of a continuous class, type IIL SNe typically have higher velocity ejecta, are brighter, and have a steeper light curve slope than the average type IIP SN.
+In Section \ref{OpticalEvolve}, we showed that ASASSN-15oz has above average ejecta velocity.
+Here we examine the light curve slope and absolute magnitude in the context of a sample of IIP/IIL SNe.
+
+Population studies of Type IIP/IIL SNe have found that SNe with steeper light curves are brighter \citep{2014Anderson,2016valenti}, either due to a larger explosion energy, a larger progenitor, or both. \Stefano{Is this true, does it need a citation?}
+Using our database of publicly available light curves, SNDAVIS \footnote{http://dark.physics.ucdavis.edu/sndavis/transient}, we plot the photospheric slope ($s_{50V}$) and the absolute V-band magnitude for XX SNe (see Figure \ref{fig:SlopeMag}). 
+As a bright type IIL SNe, ASASSN-15oz is consistent with the sample correlation.
+%=======================
+\begin{figure}
+\begin{center}
+\includegraphics[width=\columnwidth]{abs_mag_vs_slope_sample} %created by light curve_characteristics.ipynb
+\caption{The absolute V-band magnitude of a sample of public SNe from the SNDAVIS database compared to their photospheric slope ($s_{50V}$) (blue circles). 
+The trend seen by \citet{2014Anderson} and \citet{2016valenti} of brighter SNe to have steeper slopes is apparent. 
+ASASSN-15oz follows this relationship and is plotted over the sample as an orange star.
+}
+\label{fig:SlopeMag}
+\end{center}
+\end{figure}
+%-----------------------------------------
+
+
+
 
 %Slopes
-To better understand the relationship between the photospheric slope and the radioactive decay slope and the physical mechanism for both, we compare the photospheric phase slope ($s_{50V}$) with the radioactive decay slope (Figure \ref{fig:SlopeComp}) for all SNe in our database with both slopes measured.
-We compare this sample to all SNe in the database with either slope measured to ensure our sample is representative of the population.
+We also compare the photospheric phase slope ($s_{50V}$) with the radioactive decay slope (Figure \ref{fig:SlopeComp}) for ASASSN-15oz with all SNe in our database for which both slopes are measured.
 The steepness of the photospheric slope in a type II light curve can be explained by the hydrogen recombination front receding faster than the ejecta expansion, implying a progenitor with a thinner hydrogen envelope.
 The slope of the radioactive decay tail is determined by the fraction of gamma rays trapped and reprocessed by this same hydrogen envelope.
 Thus a thicker envelope should trap more gamma rays and those SNe with smaller photospheric slopes should have the same radioactive decay slope, representing complete gamma ray trapping.
-This, indeed is what we see in Figure \ref{fig:SlopeComp}, that there is a correlation between photospheric and radioactive decay phase slopes.
-\Stefano{I removed anything with an error greater than 0.25 (mag/50d), snhunt. is that too much data cleaning?}
+This, indeed is what we see in Figure \ref{fig:SlopeComp}, that there is a correlation between photospheric and radioactive decay phase slopes and that ASASSN-15oz, while having relatively steep slopes at both phases, lies on this relationship at the IIL end.
 %=======================
 \begin{figure}
 \begin{center}
@@ -721,10 +738,22 @@ The objects for which there is both a decay phase slope and a photospheric slope
 \end{figure}
 %-----------------------------------------
 
+%Interaction model
+Having analyzed individual observations for CSM interaction, we now turn to finding a unified model.
+We derived mass loss parameters from both the light curve modeling with SNEC  and the radio observation modeling.
+From the optical light curve we found the a compact CSM with a density of K = 10x10$^{17}$ g/cm extending to a radius of R = 2400 \rsun. 
+Assuming a typical of RSG wind velocity of 10 km/s, the CSM density required to fit the optical component implies a mass-loss rate of 0.19 \msun/yr.
+This is significantly higher than radio mass-loss rate which is consistent with the typical RSG mass-loss rate of $10^{-4} $- $10^{-6}$ \msun/yr, although not inconsistent with late stage mass-loss scenarios (e.g. \citet{2012quatert,2014shiode,2017fuller, 2017yaron}).
+These discrepant values can be reconciled by considering the origin of the radiation we are observing.
+The excess luminosity seen in the optical light curve is due to radiation diffusion from the shocked CSM that is behind the forward shock and is only visible after shock breakout.
+The radio luminosity on the other hand, is created by the deceleration of electrons due to the shock's interaction with the CSM.
+It is therefore representative of the shock's location at the time of the observation.
+Our observations can then be explained by a long period of average mass-loss, followed by a short period of extreme mass-loss.
+
 %UV Excess
-We also used the SNDAVIS database to search for a correlation between UV excess and light curve slope. 
-If, in fact, the diversity in light curve shapes is due to mass loss and the interaction is strong enough to produce a UV excess, then those SNe with a steeper slope, should have lost more mass, and therefore should be more UV bright.
-This should be most prominent during the first 30 days, when the CSM has the greatest affect on the light curve.
+With this model in mind, we examine our UV and X-ray observations, in the context of other IIP/IIL SNe.
+Strongly interacting SNe remain UV bright throughout their interaction, implying that perhaps a UV excess would be observed for SNe IIP/IIL during the first 30 days, when the CSM has the greatest affect on the light curve.
+Furthermore, if, in fact, the diversity in light curve shapes is due to mass loss and the interaction is strong enough to produce a UV excess, then those SNe with a steeper slope, should have lost more mass, and therefore should be more UV bright.
 We explore this by plotting UV color {\it Swift} UVW2 - V over the first 30 days of evolution for eight SNe in our database with both {\it Swift} photometry and $s_{50V}$ measurements (Figure \ref{fig:UVColor}). 
 The symbols for each SNe are colored by the V-band slope at 50 days. 
 Although a wide range of slopes are represented, no correlation between UV excess and slope is observed.
@@ -742,6 +771,7 @@ Based on this data, there is no relationship between UV excess and slope.}
 %-----------------------------------------
 
 %X-ray
+Like the UV excess, X-rays from strongly interacting SNe are frequently observed.
 To gain more insight into the X-ray upper limit, we compare the ASASSN-15oz upper limit with published X-ray observations of type IIP/IIL SNe found in the SNaX database \citep{2017ross} (see Figure \ref{fig:xray}).
 We find our upper limit is above all other detection and upper limits of IIP/IIL SNe in the database.
 This further suggests that deeper observations would be needed to detect the X-ray flux of ASASSN-15oz.
@@ -757,23 +787,9 @@ All detections from type IIP/IIL SNe are below the upper limit derived in this p
 \end{figure}
 %-----------------------------------------
 
-%Interaction model
-Having analyzed individual observations for CSM interaction, we now turn to finding a unified model.
-We derived mass loss parameters from both the light curve modeling with SNEC  and the radio observation modeling.
-From the opical light curve we found the a compact CSM with a density of K = 10x10$^{17}$ g/cm extending to a radius of R = 2400 \rsun. 
-Assuming a typical of RSG wind velocity of 10 km/s, the CSM density required to fit the optical component implies a mass-loss rate of 0.19 \msun/yr.
-This is significantly higher than radio mass-loss rate which is consistent with the typical RSG mass-loss rate of $10^{-4} $- $10^{-6}$ \msun/yr, although not inconsistent with late stage mass-loss scenarios (e.g. \citet{2012quatert,2014shiode,2017fuller, 2017yaron}).
-These discrepant values can be reconciled by considering the origin of the radiation we are observing.
-The excess luminosity seen in the optical light curve is due to radiation diffusion from the shocked CSM that is behind the forward shock and is only visible after shock breakout.
-The radio luminosity on the other hand, is created by the deceleration of electrons due to the shock's interaction with the CSM.
-It is therefore representative of the shock's location at the time of the observation.
-Our observations can then be explained by a long period of average mass-loss, followed by a short period of extreme mass-loss.
-Morozova \& Stone (submitted) modeled this scenario to reproduce both the optical light curves and the X-ray observations of SN 2013ej.
-The X-ray luminosity observed for 2013ej is below our detection limits and therefore, with a similar model for ASASSN-15oz we would not expect an X-ray detection.
-This scenario also supports our lack of narrow emission in our optical and NIR spectra as at the time of these observations the CSM in front of the shock was too low in density.
-Finally, it is possible that the CSM interaction is not strong enough to produce a UV excess. \Stefano{is this true - we see U band excess in the SNEC LC, but we said that we don't trust those wavelengths b/c of line blanketing - can we say we don't expect the CSM interaction to be strong enough when we possibly see it in the model LCs?}
-%-----------------------------------------
-\section{Summary}
+A dense shell of material surrounded by a lower density CSM has been used to model the observations of a handful of objects (e.g. 2013fs: \citet{2017yaron}; 2013ej: \citet{2018morozova2}).
+As the best model to explain the observations of a IIP SN (2013fs), a transition SN (2013ej), and now to a IIL SN (ASASSN-15oz) it may be applicable to a broad range of progenitors.
+
 %%%%%%%%%%%%%%%%
 \section*{Acknowlegments}
 This work is based (in part) on observations collected at the European Organization for Astronomical Research in the Southern Hemisphere, Chile as part of PESSTO, (the Public ESO Spectroscopic Survey for Transient Objects Survey) ESO program 188.D-3003, 191.D-0935, 197.D-1075.
