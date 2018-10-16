@@ -132,36 +132,67 @@ Supernovae
 \item \Azalee{Variations in level of detail in the descriptions of data reduction}
 \end{itemize}
 \section{Introduction}
-({\color{blue} I would start directly with massive star hydrogen rich SNe II) instead of CC SNe in general (you do not speak about stripped envelope right?)} 
+% SNe II diversity, historically 2 classes but maybe a continuum. 
+% Then explain the difference IIL need a smaller envelope as also suggested by the modeling. 
+% However evidences says they all come from similar progenitors mass, so maybe similar progenitors but different mass loss history. 
+% Mass loss is one of the problem in theory. 
+% Evidence of csm have been observed but never studied in a coherent picture
+% 
+% Incorporate rates somewhere?
+% Incorporate other IIL explanations?
+% 
+% 
 Stars greater than 8 \msun end their lives as spectacularly bright core-collapse supernovae (CCSN). 
-With the advent of wide field survies, it is increasingly easier to observe the supernova phase, it is challenging more to connect the supernova observations to their progenitor star. {\color{blue} (It seems that the challenge in connecting is related to wide fields surveys. what about: Despite an increasing amount of high quality data on SNe II, we are still struggling to connect the SN observation ... )}
-This is due in part to uncertainties in the late stages of the evolution of massive stars and in part to the challenges of modeling the complex physics of the supernova explosion and the expansion of the ejecta.
+Based on a sample of 9 events, \citet{1941minkowski} separated CCSN into type I, those without hydrogen in their spectra and type II, those with hydrogen in their spectra.
+Although the diversity of type II light curves was noted early \citep{1964minkowski, 1967pskovskii}, it was \citet{1979barbon} who first proposed a division of the type II class into type IIP and type IIL based on the shape of their light curves.
+They described type IIP light curves as having a rapid decline in the first $\sim$30 days post maximum, followed by $\sim$50 days of constant brightness (the {\it plateau}), followed by a rapid decline until $\sim$ 120 post maximum, and finally settling onto a reduced decline. 
+Type IIL light curves on the other-hand are characterized by a {\it linear} decline for up to 100 days post maximum. 
+More recently, type IIn and type IIb subclasses have been defined as SNe with narrow emission lines in their spectra and SNe whose hydrogen lines give way to strong helium lines during their photospheric phase, respectively \citep{1990schlegel, 1993filippenko}.
+Ignoring IIn and IIb SNe, type IIP/L SNe show great diversity in their spectroscopic properties and light curve shape. 
 
-\Azalee{Figure out how to weave this into the next paragraph: This interaction should be easiest to detect in type IIL supernovae as they have more of their hydrogen envelope than IIP supernovae.}
-One of the biggest challenges in connecting supernova observations to their progenitors is understanding the mass-loss of massive stars.
-The supernova that show hydrogen in their spectra throughout their evolution (type II) are currently attributed to single star progenitors (need citation).
-These supernova generally increase in brightness for a week and then decline linearly for $\sim$80 days, a period referred to as the photospheric phase, before dropping dramatically onto another linear decline, called the nebular phase (cite: Barbon, 1979, ). 
-%\Stefano{include a phase of decline between max and plateau?} {\color{blue} (not needed)}.
-However, within this general shape there is a great diversity in rise times, length of the photospheric phase, height of the drop to the nebular phase, and slopes of each decline (see for example Bertaud, 1941 (103), Minkowski 1964, Anderson, 2014, Valenti 2017). 
-In fact, the there are two classes of type II supernova, defined based on the light curve shape during the photospheric phase.
-Those that stay at constant brightness, creating a plateau, are called type IIP supernovae, while those that decline linearly are referred to at type IIL supernovae (cite: Barbon, 1979). 
-It is commonly accepted that the difference in light curve shape is due to the amount of hydrogen in the outer envelope: IIL supernovae having a thinner envelope (Find citation). 
-The most natural mechanism for this is through mass-loss due to stellar winds (find citation). 
-This view is supported by the apparent continuum of light curves found between the two classes (see for example Anderson 2014).
-However, until recently IIL and IIP supernovae were modeled without CSM interaction, an assumption at odds with the idea of late stage mass-loss (why? citations?).
+The analysis of large samples of SNe by \citet{2014anderson} and \citet{2015sanders} showed a continuum distribution between the archetypical IIP and IIL light curves, strengthen the observations of earlier authors made on smaller samples (e.g. \citet{1989young}, \citet{1993patat, 1994patat}). 
+However, some authors continue to find two distinct classes (e.g. \citet{2012arcavi}).
+In this paper we will use IIP-like to denote SNe at the IIP end of the spectrum and IIL-like to denote SNe at the IIL end of the spectrum.
 
-New full radiative transfer hydrodynamic light curve modeling of type IIP/IIL supernovae have required some amount of CSM to reproduce the slope of the light curve during the first 30-40 days (cite Viktoriya and MESA/STELLA paper) for most supernovae.
-Additionally, narrow emission lines in the spectra of some supernovae taken a few hours to days after explosion provide more evidence of interaction with CSM (citation: nature paper - Gal Yam?). 
-However, a comprehensive search for signs of interaction at all wavelengths, including those most commonly associated with interaction, X-ray and Radio, has not been done. 
-In this paper, for the first time we address this issue with the study of ASASSN-15oz, a type IIL supernova, for which we were able to collect and extensive set of data ranging from the X-ray to the Radio to search for signs of interaction with a CSM.
+From high resolution imaging prior to the SNe explosion, the progenitors of type IIP/IIL SNe have been shown to be red super giants (RSG) with masses $<$ 17\msun (\citet{2015smartt} and references there in).
+Successful modeling of type IIP-like SNe with a RSG progenitor has shown that the initial period of decline is due to adiabatic cooling during the expansion of the ejecta (e.g. \citet{1971grassberg}, \citet{1976chevalier}, \citet{1977falk}, \citet{1985litvinova},\citet{1993blinnikov}, \citet{2009kasen}).
+When the photosphere reaches $\sim$ 6000K, hydrogen recombination commences. 
+The rate of expansion of the ejecta matches the rate of recession of the recombination front, which itself is at the constant temperature of recombination, leading to an almost constant brightness.
+When the photosphere passes completely through the hydrogen dominated layer of the ejecta, the ejecta continues to expand and cool, as layers become optically thin until the light curve is powered by the radioactive decay of nickel and cobalt.
+During this final phase, the radioactive decay tail, the gamma-rays given off by the radioactive decay of nickel synthesized during the explosion are absorbed by the hydrogen and re-emitted in the optical.
+When all gamma-rays are absorbed, called complete trapping, the slope during this phase is 0.98 mag/100 days.
+
+It has been theorized that type IIL-like light curves arise from progenitors with a smaller hydrogen envelope \citep{1971grassberg, 1993blinnikov}.
+In this scenario, the recombination front would move faster than the expanding ejecta, causing the brightness to decrease. 
+The shallow H-$\alpha$ absorption troughs in type IIL-like SNe strengthen this picture \citep{1990schlegel, 2014gutierrez}.
+As the progenitors of type IIP/L SNe are thought to be single, they would need to lose mass via stellar winds to explode with a smaller hydrogen envelope.
+As mass-loss increases with zero age main sequence mass (M$_{ZAMS}$), this leads to the hypothesis that the progenitors of type IIL-like objects are more massive than IIP-like progenitors \citep{2003heger, 2009kasen}. 
+Observations that type IIL-like SNe have sorter periods before falling to the radioactive decay phase, are brighter, and have higher velocity ejecta support this idea \citep{1994patat, 2014anderson, 2014faran, 2015sanders, 2016valenti} 
+This idea is intriguing as it solves another outstanding problem, the lack of progenitors between 17-25 \msunperiod.
+However, \citet{2016valenti} found that there is no difference in the progenitor population of IIP-like and IIL-like objects and more importantly, that the progenitors of type IIL-like SNe were not above 17 \msunperiod.
+Nevertheless, mass-loss, whether governed by progenitor mass or some other factor (e.g. metallicity, rotation) remains the most promising explanation of the diversity of light curve shapes.
+
+Mass lost from a SN progenitor over the course of its lifetime will be distributed around progenitor with a density related to the mass-loss rate and the wind velocity at the time it was lost and to the time itself.
+Mass loss rates for RSG are extremely difficult to characterize with observations due to both the short period of this phase as well as the rarity of high mass stars and it not well understood theoretically.
+Thus the mass loss rates for RSG are uncertain, with typical density estimates between $10^{-6}-10^{-4}$ \msun/yr and velocities between $10-100$ km/s \citep{2011mauron}.
+Although typically assumed to be negligible, it is possible that the signatures of interaction with circumstellar material (CSM; with stellar wind origins) are visible in the light curves and spectroscopy of type IIP/L SNe, especially outside of the optical where there are fewer observations.
+The detection and evolution of this interaction can directly probe the mass loss history of massive stars. 
+
+In fact, evidence of interaction, often characterized by a single type of observation (e.g. X-ray detection), indicate that mass loss should be considered in the interpretation of type IIP/IIL SNe.
+Recent, unprecedented early spectroscopy of some IIP/IIL SNe show narrow emission lines that disappear within the first hours to days post explosion (e.g. \citet{2014gal-yam}, \citet{ 2017yaron}), indicating a thin dense CSM shell around the progenitor. 
+Corroborating this picture (although for different objects), dense CSM is also required to match the early light curves of hydrodynamic models with RSG progenitors to the optical light curves \citep{2018morozova, 2018paxton}.
+Although very few in number, x-ray and radio observations are also detecting signs of interaction around some type IIP/IIL SNe (e.g. \citet{2014dwarkadas} and references there in, \citet{2018morozova2}).
+
+While signs of interaction in type IIP/IIL SNe exist, a coherent picture of mass-loss is exceedingly rare and has never been attempted for type II-L object, the SN type most likely to show signs of interaction.
+In this paper, for the first time, we address this issue with the study of ASASSN-15oz, a type IIL-like supernova, for which we were able to collect and extensive set of data ranging from the X-ray to the Radio to search for signs of interaction with a CSM.
 
 The outline of the paper is as follows.
-In Section \ref{15ozIntro} we present the explosion parameters of ASASSN-15oz.
+In Section \ref{15ozIntro} we present the supernova parameters of ASASSN-15oz.
 In Section \ref{sec:Obs} we present the data collected at all wavelengths.
 The photometric and spectroscopic evolution are described in Sections \ref{sec:LCEvolve} and \ref{sec:SpecEvolve}, respectively.
-Section \ref{sec:Interaction} describes our search for interaction, including extensive hydrodynamic light curve modeling.
-Finally, we present a comparison to other objects and conclusions in \ref{SecComp}.
-\Stefano{should I say something about if there's no CSM?}
+Section \ref{sec:Interaction} describes our search for interaction, including extensive hydrodynamic light curve modeling and radio.
+Finally, we present a comparison to other objects and a unified interpretation of the mass loss history indicated by the multi-wavelength observations  in \ref{SecComp}.
+%\Stefano{should I say something about if there's no CSM?}
 %%%%%%%%%%%%%%%%% SN PARAMETERS %%%%%%%%%%%%%%%%%%
 \section{Supernova Parameters} \label{15ozIntro}
 Supernova ASASSN-15oz was discovered by the ASAS-SN team on August 31, 2015 and announced on September 3, 2015 \citep{2016brown}. 
@@ -319,7 +350,7 @@ The light curve of ASASSN-15oz shows a linear decline similar to that of other t
 The light curve reaches peak brightness in the V-band 8.25 days after explosion, one day after observations began, reaching an above average absolute magnitude of -18.05 $\pm$ 0.025.
 The early light curve rises until around day 20 in the redder filters, flattening in the V-band and falling in the blue bands during this same period. 
 The light curve then falls in all bands for the remainder of the observations, changing slope around day 40 and again sometime after day 85, following the fall from plateau. 
-Following \citep{2014Anderson}, we fit a slope to the first steep initial decline after maximum ($s_1$) and to the second shallower slope prior to the fall from plateau ($s_2$). 
+Following \citep{2014anderson}, we fit a slope to the first steep initial decline after maximum ($s_1$) and to the second shallower slope prior to the fall from plateau ($s_2$). 
 We also fit a global decline rate, $s_{50v}$ from soon after maximum to prior to the fall from plateau.
 During the nebular phase we fit a slope to the radioactive decay tail ($s_{tail}$). 
 The slopes we fit as well as the details of the fit are summarized in table \ref{tab:slope} and compared with other objects in Section \ref{SecComp}.
@@ -700,7 +731,7 @@ Although they are part of a continuous class, type IIL SNe typically have higher
 In Section \ref{OpticalEvolve}, we showed that ASASSN-15oz has above average ejecta velocity.
 Here we examine the light curve slope and absolute magnitude in the context of a sample of IIP/IIL SNe.
 
-Population studies of Type IIP/IIL SNe have found that SNe with steeper light curves are brighter \citep{2014Anderson,2016valenti}, either due to a larger explosion energy, a larger progenitor, or both. \Stefano{Is this true, does it need a citation?}
+Population studies of Type IIP/IIL SNe have found that SNe with steeper light curves are brighter \citep{2014anderson,2016valenti}, either due to a larger explosion energy, a larger progenitor, or both. \Stefano{Is this true, does it need a citation?}
 Using our database of publicly available light curves, SNDAVIS \footnote{http://dark.physics.ucdavis.edu/sndavis/transient}, we plot the photospheric slope ($s_{50V}$) and the absolute V-band magnitude for XX SNe (see Figure \ref{fig:SlopeMag}). 
 As a bright type IIL SNe, ASASSN-15oz is consistent with the sample correlation.
 %=======================
@@ -708,7 +739,7 @@ As a bright type IIL SNe, ASASSN-15oz is consistent with the sample correlation.
 \begin{center}
 \includegraphics[width=\columnwidth]{abs_mag_vs_slope_sample} %created by light curve_characteristics.ipynb
 \caption{The absolute V-band magnitude of a sample of public SNe from the SNDAVIS database compared to their photospheric slope ($s_{50V}$) (blue circles). 
-The trend seen by \citet{2014Anderson} and \citet{2016valenti} of brighter SNe to have steeper slopes is apparent. 
+The trend seen by \citet{2014anderson} and \citet{2016valenti} of brighter SNe to have steeper slopes is apparent. 
 ASASSN-15oz follows this relationship and is plotted over the sample as an orange star.
 }
 \label{fig:SlopeMag}
