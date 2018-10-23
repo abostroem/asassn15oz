@@ -75,7 +75,7 @@
 
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
-\title{ASASSN-15oz}
+\title{ASASSN-15oz: Searching for Signs of Circumstellar Interaction in a Type IIL Supernova}
 
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
@@ -93,6 +93,7 @@ Michael Lundquist, $^{5}$
 \newauthor
 Mathew Smith, $^{7}$
 Mark Sullivan $^{7}$
+Griffin Hosseinzadeh,$^{8}$
 \\
 % List of institutions
 $^{1}$University of California, Davis, 1 Shields Ave, Davis, CA, 95616 \\
@@ -101,7 +102,8 @@ $^{3}$Princeton University \\
 $^{4}$Mullard Space Science Laboratory - University College London\ \
 $^{5}$University of Arizona \\
 $^{6}$ Max-Planck Institut für Astrophysik, Karl-Schwarzschild Str. 1, D-85748 Garching, Germany \\
-$^{7}$ School of Physics and Astronomy, University of Southampton, Southampton, SO17 1BJ, UK
+$^{7}$ School of Physics and Astronomy, University of Southampton, Southampton, SO17 1BJ, UK\\
+$^{8}$ Harvard-Smithsonian Center for Astrohysics,  60 Garden Street,  Cambridge, MA 02138
 }
 
 % These dates will be filled out by the publisher
@@ -512,7 +514,7 @@ In the few cases that interaction is seen in IIP/IIL SNe, incomplete data result
 
 The linear shape of the light curve of IIL-like SNe is best explained by a thin hydrogen envelope on the progenitor, implying that IIL-like SNe should undergo more mass-loss than IIP-like SNe.
 ASASSN-15oz, a IIL-like SN with photometric and spectroscopic observations from the X-ray through the radio is the ideal SN on which to study the importance of mass-loss for IIP-like and IIL-like SNe.
-%The different wavelengths probe different periods of mass-loss allowing for the characterization of the mass-loss history of the progenitor.
+%FIXMEThe different wavelengths probe different periods of mass-loss allowing for the characterization of the mass-loss history of the progenitor.
 In this section we analyze the evidence for interaction at different wavelengths.
 %%%%%%%%%%%%%%%%
 \subsection{UV and X-Ray}
@@ -526,7 +528,7 @@ They model the interaction as an infinitely thin double-shock structure \citep{1
 The forward shock produces luminosities comparable to the reverse shock in the first 10 days and decreasing to below $10^{34}$ ergs/s by day 100.  
 Our non-detection is at the upper limit of this range, making it plausible that if there is X-ray flux, it is below our detection limits.
 
-The \textit{Swift} UV grism observations show no sign of the narrow emission lines typically associated with strong interaction (CSM densities $> 10^{-4}$ g/cm; \citet{2012kiewe})
+The \textit{Swift} UV grism observations show no sign of the narrow emission lines typically associated with strong interaction (CSM densities $>10^{-4}$ g/cm; \citet{2012kiewe})
 %=======================
 \begin{figure*}
 \begin{center}
@@ -864,13 +866,13 @@ The minimum of the spline is used to find the Sc II velocity.
 %Make an epoch column
 \section{Spectroscopic Observations}
 %=======================
-\input{test_spec_obs_tab.tex}\label{tab:SpecObs}
+\input{spec_obs_tab.tex}\label{tab:SpecObs}
 %FIXME: table label both show up as B
 %-----------------------------------------
 \section{Photometric Observations}
 %=======================
 %\input{ImagingObsTab} \label{tab:LcObs}
-\input{test_lc_obs} \label{tab:LcObs}
+\input{lc_obs} \label{tab:LcObs}
 %FIXME: table label both show up as B
 %-----------------------------------------
 %%%%%%%%%%%%%%%%
