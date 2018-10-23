@@ -1,0 +1,70 @@
+asassn-15oz_20150924_redblu_123847.580.fits:
+  continuum:
+    left: !!python/tuple
+    - !!python/object/apply:numpy.core.multiarray.scalar
+      - &id001 !!python/object/apply:numpy.dtype
+        args: [f8, 0, 1]
+        state: !!python/tuple [3, <, null, null, null, -1, -1, 0]
+      - !!binary |
+        NKrpN3+1v0A=
+    - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        iGouqWSo6Dw=
+    right: !!python/tuple
+    - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        Hyh9jlKRwEA=
+    - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        Wb8SUoAG6Tw=
+  feature:
+    center:
+    - !!python/tuple
+      - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          x46koUobwEA=
+      - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          Dzx08ATa3D8=
+    - !!python/tuple
+      - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          KJn1/7wywEA=
+      - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          A6ppoFyz3D8=
+    - !!python/tuple
+      - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          8O5GIv1swEA=
+      - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          vxTRgVI95D8=
+    l_edge: !!python/tuple
+    - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        wHNuHWECwEA=
+    - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        7jLpyr496D8=
+    r_edge: !!python/tuple
+    - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        sSliwFOOwEA=
+    - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        Vis2pHT/7D8=
+  fit: Gaussian1D
