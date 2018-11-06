@@ -94,6 +94,20 @@ Michael Lundquist, $^{5}$
 Mathew Smith, $^{7}$
 Mark Sullivan $^{7}$
 Griffin Hosseinzadeh,$^{8}$
+\newauthor
+Iair Arcavi,$^{10}$
+R\'egis Carier,$^{11}$
+Llu\'is Galbany,$^{12}$
+Claudia Guti\'errez,$^{13}$
+\newauthor
+Andrew Howell,$^{14}$
+Kristhell L\'opez,$^{15}$
+Cosimo Inserra,$^{16}$
+Giuliano Pignata,$^{17, 18}$
+\newauthor
+Anthony Piro,$^{19}$
+\'Osmar Rodr\'iguez,$^{20}$
+David Young,$^{21}$
 \\
 % List of institutions
 $^{1}$University of California, Davis, 1 Shields Ave, Davis, CA, 95616 \\
@@ -101,9 +115,22 @@ $^{2}$Hebrew University of Jerusalem \\
 $^{3}$Princeton University \\
 $^{4}$Mullard Space Science Laboratory - University College London\ \
 $^{5}$University of Arizona \\
-$^{6}$ Max-Planck Institut für Astrophysik, Karl-Schwarzschild Str. 1, D-85748 Garching, Germany \\
-$^{7}$ School of Physics and Astronomy, University of Southampton, Southampton, SO17 1BJ, UK\\
-$^{8}$ Harvard-Smithsonian Center for Astrohysics,  60 Garden Street,  Cambridge, MA 02138
+$^{6}$Max-Planck Institut für Astrophysik, Karl-Schwarzschild Str. 1, D-85748 Garching, Germany \\
+$^{7}$School of Physics and Astronomy, University of Southampton, Southampton, SO17 1BJ, UK\\
+$^{8}$Harvard-Smithsonian Center for Astrohysics,  60 Garden Street,  Cambridge, MA 02138 \\
+$^{9}$
+$^{10}$
+$^{11}$Cerro Tololo Inter-American Observatory, National Optical Astronomy Observatory, Casilla 603, La Serena, Chile \\
+$^{12}$
+$^{13}$
+$^{14}$
+$^{15}$
+$^{16}$
+$^{17}$Departamento de Ciencias Fisicas, Universidad Andres Bello, Avda. Republica 252, Santiago, Chile
+$^{18}$Millennium Institute of Astrophysics (MAS), Nuncio Monseñor Sótero Sanz 100, Providencia, Santiago, Chile
+$^{19}$
+$^{20}$
+$^{21}$
 }
 
 % These dates will be filled out by the publisher
@@ -132,6 +159,7 @@ Supernovae
 
 %%%%%%%%%%%%%%%%% BODY OF PAPER %%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%% INTRODUCTION %%%%%%%%%%%%%%%%%%
+\section{Introduction}
 Stars greater than 8 \msun end their lives as spectacularly bright core-collapse supernovae (CCSN). 
 CCSNe are divided into Type I, those without hydrogen in their spectra and Type II, those with hydrogen in their spectra \citep{1941minkowski}.
 Although the diversity of Type II light curves was noted early \citep{1964minkowski, 1967pskovskii}, it was \citet{1979barbon} who first proposed a division of the Type II class into Type IIP SNe (IIP SNe) and Type IIL SNe (IIL SNe) based on the shape of their light curves.
@@ -147,7 +175,8 @@ When the photosphere passes completely through the hydrogen dominated layer of t
 It is theorized that IIL-like SN light curves arise from progenitors with  smaller hydrogen envelopes \citep{1971grassberg,1989branch,1993blinnikov}.
 In this scenario, the recombination front would move faster than the expanding ejecta, causing the brightness to decrease. 
 The shallow H-$\alpha$ absorption troughs in IIL-like SNe, possibly due to less absorbing material, strengthen this picture \citep{1996schlegel,2014gutierrez}.
-To explode with smaller hydrogen envelopes, IIL-like SNe must lose mass via stellar winds.
+To explode with smaller hydrogen envelopes, IIL-like SN progenitors must lose mass via stellar winds or mass transfer to a binary companion.
+In this paper, we will consider single progenitor systems and thus mass-loss due to stellar winds. 
 As mass-loss increases with zero age main sequence mass (M$_{ZAMS}$)  \citep{2003heger,2009kasen}, this leads to the hypothesis that the progenitors of IIL-like SNe are more massive than IIP-like progenitors. 
 Observations that IIL-like SNe show shorter periods before falling to the radioactive decay phase, are brighter, and have higher velocity ejecta support this hypothesis \citep{1994patat,2014anderson,2014faran,2015sanders,2015valenti,2016valenti} 
 This idea is intriguing as it solves another outstanding problem, the lack of progenitors between 17-25 \msun \citep{2015smartt}.
@@ -488,8 +517,8 @@ Following \citet{2018jerkstrand}, the scaling combined with the equation for the
 \frac{F_{obs}}{F_{mod}} = \frac{d_{mod}^{2}}{d_{obs}^{2}}\frac{(M_{56,Ni}){}_{obs}}{(M_{56, Ni}){}_{mod}}exp\left(\frac{t_{mod} - t_{obs}}{111.4}\right)
 \end{equation}
 Where $F_{obs}$ and $F_{mod}$ are the observed and model flux, $d_{obs}$ and $d_{mod}$ the observed and model distance, $(M_{56, Ni}){}_{obs}$ and $(M_{56, Ni}){}_{mod}$ are the observed and model nickel mass, and $t_{obs}$ and $t_{mod}$ are epoch of the observation and the model.
-Using this relation we find a nickel mass of 0.02 \msunperiod.
-This value is a factor of four smaller than our lower limit for the nickel mass (see Section \ref{15ozIntro}).
+Using this relation, we average the nickel mass found for each mass model to find an nickel mass of 0.03 \msun for day 212 and 0.02 \msun for day 340.
+\Azalee{These values is a factor of four smaller than our lower limit for the nickel mass (see Section \ref{15ozIntro}).}
 This may be due to the fact that the spectral synthesis modeling does not account for the incomplete gamma ray trapping in ASASSN-15oz.
 The fact that several IIP/IIL SNe do not have complete trapping (see Section \ref{SecComp}) should be taken into account in the future.
 %=======================
@@ -564,7 +593,7 @@ They do however, predict absorption in HeI $\lambda10830$ 20-60 days post explos
 
 A feature blueward of H-$\alpha$ is often present in Type II SNe, however, it is unclear if this feature is due to high velocity hydrogen or to Si II ($\lambda$6355)
 and it has thus been named the cachito feature to avoid association with a particular species.
-Building on a similar analysis of single objects (e.g. SN 1999em: \citealt{2001leonard}, SN 2013ej: \citealt{2014valenti}), \citet{2017gutierrez} searched for this feature in 122 IIP/IIL SNe. 
+Building on a similar analysis of one to a few objects (e.g. SN 1999em: \citealt{2001leonard}, SNe 2009dd, 2007pk, 2010aj, 1995ad, 1996W: \citet{2013inserra}, SN 2013ej: \citealt{2014valenti}), \citet{2017gutierrez} searched for this feature in 122 IIP/IIL SNe. 
 They find the cachito feature in 70 SNe in their sample and divide the detections in early phase detections (phase < 40 days) and late phase detections (phase > 40 days).
 The velocities of the cachito feature observed in the early sample are most often well matched to the Fe II velocity if interpreted as Si II. 
 For this reason, they interpret the cachito feature in the early sample as Si II and at late times as high velocity hydrogen.
@@ -823,6 +852,8 @@ under contract with the National Aeronautics and Space Administration.
 The National Radio Astronomy Observatory is a facility of the National Science Foundation operated under cooperative agreement by Associated Universities, Inc.
 This work makes use of observations from the LCOGT network.
 This research made use of Astropy,\footnote{http://www.astropy.org} a community-developed core Python package for Astronomy \citep{astropy:2013, astropy:2018}
+
+Support for G.P. is provided by the Ministry of Economy, Development, and Tourism's Millennium Science Initiative through grant IC120009, awarded to The Millennium Institute of Astrophysics, MAS
 
 %\software{Astropy}
 
