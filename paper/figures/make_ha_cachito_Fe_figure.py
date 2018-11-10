@@ -67,10 +67,7 @@ texpl = Time(sn15oz.jdexpl, format='jd')
 # In[6]:
 
 
-old_fitting = asc.read(os.path.join(TEST_FILE_DIR, 'HA-cachito_old.tab'))
-new_fit_together = asc.read(os.path.join(TEST_FILE_DIR, 'HA-cachito.tab'))
 new_fit_cachito = asc.read(os.path.join(TEST_FILE_DIR, 'cachito.tab'))
-new_fit_HA = asc.read(os.path.join(TEST_FILE_DIR, 'HA.tab'))
 
 
  
@@ -97,15 +94,6 @@ velocity_cachito = -1*calc_velocity(new_fit_cachito['vel0'], HA).to(u.km/u.s).va
 # In[9]:
 
 
-phase_HA = (Time(new_fit_HA['date'])-texpl).value
-velocity_HA = -1*calc_velocity(new_fit_HA['vel0'], HA).to(u.km/u.s).value
-
-
- 
- 
-# In[19]:
-
-
 #tbdata_feII = asc.read(os.path.join(DATA_DIR, 'FeII_multi.tab'))
 #tbdata_feII.remove_columns(['vel1', 'vel_err_left_1', 'vel_err_right_1', 'vel_pew_1', 'vel_pew_err1'])
 tbdata_feII = asc.read(os.path.join(DATA_DIR, 'FeII_5169.tab'))
@@ -118,7 +106,7 @@ tbdata_feII.rename_column('vel_pew_err0', 'pew_err')
 
  
  
-# In[20]:
+# In[10]:
 
 
 phase_feII = (Time(tbdata_feII['date'])-texpl).value
@@ -127,7 +115,7 @@ velocity_feII = -1*calc_velocity(tbdata_feII['velocity'], FeII).to(u.km/u.s)
 
  
  
-# In[21]:
+# In[11]:
 
 
 fig = plt.figure()

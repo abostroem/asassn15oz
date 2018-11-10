@@ -5,7 +5,7 @@
 #     * spectra_montage.pdf
 
  
-# In[1]:
+# In[10]:
 
 
 import os
@@ -18,8 +18,7 @@ from matplotlib import pyplot as plt
 #get_ipython().run_line_magic('matplotlib', 'inline')
 import matplotlib
 
-import spectroscopy as spec
-import visualization
+from utilities_az import spectroscopy as spec, visualization, supernova
 
 #plt.ioff()
 
@@ -36,7 +35,7 @@ plt.style.use(['seaborn-paper', 'az-paper-twocol'])
 # This is the only way I could get the bars on my capital I's, I'm not sure why it works, but I tried a million other things that didn't work
 
  
-# In[11]:
+# In[3]:
 
 
 import matplotlib as mpl
@@ -114,47 +113,58 @@ spectra_files = [
 
  
  
-# In[8]:
+# In[84]:
 
 
-line_list_top = [
-            ('OI',        9100, 30),
-            ('OI',        7615, 30), 
-            ('CaII',      8300, 30), 
-            ('CaII',      8475, 30),
-            ('ScII',      6100, 30), 
-            ('NaI',       5770, 30), 
-            ('ScII',      5560, 30), 
-            ('ScII',      5415, 30),
-            ('FeI',       5303, 30), 
-            ('ScII/FeII', 5170, 40),
-            ('FeII/TiII', 5075, 40), 
-            ('BaI/FeII',  4455, 40), 
+line_list_bottom = [
+            ('OI',        9100, -30),
+            ('OI',        7615, -30), 
+            ('CaII',      8300, -30), 
+            ('CaII',      8475, -30),
+            ('ScII',      6100, -30), 
+            ('NaI',       5770, -30), 
+            ('ScII',      5560, -30), 
+            ('ScII',      5415, -30),
+            ('FeI',       5303, -30), 
+            ('ScII/FeII', 5170, -35),
+            ('FeII/TiII', 5075, -35), 
+            ('BaI/FeII',  4455, -20), 
 ]
 
 
  
  
-# In[9]:
+# In[154]:
 
 
-line_list_bottom = [
-                    (r'H-$\alpha$', 6390, -30),
-                    (r'H-$\beta$', 4690, -30),
-                    ('cachito', 6145, -20)
+line_list_top = [
+                    (r'H-$\alpha$', 6350, 30),
+                    (r'H-$\beta$',  4690, 30),
+                    ('cachito',     6145, 30)
                    ]
 
 
  
  
-# In[18]:
+# In[155]:
+
+
+sn15oz = supernova.LightCurve2('asassn-15oz')
+jdexpl = Time(sn15oz.jdexpl, format='jd', out_subfmt='date')
+
+
+ 
+ 
+# In[156]:
 
 
 fig = plt.figure()
 fig.set_figheight(6)
-fig.subplotpars.update(left=0.15, bottom=0.1, top=0.97)
+fig.subplotpars.update(left=0.06, bottom=0.1, top=0.97)
 ax = fig.add_subplot(1,1,1)
-offset = np.arange(len(spectra_files))*1.2E-1
+#offset = np.append(np.arange(0,5)*0.09, np.arange(5,len(spectra_files))*0.15)[::-1]
+offset = (np.arange(0,len(spectra_files))*0.9)[::-1]
+#offset[5] = offset[5]*1.1
 ref_spec = read_iraf_spectrum(os.path.join(spectra_files[0][1], spectra_files[0][0]))
 #Consider making this all one color
 colors = visualization.make_color_wheel(spectra_files+[1], cmap=cm_rainbow)
@@ -164,29 +174,33 @@ for indx, ifile in enumerate(spectra_files):
         tbdata = asc.read(os.path.join(idir, filename), names=['wave', 'flux', 'err'])
         ispec = spec.spectrum1d(tbdata['wave'], tbdata['flux'], error=tbdata['err'])
         date = Time('2015-09-21', out_subfmt='date')
-        textoffset = offset[indx]*0.93
     else:
         ispec = read_iraf_spectrum(os.path.join(idir, filename))
         date = Time(fits.getval(os.path.join(idir, filename), 'date-obs', 0), out_subfmt='date')
-        textoffset = offset[indx]
     scale_ispec = spec.scale_spectra(ispec, ref_spec)
-    plt.plot(scale_ispec.wave, scale_ispec.flux/10**-13+textoffset, color=colors[indx])
-    
-    ax.text(10200, (scale_ispec.flux+offset[indx])[-5], '{}'.format(date))
-ax.set_xlim(3000, 12000)
-ax.set_ylim(-0.25,1.7)
+    plt_indx = (scale_ispec.wave<9200) & (scale_ispec.wave >3300)
+    plt.plot(scale_ispec.wave[plt_indx], np.log10(scale_ispec.flux[plt_indx]/10**-13)+offset[indx], color=colors[indx])
+    phase_str = (date-jdexpl).value
+    phase_yloc = np.log10(scale_ispec.flux[plt_indx][-2]/10**-13)+offset[indx]
+    if np.isfinite(phase_yloc):
+        ax.text(9300, phase_yloc, '{:3.2f}d'.format(phase_str))
+    else:
+        print(date)
+
+ax.set_xlim(3200, 10200)
+ax.set_ylim(-4,10.5)
+ax.set_yticks([])
 ax.set_xlabel(r'Rest Wavelength ($\rm \AA$)')
-ax.set_ylabel(r'Flux + offset ($x10^{-13}$ $\rm erg/cm^2/s/\AA$)')
+ax.set_ylabel(r'log(Flux) + offset')
 
 
 #-----------------------
-max_flux = scale_ispec.flux.max() + offset[indx]
 for ilabel, iwave, text_offset in line_list_top:
-    line_flux = scale_ispec.flux[np.argmin(np.abs(scale_ispec.wave-iwave))]/10**-13
-    #plt.plot(iwave, line_flux+offset[indx], '.')
+    closest_wl_indx = np.argmin(np.abs(ref_spec.wave-iwave))
+    line_flux = np.log10(ref_spec.flux[closest_wl_indx]/10**-13)+offset[0]+0.1
     plt.annotate(
         ilabel,
-        xy=(iwave, line_flux+offset[indx]+0.025), xytext=(0, text_offset), 
+        xy=(iwave, line_flux), xytext=(0, text_offset), 
         arrowprops=dict(arrowstyle='-'),
         rotation='vertical', 
         xycoords='data', 
@@ -194,13 +208,12 @@ for ilabel, iwave, text_offset in line_list_top:
         ha='center', 
         fontproperties=font)
 #-----------------------    
-text_offset = 0.1
-min_flux = ref_spec.flux.min()
 for ilabel, iwave, text_offset in line_list_bottom:
-    line_flux = ref_spec.flux[np.argmin(np.abs(ref_spec.wave-iwave))]/10**-13
+    closest_wl_indx = np.argmin(np.abs(scale_ispec.wave-iwave))
+    line_flux = np.log10(scale_ispec.flux[closest_wl_indx]/10**-13)-0.1
     plt.annotate(
         ilabel,
-        xy=(iwave, line_flux-0.025), xytext=(0, text_offset), 
+        xy=(iwave, line_flux), xytext=(0, text_offset), 
         arrowprops=dict(arrowstyle='-'),
         rotation='vertical', 
         xycoords='data', 

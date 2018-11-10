@@ -5,18 +5,17 @@
 #     * lightcurve_snec.pdf
 
  
-# In[5]:
+# In[1]:
 
 
 from astropy.io import ascii as asc
 import astropy.units as u
 from matplotlib import pyplot as plt
-import supernova
 import glob
 import os
 import sys
 import numpy as np
-import visualization
+from utilities_az import visualization, supernova
 #get_ipython().run_line_magic('matplotlib', 'inline')
 
 import matplotlib as mpl
@@ -24,7 +23,7 @@ import matplotlib as mpl
 
  
  
-# In[6]:
+# In[2]:
 
 
 plt.style.use(['seaborn-paper', 'az-paper-onecol'])
@@ -32,7 +31,7 @@ plt.style.use(['seaborn-paper', 'az-paper-onecol'])
 
  
  
-# In[7]:
+# In[4]:
 
 
 sys.path.append('/Users/bostroem/Desktop/research/not_my_code/SNEC-1.01/')
@@ -41,7 +40,7 @@ import chisq_analysis
 
  
  
-# In[8]:
+# In[5]:
 
 
 DARK_DIR = '/Users/bostroem/dark'
@@ -51,7 +50,7 @@ DARK_DIR = '/Users/bostroem/dark'
 # # Get Photometry
 
  
-# In[9]:
+# In[6]:
 
 
 sn15oz = supernova.LightCurve2('asassn-15oz')
@@ -63,7 +62,7 @@ sn15oz.get_abs_mag()
 # # Get Model
 
  
-# In[10]:
+# In[7]:
 
 
 ni_mass = [0.083, 0.0965, 0.11]
@@ -85,7 +84,7 @@ snec_15oz = chisq_analysis.SnecAnalysis(snname, snec_models, S2_start, S2_end,
 
  
  
-# In[11]:
+# In[8]:
 
 
 best_model_csm_dir = os.path.join(snec_models, 
@@ -102,7 +101,7 @@ best_model_csm_data = snec_15oz.prepare_model_data(best_model_csm_dir)
 
  
  
-# In[12]:
+# In[9]:
 
 
 best_model_bare_dir = os.path.join(DARK_DIR,'bostroem/research/not_my_code/SNEC/asassn15oz/mixing_5.0/M18/E_1.4/Data')
@@ -111,7 +110,7 @@ best_model_bare_data = snec_15oz.prepare_model_data(best_model_bare_dir)
 
  
  
-# In[14]:
+# In[10]:
 
 
 fig = plt.figure()
@@ -151,10 +150,10 @@ ax.plot(best_model_csm_data['time'], best_model_csm_data['U']+5.8, color=lu.get_
 ax.plot(best_model_bare_data['time'], best_model_bare_data['U']+5.8, ls='--', color=lu.get_color(), alpha=0.75)
 
 ax.barh(-9.25, 97.5, 1.,6.6, facecolor='w', edgecolor='LightGrey', alpha=0.75)
-ax.annotate(s='With CSM (wind)', xy=(12, -9.5), xytext=(32, -9.4), xycoords='data', 
+ax.annotate(s='Without CSM (wind)', xy=(12, -9.5), xytext=(32, -9.4), xycoords='data', 
             arrowprops={'arrowstyle':'-',  'linestyle':'--','linewidth':1.5}, fontsize=6.0, 
             backgroundcolor='none')
-ax.annotate(s='Without CSM (wind)', xy=(12, -9), xytext=(32, -8.9), xycoords='data', fontsize=6.0, 
+ax.annotate(s='With CSM (wind)', xy=(12, -9), xytext=(32, -8.9), xycoords='data', fontsize=6.0, 
             arrowprops={'arrowstyle':'-', 'linewidth':1.5}, 
             backgroundcolor='none')
 

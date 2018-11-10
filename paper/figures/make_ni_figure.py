@@ -14,10 +14,9 @@ from astropy.time import Time
 from astropy.table import Table, vstack
 from matplotlib import pyplot as plt
 import numpy as np
-#get_ipython().run_line_magic('matplotlib', 'inline')
+#get_ipython().run_line_magic('matplotlib', '')
 import astropy.units as u
-import supernova 
-import connect_to_sndavis
+from utilities_az import supernova, connect_to_sndavis
 
 from astropy.modeling import fitting, models
 
@@ -107,7 +106,7 @@ sn87A_lower_scale_flux = sn87A_logL*sn87A_lower_scale_factor
 
  
  
-# In[12]:
+# In[9]:
 
 
 fig = plt.figure()
@@ -151,6 +150,59 @@ ax2.set_xlabel('Phase (day)')
 ax2.set_ylabel('\t\t\t\t\tLog(L$_{bol}$) (erg/s)')
 #ax2.set_title('Scale luminosity to determine lower limit on Ni mass')
 plt.savefig(os.path.join(FIG_DIR, 'ni_mass_lc.pdf'))
+
+
+ 
+# Check whether $L_{complete}/L_{obs} = M_{Ni,mod}/M_{Ni, obs}$
+
+ 
+# In[11]:
+
+
+phase = 228
+Lcomplete = np.interp(phase, sn87A_phase, sn87A_lower_scale_flux)
+Lobs = tail_fit(phase)
+print('Lcomplete/Lobs = {}'.format(Lcomplete/Lobs))
+
+
+ 
+ 
+# In[12]:
+
+
+phase = 340
+Lcomplete = 10**np.interp(phase, sn87A_phase, sn87A_lower_scale_flux)
+Lobs = 10**tail_fit(phase)
+print('Lcomplete/Lobs = {}'.format(Lcomplete/Lobs))
+
+
+ 
+# # What would the luminosity discrepancy have to be to get the Ni mass ratio of 4 (or 3.75) ?
+
+ 
+# In[25]:
+
+
+fig = plt.figure()
+ax1 = fig.add_subplot(1,1,1)
+
+tail_phase = np.arange(end_fall_phase_lower, 300)
+s2_phase = np.arange(tbdata['phase'][s2_indx][0], start_fall_phase_lower)
+
+ax1.errorbar(tbdata['phase'], tbdata['logL'], tbdata['err'], fmt='.', capsize=1, linestyle='none', label='Observation')
+ax1.plot(s2_phase, s2_fit(s2_phase), label='S2 fit')
+ax1.plot([s2_phase[-1], tail_phase[0]], [s2_fit(s2_phase[-1]), tail_fit(tail_phase[0])], label='Artificial fall')
+ax1.plot(tail_phase, tail_fit(tail_phase), label='Tail fit')
+ax1.plot(sn87A_phase, sn87A_lower_scale_flux, ls=':',  label='Complete trapping')
+ax1.plot(tail_phase[0], tail_fit(end_fall_phase_lower), '*', markersize=8, label='Ni Scale Luminosity', mec='k')
+ax1.plot(228, tail_fit(228)+np.log10(0.08/0.03), 's')
+ax1.plot(340, tail_fit(340)+np.log10(0.08/0.02), 's')
+ax1.legend(loc='lower left', framealpha=0)
+ax1.set_xlim(-5, 350)
+ax1.set_ylim(40, 42.75)
+ax1.set_xlabel('Phase (day)')
+ax1.set_ylabel('Log(L$_{bol}$) (erg/s)')
+ax1.grid()
 
 
  

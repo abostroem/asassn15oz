@@ -5,7 +5,7 @@
 #     * spec_obs_tab.tex
 
  
-# In[1]:
+# In[32]:
 
 
 import os
@@ -14,13 +14,12 @@ from astropy.io import ascii as asc
 from astropy.io import fits
 from astropy.time import Time
 from astropy.table import Table
-import connect_to_sndavis
-import supernova
+from utilities_az import connect_to_sndavis, supernova
 
 
  
  
-# In[2]:
+# In[33]:
 
 
 sn15oz = supernova.LightCurve2('asassn-15oz')
@@ -28,7 +27,7 @@ sn15oz = supernova.LightCurve2('asassn-15oz')
 
  
  
-# In[3]:
+# In[34]:
 
 
 IRTF_DIR = '../../data/spectra/IRTF/'
@@ -37,20 +36,21 @@ SOFI_DIR = '../../data/spectra/SOFI'
 DATA_DIR_LCO = '../../data/spectra/lco/'
 DATA_DIR_EFOSC = '../../data/spectra/EFOSC/'
 DATA_DIR_XSHOOT = '../../data/spectra/xshooter/'
+DATA_DIR_GEM = '/Users/bostroem/Desktop/research/asassn15oz/data/spectra/gmos/'
 
 
  
 # # IR
 
  
-# In[4]:
+# In[35]:
 
 
 sofi1 = os.path.join(SOFI_DIR, 'asassn15oz_20150905_2457270.58657_1.fits')
 sofi2= os.path.join(SOFI_DIR, 'asassn15oz_20151005_2457300.50252_1.fits')
 irtf = os.path.join(IRTF_DIR, 'A15oz_merge.txt')
-
-ir_spec_dates = [Time(fits.getval(sofi1, 'date', 0), out_subfmt='date'), Time(fits.getval(sofi2, 'date', 0), out_subfmt='date'), Time('2015-10-10', out_subfmt='date')]
+#IRTF date from commented header
+ir_spec_dates = [Time(fits.getval(sofi1, 'date-obs', 0), out_subfmt='date'), Time(fits.getval(sofi2, 'date-obs', 0), out_subfmt='date'), Time(57305.1963045, format='mjd', out_subfmt='date')]
 ir_spec_telescopes = ['NTT', 'NTT', 'IRTF']
 ir_spec_instruments = ['SOFI', 'SOFI', 'SpeX']
 
@@ -59,7 +59,7 @@ ir_spec_instruments = ['SOFI', 'SOFI', 'SpeX']
 # # Optical
 
  
-# In[5]:
+# In[36]:
 
 
 spectra_files = [
@@ -78,7 +78,11 @@ spectra_files = [
          ('asassn-15oz_20151025_redblu_102221.833.fits', DATA_DIR_LCO),
          ('asassn-15oz_20151107_redblu_101210.833.fits', DATA_DIR_LCO),
          ('tASAS-SN_15oz_20151107_Gr13_Free_slit1.5_57723_1_e.fits', DATA_DIR_EFOSC),
-         ('tASAS-SN_15oz_20151118_Gr13_Free_slit1.0_57723_1_e.fits', DATA_DIR_EFOSC)
+         ('tASAS-SN_15oz_20151118_Gr13_Free_slit1.0_57723_1_e.fits', DATA_DIR_EFOSC),
+         ('tASASSN-15oz_20160410_Gr13_Free_slit1.5_57723_1_e.fits', DATA_DIR_EFOSC),
+         ('comb20160610_R400.fits', DATA_DIR_GEM),
+         ('tASASSN-15oz_20160802_Gr13_Free_slit1.0_57723_1_e.fits', DATA_DIR_EFOSC),
+         ('tASASSN-15oz_20160918_Gr13_Free_slit1.5_57723_2_e.fits', DATA_DIR_EFOSC),
                 ]
 
 optical_spec_dates = []
@@ -88,17 +92,22 @@ optical_spec_instruments = []
 for ifile, idir in spectra_files:
     filename = os.path.join(idir, ifile)
     if idir == DATA_DIR_LCO:
-        optical_spec_dates.append(Time(fits.getval(filename, 'date', 0),out_subfmt='date'))
+        optical_spec_dates.append(Time(fits.getval(filename, 'date-obs', 0),out_subfmt='date'))
         optical_spec_telescopes.append('LCO')
         optical_spec_instruments.append('FLOYDS')
     elif idir == DATA_DIR_EFOSC:
-        optical_spec_dates.append(Time(fits.getval(filename, 'date', 0),out_subfmt='date'))
+        optical_spec_dates.append(Time(fits.getval(filename, 'date-obs', 0),out_subfmt='date'))
         optical_spec_telescopes.append('NTT')
         optical_spec_instruments.append('EFOSC')
-    else:
-        optical_spec_dates.append(Time('2015-09-21', out_subfmt='date'))
+    elif idir == DATA_DIR_XSHOOT:
+        #date from ESO XSHOOTER archive
+        optical_spec_dates.append(Time(57286.981832762, format='mjd', out_subfmt='date'))
         optical_spec_telescopes.append('VLT')
         optical_spec_instruments.append('X-SHOOTER')
+    elif idir == DATA_DIR_GEM:
+        optical_spec_dates.append(Time(fits.getval(filename, 'mjd-obs', 0), format='mjd', out_subfmt='date'))
+        optical_spec_telescopes.append('Gemini-S')
+        optical_spec_instruments.append('GMOS')
         
 
 
@@ -106,7 +115,7 @@ for ifile, idir in spectra_files:
 # # UV
 
  
-# In[6]:
+# In[37]:
 
 
 SWIFT_DIR = '../../data/swiftuvot/reduced_default/'
@@ -114,7 +123,7 @@ SWIFT_DIR = '../../data/swiftuvot/reduced_default/'
 
  
  
-# In[7]:
+# In[38]:
 
 
 uv_spec_dates = []
@@ -125,14 +134,15 @@ obsid_list1 = ['00034040001', '00034040002', '00034040005', '00034040007', '0003
 for obsid in obsid_list1:
     flist1 = glob.glob(os.path.join(SWIFT_DIR, obsid, 'uvot', 'image', '*.pha'))
     for ifile in flist1:
-        uv_spec_dates.append(Time(fits.getval(ifile, 'date', 0), out_subfmt='date'))
+        hdr = fits.getheader(ifile, 1)
+        uv_spec_dates.append(Time(fits.getval(ifile, 'date-obs', 1), out_subfmt='date'))
         uv_spec_telescopes.append('Swift')
         uv_spec_instruments.append('UVOTA')
 
 
  
  
-# In[9]:
+# In[39]:
 
 
 dateobs = []
@@ -144,7 +154,7 @@ telescope = []
 for itel, iinst, idate in zip(uv_spec_telescopes, uv_spec_instruments, uv_spec_dates):
     dateobs.append('{}'.format(idate.iso))
     jd.append('{:7.1f}'.format(idate.jd))
-    phase.append('{:3.1}'.format(idate.jd - sn15oz.jdexpl))
+    phase.append('{:3.1f}'.format(idate.jd - sn15oz.jdexpl))
     instrument.append(iinst)
     telescope.append(itel)
 for itel, iinst, idate in zip(optical_spec_telescopes, optical_spec_instruments, optical_spec_dates):

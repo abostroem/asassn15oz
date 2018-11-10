@@ -41,7 +41,7 @@ luminosity = [] # (10^39 erg s^-1)
 lumErrL =[]
 lumErrH =[]
 
-ofile = open('../..//data/xray/SNaX.TSV', 'r')
+ofile = open('../../data/xray/SNaX.TSV', 'r')
 for iline in ofile:
     if iline.startswith('SN'):
         sline = iline.split('\t')

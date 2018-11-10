@@ -12,9 +12,7 @@ import numpy as np
 
 from matplotlib import pyplot as plt
 import matplotlib as mpl
-import define_filters
-import supernova
-import visualization
+from utilities_az import define_filters, supernova, visualization
 
 #get_ipython().run_line_magic('matplotlib', 'inline')
 
@@ -70,7 +68,7 @@ colors = visualization.make_color_wheel(offsets, cmap=rainbow_cm)
 
  
  
-# In[11]:
+# In[9]:
 
 
 fig = plt.figure()
@@ -78,9 +76,18 @@ fig.set_figheight(6)
 fig.subplotpars.update(bottom=0.08, top=0.98)
 ax = fig.add_subplot(1,1,1)
 for ioffset, icolor, iband in zip(offsets, colors, sort_bands):
+    if iband.isupper():
+        symbol = 's'
+    elif iband in ['uw2', 'um2', 'uw1', 'us', 'bs', 'vs']:
+        symbol = '^'
+    else:
+        symbol = 'o'
     ax.errorbar(sn15oz.phase[iband], sn15oz.apparent_mag[iband]+ioffset, sn15oz.apparent_mag_err[iband],
                 ecolor=icolor, capsize=2, linestyle='none')
-    ax.plot(sn15oz.phase[iband], sn15oz.apparent_mag[iband]+ioffset, 'o', color=icolor, label='{}+{:1.2f}'.format(iband, ioffset))
+    if ioffset < 0:
+        ax.plot(sn15oz.phase[iband], sn15oz.apparent_mag[iband]+ioffset, symbol, color=icolor, mec='k', label='{}-{:1.2f}'.format(iband, abs(ioffset)))
+    else:
+        ax.plot(sn15oz.phase[iband], sn15oz.apparent_mag[iband]+ioffset, symbol, color=icolor, mec='k', label='{}+{:1.2f}'.format(iband, ioffset))
 ax.invert_yaxis()
 ax.legend(loc='best', ncol=2)
 ax.set_xlim(0, 425)
