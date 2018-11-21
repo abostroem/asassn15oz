@@ -5,7 +5,7 @@
 #     * spectra_montage.pdf
 
  
-# In[10]:
+# In[1]:
 
 
 import os
@@ -98,7 +98,7 @@ spectra_files = [
          ('asassn15oz_20150911_redblu_105336.349.fits', DATA_DIR_LCO),
          ('asassn15oz_20150916_redblu_120911.274.fits', DATA_DIR_LCO),
          #('asassn-15oz_20150920_redblu_135034.512.fits',DATA_DIR_LCO),
-         ('ASASSN15oz_VLT_20150921.txt', DATA_DIR_XSHOOT),
+         ('ASASSN15oz_VLT_20150921_Combined.txt', DATA_DIR_XSHOOT),
          ('asassn-15oz_20150924_redblu_123847.580.fits',DATA_DIR_LCO),
          ('asassn-15oz_20150930_redblu_122858.217.fits',DATA_DIR_LCO),
          ('tASASSN-15oz_20151003_Gr13_Free_slit1.0_57720_1_e.fits',DATA_DIR_EFOSC),
@@ -113,7 +113,7 @@ spectra_files = [
 
  
  
-# In[84]:
+# In[8]:
 
 
 line_list_bottom = [
@@ -134,7 +134,7 @@ line_list_bottom = [
 
  
  
-# In[154]:
+# In[9]:
 
 
 line_list_top = [
@@ -146,7 +146,7 @@ line_list_top = [
 
  
  
-# In[155]:
+# In[10]:
 
 
 sn15oz = supernova.LightCurve2('asassn-15oz')
@@ -155,7 +155,7 @@ jdexpl = Time(sn15oz.jdexpl, format='jd', out_subfmt='date')
 
  
  
-# In[156]:
+# In[29]:
 
 
 fig = plt.figure()
@@ -174,6 +174,7 @@ for indx, ifile in enumerate(spectra_files):
         tbdata = asc.read(os.path.join(idir, filename), names=['wave', 'flux', 'err'])
         ispec = spec.spectrum1d(tbdata['wave'], tbdata['flux'], error=tbdata['err'])
         date = Time('2015-09-21', out_subfmt='date')
+        telluric_offset = offset[indx]
     else:
         ispec = read_iraf_spectrum(os.path.join(idir, filename))
         date = Time(fits.getval(os.path.join(idir, filename), 'date-obs', 0), out_subfmt='date')
@@ -220,7 +221,20 @@ for ilabel, iwave, text_offset in line_list_bottom:
         textcoords='offset points', 
         ha='center', 
         fontproperties=font)
+    
+#mark telluric features:
+for iline in [5900, 6900, 7250, 7600, 8300, 9100]:
+    plt.plot(iline, telluric_offset-1.1, marker='+', markerfacecolor='none', markeredgecolor='k')
+    plt.plot(iline, telluric_offset-1.1, marker='o', markerfacecolor='none', markeredgecolor='k')
 plt.savefig('spectra_montage.pdf')
+
+
+ 
+ 
+# In[14]:
+
+
+print(telluric_offset)
 
 
  

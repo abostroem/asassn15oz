@@ -17,7 +17,7 @@ from matplotlib import pyplot as plt
 #get_ipython().run_line_magic('matplotlib', 'inline')
 from cycler import cycler
 
-import spectroscopy as spec
+from utilities_az import spectroscopy as spec
 
 
  
@@ -40,17 +40,18 @@ FIG_DIR = '.'
 
  
  
-# In[5]:
+# In[4]:
 
 
 flist = glob.glob(os.path.join(SYN_DIR, 'syn_spec*only.txt'))
 spectrum = asc.read(os.path.join(DATA_DIR, 'lco','asassn15oz_20151006_redblu_101906.800_dust_corr.asc'))
+#spectrum = asc.read(os.path.join(DATA_DIR, 'EFOSC','ASASSN-15oz_20151003_Gr13_Free_slit1.0_57720_1_e_rest_dustcorrsca.dat'), names=['rest_wavelength', 'dust_corr_flux'])
 scale_indx = spectrum['rest_wavelength']>5000
 
 
  
  
-# In[6]:
+# In[5]:
 
 
 tbdata_all = asc.read(os.path.join(SYN_DIR, 'syn_spec_Hb_all.txt'), names=['wave', 'flux', '?'])
@@ -60,7 +61,7 @@ scale_all = np.trapz(spectrum['dust_corr_flux'][scale_indx],spectrum['rest_wavel
 
  
  
-# In[8]:
+# In[6]:
 
 
 fig, axlist = plt.subplots(nrows=11)
@@ -109,6 +110,18 @@ axlist[5].set_ylabel(r'Flux ($x10^{-15}$ $\rm erg/cm^2/s/\AA$)')
 axlist[10].set_xlabel(r'Wavelength ($\rm \AA$)')
 axlist[10].set_xticks(np.arange(3000, 11000, 1000))
 plt.savefig(os.path.join(FIG_DIR, 'syn++indiv_elements.pdf'))
+
+
+ 
+ 
+# In[15]:
+
+
+spectrum_old = asc.read(os.path.join(DATA_DIR, 'lco','asassn15oz_20151006_redblu_101906.800_dust_corr.asc'))
+spectrum_old.colnames
+plt.figure()
+plt.plot(spectrum_old['rest_wavelength'], spectrum_old['dust_corr_flux'])
+plt.plot(spectrum['rest_wavelength'], spectrum['dust_corr_flux'])
 
 
  

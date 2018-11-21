@@ -12,7 +12,7 @@ from astropy.io import ascii as asc
 import numpy as np
 from matplotlib import pyplot as plt
 #get_ipython().run_line_magic('matplotlib', 'inline')
-import spectroscopy as spec
+from utilities_az import spectroscopy as spec
 import matplotlib as mpl
 
 

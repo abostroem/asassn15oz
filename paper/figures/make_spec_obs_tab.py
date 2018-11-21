@@ -5,7 +5,7 @@
 #     * spec_obs_tab.tex
 
  
-# In[32]:
+# In[1]:
 
 
 import os
@@ -19,7 +19,7 @@ from utilities_az import connect_to_sndavis, supernova
 
  
  
-# In[33]:
+# In[2]:
 
 
 sn15oz = supernova.LightCurve2('asassn-15oz')
@@ -27,7 +27,7 @@ sn15oz = supernova.LightCurve2('asassn-15oz')
 
  
  
-# In[34]:
+# In[3]:
 
 
 IRTF_DIR = '../../data/spectra/IRTF/'
@@ -35,6 +35,7 @@ SOFI_DIR = '../../data/spectra/SOFI'
 
 DATA_DIR_LCO = '../../data/spectra/lco/'
 DATA_DIR_EFOSC = '../../data/spectra/EFOSC/'
+DATA_DIR_EFOSC_BAD = '../../data/spectra/EFOSC/not_used'
 DATA_DIR_XSHOOT = '../../data/spectra/xshooter/'
 DATA_DIR_GEM = '/Users/bostroem/Desktop/research/asassn15oz/data/spectra/gmos/'
 
@@ -43,7 +44,7 @@ DATA_DIR_GEM = '/Users/bostroem/Desktop/research/asassn15oz/data/spectra/gmos/'
 # # IR
 
  
-# In[35]:
+# In[4]:
 
 
 sofi1 = os.path.join(SOFI_DIR, 'asassn15oz_20150905_2457270.58657_1.fits')
@@ -59,7 +60,7 @@ ir_spec_instruments = ['SOFI', 'SOFI', 'SpeX']
 # # Optical
 
  
-# In[36]:
+# In[5]:
 
 
 spectra_files = [
@@ -80,7 +81,12 @@ spectra_files = [
          ('tASAS-SN_15oz_20151107_Gr13_Free_slit1.5_57723_1_e.fits', DATA_DIR_EFOSC),
          ('tASAS-SN_15oz_20151118_Gr13_Free_slit1.0_57723_1_e.fits', DATA_DIR_EFOSC),
          ('tASASSN-15oz_20160410_Gr13_Free_slit1.5_57723_1_e.fits', DATA_DIR_EFOSC),
+         ('tASASSN-15oz_20160410_Gr13_Free_slit1.5_57723_2_e.fits', DATA_DIR_EFOSC_BAD), #Not used b/c much lower S/N than first observation
+         ('comb20160609_R400.fits', DATA_DIR_GEM),
          ('comb20160610_R400.fits', DATA_DIR_GEM),
+         ('comb20160612_B600.fits', DATA_DIR_GEM),
+         ('ASASSN-15oz_2016-09-11_01-56-02_ESO-NTT_EFOSC2-NTT_PESSTO.fits', DATA_DIR_EFOSC_BAD),
+         ('ASASSN-15oz_2016-09-11_02-34-23_ESO-NTT_EFOSC2-NTT_PESSTO.fits', DATA_DIR_EFOSC_BAD),
          ('tASASSN-15oz_20160802_Gr13_Free_slit1.0_57723_1_e.fits', DATA_DIR_EFOSC),
          ('tASASSN-15oz_20160918_Gr13_Free_slit1.5_57723_2_e.fits', DATA_DIR_EFOSC),
                 ]
@@ -95,7 +101,7 @@ for ifile, idir in spectra_files:
         optical_spec_dates.append(Time(fits.getval(filename, 'date-obs', 0),out_subfmt='date'))
         optical_spec_telescopes.append('LCO')
         optical_spec_instruments.append('FLOYDS')
-    elif idir == DATA_DIR_EFOSC:
+    elif idir in [DATA_DIR_EFOSC, DATA_DIR_EFOSC_BAD]:
         optical_spec_dates.append(Time(fits.getval(filename, 'date-obs', 0),out_subfmt='date'))
         optical_spec_telescopes.append('NTT')
         optical_spec_instruments.append('EFOSC')
@@ -115,24 +121,24 @@ for ifile, idir in spectra_files:
 # # UV
 
  
-# In[37]:
+# In[6]:
 
 
-SWIFT_DIR = '../../data/swiftuvot/reduced_default/'
+SWIFT_DIR = '../../data/swiftuvot/original/'
 
 
  
  
-# In[38]:
+# In[7]:
 
 
 uv_spec_dates = []
 uv_spec_telescopes = []
 uv_spec_instruments = []
-obsid_list1 = ['00034040001', '00034040002', '00034040005', '00034040007', '00034040009']
+obsid_list1 = ['00034040001', '00034040002', '00034040005', '00034040007', '00034040009', '00034040015']
 
 for obsid in obsid_list1:
-    flist1 = glob.glob(os.path.join(SWIFT_DIR, obsid, 'uvot', 'image', '*.pha'))
+    flist1 = glob.glob(os.path.join(SWIFT_DIR, obsid, 'uvot', 'image', '*dt.img.gz'))
     for ifile in flist1:
         hdr = fits.getheader(ifile, 1)
         uv_spec_dates.append(Time(fits.getval(ifile, 'date-obs', 1), out_subfmt='date'))
@@ -142,7 +148,7 @@ for obsid in obsid_list1:
 
  
  
-# In[39]:
+# In[8]:
 
 
 dateobs = []
@@ -150,19 +156,22 @@ jd = []
 phase = []
 instrument = []
 telescope = []
-
 for itel, iinst, idate in zip(uv_spec_telescopes, uv_spec_instruments, uv_spec_dates):
     dateobs.append('{}'.format(idate.iso))
     jd.append('{:7.1f}'.format(idate.jd))
     phase.append('{:3.1f}'.format(idate.jd - sn15oz.jdexpl))
     instrument.append(iinst)
     telescope.append(itel)
+    if dateobs[-1] == '2017-09-20':
+        dateobs[-1] = dateobs[-1]+r'$\rm{^{+}}$'
 for itel, iinst, idate in zip(optical_spec_telescopes, optical_spec_instruments, optical_spec_dates):
     dateobs.append('{}'.format(idate.iso))
     jd.append('{:7.1f}'.format(idate.jd))
     phase.append('{:3.1f}'.format(idate.jd - sn15oz.jdexpl))
     instrument.append(iinst)
     telescope.append(itel)    
+    if (dateobs[-1] == '2016-09-11'):
+        dateobs[-1] = dateobs[-1]+r'$\rm{^{*}}$'
 for itel, iinst, idate in zip(ir_spec_telescopes, ir_spec_instruments, ir_spec_dates):
     dateobs.append('{}'.format(idate.iso))
     jd.append('{:7.1f}'.format(idate.jd))
@@ -173,10 +182,13 @@ for itel, iinst, idate in zip(ir_spec_telescopes, ir_spec_instruments, ir_spec_d
 tbdata = Table([dateobs, jd, phase, telescope, instrument], names=['Date', 'JD', 'Phase', 'Observatory', 'Instrument']) 
 tbdata.sort(['Date'])
 tbdata.write('../spec_obs_tab.tex', format='ascii.latex', overwrite=True,
-            latexdict={'preamble':r'\centering',
-                       'caption':r'Spectroscopic Observations of ASASSN-15oz',
-                       'data_start':r'\hline',
-                      'label':r'tab:SpecObs'},)
+            latexdict={#'preamble':r'\centering',
+                       'caption':r'Spectroscopic Observations of ASASSN-15oz \label{tab:SpecObs}',
+                       'data_start':r'\hline', 
+                       'data_end': r'\hline',
+                       'header_start':r'\hline',
+                       'tablefoot': r'\\$\rm{^{*}}$No signal in data due to cloud cover\\ $\rm{^{+}}$ Template observation',
+                       'tabletype': 'table*'})
 
 
  

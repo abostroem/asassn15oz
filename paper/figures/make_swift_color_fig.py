@@ -5,7 +5,7 @@
 #     * uv_slope_comp.pdf
 
  
-# In[10]:
+# In[1]:
 
 
 import numpy as np
@@ -13,15 +13,12 @@ from matplotlib import pyplot as plt
 import matplotlib as mpl
 #get_ipython().run_line_magic('matplotlib', 'inline')
 
-import supernova
-import visualization
-import define_filters
-import connect_to_sndavis
+from utilities_az import supernova,visualization,define_filters,connect_to_sndavis
 
 
  
  
-# In[13]:
+# In[2]:
 
 
 plt.style.use(['seaborn-paper', 'az-paper-onecol'])
@@ -29,7 +26,7 @@ plt.style.use(['seaborn-paper', 'az-paper-onecol'])
 
  
  
-# In[14]:
+# In[3]:
 
 
 sn15oz = supernova.LightCurve2('ASASSN-15oz')
@@ -40,7 +37,7 @@ sn15oz.get_photometry()
 # # Look at lots of supernovae
 
  
-# In[15]:
+# In[4]:
 
 
 db, cursor = connect_to_sndavis.get_cursor()
@@ -50,7 +47,7 @@ db, cursor = connect_to_sndavis.get_cursor()
 # ## Select all SN with uw2 and vs data
 
  
-# In[16]:
+# In[5]:
 
 
 sql_query = '''SELECT DISTINCT name, slope
@@ -70,7 +67,7 @@ snslope_uw2 = np.array(snslope_uw2)
 
  
  
-# In[17]:
+# In[6]:
 
 
 sql_query = '''SELECT DISTINCT name
@@ -86,7 +83,7 @@ for i in results:
 
  
  
-# In[18]:
+# In[7]:
 
 
 snlist = list(set(snname_uw2) & set(snname_vs))
@@ -95,7 +92,7 @@ max_slope = np.max(snslope_uw2)*100+0.001
 
  
  
-# In[19]:
+# In[8]:
 
 
 cm_rainbow = visualization.make_rainbow_cm()
@@ -103,7 +100,7 @@ cm_rainbow = visualization.make_rainbow_cm()
 
  
  
-# In[20]:
+# In[14]:
 
 
 fig = plt.figure()
@@ -119,7 +116,7 @@ for sn in snlist:
     snobj = supernova.LightCurve2(sn)
     snobj.get_photometry()
     if sn.startswith('ASA'):
-        label = 'ASAS-SN {}'.format(sn.split('-')[1])
+        label = 'ASASSN-{}'.format(sn.split('-')[1])
     else:
         label=sn
     vs_interp = np.interp(snobj.jd['uw2'], snobj.jd['vs'], snobj.apparent_mag['vs'])
@@ -129,11 +126,11 @@ for sn in snlist:
 vs_interp = np.interp(sn15oz.jd['uw2'], sn15oz.jd['vs'], sn15oz.apparent_mag['vs'])
 slope_color=cm_rainbow(float(snslope_uw2[np.array(snname_uw2)=='ASASSN-15oz']*100/max_slope))
 jderr_15oz = np.ones(len(sn15oz.jd['uw2']))*sn15oz.jdexpl_err
-ax1.errorbar(sn15oz.jd['uw2']-sn15oz.jdexpl, sn15oz.apparent_mag['uw2']-vs_interp, xerr=jderr_15oz, fmt='s', c=slope_color, elinewidth=0.5, ecolor='k',label='ASAS-SN 15oz', mec='k', zorder=15)
+ax1.errorbar(sn15oz.jd['uw2']-sn15oz.jdexpl, sn15oz.apparent_mag['uw2']-vs_interp, xerr=jderr_15oz, fmt='s', c=slope_color, elinewidth=0.5, ecolor='k',label='ASASSN-15oz', mec='k', zorder=15)
 ax1.set_xlim(0,42)
 ax1.set_xlabel('Phase (day)')
 ax1.set_ylabel('UVW2-V (mag)')
-ax1.legend(ncol=2, bbox_to_anchor=[0.3, -0.1, 0.2, 0.5], framealpha=1)
+ax1.legend(ncol=2, bbox_to_anchor=[0.31, -0.1, 0.2, 0.5], framealpha=1)
 #ax1.legend( ncol=1, framealpha=1.0, loc='lower right')
 ax1.set_ylim(-2.5, 5.75)
 norm = mpl.colors.Normalize(vmin=0, vmax=1.0/100*max_slope*50)

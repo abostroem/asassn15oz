@@ -13,8 +13,7 @@ from astropy import table
 from astropy.table import Table
 from astropy.time import Time
 
-import supernova
-import connect_to_sndavis
+from utilities_az import supernova, connect_to_sndavis
 
 
  
@@ -30,15 +29,24 @@ db, cursor = connect_to_sndavis.get_cursor()
 # In[3]:
 
 
-query_str = '''
-SELECT DISTINCT mag, magerr, BINARY(filter), jd, source 
-FROM photometry 
-WHERE targetid = 322'''
+sn15oz = supernova.LightCurve2('asassn-15oz')
 
 
  
  
 # In[4]:
+
+
+query_str = '''
+SELECT DISTINCT mag, magerr, BINARY(filter), jd, source 
+FROM photometry 
+WHERE targetid = 322
+ORDER BY jd'''
+
+
+ 
+ 
+# In[5]:
 
 
 cursor.execute(query_str)
@@ -47,7 +55,7 @@ results = cursor.fetchall()
 
  
  
-# In[5]:
+# In[6]:
 
 
 loc_dict = {
@@ -67,7 +75,7 @@ loc_dict = {
 
  
  
-# In[6]:
+# In[7]:
 
 
 band = []
@@ -76,6 +84,7 @@ date = []
 mag = []
 mag_err = []
 source = []
+phase = []
 for iresult in results:
     #rename the Swift filters to their proper names
     ifilter = iresult['BINARY(filter)']
@@ -90,8 +99,9 @@ for iresult in results:
     mag_err.append(iresult['magerr'])
     source.append(loc_dict[iresult['source']]['short'])
     date.append(Time(iresult['jd'], format='jd', out_subfmt='date').iso)
-tbdata = Table([date, jd, mag, mag_err, band, source], 
-               names=['Date-Obs','JD', 
+    phase.append((Time(iresult['jd'], format='jd') - Time(sn15oz.jdexpl, format='jd')).value)
+tbdata = Table([date, jd, phase, mag, mag_err, band, source], 
+               names=['Date-Obs','JD', 'Phase',
                       'Apparent Magnitude', 
                       'Apparent Magnitude Error', 
                       'Filter', 
@@ -101,17 +111,17 @@ tbdata.sort(keys=['JD', 'Filter'])
 
  
  
-# In[7]:
+# In[8]:
 
 
 tbdata.write('../lc_obs.tex', format='aastex', 
              formats={'JD':'%8.2f', 
+                      'Phase':'%4.2f',
                       'Apparent Magnitude':'%2.2f',
                       'Apparent Magnitude Error': '%1.2f'}, overwrite=True,
             latexdict={'preamble':r'\centering',
-                       'caption':r'Imaging Observations of ASASSN-15oz',
-                       'data_start':r'\hline',
-                      'label':r'tab:LcObs'})
+                       'caption':r'Imaging Observations of ASASSN-15oz \label{tab:LcObs}',
+                       'data_start':r'\hline'})
 
 
  

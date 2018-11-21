@@ -5,7 +5,7 @@
 #     * ir_spec_montage_log.pdf
 
  
-# In[1]:
+# In[3]:
 
 
 import os
@@ -19,23 +19,22 @@ from astropy.time import Time
 from astropy.modeling import fitting, models
 
 from matplotlib import pyplot as plt
-#get_ipython().run_line_magic('matplotlib', '')
+#get_ipython().run_line_magic('matplotlib', 'inline')
 
 #https://github.com/abostroem/utilities
-import supernova
-import spectroscopy as spec
-import visualization
+from utilities_az import supernova, spectroscopy as spec, visualization
 
 
  
  
-# In[2]:
+# In[4]:
 
 
 IRTF_DIR = '../../data/spectra/IRTF/'
 SOFI_DIR = '../../data/spectra/SOFI'
 LCO_DIR = '../../data/spectra/lco/'
 EFOSC_DIR = '../../data/spectra/EFOSC/'
+XSHOOT_DIR = '../../data/spectra/xshooter/'
 
 FIG_DIR = '.'
 VEL_DATA_DIR = '../../data/line_info'
@@ -43,7 +42,7 @@ VEL_DATA_DIR = '../../data/line_info'
 
  
  
-# In[3]:
+# In[5]:
 
 
 z = 0.0069 #15oz redshift
@@ -51,7 +50,7 @@ z = 0.0069 #15oz redshift
 
  
  
-# In[4]:
+# In[6]:
 
 
 #Date-obs: 2015-10-10
@@ -60,7 +59,7 @@ tbdata_irtf = asc.read(os.path.join(IRTF_DIR, 'A15oz_merge.txt'), names=['wave',
 
  
  
-# In[5]:
+# In[7]:
 
 
 tbdata_sofi1_blue = fits.getdata(os.path.join(SOFI_DIR, 'asassn15oz_20150905_2457270.58657_1.fits'), 1) #wave, flux, err, skyback
@@ -71,7 +70,15 @@ tbdata_sofi2_red = fits.getdata(os.path.join(SOFI_DIR, 'asassn15oz_20151005_2457
 
  
  
-# In[6]:
+# In[8]:
+
+
+tbdata_xshoot = asc.read(os.path.join(XSHOOT_DIR, 'ASASSN15oz_VLT_20150921_Combined2.txt'), names=['wave', 'flux', 'err'])
+
+
+ 
+ 
+# In[9]:
 
 
 import matplotlib as mpl
@@ -85,7 +92,7 @@ print(mpl.rcParams['font.monospace'][6:])
 
  
  
-# In[9]:
+# In[10]:
 
 
 spec_sofi1_blue = spec.spectrum1d(spec.apply_redshift(tbdata_sofi1_blue['WAVE'][0],z), 
@@ -103,11 +110,14 @@ spec_sofi2_red = spec.spectrum1d( spec.apply_redshift(tbdata_sofi2_red['WAVE'][0
 spec_irtf = spec.spectrum1d(spec.apply_redshift(tbdata_irtf['wave']*10**4, z), 
                             tbdata_irtf['flux'], 
                             tbdata_irtf['err'])
+spec_xshoot = spec.spectrum1d(spec.apply_redshift(tbdata_xshoot['wave'], z), 
+                              tbdata_xshoot['flux'], 
+                              tbdata_xshoot['err'])
 
 
  
  
-# In[10]:
+# In[11]:
 
 
 scale_sofi1_blue = spec.scale_spectra(spec_sofi1_blue, spec_sofi1_blue, wlmin=15000, wlmax=16000)
@@ -115,12 +125,22 @@ scale_sofi1_red = spec.scale_spectra(spec_sofi1_red, spec_sofi1_blue,   wlmin=15
 scale_sofi2_blue = spec.scale_spectra(spec_sofi2_blue, spec_sofi1_blue, wlmin=15000, wlmax=16000)
 scale_sofi2_red = spec.scale_spectra(spec_sofi2_red, spec_sofi1_blue,   wlmin=15000, wlmax=16000)
 scale_irtf = spec.scale_spectra(spec_irtf, spec_sofi1_blue,             wlmin=15000, wlmax=16000)
+scale_xshoot = spec.scale_spectra(spec_xshoot, spec_sofi1_blue,         wlmin=15000, wlmax=16000)
 
 
  
  
-# In[14]:
+# In[24]:
 
+
+def plot_ir_spec(spectrum, telluric_blue, telluric_red,  ax_ir, offset=0,color=None):
+    segment1_indx = spectrum.wave<telluric_blue[0]
+    segment2_indx = (spectrum.wave>telluric_blue[1]) & (spectrum.wave<telluric_red[0])
+    segment3_indx = spectrum.wave>telluric_red[1]
+    l, = ax_ir.plot(spectrum.wave[segment1_indx], np.log10(spectrum.flux[segment1_indx])+offset, color=color)
+    ax_ir.plot(spectrum.wave[segment2_indx], np.log10(spectrum.flux[segment2_indx])+offset, color=l.get_color())
+    ax_ir.plot(spectrum.wave[segment3_indx], np.log10(spectrum.flux[segment3_indx])+offset, color=l.get_color())
+    return ax_ir, l
 
 plt.style.use(['seaborn-paper', 'az-paper-twocol'])
 fig = plt.figure()
@@ -130,35 +150,29 @@ telluric_blue = (13300, 14500)
 telluric_red = (17800, 19250)
 
 
-segment1_indx = scale_irtf.wave<telluric_blue[0]
-segment2_indx = (scale_irtf.wave>telluric_blue[1]) & (scale_irtf.wave<telluric_red[0])
-segment3_indx = scale_irtf.wave>telluric_red[1]
-
 ax_ir.axvspan(telluric_blue[0], telluric_blue[1], color='LightGray', alpha=0.5)
 ax_ir.axvspan(telluric_red[0], telluric_red[1], color='LightGray', alpha=0.5)
 #Plot Second SOFI spec deredshifted
-l2, = ax_ir.plot(scale_sofi1_blue.wave, np.log10(scale_sofi1_blue.flux))
-l3, = ax_ir.plot(scale_sofi2_blue.wave, np.log10(scale_sofi2_blue.flux)-0.5)
-l1, = ax_ir.plot(scale_irtf.wave[segment1_indx], np.log10(scale_irtf.flux[segment1_indx])-1)
-ax_ir.plot(scale_irtf.wave[segment2_indx], np.log10(scale_irtf.flux[segment2_indx])-1, color=l1.get_color())
 
-
-ax_ir.plot(scale_sofi1_red.wave, np.log10(scale_sofi1_red.flux), color=l2.get_color())
-ax_ir.plot(scale_sofi2_red.wave, np.log10(scale_sofi2_red.flux)-0.5, color=l3.get_color())
-ax_ir.plot(scale_irtf.wave[segment3_indx], np.log10(scale_irtf.flux[segment3_indx])-1, color=l1.get_color())
+ax_ir, l2 = plot_ir_spec(scale_sofi1_blue, telluric_blue, telluric_red, ax_ir)
+ax_ir, l2 = plot_ir_spec(scale_sofi1_red, telluric_blue, telluric_red, ax_ir, color=l2.get_color())
+ax_ir, l4 = plot_ir_spec(scale_xshoot, telluric_blue, telluric_red, ax_ir, offset=-0.85)
+ax_ir, l3 = plot_ir_spec(scale_sofi2_blue, telluric_blue, telluric_red, ax_ir, offset=-1.25)
+ax_ir, l3 = plot_ir_spec(scale_sofi2_red, telluric_blue, telluric_red, ax_ir, offset=-1.25, color=l3.get_color())
+ax_ir, l1 = plot_ir_spec(scale_irtf, telluric_blue, telluric_red, ax_ir, offset = -1.75)
 
 ax_ir.set_ylim(-17.75,-14.5)
 ax_ir.set_xlim(9000, 24900)
 
-annotation_dict_blue = {'CaII 9906': (9686,       -16.15),
-                   'MgII 10092': (9857,           -16.15),
-                   r'P-$\delta$':(10232,          -16.15),
-                   'CI 10691/HeI 10830': (10500, -16.4),
-                   r'P-$\gamma$': (10675,         -16.5),
-                   'OI 11290': (11075,            -16.5),
-                   'CaII 11836': (11572,          -16.25),
-                   'CaII 11947': (11685,          -16.9),
-                   r'P-$\beta$':(12503,           -16.5)}
+annotation_dict_blue = {'CaII 9906': (9686,       -16.85),
+                   'MgII 10092': (9857,           -16.85),
+                   r'P-$\delta$':(10232,          -16.85),
+                   'CI 10691/HeI 10830': (10500,  -17.20),
+                   r'P-$\gamma$': (10675,         -17.20),
+                   'OI 11290': (11075,            -17.20),
+                   'CaII 11836': (11572,          -16.95),
+                   'CaII 11947': (11685,          -17.6),
+                   r'P-$\beta$':(12503,           -17.2)}
 
 for key in annotation_dict_blue.keys():
     x,y = annotation_dict_blue[key]
@@ -185,11 +199,13 @@ for key in annotation_dict_red.keys():
         fontproperties=font)
 ax_ir.set_ylabel(r'log(Flux) ($\rm erg/cm^2/s/\AA$)+ offset')
 ax_ir.set_xlabel(r'Wavelength ($\rm \AA$)')
-ax_ir.set_yticks([])
+#ax_ir.set_yticks([])
+ax_ir.set_ylim(-19.5, -14)
 
 ax_ir.text(25000, -16.0, '8d' , ha='left')
-ax_ir.text(25000, -16.65, '38d', ha='left')
-ax_ir.text(25000, -17.0, '43d', ha='left')
+ax_ir.text(25000, -16.5, '25d', ha='left')
+ax_ir.text(25000, -17.35, '38d', ha='left')
+ax_ir.text(25000, -17.7, '43d', ha='left')
 plt.savefig(os.path.join(FIG_DIR, 'ir_spec_montage_log.pdf'))
 
 

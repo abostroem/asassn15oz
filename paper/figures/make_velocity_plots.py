@@ -8,7 +8,7 @@
 # * phot_velocity_table.csv
 
  
-# In[1]:
+# In[2]:
 
 
 import os
@@ -25,12 +25,12 @@ import numpy as np
 from matplotlib import pyplot as plt
 #get_ipython().run_line_magic('matplotlib', 'inline')
 
-import spectroscopy as spec
+from utilities_az import spectroscopy as spec
 
 
  
  
-# In[2]:
+# In[3]:
 
 
 plt.style.use(['seaborn-paper','az-paper-onecol'])
@@ -38,7 +38,7 @@ plt.style.use(['seaborn-paper','az-paper-onecol'])
 
  
  
-# In[3]:
+# In[4]:
 
 
 FIG_DIR = '.'
@@ -49,7 +49,7 @@ DATA_DIR = '../../data/line_info/'
 # ### Wavelengths are already corrected for redshift!
 
  
-# In[4]:
+# In[5]:
 
 
 sn = namedtuple('sn', ('jdexpl', 'redshift'))
@@ -60,7 +60,7 @@ sn15oz = sn(jdexpl=jd_expl, redshift=redshift)
 
  
  
-# In[5]:
+# In[6]:
 
 
 flist = [#'hbeta.tab', 'hbeta_2.tab', 'hbeta_3.tab', 
@@ -78,7 +78,7 @@ for ifile in flist[1:]:
 
  
  
-# In[6]:
+# In[7]:
 
 
 for iline in tbdata:
@@ -87,7 +87,7 @@ for iline in tbdata:
 
  
  
-# In[7]:
+# In[8]:
 
 
 rest_wavelengths = {'NaI': 5898,
@@ -131,7 +131,7 @@ markers = {'HA-cachito': 'o',
 
  
  
-# In[8]:
+# In[9]:
 
 
 tbdata_halpha = asc.read(os.path.join(DATA_DIR, 'HA.tab'))
@@ -145,7 +145,7 @@ tbdata_CaII = asc.read(os.path.join(DATA_DIR, 'CaII.tab'))
 
  
  
-# In[9]:
+# In[10]:
 
 
 tbdata_halpha.rename_column('vel0', 'velocity')
@@ -157,7 +157,7 @@ tbdata_halpha.rename_column('vel_pew_err0', 'pew_err')
 
  
  
-# In[10]:
+# In[11]:
 
 
 #tbdata_feII.remove_columns(['vel1', 'vel_err_left_1', 'vel_err_right_1', 'vel_pew_1', 'vel_pew_err1'])
@@ -170,7 +170,7 @@ tbdata_feII.rename_column('vel_pew_err0', 'pew_err')
 
  
  
-# In[11]:
+# In[12]:
 
 
 tbdata_HB.rename_column('vel0', 'velocity')
@@ -182,7 +182,7 @@ tbdata_HB.rename_column('vel_pew_err0', 'pew_err')
 
  
  
-# In[12]:
+# In[13]:
 
 
 tbdata_NaI.rename_column('vel0', 'velocity')
@@ -194,7 +194,7 @@ tbdata_NaI.rename_column('vel_pew_err0', 'pew_err')
 
  
  
-# In[13]:
+# In[14]:
 
 
 tbdata_OI.rename_column('vel0', 'velocity')
@@ -206,7 +206,7 @@ tbdata_OI.rename_column('vel_pew_err0', 'pew_err')
 
  
  
-# In[14]:
+# In[15]:
 
 
 tbdata_CaII.remove_columns(['vel1', 'vel_err_left_1', 'vel_err_right_1', 'vel_pew_1', 'vel_pew_err1',
@@ -220,7 +220,7 @@ tbdata_CaII.rename_column('vel_pew_err0', 'pew_err')
 
  
  
-# In[15]:
+# In[16]:
 
 
 plt.style.use(['seaborn-paper', 'az-paper-onecol'])
@@ -253,17 +253,28 @@ for i, feature in enumerate(plot_list):
         label = '{} {}'.format(feature[:-4], feature[-4:])
     if len(feature_tbdata) != 0:
         dates = Time(feature_tbdata['date'])
+        sort_indx = np.argsort(dates)
+        dates = dates[sort_indx]
     else:
         print(feature)
     v = (((feature_tbdata['velocity'] - rest_wavelengths[feature])/rest_wavelengths[feature])*c.c.to(u.km/u.s))
+    v = v[sort_indx]
     #plt.plot((dates-sn15oz.jdexpl).value+i*0.1, np.abs(v.value), '.', color=colors[feature], label=feature)
     v_err_l = np.sqrt(((c.c.to(u.km/u.s)/rest_wavelengths[feature])*feature_tbdata['vel_err_left'])**2)
+    v_err_l = v_err_l[sort_indx]
     v_err_r = np.sqrt(((c.c.to(u.km/u.s)/rest_wavelengths[feature])*feature_tbdata['vel_err_right'])**2)
+    v_err_r = v_err_r[sort_indx]
     l = plt.errorbar((dates-sn15oz.jdexpl).value+i*0.1, np.abs(v.value)/1000, yerr=(v_err_l.value/1000, v_err_r.value/1000), 
-                  linestyle='none', capsize=2, alpha=0.25)
-    plt.plot((dates-sn15oz.jdexpl).value+i*0.1, np.abs(v.value)/1000, 
-                  linestyle='none', marker=markers[feature], label=label,
-                  color=l[0].get_color(), markeredgecolor='k')
+                  linestyle='none', capsize=1, alpha=0.25, lw=1.0)
+    if feature != 'HB':
+        plt.plot((dates-sn15oz.jdexpl).value+i*0.1, np.abs(v.value)/1000, 
+                       marker=markers[feature], label=label,
+                      color=l[0].get_color(), markeredgecolor='k', markersize=3, alpha=1.0, lw=0.5)
+    else:
+        plt.plot((dates-sn15oz.jdexpl).value+i*0.1, np.abs(v.value)/1000, 
+                       marker=markers[feature], label=label,
+                      color=l[0].get_color(), markeredgecolor='k', markersize=3, alpha=1.0, zorder=100, lw=0.5)
+    
     
     
 
@@ -277,7 +288,7 @@ plt.savefig(os.path.join(FIG_DIR,'line_velocity.pdf'))
 # # Compare to Guitierrez 2017
 
  
-# In[16]:
+# In[17]:
 
 
 tbdata_halpha = asc.read(os.path.join(DATA_DIR, 'HA.tab'))
@@ -290,7 +301,7 @@ tbdata_halpha.rename_column('vel_pew_err0', 'pew_err')
 
  
  
-# In[17]:
+# In[18]:
 
 
 tbdata_HB = asc.read(os.path.join(DATA_DIR, 'HB.tab'))
@@ -303,7 +314,7 @@ tbdata_HB.rename_column('vel_pew_err0', 'pew_err')
 
  
  
-# In[18]:
+# In[19]:
 
 
 #tbdata_feII = asc.read(os.path.join(DATA_DIR, 'FeII_multi.tab'))
@@ -318,7 +329,7 @@ tbdata_feII.rename_column('vel_pew_err0', 'pew_err')
 
  
  
-# In[19]:
+# In[20]:
 
 
 v_halpha = (((tbdata_halpha['velocity'] - rest_wavelengths['HA-cachito'])/rest_wavelengths['HA-cachito'])*c.c.to(u.km/u.s))
@@ -339,7 +350,7 @@ v50_phot = np.abs(np.interp(50, (dates_full-sn15oz.jdexpl).value, v_feII_full))
 # ## Velocity spread error
 
  
-# In[20]:
+# In[21]:
 
 
 v_halpha_err_l = np.sqrt(((c.c.to(u.km/u.s)/rest_wavelengths['HA-cachito'])*tbdata_halpha['vel_err_left'])**2)
@@ -356,7 +367,7 @@ v_hbeta_err_r = np.sqrt(((c.c.to(u.km/u.s)/rest_wavelengths['HB'])*tbdata_HB['ve
 # ## 2 $\AA$ error
 
  
-# In[21]:
+# In[22]:
 
 
 delta_wave = np.ones(len(v_halpha))*2.0
@@ -374,7 +385,7 @@ v_hbeta_err_r = np.sqrt(((c.c.to(u.km/u.s)/rest_wavelengths['HB'])*delta_wave)**
 # ## Guitierrez Empirical
 
  
-# In[22]:
+# In[23]:
 
 
 t_gutierrez = np.array([4,8.6,12.8,18.1,23.1,27.7,33.1,38.1,42.8,47.8,53.1,58.6,63.3,68,72.8,78.2,83.5,87.5,93.3,98.2,103,108.2,115.7])
@@ -394,7 +405,7 @@ v50_phot_gutierrez = np.interp(50, t_gutierrez[1:], vfeII_gutierrez)
 # ## Plot in velocity (without normalizing by V50)
 
  
-# In[23]:
+# In[28]:
 
 
 plt.style.use(['seaborn-paper', 'az-paper-twocol'])
@@ -410,16 +421,16 @@ ax2 = plt.axes([left+width+pad, bottom, width, height], sharex=ax1, sharey=ax1)
 ax3 = plt.axes([left+2*width+2*pad, bottom, width, height], sharex=ax1, sharey=ax1)
 dates_halpha = Time(tbdata_halpha['date'])
 
-ax1.plot((dates_halpha-sn15oz.jdexpl).value, np.abs(v_halpha.value)/1000, 
-                  linestyle='none', 
-                  marker=markers['HA-cachito'], label=r'H-$\alpha$')
 
-l2 = ax1.plot(t_gutierrez, vhalpha_gutierrez/1000, color='k')
+
+l2, = ax1.plot(t_gutierrez, vhalpha_gutierrez/1000)
 ax1.fill_between(t_gutierrez, 
                  (vhalpha_gutierrez+vhalpha_err_gutierrez)/1000,
                  (vhalpha_gutierrez-vhalpha_err_gutierrez)/1000, 
-                 alpha=0.25, color=l2[0].get_color())
-
+                 alpha=0.25, color=l2.get_color())
+l1, = ax1.plot((dates_halpha-sn15oz.jdexpl).value, np.abs(v_halpha.value)/1000, 
+                  linestyle='none', 
+                  marker=markers['HA-cachito'], label=r'H-$\alpha$', zorder=10)
 ax1.set_xlim(0, 120)
 ax1.set_title(r'H-$\alpha$')
 ax1.set_ylabel('Velocity (1000 km/s)')
@@ -435,26 +446,30 @@ ax2.plot((dates_hbeta-sn15oz.jdexpl).value, np.abs(v_hbeta.value)/1000,
 #                 color='white', linestyle='none', zorder=9)
 #
 
-ax2.plot(t_gutierrez,  vhbeta_gutierrez/1000, color='k')
+ax2.plot(t_gutierrez,  vhbeta_gutierrez/1000, color=l2.get_color())
 ax2.fill_between(t_gutierrez, 
                  (vhbeta_gutierrez+vhbeta_err_gutierrez)/1000,
                  (vhbeta_gutierrez-vhbeta_err_gutierrez)/1000, 
-                 alpha=0.25, color=l2[0].get_color() )
+                 alpha=0.25, color=l2.get_color() )
+ax2.plot((dates_hbeta-sn15oz.jdexpl).value, np.abs(v_hbeta.value)/1000,
+                 linestyle='none', marker=markers['HB'], 
+                 label=r'H-$\beta$', zorder=10, color=l1.get_color())
 
 ax2.set_title(r'H-$\beta$')
 ax2.set_xlabel('Phase (day)')
 
 dates_feII = Time(tbdata_feII['date'])
-ax3.plot((dates_feII-sn15oz.jdexpl).value, np.abs(v_feII.value)/1000, 
-                  linestyle='none', 
-                 marker=markers['FeII_multi'], label=r'FeII 5159')
+
 
 ax3.set_title('FeII')
-ax3.plot(t_gutierrez[1:],  vfeII_gutierrez/1000, color='k')
+ax3.plot(t_gutierrez[1:],  vfeII_gutierrez/1000, color=l2.get_color())
 ax3.fill_between(t_gutierrez[1:], 
                  (vfeII_gutierrez+vfeII_err_gutierrez)/1000,
                  (vfeII_gutierrez-vfeII_err_gutierrez)/1000, 
-                 alpha=0.25, color=l2[0].get_color() )
+                 alpha=0.25, color=l2.get_color() )
+ax3.plot((dates_feII-sn15oz.jdexpl).value, np.abs(v_feII.value)/1000, 
+                  linestyle='none', 
+                 marker=markers['FeII_multi'], label=r'FeII 5159', zorder=10, color=l1.get_color())
 
 plt.savefig(os.path.join(FIG_DIR, 'velocity_compare_guitierrez.pdf'))
 
@@ -542,7 +557,7 @@ indx_tau_sob = phase_tau_sob > start_phase_tau_sob
 # ### Infer FeII from H-beta following Faran 2014
 
  
-# In[30]:
+# In[32]:
 
 
 v_feII = (((tbdata_feII['velocity'] - rest_wavelengths['FeII_multi'])/rest_wavelengths['FeII_multi'])*c.c.to(u.km/u.s))
@@ -554,11 +569,19 @@ v_hbeta_err_l = np.sqrt(((c.c.to(u.km/u.s)/rest_wavelengths['HB'])*tbdata_HB['ve
 v_hbeta_err_r = np.sqrt(((c.c.to(u.km/u.s)/rest_wavelengths['HB'])*tbdata_HB['vel_err_right'])**2)
 
 v_feII_calc = 0.805*v_hbeta
+v_feII_err_l_calc = 0.805*v_hbeta_err_l
+v_feII_err_r_calc = 0.805*v_hbeta_err_r
 v_feII_full = np.empty(len(tbdata_HB))
+v_feII_err_l_full = np.empty(len(tbdata_HB))
+v_feII_err_r_full = np.empty(len(tbdata_HB))
 early_indx = Time(tbdata_HB['date']) < np.min(Time(tbdata_feII['date']))
 late_indx = Time(tbdata_HB['date']) >= np.min(Time(tbdata_feII['date'])) 
 v_feII_full[early_indx] = v_feII_calc[early_indx]
 v_feII_full[late_indx] = v_feII
+v_feII_err_l_full[early_indx] = v_feII_err_l_calc[early_indx]
+v_feII_err_r_full[early_indx] = v_feII_err_r_calc[early_indx]
+v_feII_err_l_full[late_indx] = v_feII_err_l
+v_feII_err_r_full[late_indx] = v_feII_err_r
 dates_full = Time(tbdata_HB['date'])
 v50_phot = np.abs(np.interp(50, (dates_full-sn15oz.jdexpl).value, v_feII_full))
 
@@ -577,6 +600,7 @@ v_hbeta_err_l = np.sqrt(((c.c.to(u.km/u.s)/rest_wavelengths['HB'])*tbdata_HB['ve
 v_hbeta_err_r = np.sqrt(((c.c.to(u.km/u.s)/rest_wavelengths['HB'])*tbdata_HB['vel_err_right'])**2)
 
 v_feII_calc_multi = 0.805*v_hbeta
+v_feII_calc_err_l_multi = 0.805*v_hbeta
 v_feII_full_multi = np.empty(len(tbdata_HB))
 early_indx_multi = Time(tbdata_HB['date']) < np.min(Time(tbdata_feII_multi['date']))
 late_indx_multi = Time(tbdata_HB['date']) >= np.min(Time(tbdata_feII_multi['date'])) 
@@ -588,7 +612,7 @@ v50_phot_multi = np.abs(np.interp(50, (dates_full_multi-sn15oz.jdexpl).value, v_
 
  
  
-# In[32]:
+# In[35]:
 
 
 plt.style.use(['seaborn-paper', 'az-paper-onecol'])
@@ -601,7 +625,7 @@ ax = fig.add_subplot(1,1,1)
 ax.plot((tbdata_vel['time']*u.second - breakout_time).to(u.day), (tbdata_vel['velocity']*u.cm/u.second).to(u.km/u.second)/1000, label = 'SNEC Photospheric Velocity')
 ax.plot(phase_tau_sob[indx_tau_sob], velocity_tau_sob[indx_tau_sob], label = 'Fe II Velocity for $\\tau_{sob}=1.0$')
 ax.set_xlim(0, 100)
-ax.plot((dates_full -sn15oz.jdexpl).value+4, (v_feII_full*-1)/1000, 'o', label='Fe II Velocity (Photospheric)', markeredgecolor='k')
+ax.errorbar((dates_full -sn15oz.jdexpl).value+4, (v_feII_full*-1)/1000, (v_feII_err_l_full/1000, v_feII_err_r_full/1000), fmt='o', label='Fe II Velocity (Photospheric)')#, markeredgecolor='k')
 #ax.plot((dates_full_multi -sn15oz.jdexpl).value+4, (v_feII_full_multi*-1)/1000, '.', label='Old Fe II Velocity (Photospheric)', markeredgecolor='k')
 ax.plot(())
 ax.set_xlabel('Phase (day)')

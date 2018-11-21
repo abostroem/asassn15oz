@@ -21,7 +21,7 @@ from astropy.modeling import models, fitting
 from matplotlib import pyplot as plt
 #get_ipython().run_line_magic('matplotlib', 'inline')
 
-import supernova
+from utilities_az import supernova
 
 
  

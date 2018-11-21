@@ -5,7 +5,7 @@
 # * xray_comp.pdf
 
  
-# In[1]:
+# In[7]:
 
 
 from astropy.table import Table
@@ -13,14 +13,14 @@ from astropy.io import ascii as asc
 from astropy.time import Time
 from matplotlib import pyplot as plt
 import numpy as np
-#get_ipython().run_line_magic('matplotlib', '')
+#get_ipython().run_line_magic('matplotlib', 'inline')
 import matplotlib as mpl
-import supernova
+from utilities_az import supernova
 
 
  
  
-# In[2]:
+# In[8]:
 
 
 plt.style.use(['seaborn-paper', 'az-paper-onecol'])
@@ -28,7 +28,7 @@ plt.style.use(['seaborn-paper', 'az-paper-onecol'])
 
  
  
-# In[3]:
+# In[9]:
 
 
 #        0       1           2                  3             4              5          6        7           8                                  9              10         11                           12           13           14          15                       16                              17                          18        19          
@@ -58,7 +58,7 @@ tbdata = Table([name, sntype, age, isUpperBound, luminosity, lumErrL, lumErrH],
 
  
  
-# In[5]:
+# In[10]:
 
 
 sn15oz = supernova.LightCurve2('asassn-15oz')
@@ -68,7 +68,7 @@ sn15oz_phase = Time(['2015-09-05', '2015-11-18']) - Time(sn15oz.jdexpl, format='
 
  
  
-# In[6]:
+# In[11]:
 
 
 fig = plt.figure()
@@ -103,7 +103,7 @@ leg_lines.append(iline[0])
 leg_labels.append('ASASSN-15oz, IIL')
 plt.xlim(0,100)
 plt.xlabel('Phase (day)')
-plt.ylabel('Luminosity (x10$^{39}$ ergs/s)')
+plt.ylabel('Luminosity (x10$^{39}$ erg/s)')
 plt.legend(leg_lines, leg_labels)
 plt.savefig('xray_comp.pdf')
 

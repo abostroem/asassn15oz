@@ -5,7 +5,7 @@
 #     * ni_mass_lc.pdf
 
  
-# In[1]:
+# In[2]:
 
 
 import os
@@ -16,17 +16,9 @@ from matplotlib import pyplot as plt
 import numpy as np
 #get_ipython().run_line_magic('matplotlib', '')
 import astropy.units as u
-from utilities_az import supernova, connect_to_sndavis
-
 from astropy.modeling import fitting, models
 
-
- 
- 
-# In[2]:
-
-
-plt.style.use(['seaborn-paper', 'az-paper-onecol'])
+from utilities_az import supernova, connect_to_sndavis
 
 
  
@@ -34,12 +26,20 @@ plt.style.use(['seaborn-paper', 'az-paper-onecol'])
 # In[3]:
 
 
-FIG_DIR = '.'
+plt.style.use(['seaborn-paper', 'az-paper-onecol'])
 
 
  
  
 # In[4]:
+
+
+FIG_DIR = '.'
+
+
+ 
+ 
+# In[5]:
 
 
 tbdata = asc.read('../../data/asassn15oz_bolo_UBgVrRiI.txt', names=['phase', 'logL', 'err'])
@@ -48,7 +48,7 @@ tbdata_87A = asc.read('../../data/bol_lum_1987A_extrap.txt', names=['phase', 'lo
 
  
  
-# In[5]:
+# In[6]:
 
 
 sn15oz = supernova.LightCurve2('asassn-15oz')
@@ -61,7 +61,7 @@ Time(sn15oz.jdexpl, format='jd').iso
 
  
  
-# In[6]:
+# In[7]:
 
 
 lin_model = models.Linear1D()
@@ -76,7 +76,7 @@ tail_fit = fitter(lin_model, tbdata['phase'][tail_indx], tbdata['logL'][tail_ind
 
  
  
-# In[7]:
+# In[8]:
 
 
 fall_from_plateau_length = 20 #days
@@ -90,7 +90,7 @@ start_fall_phase_lower = conservative_tpt-fall_from_plateau_length/2.
 
  
  
-# In[8]:
+# In[9]:
 
 
 sn87A_indx = tbdata_87A['phase']>75
@@ -106,7 +106,7 @@ sn87A_lower_scale_flux = sn87A_logL*sn87A_lower_scale_factor
 
  
  
-# In[9]:
+# In[10]:
 
 
 fig = plt.figure()
@@ -180,7 +180,7 @@ print('Lcomplete/Lobs = {}'.format(Lcomplete/Lobs))
 # # What would the luminosity discrepancy have to be to get the Ni mass ratio of 4 (or 3.75) ?
 
  
-# In[25]:
+# In[13]:
 
 
 fig = plt.figure()
