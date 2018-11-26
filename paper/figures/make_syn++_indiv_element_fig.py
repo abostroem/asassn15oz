@@ -106,7 +106,7 @@ for ion, ax in zip(elements, axlist[1:]):
     indx+=1
     
 plt.subplots_adjust(hspace=0.0)
-axlist[5].set_ylabel(r'Flux ($x10^{-15}$ $\rm erg/cm^2/s/\AA$)')
+axlist[5].set_ylabel(r'Flux ($x10^{-15}$ $\rm erg\,cm^{-2}\,s^{-1}\,\AA^{-1}$)')
 axlist[10].set_xlabel(r'Wavelength ($\rm \AA$)')
 axlist[10].set_xticks(np.arange(3000, 11000, 1000))
 plt.savefig(os.path.join(FIG_DIR, 'syn++indiv_elements.pdf'))

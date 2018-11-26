@@ -148,7 +148,7 @@ for obsid in obsid_list1:
 
  
  
-# In[8]:
+# In[15]:
 
 
 dateobs = []
@@ -183,7 +183,7 @@ tbdata = Table([dateobs, jd, phase, telescope, instrument], names=['Date', 'JD',
 tbdata.sort(['Date'])
 tbdata.write('../spec_obs_tab.tex', format='ascii.latex', overwrite=True,
             latexdict={#'preamble':r'\centering',
-                       'caption':r'Spectroscopic Observations of ASASSN-15oz \label{tab:SpecObs}',
+                       'caption':r'Spectroscopic Observations of ASASSN-15oz.\label{tab:SpecObs}',
                        'data_start':r'\hline', 
                        'data_end': r'\hline',
                        'header_start':r'\hline',

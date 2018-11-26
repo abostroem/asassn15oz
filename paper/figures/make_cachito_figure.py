@@ -87,7 +87,7 @@ def calc_obs_wave(velocity, rest_wl):
 
  
  
-# In[11]:
+# In[8]:
 
 
 VEL_DATA_DIR =   '../../data/line_info/'
@@ -102,7 +102,7 @@ HBETA_DIR = '../../data/line_info'
 
  
  
-# In[12]:
+# In[9]:
 
 
 z = 0.0069 #15oz redshift
@@ -118,7 +118,7 @@ IR_dates = Time(['2015-09-05','2015-10-05', '2015-10-10'])
 
  
  
-# In[20]:
+# In[10]:
 
 
 spectra_files = [
@@ -143,7 +143,7 @@ spectra_files = [
 
  
  
-# In[14]:
+# In[11]:
 
 
 tbdata_sofi1_blue = fits.getdata(os.path.join(SOFI_DIR, 'asassn15oz_20150905_2457270.58657_1.fits'), 1) #wave, flux, err, skyback
@@ -154,7 +154,7 @@ tbdata_irtf = asc.read(os.path.join(IRTF_DIR, 'A15oz_merge.txt'), names=['wave',
 
  
  
-# In[15]:
+# In[12]:
 
 
 spec_sofi1 = spec.spectrum1d(spec.apply_redshift(tbdata_sofi1_blue['WAVE'][0], z), tbdata_sofi1_blue['flux'][0], tbdata_sofi1_blue['err'])
@@ -164,7 +164,7 @@ spec_irtf = spec.spectrum1d(spec.apply_redshift(tbdata_irtf['wave']*10**4, z), t
 
  
  
-# In[16]:
+# In[13]:
 
 
 new_fit_cachito = asc.read(os.path.join(TEST_FILE_DIR, 'cachito.tab'))
@@ -178,7 +178,7 @@ power_fit_cachito = fitter_power(power_model, phase_cachito, velocity_cachito)
 
  
  
-# In[17]:
+# In[14]:
 
 
 new_fit_ha = asc.read(os.path.join(TEST_FILE_DIR, 'Ha.tab'))
@@ -189,7 +189,7 @@ power_fit_ha = fitter_power(power_model, phase_ha, velocity_ha)
 
  
  
-# In[18]:
+# In[15]:
 
 
 new_fit_hb = asc.read(os.path.join(HBETA_DIR, 'Hbeta.tab'))
@@ -200,7 +200,7 @@ power_fit_hb = fitter_power(power_fit_ha, phase_hb, velocity_hb)
 
  
  
-# In[86]:
+# In[16]:
 
 
 plt.close()
@@ -312,7 +312,7 @@ ax1.set_xticks([-20, 0])
 ax1.set_yticks([])
 ax1.set_xlim(calc_velocity(6000, Ha).to(u.km/u.s).value/1000, calc_velocity(6600, Ha).to(u.km/u.s).value/1000)
 ax1.set_ylim(ha_scale*ylimits)
-ax1.set_ylabel(r'Flux + offset ($\rm erg/cm^2/s/\AA$)', labelpad=25.0)
+ax1.set_ylabel(r'Flux + offset', labelpad=25.0)
 ax1.set_title(r'H-$\alpha$', fontsize='x-large')
 
 ax2.set_ylim(hb_scale*ylimits)

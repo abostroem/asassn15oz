@@ -5,7 +5,7 @@
 # * xray_comp.pdf
 
  
-# In[7]:
+# In[1]:
 
 
 from astropy.table import Table
@@ -20,7 +20,7 @@ from utilities_az import supernova
 
  
  
-# In[8]:
+# In[2]:
 
 
 plt.style.use(['seaborn-paper', 'az-paper-onecol'])
@@ -28,7 +28,7 @@ plt.style.use(['seaborn-paper', 'az-paper-onecol'])
 
  
  
-# In[9]:
+# In[3]:
 
 
 #        0       1           2                  3             4              5          6        7           8                                  9              10         11                           12           13           14          15                       16                              17                          18        19          
@@ -58,7 +58,7 @@ tbdata = Table([name, sntype, age, isUpperBound, luminosity, lumErrL, lumErrH],
 
  
  
-# In[10]:
+# In[4]:
 
 
 sn15oz = supernova.LightCurve2('asassn-15oz')
@@ -68,7 +68,7 @@ sn15oz_phase = Time(['2015-09-05', '2015-11-18']) - Time(sn15oz.jdexpl, format='
 
  
  
-# In[11]:
+# In[7]:
 
 
 fig = plt.figure()
@@ -97,13 +97,13 @@ for snname in snnames:
             plt.errorbar(tbdata[indx]['age'][tbdata[indx]['isUpperBound']], tbdata[indx]['luminosity'][tbdata[indx]['isUpperBound']], fmt='.',
                          yerr=[0.25]*len(tbdata[indx]['age'][tbdata[indx]['isUpperBound']]),
                          uplims = [True]*len(tbdata[indx]['age'][tbdata[indx]['isUpperBound']]), ecolor=iline[0].get_color())
-iline = plt.errorbar(np.array([np.mean(sn15oz_phase).value]), np.array([3.72]), fmt='s',
+iline = plt.errorbar(np.array([np.mean(sn15oz_phase).value]), np.array([2.56]), fmt='s',
             yerr=np.array([0.25]), uplims=np.array([True]))
 leg_lines.append(iline[0])
 leg_labels.append('ASASSN-15oz, IIL')
 plt.xlim(0,100)
 plt.xlabel('Phase (day)')
-plt.ylabel('Luminosity (x10$^{39}$ erg/s)')
+plt.ylabel(r'Luminosity (x10$^{39}$ erg $\rm s^{-1}$)')
 plt.legend(leg_lines, leg_labels)
 plt.savefig('xray_comp.pdf')
 

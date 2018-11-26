@@ -5,7 +5,7 @@
 #     * nebular_spectra_OI.pdf
 
  
-# In[8]:
+# In[6]:
 
 
 import os
@@ -23,7 +23,7 @@ from utilities_az import spectroscopy as spec, supernova, define_filters
 
  
  
-# In[9]:
+# In[7]:
 
 
 plt.style.use(['seaborn-paper', 'az-paper-onecol'])
@@ -33,7 +33,7 @@ plt.style.use(['seaborn-paper', 'az-paper-onecol'])
 # Confirmed that scaled spectra files have not been de-redshifted
 
  
-# In[10]:
+# In[8]:
 
 
 FIG_DIR = '.'
@@ -46,7 +46,7 @@ model_repo = '../../../nebular_spectra_OI/models/'
 # ## Read in spectra and de-redshift
 
  
-# In[11]:
+# In[9]:
 
 
 specfile_212 = os.path.join(neb_repo, 'tASASSN_15oz_20160410_Gr13_Free_slit1.5_57723_1_esca.asci') 
@@ -57,7 +57,7 @@ spectrum_212 = tbdata_212['flux']
 
  
  
-# In[12]:
+# In[10]:
 
 
 specfile_340 = os.path.join(neb_repo, 'tASASSN_15oz_20160802_Gr13_Free_slit1.0_57723_1_esca.asci') 
@@ -69,7 +69,7 @@ spectrum_340 = tbdata_340['flux']
 
  
  
-# In[103]:
+# In[11]:
 
 
 specfile_306 = os.path.join(GEMINI_DIR, 'gmos_merge_rest_dustcorrsca.dat')
@@ -83,7 +83,7 @@ spectrum_306 = tbdata_306['flux']
 # ## Read in Models
 
  
-# In[105]:
+# In[12]:
 
 
 modelfile12_212 = os.path.join(model_repo, 'mzams12_212d.dat')
@@ -94,7 +94,7 @@ modelfile25_212 = os.path.join(model_repo, 'mzams25_212d.dat')
 
  
  
-# In[106]:
+# In[13]:
 
 
 modelfile12_340 = os.path.join(model_repo, 'mzams12_306d.dat')
@@ -105,7 +105,7 @@ modelfile25_340 = os.path.join(model_repo, 'mzams25_369d.dat')
 
  
  
-# In[107]:
+# In[14]:
 
 
 modelfile12_306 = os.path.join(model_repo, 'mzams12_306d.dat')
@@ -116,7 +116,7 @@ modelfile25_306 = os.path.join(model_repo, 'mzams25_306d.dat')
 
  
  
-# In[108]:
+# In[15]:
 
 
 mod12_212 = asc.read(modelfile12_212, names = ['wavelength', 'flux'])
@@ -127,7 +127,7 @@ mod25_212 = asc.read(modelfile25_212, names = ['wavelength', 'flux'])
 
  
  
-# In[109]:
+# In[16]:
 
 
 mod12_340 = asc.read(modelfile12_340, names = ['wavelength', 'flux'])
@@ -138,7 +138,7 @@ mod25_340 = asc.read(modelfile25_340, names = ['wavelength', 'flux'])
 
  
  
-# In[110]:
+# In[17]:
 
 
 mod12_306 = asc.read(modelfile12_306, names = ['wavelength', 'flux'])
@@ -151,7 +151,7 @@ mod25_306 = asc.read(modelfile25_306, names = ['wavelength', 'flux'])
 # ## Create Spectrum Objects
 
  
-# In[111]:
+# In[18]:
 
 
 mod_spec12_212 = spec.spectrum1d(mod12_212['wavelength'], mod12_212['flux'])
@@ -163,7 +163,7 @@ data_spec_212 = spec.spectrum1d(wl_212-10, spectrum_212)
 
  
  
-# In[112]:
+# In[19]:
 
 
 mod_spec12_340 = spec.spectrum1d(mod12_340['wavelength'], mod12_340['flux'])
@@ -175,7 +175,7 @@ data_spec_340 = spec.spectrum1d(wl_340-20, spectrum_340)
 
  
  
-# In[113]:
+# In[20]:
 
 
 mod_spec12_306 = spec.spectrum1d(mod12_306['wavelength'], mod12_306['flux'])
@@ -189,7 +189,7 @@ data_spec_306 = spec.spectrum1d(wl_306-20, spectrum_306)
 # # Scale Models to spectrum
 
  
-# In[114]:
+# In[21]:
 
 
 Ni_mass_mod = 0.062 #Msun
@@ -220,7 +220,7 @@ t_mod_25_212 = 212.0
 # ##### Scale by time difference
 
  
-# In[115]:
+# In[22]:
 
 
 #Create new object
@@ -236,7 +236,7 @@ scale_time_mod_spec25_212.flux = scale_time_mod_spec25_212.flux*np.exp((t_mod_25
 
  
  
-# In[116]:
+# In[23]:
 
 
 #Create new object
@@ -252,7 +252,7 @@ scale_time_mod_spec25_340.flux = scale_time_mod_spec25_340.flux*np.exp((t_mod_25
 
  
  
-# In[117]:
+# In[24]:
 
 
 #Create new object
@@ -270,7 +270,7 @@ scale_time_mod_spec25_306.flux = scale_time_mod_spec25_306.flux*np.exp((t_mod_25
 # #### Scale model to observed spectrum by distance and Ni mass (empirically)
 
  
-# In[118]:
+# In[25]:
 
 
 scale_mod12_212, scale_factor_12_212 =  spec.scale_spectra(scale_time_mod_spec12_212, data_spec_212, scale_factor=True)
@@ -281,7 +281,7 @@ scale_mod25_212, scale_factor_25_212 =  spec.scale_spectra(scale_time_mod_spec25
 
  
  
-# In[119]:
+# In[26]:
 
 
 scale_mod12_340, scale_factor_12_340 =  spec.scale_spectra(scale_time_mod_spec12_340, data_spec_340, scale_factor=True)
@@ -292,7 +292,7 @@ scale_mod25_340, scale_factor_25_340 =  spec.scale_spectra(scale_time_mod_spec25
 
  
  
-# In[120]:
+# In[27]:
 
 
 scale_mod12_306, scale_factor_12_306 =  spec.scale_spectra(scale_time_mod_spec12_306, data_spec_306, scale_factor=True)
@@ -303,7 +303,7 @@ scale_mod25_306, scale_factor_25_306 =  spec.scale_spectra(scale_time_mod_spec25
 
  
  
-# In[121]:
+# In[28]:
 
 
 fig = plt.figure()
@@ -338,7 +338,7 @@ ax1_inset.set_yticks(())
 
 
 ax2 = fig.add_subplot(3,1,2)
-ax2.plot(data_spec_306.wave, data_spec_306.flux/10**-16, lw=1.0, label='Day 306 Spectrum', color=l4.get_color())
+ax2.plot(data_spec_306.wave, data_spec_306.flux/10**-16, lw=1.0, label='Day 288 Spectrum', color=l4.get_color())
 ax2.plot(scale_mod12_306.wave, scale_mod12_306.flux/10**-16, label='12M$\odot$',   lw=0.75, alpha=0.8,color=l0.get_color())
 ax2.plot(scale_mod15_306.wave, scale_mod15_306.flux/10**-16, label='15M$\odot$',   lw=0.75, alpha=0.8,color=l1.get_color())
 ax2.plot(scale_mod19_306.wave, scale_mod19_306.flux/10**-16, label='19M$\odot$',   lw=0.75, alpha=0.8,color=l2.get_color())
@@ -350,7 +350,7 @@ ax2.plot(scale_mod25_306.wave, scale_mod25_306.flux/10**-16, label='25M$\odot$',
 ax2.set_xlim(3500, 9200)
 ax2.set_ylim(0, 7E-16/10**-16)
 ax2.set_xlabel(r'Wavlength ($\rm \AA$)')
-ax2.set_ylabel('\t\t\t\t\tFlux ($x10^{-16}$'+r'$\rm erg/cm^2/s/\AA$)')
+ax2.set_ylabel(r'Flux ($\rm x10^{-16} erg\,cm^{-2}\,s^{-1}\,\AA^{-1}$)')
 ax2.legend(bbox_to_anchor=[0.54,0.64, 0.39, 0.39], framealpha=1.0)
 #Inset
 ax2_inset = plt.axes([.25, .55, .2, .1])
@@ -384,7 +384,7 @@ ax3.plot(scale_mod25_340.wave, scale_mod25_340.flux/10**-16, label='25M$\odot$',
 ax3.set_xlim(3500, 9200)
 ax3.set_ylim(0, 3E-16/10**-16)
 ax3.set_xlabel(r'Wavlength ($\rm \AA$)')
-ax3.set_ylabel('\t\t\t\t\tFlux ($x10^{-16}$'+r'$\rm erg/cm^2/s/\AA$)')
+
 ax3.legend(bbox_to_anchor=[0.54,0.64, 0.39, 0.39], framealpha=1.0)
 #Inset
 ax3_inset = plt.axes([.25, .25, .2, .1])
@@ -547,6 +547,14 @@ print('Ni mass for 19 Msun @ 340 days = {}'.format(Ni_mass_19_340))
 Ni_mass_25_340 = scale_factor_25_340*Ni_mass_mod * (d_15oz/d_mod)**2
 print('Ni mass for 25 Msun @ 340 days = {}'.format(Ni_mass_25_340))
 print('Average Ni mass for day 340 = {}'.format(np.mean(np.array([Ni_mass_12_340, Ni_mass_15_340, Ni_mass_19_340, Ni_mass_25_340]))))
+
+
+ 
+ 
+# In[4]:
+
+
+np.mean(np.array([0.028, 0.027, 0.021]))
 
 
  

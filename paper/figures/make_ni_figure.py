@@ -5,7 +5,7 @@
 #     * ni_mass_lc.pdf
 
  
-# In[2]:
+# In[3]:
 
 
 import os
@@ -14,7 +14,7 @@ from astropy.time import Time
 from astropy.table import Table, vstack
 from matplotlib import pyplot as plt
 import numpy as np
-#get_ipython().run_line_magic('matplotlib', '')
+#get_ipython().run_line_magic('matplotlib', 'inline')
 import astropy.units as u
 from astropy.modeling import fitting, models
 
@@ -23,7 +23,7 @@ from utilities_az import supernova, connect_to_sndavis
 
  
  
-# In[3]:
+# In[4]:
 
 
 plt.style.use(['seaborn-paper', 'az-paper-onecol'])
@@ -31,7 +31,7 @@ plt.style.use(['seaborn-paper', 'az-paper-onecol'])
 
  
  
-# In[4]:
+# In[5]:
 
 
 FIG_DIR = '.'
@@ -39,7 +39,7 @@ FIG_DIR = '.'
 
  
  
-# In[5]:
+# In[6]:
 
 
 tbdata = asc.read('../../data/asassn15oz_bolo_UBgVrRiI.txt', names=['phase', 'logL', 'err'])
@@ -48,7 +48,7 @@ tbdata_87A = asc.read('../../data/bol_lum_1987A_extrap.txt', names=['phase', 'lo
 
  
  
-# In[6]:
+# In[7]:
 
 
 sn15oz = supernova.LightCurve2('asassn-15oz')
@@ -61,7 +61,7 @@ Time(sn15oz.jdexpl, format='jd').iso
 
  
  
-# In[7]:
+# In[8]:
 
 
 lin_model = models.Linear1D()
@@ -76,7 +76,7 @@ tail_fit = fitter(lin_model, tbdata['phase'][tail_indx], tbdata['logL'][tail_ind
 
  
  
-# In[8]:
+# In[9]:
 
 
 fall_from_plateau_length = 20 #days
@@ -90,7 +90,7 @@ start_fall_phase_lower = conservative_tpt-fall_from_plateau_length/2.
 
  
  
-# In[9]:
+# In[10]:
 
 
 sn87A_indx = tbdata_87A['phase']>75
@@ -106,7 +106,7 @@ sn87A_lower_scale_flux = sn87A_logL*sn87A_lower_scale_factor
 
  
  
-# In[10]:
+# In[15]:
 
 
 fig = plt.figure()
@@ -147,7 +147,7 @@ ax2.legend(loc='lower left', framealpha=0)
 ax2.set_xlim(-5, 250)
 ax2.set_ylim(40.25, 42.75)
 ax2.set_xlabel('Phase (day)')
-ax2.set_ylabel('\t\t\t\t\tLog(L$_{bol}$) (erg/s)')
+ax2.set_ylabel('\t\t\t\t\tLog(L$_{bol}$)'+r' ($\rm erg\,s^{-1}$)')
 #ax2.set_title('Scale luminosity to determine lower limit on Ni mass')
 plt.savefig(os.path.join(FIG_DIR, 'ni_mass_lc.pdf'))
 
@@ -156,7 +156,7 @@ plt.savefig(os.path.join(FIG_DIR, 'ni_mass_lc.pdf'))
 # Check whether $L_{complete}/L_{obs} = M_{Ni,mod}/M_{Ni, obs}$
 
  
-# In[11]:
+# In[12]:
 
 
 phase = 228
@@ -167,7 +167,7 @@ print('Lcomplete/Lobs = {}'.format(Lcomplete/Lobs))
 
  
  
-# In[12]:
+# In[13]:
 
 
 phase = 340

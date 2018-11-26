@@ -31,7 +31,7 @@ plt.style.use(['seaborn-paper', 'az-paper-twocol'])
 
  
  
-# In[13]:
+# In[3]:
 
 
 import matplotlib as mpl
@@ -45,7 +45,7 @@ font.set_size('5')
 # ### Roll Angle 1: 248
 
  
-# In[3]:
+# In[4]:
 
 
 SWIFT_DIR = '../../data/swiftuvot/reduced_default/'
@@ -64,7 +64,7 @@ for obsid in obsid_list1:
 
  
  
-# In[4]:
+# In[5]:
 
 
 wl1 = data_list1[0]['LAMBDA']
@@ -86,7 +86,7 @@ smoothed_signal1 = convolve(final_spec1, Box1DKernel(11))
 # ### Roll Angle 2: 260
 
  
-# In[5]:
+# In[6]:
 
 
 SWIFT_DIR = '../../data/swiftuvot/reduced_default/'
@@ -105,7 +105,7 @@ for obsid in obsid_list2:
 
  
  
-# In[6]:
+# In[7]:
 
 
 wl2 = data_list2[0]['LAMBDA']
@@ -127,7 +127,7 @@ smoothed_signal2 = convolve(final_spec2, Box1DKernel(11))
 # ### Combine Roll Angles
 
  
-# In[7]:
+# In[8]:
 
 
 SWIFT_DIR = '../../data/swiftuvot/reduced_default/'
@@ -145,7 +145,7 @@ for obsid in obsid_list:
 
  
  
-# In[8]:
+# In[9]:
 
 
 wl = data_list[0]['LAMBDA']
@@ -173,7 +173,7 @@ tbdata.write(os.path.join(SWIFT_DIR, 'combine_epoch1.csv'))
 # 
 
  
-# In[56]:
+# In[10]:
 
 
 elements = {'HI':[4300,  4760], 
@@ -184,7 +184,7 @@ elements = {'HI':[4300,  4760],
 
  
  
-# In[60]:
+# In[11]:
 
 
 plt.style.use(['seaborn-paper', 'az-paper-twocol'])
@@ -230,7 +230,7 @@ for elem in elements.keys():
 
 #plt.tight_layout()
 ax1.set_xlabel(r'Wavelength ($\rm \AA$)')
-ax1.set_ylabel(r'Flux ($\rm x10^{-14}$ $\rm erg/cm^2/s/\AA$)')
+ax1.set_ylabel(r'Flux ($\rm x10^{-14}$ $\rm erg\,cm^{-2}\,s^{-1}\,\AA^{-1}$)')
 
 ax1.set_xlim(2000, 6700)
 

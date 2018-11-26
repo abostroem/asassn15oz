@@ -5,7 +5,7 @@
 # * lc_obs.tex
 
  
-# In[1]:
+# In[10]:
 
 
 import numpy as np
@@ -18,7 +18,7 @@ from utilities_az import supernova, connect_to_sndavis
 
  
  
-# In[2]:
+# In[11]:
 
 
 db, cursor = connect_to_sndavis.get_cursor()
@@ -26,7 +26,7 @@ db, cursor = connect_to_sndavis.get_cursor()
 
  
  
-# In[3]:
+# In[12]:
 
 
 sn15oz = supernova.LightCurve2('asassn-15oz')
@@ -34,7 +34,7 @@ sn15oz = supernova.LightCurve2('asassn-15oz')
 
  
  
-# In[4]:
+# In[13]:
 
 
 query_str = '''
@@ -46,7 +46,7 @@ ORDER BY jd'''
 
  
  
-# In[5]:
+# In[14]:
 
 
 cursor.execute(query_str)
@@ -55,7 +55,7 @@ results = cursor.fetchall()
 
  
  
-# In[6]:
+# In[15]:
 
 
 loc_dict = {
@@ -75,7 +75,7 @@ loc_dict = {
 
  
  
-# In[7]:
+# In[18]:
 
 
 band = []
@@ -97,7 +97,10 @@ for iresult in results:
     jd.append(iresult['jd'])
     mag.append(iresult['mag'])
     mag_err.append(iresult['magerr'])
-    source.append(loc_dict[iresult['source']]['short'])
+    if ifilter in [b'J', b'H', b'K']:
+        source.append('NTT')
+    else:
+        source.append(loc_dict[iresult['source']]['short'])
     date.append(Time(iresult['jd'], format='jd', out_subfmt='date').iso)
     phase.append((Time(iresult['jd'], format='jd') - Time(sn15oz.jdexpl, format='jd')).value)
 tbdata = Table([date, jd, phase, mag, mag_err, band, source], 
@@ -111,7 +114,7 @@ tbdata.sort(keys=['JD', 'Filter'])
 
  
  
-# In[8]:
+# In[19]:
 
 
 tbdata.write('../lc_obs.tex', format='aastex', 
@@ -120,7 +123,7 @@ tbdata.write('../lc_obs.tex', format='aastex',
                       'Apparent Magnitude':'%2.2f',
                       'Apparent Magnitude Error': '%1.2f'}, overwrite=True,
             latexdict={'preamble':r'\centering',
-                       'caption':r'Imaging Observations of ASASSN-15oz \label{tab:LcObs}',
+                       'caption':r'Imaging Observations of ASASSN-15oz.\label{tab:LcObs}',
                        'data_start':r'\hline'})
 
 

@@ -346,47 +346,18 @@ axHistx.set_xlim(axCenter.get_xlim())
 
 axHistx.legend(loc='best')
 
-axCenter.set_ylabel(r"$\rm s_{tail}$ (mag/50day)")
-axCenter.set_xlabel(r"$\rm s_{50V}$ (mag/50day)")
+axCenter.set_ylabel(r"$\rm s_{tail}$ (mag $\rm{(50 day)^{-1}}$)")
+axCenter.set_xlabel(r"$\rm s_{50V}$ (mag $\rm{(50 day)^{-1}}$)")
 axCenter.legend([l1[0], l2[0]], ['SN Sample', 'ASASSN-15oz'], loc=(0.05, 0.8))#bbox_to_anchor=(0.25,0.75, 0.2, 0.2))
 plt.savefig('slope_compare.pdf')
 print(len(s50v))
 
 
  
-# # Make LC comparison picture
+# ## Combine figures 
 
  
-# In[23]:
-
-
-fig = plt.figure()
-ax = fig.add_subplot(1,1,1)
-ax.plot([], [], label=None)
-sn_list = ['asassn-15oz','1999em', '2004et', '2013by', '2013ej', '2005cs']
-labels = ['ASASSN-15oz', 'SN1999em', 'SN2004et', 'SN2013by', 'SN2013ej', 'SN2005cs']
-for snname, snlabel in zip(sn_list, labels):
-    sn = supernova.LightCurve2(snname)
-    sn.get_photometry()
-    sn.get_abs_mag()
-    indx = np.argsort(sn.phase['V'])
-    ax.plot(sn.phase['V'][indx], sn.abs_mag['V'][indx], '.', ls='-', label=snlabel)
-    if snname == 'asassn-15oz':
-        ax.set_ylim(np.min(sn.abs_mag['V']), np.max(sn.abs_mag['V'])+1)
-        ax.set_xlim(0, 250)
-    
-ax.invert_yaxis()
-ax.legend()
-ax.set_xlabel('Phase (day)')
-ax.set_ylabel(r'Absolute $V$-band magnitude')
-plt.savefig('lc_comparison.pdf')
-
-
- 
-# # Make Figure for Paper of S_50v vs Abs Mag
-
- 
-# In[25]:
+# In[20]:
 
 
 query_str = "SELECT DISTINCT supernovanames.name, snslope.targetid,slope, slopeerr, slopetype, mag, magerr, mu, muerr, ebvg, ebvgerr, ebvi, ebvierr FROM snslope JOIN idsupernovae ON idsupernovae.id=snslope.targetid JOIN supernovanames ON idsupernovae.id=supernovanames.targetid JOIN snpeakmagnitude ON idsupernovae.id=snpeakmagnitude.targetid WHERE (sntype IN (6, 17, 18)) AND (slopetype='s50') AND (snslope.filter='V') AND (snpeakmagnitude.filter='V') ORDER BY snslope.targetid"
@@ -396,77 +367,11 @@ results = cursor.fetchall()
 
  
  
-# In[26]:
+# In[22]:
 
 
-plt.style.use(['seaborn-paper','az-paper-onecol'])
-name = []
-slope = []
-slopeerr = []
-absmag = []
-absmagerr = []
-sn15oz_dict = {}
-special_sn_dict = {}
-for idict in results:
-    if (idict['mu'] is not None) and (idict['muerr'] is not None):
-        name.append(idict['name'])
-        slope.append(idict['slope'])
-        slopeerr.append(idict['slopeerr'])
-        if idict['ebvi'] is None:
-            idict['ebvi'] = 0
-        iabs_mag, iabs_mag_err = supernova.calc_abs_mag(idict['mag'], idict['mu'], idict['ebvg'], 'V', 
-                                         host_ebv=idict['ebvi'], dist_mod_err=idict['muerr'], app_mag_err=idict['magerr'])
-        absmag.append(iabs_mag)
-        absmagerr.append(iabs_mag_err)
-        if idict['targetid'] == 322: #ASASSN-15oz
-            sn15oz_dict = idict
-            sn15oz_dict['absmag'] = iabs_mag
-            sn15oz_dict['absmagerr'] = iabs_mag_err
-        if idict['name'] in sn_list[1:]:
-            special_sn_dict[idict['name']] = {}
-            special_sn_dict[idict['name']]['absmag'] = iabs_mag
-            special_sn_dict[idict['name']]['absmagerr'] = iabs_mag_err
-            special_sn_dict[idict['name']]['slope'] = idict['slope']
-            special_sn_dict[idict['name']]['slopeerr'] = idict['slopeerr']
-name = np.array(name)
-slope = np.array(slope)
-slopeerr = np.array(slopeerr)
-absmag = np.array(absmag)
-absmagerr = np.array(absmagerr)
-print(len(slope))
-    
-fig = plt.figure()
-ax = fig.add_subplot(1,1,1)
-ax.axvline(0.5, color='gray', ls=':')
-ax.text(0.1,-21, 'IIP')
-ax.text(0.6,-21, 'IIL')
-ax.errorbar(slope*50, absmag, xerr=slopeerr*50, yerr=absmagerr, fmt='o', label='SN Sample')
-for snname, snlabel in zip(sn_list, labels):
-    if snname == 'asassn-15oz':
-        ax.errorbar(sn15oz_dict['slope']*50, sn15oz_dict['absmag'], 
-            xerr=sn15oz_dict['slopeerr']*50, yerr=sn15oz_dict['absmagerr'],
-           fmt='s', label=snlabel, markeredgecolor='k')
-    else:
-        ax.errorbar(special_sn_dict[snname]['slope']*50, special_sn_dict[snname]['absmag'], 
-            xerr=special_sn_dict[snname]['slopeerr']*50, yerr=special_sn_dict[snname]['absmagerr'],
-           fmt='o', label=snlabel, markeredgecolor='w')
-
-
-ax.invert_yaxis()
-ax.set_xlabel(r'$\rm s_{50V}$ (mag/50day)')
-ax.set_ylabel('Absolute $V$-band magnitude')
-ax.legend(loc='lower right')
-
-plt.savefig('abs_mag_vs_slope_sample.pdf')
-
-
- 
-# ## Combine figures 
-
- 
-# In[29]:
-
-
+sn_list = ['asassn-15oz','1999em', '2004et', '2013by', '2013ej', '2005cs']
+labels = ['ASASSN-15oz', 'SN1999em', 'SN2004et', 'SN2013by', 'SN2013ej', 'SN2005cs']
 plt.style.use(['seaborn-paper','az-paper-twocol'])
 name = []
 slope = []
@@ -523,12 +428,11 @@ for snname, snlabel in zip(sn_list, labels):
 ax2.set_yticklabels([])
 ax2.set_ylim(-22.5, -9.5)
 ax2.invert_yaxis()
-ax2.set_xlabel(r'$\rm s_{50V}$ (mag/50day)')
+ax2.set_xlabel(r'$\rm s_{50V}$ (mag$\rm \,(50day)^{-1}$)')
 ax2.legend(loc='lower right')
 
 ax1.plot([], [], label=None)
-sn_list = ['asassn-15oz','1999em', '2004et', '2013by', '2013ej', '2005cs']
-labels = ['ASASSN-15oz', 'SN1999em', 'SN2004et', 'SN2013by', 'SN2013ej', 'SN2005cs']
+
 for snname, snlabel in zip(sn_list, labels):
     sn = supernova.LightCurve2(snname)
     sn.get_photometry()
