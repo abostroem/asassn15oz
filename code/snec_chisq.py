@@ -58,28 +58,13 @@ def get_breakout_time(model_dir):
     return time_breakout
                  
 def calculate_bolometric_chisq():
-    with open('missing_snec_models_bolo.txt', 'a') as missing_ofile:
+    with open('missing_snec_models_bolo.txt', 'w') as missing_ofile:
         with open('chisq_bolo.csv', 'w') as chisq_ofile:
-            try:
-                tbdata = asc.read('chisq_bolometricL.csv', names=['ni_mass', 'energy', 'mass', 'time_offset', 'K', 'R', 'chisq'])
-                last_done = tbdata[-1]
-            except:
-                last_done = Table([[0.], [0.], [0.], [0.], [0.], [0.], [0.]], names=['ni_mass', 'energy', 'mass', 'time_offset', 'K', 'R', 'chisq'])
             for i, ini_mass in enumerate(ni_mass):
-                if last_done['ni_mass'] > ini_mass:
-                    continue
                 for j, jenergy in enumerate(energies):
-                    if last_done['energy'] > jenergy:
-                        continue
                     for m, mmass in enumerate(masses):
-                        if last_done['mass']>mmass:
-                            continue
                         for k, kval in enumerate(Kvalues):
-                            if last_done['K'] > kval:
-                                continue
                             for r, rradius in enumerate(radii):
-                                if last_done['R']> rradius:
-                                    continue
                                 model_dir = os.path.join(snec_models, 
                                              'Ni_mass_{:1.4f}'.format(ini_mass),
                                              'Ni_mixing_{:1.1f}'.format(5.0),
@@ -198,28 +183,13 @@ def calc_color_chisq():
     #if norm:
         #del norm
     chisq_color = np.zeros((len(ni_mass), len(energies), len(masses), len(time_offsets), len(Kvalues), len(radii)))
-    with open('missing_snec_models_color.txt', 'a') as missing_ofile:
+    with open('missing_snec_models_color.txt', 'w') as missing_ofile:
         with open('chisq_color.csv', 'w') as chisq_ofile:
-            try:
-                tbdata = asc.read('chisq_color.csv', names=['ni_mass', 'energy', 'mass', 'time_offset', 'K', 'R', 'chisq'])
-                last_done = tbdata[-1]
-            except:
-                last_done = Table([[0.], [0.], [0.], [0.], [0.], [0.], [0.]], names=['ni_mass', 'energy', 'mass', 'time_offset', 'K', 'R', 'chisq'])
             for i, ini_mass in enumerate(ni_mass):
-                if last_done['ni_mass'] > ini_mass:
-                    continue
                 for j, jenergy in enumerate(energies):
-                    if last_done['energy'] > jenergy:
-                        continue
                     for m, mmass in enumerate(masses):
-                        if last_done['mass']>mmass:
-                            continue
                         for k, kval in enumerate(Kvalues):
-                            if last_done['K'] > kval:
-                                continue
                             for r, rradius in enumerate(radii):
-                                if last_done['R']> rradius:
-                                    continue
                                 model_dir = os.path.join(snec_models, 
                                              'Ni_mass_{:1.4f}'.format(ini_mass),
                                              'Ni_mixing_{:1.1f}'.format(5.0),
