@@ -13,14 +13,13 @@ import matplotlib as mpl
 
 from utilities_az import visualization, supernova
 
-sys.path.append('/Users/bostroem/Desktop/research/not_my_code/SNEC-1.01/')
-import chisq_analysis
-
-plt.style.use(['seaborn-paper', 'az-paper-onecol'])
+#plt.style.use(['seaborn-paper', 'az-paper-onecol'])
 
 DARK_DIR = '/Users/bostroem/dark'
 FIG_DIR = '../figures/'
 SAVE_DIR = '../snec_models'
+
+snec_models = os.path.join(DARK_DIR,'SNEC/snec_models/')
 
 filters_1 = ['U', 'B', 'V', 'R', 'I']
 filters_2 = ['V', 'R', 'I']
@@ -34,14 +33,6 @@ ni_mixing = np.array([5.0])
 time_offsets = np.arange(-4, 4, 1)
 Kvalues =   np.array([10, 20, 30, 35, 40, 50, 60])
 radii =     np.array([1500, 1800, 2100, 2400, 2700, 3000, 3300])
-
-snec_models = os.path.join(DARK_DIR,'SNEC/snec_models/')
-snname = 'asassn15oz'
-S2_start = 50
-S2_end = 88  #Vary this parameter
-snec_15oz = chisq_analysis.SnecAnalysis(snname, snec_models, S2_start, S2_end, 
-                 ni_mass, ni_mixing, masses, energies, time_offsets, 
-                 Kvalues, radii, fig_dir='../figures')
 
 def prepare_model_data(model_dir):
     model_mag_tbdata = asc.read(os.path.join(model_dir,'magnitudes.dat'),
