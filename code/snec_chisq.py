@@ -31,8 +31,8 @@ energies =  np.array([0.5, 0.8, 1.1, 1.4, 1.7, 2.0])
 masses =    np.array([11, 13, 15, 16, 17, 18, 21])
 ni_mixing = np.array([5.0])
 time_offsets = np.arange(-4, 4, 1)
-Kvalues =   np.array([10, 20, 30, 35, 40, 50, 60])
-radii =     np.array([1500, 1800, 2100, 2400, 2700, 3000, 3300])
+Kvalues =   np.array([0, 10, 20, 30, 35, 40, 50, 60])
+radii =     np.array([0, 1500, 1800, 2100, 2400, 2700, 3000, 3300])
 
 def prepare_model_data(model_dir):
     model_mag_tbdata = asc.read(os.path.join(model_dir,'magnitudes.dat'),
@@ -146,8 +146,8 @@ def calculate_bolometric_chisq():
     ax.set_xticklabels(list(masses))
     ax.set_yticks(np.arange(len(energies)))
     ax.set_yticklabels(list(energies))
-    ax.plot(5, 3, 'r*')
-    ax.plot(4, 2, 'w*')
+    #ax.plot(5, 3, 'r*')
+    #ax.plot(4, 2, 'w*')
     fig.colorbar(im)
     plt.savefig(os.path.join(FIG_DIR, 'chisq_Lbolo_MvsE.pdf'))
     
@@ -162,8 +162,8 @@ def calculate_bolometric_chisq():
     ax.set_xticklabels(np.int_(radii/100))
     ax.set_yticks(np.arange(0, 7))
     ax.set_yticklabels(Kvalues)
-    ax.plot(3, 0, 'r*')
-    ax.plot(1, 4, 'w*')
+    #ax.plot(3, 0, 'r*')
+    #ax.plot(1, 4, 'w*')
     fig.colorbar(im)
     plt.savefig(os.path.join(FIG_DIR, 'chisq_Lbolo_KvsR.pdf'))
     
@@ -290,8 +290,8 @@ def calc_color_chisq():
     ax.set_xticklabels(list(masses))
     ax.set_yticks(np.arange(len(energies)))
     ax.set_yticklabels(list(energies))
-    ax.plot(5, 3, 'r*')
-    ax.plot(4, 2, 'w*')
+    #ax.plot(5, 3, 'r*')
+    #ax.plot(4, 2, 'w*')
     fig.colorbar(im)
     plt.savefig(os.path.join(FIG_DIR, 'chisq_color_MvE.pdf'))
     
@@ -306,8 +306,8 @@ def calc_color_chisq():
     ax.set_xticklabels(np.int_(radii/100))
     ax.set_yticks(np.arange(0, 7))
     ax.set_yticklabels(Kvalues)
-    ax.plot(3, 0, 'r*')
-    ax.plot(1, 4, 'w*')
+    #ax.plot(3, 0, 'r*')
+    #ax.plot(1, 4, 'w*')
     fig.colorbar(im)
     plt.savefig(os.path.join(FIG_DIR, 'chisq_color_KvsR.pdf'))
     
