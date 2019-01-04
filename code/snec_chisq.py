@@ -15,7 +15,7 @@ from utilities_az import visualization, supernova
 
 #plt.style.use(['seaborn-paper', 'az-paper-onecol'])
 
-DARK_DIR = '/Users/bostroem/dark'
+DARK_DIR = '/dark'
 FIG_DIR = '../figures/'
 SAVE_DIR = '../snec_models'
 
