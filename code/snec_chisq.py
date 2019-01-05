@@ -2,6 +2,7 @@ import math
 import glob
 import os
 import sys
+import datetime
 
 import numpy as np
 
@@ -45,8 +46,8 @@ def get_breakout_time(model_dir):
     return time_breakout
                  
 def calculate_bolometric_chisq():
-    with open('missing_snec_models_bolo.txt', 'w') as missing_ofile:
-        with open('chisq_bolo.csv', 'w') as chisq_ofile:
+    with open(os.path.join(SAVE_DIR,'missing_snec_models_bolo.txt'), 'w') as missing_ofile:
+        with open(os.path.join(SAVE_DIR,'chisq_bolo.csv'), 'w') as chisq_ofile:
             for i, ini_mass in enumerate(ni_mass):
                 for j, jenergy in enumerate(energies):
                     for m, mmass in enumerate(masses):
@@ -170,8 +171,8 @@ def calc_color_chisq():
     #if norm:
         #del norm
     chisq_color = np.zeros((len(ni_mass), len(energies), len(masses), len(time_offsets), len(Kvalues), len(radii)))
-    with open('missing_snec_models_color.txt', 'w') as missing_ofile:
-        with open('chisq_color.csv', 'w') as chisq_ofile:
+    with open(os.path.join(SAVE_DIR,'missing_snec_models_color.txt'), 'w') as missing_ofile:
+        with open(os.path.join(SAVE_DIR,'chisq_color.csv'), 'w') as chisq_ofile:
             for i, ini_mass in enumerate(ni_mass):
                 for j, jenergy in enumerate(energies):
                     for m, mmass in enumerate(masses):
@@ -211,7 +212,7 @@ def calc_color_chisq():
                                     chisq_color[i,j,m,:,k,r] = np.nan
                                     for toff in time_offsets:
                                             chisq_ofile.write('{},{},{},{},{},{},{}'.format(ini_mass, jenergy, mmass, kval, rradius, toff, np.nan))
-    ofile_pickle = open(os.path.join(PKL_DIR, 'chisq_color.pkl'))
+    ofile_pickle = open(os.path.join(SAVE_DIR, 'chisq_color.pkl'))
     ofile_pickle.dump(chisq_color)
     ofile_pickel.close()
     min_indx_base_mod = np.where(chisq_color == np.nanmin(chisq_color))
@@ -282,6 +283,12 @@ if __name__ == "__main__":
     time_offsets = np.arange(-4, 4, 1)
     Kvalues =   np.array([0, 10, 20, 30, 35, 40, 50, 60])
     radii =     np.array([0, 1500, 1800, 2100, 2400, 2700, 3000, 3300])
+    start = datetime.datetime.now()
     calc_color_chisq()
+    end = datetime.datetime.now()
+    print('color calc took {}'.format(((end-start)*u.second).to(u.minute)))
+    start = datetime.datetime.now()
     calculate_bolometric_chisq()
+    end = datetime.datetime.now()
+    print('Bolo luminosity calc took {}'.format(((end-start)*u.second).to(u.minute)))
     
