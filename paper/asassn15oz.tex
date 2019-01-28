@@ -423,7 +423,7 @@ The slope of the radioactive decay tail is steeper than expected from the radioa
 %=======================
 \begin{figure}
 \begin{center}
-\includegraphics[width=\columnwidth]{slopes} %created by light_curve_characteristics
+\includegraphics[width=\columnwidth]{slopes_fig} %created by light_curve_characteristics
 \caption{The $\rm{s_{1}}$ (pink), $\rm{s_{2}}$ (yellow), $\rm{s_{50V}}$ (indigo), and $\rm{ s_{tail}}$ (black) fits plotted over the period used to derive the relation. 
 The {\it V}-band light curve is plotted in gray. 
 Although errors in the apparent magnitude are plotted, in many cases these are smaller than the points.}
@@ -588,7 +588,6 @@ Although it is well known that massive stars undergo significant mass-loss durin
 The location and density of circumstellar material around a star record the amount of mass lost at different times during a star's evolution. 
 As the SN shock passes through this material, it provides a unique probe of this material and thus the mass-loss of the progenitor.
 While the mass-loss of stars with dense CSM (e.g. IIn SNe) that show strong evidence of interaction, such as narrow emission lines in photospheric spectra or irregular photometric brightening, is often studied, the mass-loss of SNe with lower density CSM is often ignored.
-In the few cases that interaction is seen in IIP/IIL SNe, incomplete data results in a single indication of interaction (e.g. optical light curve shape or radio emission).
 
 In IIP-like SNe, the plateau is the result of the recession of the photosphere due to hydrogen recombination matching the expansion of the SN ejecta.
 \textbf{The linear decline of the light curves of IIL-like SNe is then explained by the photosphere receding faster than the ejecta's expansion.
@@ -703,11 +702,11 @@ Assuming CSM surrounding the SN is created by a stellar wind from the progenitor
 where $\rm{\dot{M}}$ is the wind mass-loss rate and $\rm{v_{wind}}$ is the wind velocity.
 We find $\rm{K = 4.51\times 10^{11}}$ g $\rm{cm^{-1}}$.
 \textbf{With a wind velocity between 10-100 km $\rm{s^{-1}}$, this implies a mass-loss rate between $\rm{\dot{M}}$ $\rm{\approx 0.9-9\times 10^{-7}}$ \msunperiod $\rm{yr^{-1}}$.}
-However, note that if the system deviates from equipartition (as has been observed in some past cases; e.g. \citealt{2012soderberg,2013horesh}), then the derived values of the velocity will change by $v \propto \left(\frac{\epsilon_{e}}{\epsilon_{B}}\right)^{\frac{1}{19}}$ and the mass-loss rate by 
-\begin{equation}
-\dot{M} \propto \frac{\left(  \frac{\epsilon_{e}}{\epsilon_{B}}\right)^{\frac{\rho}{19}}} {\epsilon_{B}}
-\end{equation}
-where $\rm{\rho}$ is the CSM density.
+%However, note that if the system deviates from equipartition (as has been observed in some past cases; e.g. \citealt{2012soderberg,2013horesh}), then the derived values of the velocity will change by $v \propto \left(\frac{\epsilon_{e}}{\epsilon_{B}}\right)^{\frac{1}{19}}$ and the mass-loss rate by 
+%\begin{equation}
+%\dot{M} \propto \frac{\left(  \frac{\epsilon_{e}}{\epsilon_{B}}\right)^{\frac{\rho}{19}}} {\epsilon_{B}}
+%\end{equation}
+%where $\rm{\rho}$ is the CSM density.
 %=======================
 \begin{figure}
 \begin{center}
@@ -787,7 +786,6 @@ This is computationally less intensive than modeling the full parameter space an
 Given the complexity of the parameter space, we choose to model the best light curve with CSM, exploring the full set of parameters simultaneously. 
 
 For ease of comparison with observations, SNEC uses the photospheric temperature at each time step to compute a blackbody spectrum, which it combines with different filter throughputs to output a light curve in Sloan filters {\it u, g, r,} and {\it i}, Bessell filters {\it U, B, V, R,} and {\it I} and PanSTARRS filter {\it z}. 
-\footnote{While the observed photometry could be extrapolated to produce a bolometric luminosity, we consider the uncertainties associated with the missing flux from both the unobserved wavelengths and due to line blanketing in the observed UV wavelengths, especially at early times, to be comparable to the inaccuracy introduced by the assumption of a blackbody spectrum.}
 During the rise and plateau phase, a blackbody should be a good approximation to the longer wavelengths. 
 However, line blanketing may cause the bluer filters to be a poor representation of the observed spectrum \citep{2009kasen,2005dessart}.
 For this reason the best fit model is determined using the {\it g, r,} and {\it i} filters. 
@@ -941,7 +939,7 @@ We also compare $\rm{s_{50V}}$ and the radioactive decay slope  for ASASSN-15oz 
 The steepness of $\rm{s_{50V}}$ in a IIP/IIL SN light curve can be explained by the hydrogen recombination front receding faster than the ejecta expansion, implying a progenitor with a smaller hydrogen envelope.
 The slope of the radioactive decay tail is determined by the fraction of gamma rays trapped and reprocessed by this same hydrogen envelope.
 \textbf{A lower fraction of trapped gamma rays can result either from a smaller hydrogen envelope or by external mixing of $\rm{^{56}Ni}$.
-Given the dependence of both  $\rm{s_{50V}}$  and the radioactive decay slope on the hydrogen envelope, the correlation between them, seen in Figure \ref{fig:SlopeComp}, is unsurprising. 
+Given the possible dependence of both  $\rm{s_{50V}}$  and the radioactive decay slope on the hydrogen envelope, the correlation between them, seen in Figure \ref{fig:SlopeComp}, is unsurprising. 
 ASASSN-15oz, having relatively steep slopes at both phases, lies at the IIL end of this relationship.}
 This correlation was presented in \citet{2014anderson} and is supported here with a larger sample.
 %=======================
