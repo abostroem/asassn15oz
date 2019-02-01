@@ -200,17 +200,17 @@ power_fit_hb = fitter_power(power_fit_ha, phase_hb, velocity_hb)
 
  
  
-# In[16]:
+# In[17]:
 
 
 plt.close()
 fig = plt.figure()
-fig.set_figheight(5.5)
+fig.set_figheight(5.0)
 
 width = 0.21
 left = 0.2
 height = 0.86
-bottom = 0.085
+bottom = 0.09
 pad = 0.025
 
 ax1 = plt.axes([left, bottom, width, height])
@@ -313,16 +313,16 @@ ax1.set_yticks([])
 ax1.set_xlim(calc_velocity(6000, Ha).to(u.km/u.s).value/1000, calc_velocity(6600, Ha).to(u.km/u.s).value/1000)
 ax1.set_ylim(ha_scale*ylimits)
 ax1.set_ylabel(r'Flux + offset', labelpad=25.0)
-ax1.set_title(r'H-$\alpha$', fontsize='x-large')
+ax1.set_title(r'H $\rm \alpha$')
 
 ax2.set_ylim(hb_scale*ylimits)
 ax2.set_yticks([])
 ax2.set_xlabel('Velocity (1000 km/s)')
-ax2.set_title(r'H-$\beta$',fontsize='x-large')
+ax2.set_title(r'H $\rm \beta$')
 
 ax3.set_yticks([])
 ax3.set_ylim(he_scale*ylimits)
-ax3.set_title(r'HeI', ha='center', fontsize='x-large')
+ax3.set_title(r'He I', ha='center')
 
 plt.subplots_adjust(wspace=0.1)
 plt.savefig('cachito_evolution.pdf')

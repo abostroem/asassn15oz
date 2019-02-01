@@ -115,11 +115,11 @@ velocity_feII = -1*calc_velocity(tbdata_feII['velocity'], FeII).to(u.km/u.s)
 
  
  
-# In[11]:
+# In[15]:
 
 
 fig = plt.figure()
-fig.subplotpars.update(left=.17)
+fig.subplotpars.update(left=.17, bottom=0.23)
 ax_Fe = fig.add_subplot(1,1,1)
 
 ax_Fe.plot((Time(new_fit_cachito['date'])-texpl).value, -1*calc_velocity(new_fit_cachito['vel0'], SiII).to(u.km/u.s)/1000, '^', label='Cachito (as SiII 6533)')

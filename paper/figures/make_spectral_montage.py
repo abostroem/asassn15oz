@@ -191,7 +191,7 @@ for indx, ifile in enumerate(spectra_files):
 ax.set_xlim(3200, 10200)
 ax.set_ylim(-4,10.5)
 ax.set_yticks([])
-ax.set_xlabel(r'Rest Wavelength ($\rm \AA$)')
+ax.set_xlabel(r'Rest wavelength ($\rm \AA$)')
 ax.set_ylabel(r'log(Flux) + offset')
 
 

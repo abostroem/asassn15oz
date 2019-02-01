@@ -5,7 +5,7 @@
 #     * ni_mass_lc.pdf
 
  
-# In[3]:
+# In[1]:
 
 
 import os
@@ -23,7 +23,7 @@ from utilities_az import supernova, connect_to_sndavis
 
  
  
-# In[4]:
+# In[2]:
 
 
 plt.style.use(['seaborn-paper', 'az-paper-onecol'])
@@ -31,7 +31,7 @@ plt.style.use(['seaborn-paper', 'az-paper-onecol'])
 
  
  
-# In[5]:
+# In[3]:
 
 
 FIG_DIR = '.'
@@ -39,7 +39,7 @@ FIG_DIR = '.'
 
  
  
-# In[6]:
+# In[4]:
 
 
 tbdata = asc.read('../../data/asassn15oz_bolo_UBgVrRiI.txt', names=['phase', 'logL', 'err'])
@@ -48,7 +48,7 @@ tbdata_87A = asc.read('../../data/bol_lum_1987A_extrap.txt', names=['phase', 'lo
 
  
  
-# In[7]:
+# In[5]:
 
 
 sn15oz = supernova.LightCurve2('asassn-15oz')
@@ -61,7 +61,7 @@ Time(sn15oz.jdexpl, format='jd').iso
 
  
  
-# In[8]:
+# In[6]:
 
 
 lin_model = models.Linear1D()
@@ -76,7 +76,7 @@ tail_fit = fitter(lin_model, tbdata['phase'][tail_indx], tbdata['logL'][tail_ind
 
  
  
-# In[9]:
+# In[7]:
 
 
 fall_from_plateau_length = 20 #days
@@ -90,7 +90,7 @@ start_fall_phase_lower = conservative_tpt-fall_from_plateau_length/2.
 
  
  
-# In[10]:
+# In[8]:
 
 
 sn87A_indx = tbdata_87A['phase']>75
@@ -106,12 +106,12 @@ sn87A_lower_scale_flux = sn87A_logL*sn87A_lower_scale_factor
 
  
  
-# In[15]:
+# In[19]:
 
 
 fig = plt.figure()
 fig.set_figheight(4)
-fig.subplotpars.update(bottom=0.12)
+fig.subplotpars.update(bottom=0.12, left=0.23)
 ax1 = fig.add_subplot(2,1,1)
 ax2 = fig.add_subplot(2,1,2)
 
@@ -122,7 +122,7 @@ ax1.errorbar(tbdata['phase'], tbdata['logL'], tbdata['err'], fmt='.', capsize=1,
 ax1.plot(tbdata['phase'][s2_indx], s2_fit(tbdata['phase'][s2_indx]),  label='S2 fit')
 ax1.plot([start_fall_phase_upper, end_fall_phase_upper], [s2_fit(start_fall_phase_upper), tail_fit(end_fall_phase_upper)],  label='Artificial fall')
 ax1.plot(tail_phase, tail_fit(tail_phase),  label='Tail fit')
-ax1.plot(sn87A_phase, sn87A_upper_scale_flux, ls=':', label='Complete trapping')
+ax1.plot(sn87A_phase, sn87A_upper_scale_flux, ls=':', label=r'Fully trapped $\rm ^{56}$Co decay')
 ax1.plot(end_fall_phase_upper, tail_fit(end_fall_phase_upper), '*', markersize=8,  label='Ni Scale Luminosity', mec='k')
 
 ax1.legend(loc='lower left', framealpha=0)
@@ -141,7 +141,7 @@ ax2.errorbar(tbdata['phase'], tbdata['logL'], tbdata['err'], fmt='.', capsize=1,
 ax2.plot(s2_phase, s2_fit(s2_phase), label='S2 fit')
 ax2.plot([s2_phase[-1], tail_phase[0]], [s2_fit(s2_phase[-1]), tail_fit(tail_phase[0])], label='Artificial fall')
 ax2.plot(tail_phase, tail_fit(tail_phase), label='Tail fit')
-ax2.plot(sn87A_phase, sn87A_lower_scale_flux, ls=':',  label='Complete trapping')
+ax2.plot(sn87A_phase, sn87A_lower_scale_flux, ls=':',  label=r'Fully trapped $\rm ^{56}$Co decay')
 ax2.plot(tail_phase[0], tail_fit(end_fall_phase_lower), '*', markersize=8, label='Ni Scale Luminosity', mec='k')
 ax2.legend(loc='lower left', framealpha=0)
 ax2.set_xlim(-5, 250)
@@ -156,7 +156,7 @@ plt.savefig(os.path.join(FIG_DIR, 'ni_mass_lc.pdf'))
 # Check whether $L_{complete}/L_{obs} = M_{Ni,mod}/M_{Ni, obs}$
 
  
-# In[12]:
+# In[10]:
 
 
 phase = 228
@@ -167,7 +167,7 @@ print('Lcomplete/Lobs = {}'.format(Lcomplete/Lobs))
 
  
  
-# In[13]:
+# In[11]:
 
 
 phase = 340
@@ -203,6 +203,7 @@ ax1.set_ylim(40, 42.75)
 ax1.set_xlabel('Phase (day)')
 ax1.set_ylabel('Log(L$_{bol}$) (erg/s)')
 ax1.grid()
+plt.savefig('../../figures/ni_luminosity_scale.pdf')
 
 
  

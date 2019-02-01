@@ -123,7 +123,7 @@ if edge_results is not None:
 
  
  
-# In[7]:
+# In[8]:
 
 
 fig = plt.figure()
@@ -156,7 +156,7 @@ l4 = ax_Ca.plot([continuum_l.wave, continuum_r.wave],
                marker='o', ls='--', label='continuum')
 
 ax_Ca.set_xlabel(r'Wavelength ($\rm \AA$)')
-ax_Ca.set_ylabel(r'Flux ($\rm x10^{-15} erg/cm{^2}/s/\AA$)')
+ax_Ca.set_ylabel(r'Flux ($\rm \times 10^{-15}$ erg $\rm cm^{-2}$ $\rm s^{-1}$ $\rm \AA^{-1}$)')
 
 min_indx_Sc = int(np.where(spectrum_Sc.wave == spectrum_Sc.wave[line_indx_Sc][0])[0])
 max_indx_Sc = int(np.where(spectrum_Sc.wave == spectrum_Sc.wave[line_indx_Sc][-1])[0])

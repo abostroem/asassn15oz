@@ -26,7 +26,7 @@ import astropy.units as u
 # In[2]:
 
 
-plt.style.use(['seaborn-paper', 'az-paper-twocol'])
+plt.style.use(['seaborn-paper', 'az-paper-onecol'])
 
 
  
@@ -187,9 +187,9 @@ elements = {'HI':[4300,  4760],
 # In[11]:
 
 
-plt.style.use(['seaborn-paper', 'az-paper-twocol'])
+plt.style.use(['seaborn-paper', 'az-paper-onecol'])
 fig = plt.figure()
-fig.subplotpars.update(left=0.075, right=0.98)
+fig.subplotpars.update( right=0.98)
 ax1 = fig.add_subplot(1,1,1)
 #ax.grid()
 default_cycler = plt.rcParams['axes.prop_cycle']
@@ -202,22 +202,25 @@ l2 = ax1.plot(wl2,convolve(final_spec2/10**-14, Box1DKernel(3)),  label='Roll An
 #l3 = ax1.plot(wl, final_spec/10**-14 ,  label='Combined Spectrum', lw=1.5)
 ax1.set_ylim(-0.5,2)
 ax1.set_yticks([0, 1, 2])
-ax1.legend(loc='upper right')
+ax1.legend(bbox_to_anchor=[0.3, 0.175, 0.3, 0.2])
 
 for elem in elements.keys():
     for iline in elements[elem]:
         closest_wl_indx = np.argmin(np.abs(wl-iline))
         line_flux = (final_spec/10**-14)[closest_wl_indx]+0.5
         txt = elem
-        if elem != 'HI':
-            txt+='?'
-            offset=25
-        else:
+        if elem == 'HI':
             offset = 15
             if iline > 4500:
                 txt = r'H-$\rm \beta$'
             else:
                 txt = r'H-$\rm \gamma$'
+        elif 'Ti' in elem:
+            txt+='?'
+            offset=15
+        else:
+            txt+='?'
+            offset=25
         plt.annotate(
         txt,
         xy=(iline, line_flux), xytext=(0, offset), 
@@ -228,21 +231,12 @@ for elem in elements.keys():
         ha='center', 
         fontproperties=font)
 
-#plt.tight_layout()
 ax1.set_xlabel(r'Wavelength ($\rm \AA$)')
-ax1.set_ylabel(r'Flux ($\rm x10^{-14}$ $\rm erg\,cm^{-2}\,s^{-1}\,\AA^{-1}$)')
+ax1.set_ylabel(r'Flux ($\rm x10^{-14}$ $\rm erg\,cm^{-2}\,s^{-1}\,\AA^{-1}$)', position=(1,0.38))
 
 ax1.set_xlim(2000, 6700)
 
 plt.savefig('swift_spectra.pdf')
-
-
- 
- 
-# In[18]:
-
-
-line_flux
 
 
  

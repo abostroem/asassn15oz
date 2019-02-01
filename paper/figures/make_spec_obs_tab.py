@@ -148,7 +148,7 @@ for obsid in obsid_list1:
 
  
  
-# In[15]:
+# In[8]:
 
 
 dateobs = []
@@ -179,7 +179,7 @@ for itel, iinst, idate in zip(ir_spec_telescopes, ir_spec_instruments, ir_spec_d
     instrument.append(iinst)
     telescope.append(itel)
 
-tbdata = Table([dateobs, jd, phase, telescope, instrument], names=['Date', 'JD', 'Phase', 'Observatory', 'Instrument']) 
+tbdata = Table([dateobs, jd, phase, telescope, instrument], names=['Date', 'JD', 'Phase (Day)', 'Observatory', 'Instrument']) 
 tbdata.sort(['Date'])
 tbdata.write('../spec_obs_tab.tex', format='ascii.latex', overwrite=True,
             latexdict={#'preamble':r'\centering',

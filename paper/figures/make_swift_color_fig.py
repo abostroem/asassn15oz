@@ -5,7 +5,7 @@
 #     * uv_slope_comp.pdf
 
  
-# In[1]:
+# In[2]:
 
 
 import numpy as np
@@ -18,7 +18,7 @@ from utilities_az import supernova,visualization,define_filters,connect_to_sndav
 
  
  
-# In[2]:
+# In[3]:
 
 
 plt.style.use(['seaborn-paper', 'az-paper-onecol'])
@@ -26,7 +26,7 @@ plt.style.use(['seaborn-paper', 'az-paper-onecol'])
 
  
  
-# In[3]:
+# In[4]:
 
 
 sn15oz = supernova.LightCurve2('ASASSN-15oz')
@@ -37,7 +37,7 @@ sn15oz.get_photometry()
 # # Look at lots of supernovae
 
  
-# In[4]:
+# In[5]:
 
 
 db, cursor = connect_to_sndavis.get_cursor()
@@ -47,7 +47,7 @@ db, cursor = connect_to_sndavis.get_cursor()
 # ## Select all SN with uw2 and vs data
 
  
-# In[5]:
+# In[6]:
 
 
 sql_query = '''SELECT DISTINCT name, slope
@@ -67,7 +67,7 @@ snslope_uw2 = np.array(snslope_uw2)
 
  
  
-# In[6]:
+# In[7]:
 
 
 sql_query = '''SELECT DISTINCT name
@@ -83,7 +83,7 @@ for i in results:
 
  
  
-# In[7]:
+# In[8]:
 
 
 snlist = list(set(snname_uw2) & set(snname_vs))
@@ -92,7 +92,7 @@ max_slope = np.max(snslope_uw2)*100+0.001
 
  
  
-# In[8]:
+# In[9]:
 
 
 cm_rainbow = visualization.make_rainbow_cm()
@@ -104,7 +104,8 @@ cm_rainbow = visualization.make_rainbow_cm()
 
 
 fig = plt.figure()
-fig.subplotpars.update(left=0.18, right=0.95, top=0.85)
+fig.set_figheight(fig.get_figwidth())
+fig.subplotpars.update(left=0.18, right=0.95, top=0.85, bottom=0.18)
 gs1 = mpl.gridspec.GridSpec(9, 1)
 ax1 = plt.subplot(gs1[1:10,0])
 ax2 = plt.subplot(gs1[0,0])

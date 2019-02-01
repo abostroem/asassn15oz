@@ -5,7 +5,7 @@
 # * lc_obs.tex
 
  
-# In[10]:
+# In[2]:
 
 
 import numpy as np
@@ -18,7 +18,7 @@ from utilities_az import supernova, connect_to_sndavis
 
  
  
-# In[11]:
+# In[3]:
 
 
 db, cursor = connect_to_sndavis.get_cursor()
@@ -26,7 +26,7 @@ db, cursor = connect_to_sndavis.get_cursor()
 
  
  
-# In[12]:
+# In[4]:
 
 
 sn15oz = supernova.LightCurve2('asassn-15oz')
@@ -34,7 +34,7 @@ sn15oz = supernova.LightCurve2('asassn-15oz')
 
  
  
-# In[13]:
+# In[5]:
 
 
 query_str = '''
@@ -46,7 +46,7 @@ ORDER BY jd'''
 
  
  
-# In[14]:
+# In[6]:
 
 
 cursor.execute(query_str)
@@ -55,7 +55,7 @@ results = cursor.fetchall()
 
  
  
-# In[15]:
+# In[7]:
 
 
 loc_dict = {
@@ -69,13 +69,14 @@ loc_dict = {
 10: {'short': 'CPT 1m', 'long': 'SAAO - Sutherland Facilities - 1m'}, #cpt1m010
 11: {'short': 'COJ 1m', 'long': 'Siding Springs Observatory - 1m'}, #coj1m011-kb05 1m0
 12: {'short': 'CPT 1m', 'long': 'SAAO - Sutherland Facilities - 1m'}, #cpt1m012-kb75 1m0
-13: {'short': 'CPT 1m', 'long': 'SAAO - Sutherland Facilities - 1m '},
-88: {'short': 'Swift', 'long': 'Swift'}} #cpt1m013-kb76 1m0
+13: {'short': 'CPT 1m', 'long': 'SAAO - Sutherland Facilities - 1m '},#cpt1m013-kb76 1m0
+88: {'short': 'Swift', 'long': 'Swift'}, #Swift
+-88: {'short': 'Swift', 'long': 'Swift'}} #Swift; non-detections in the DB have negative sources
 
 
  
  
-# In[18]:
+# In[8]:
 
 
 band = []
@@ -104,7 +105,7 @@ for iresult in results:
     date.append(Time(iresult['jd'], format='jd', out_subfmt='date').iso)
     phase.append((Time(iresult['jd'], format='jd') - Time(sn15oz.jdexpl, format='jd')).value)
 tbdata = Table([date, jd, phase, mag, mag_err, band, source], 
-               names=['Date-Obs','JD', 'Phase',
+               names=['Date-Obs','JD', 'Phase (Day)',
                       'Apparent Magnitude', 
                       'Apparent Magnitude Error', 
                       'Filter', 
@@ -114,17 +115,60 @@ tbdata.sort(keys=['JD', 'Filter'])
 
  
  
-# In[19]:
+# In[9]:
 
 
 tbdata.write('../lc_obs.tex', format='aastex', 
              formats={'JD':'%8.2f', 
-                      'Phase':'%4.2f',
+                      'Phase (Day)':'%4.2f',
                       'Apparent Magnitude':'%2.2f',
                       'Apparent Magnitude Error': '%1.2f'}, overwrite=True,
             latexdict={'preamble':r'\centering',
                        'caption':r'Imaging Observations of ASASSN-15oz.\label{tab:LcObs}',
                        'data_start':r'\hline'})
+
+
+ 
+ 
+# In[11]:
+
+
+tbdata_short = tbdata[0:5].copy()
+tbdata_short.write('../lc_obs_short.tex', format='latex', 
+             formats={'JD':'%8.2f', 
+                      'Phase (Day)':'%4.2f',
+                      'Apparent Magnitude':'%2.2f',
+                      'Apparent Magnitude Error': '%1.2f'}, overwrite=True,
+            latexdict={'preamble':r'\centering',
+                       'caption':r'Sample of Imaging Observations of ASASSN-15oz. Full table available on-line.\label{tab:LcObs}',
+                       'data_start':r'\hline',
+                       'tabletype': 'table*'})
+
+
+ 
+ 
+# In[12]:
+
+
+tbdata.write('../lc_obs.dat',  overwrite=True, format='ascii')
+ofile = open('../lc_obs.dat', 'r')
+all_lines = ofile.readlines()
+ofile.close()
+header = '''#Photometric observations of ASASSN-15oz.
+#Columns:
+#Date-Obs: (str) Human readable date of observation
+#JD: (float) Julian Date of observation
+#Phase: (float) Days since explosion, where explosion is defined as {}
+#Apparent Magnitude: (float)
+#Apparent Magntidue Error: (float)
+#Filter: (str) Filter used for observation
+#Source: (str) Observatory used to take the data. OGG, COJ, LSC,  ELP, and CPT are Las Cumbres Observatory Telescopes.\n
+'''.format(sn15oz.jdexpl)
+ofile = open('../asassn15oz_lc_obs.dat', 'w')
+ofile.write(header)
+for iline in all_lines[1:]:
+    ofile.write(iline)
+ofile.close()
 
 
  

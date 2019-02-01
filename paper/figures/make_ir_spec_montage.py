@@ -5,7 +5,7 @@
 #     * ir_spec_montage_log.pdf
 
  
-# In[2]:
+# In[1]:
 
 
 import os
@@ -27,7 +27,7 @@ from utilities_az import supernova, spectroscopy as spec, visualization
 
  
  
-# In[3]:
+# In[2]:
 
 
 IRTF_DIR = '../../data/spectra/IRTF/'
@@ -42,7 +42,7 @@ VEL_DATA_DIR = '../../data/line_info'
 
  
  
-# In[4]:
+# In[3]:
 
 
 z = 0.0069 #15oz redshift
@@ -50,7 +50,7 @@ z = 0.0069 #15oz redshift
 
  
  
-# In[5]:
+# In[4]:
 
 
 #Date-obs: 2015-10-10
@@ -59,7 +59,7 @@ tbdata_irtf = asc.read(os.path.join(IRTF_DIR, 'A15oz_merge.txt'), names=['wave',
 
  
  
-# In[6]:
+# In[5]:
 
 
 tbdata_sofi1_blue = fits.getdata(os.path.join(SOFI_DIR, 'asassn15oz_20150905_2457270.58657_1.fits'), 1) #wave, flux, err, skyback
@@ -70,7 +70,7 @@ tbdata_sofi2_red = fits.getdata(os.path.join(SOFI_DIR, 'asassn15oz_20151005_2457
 
  
  
-# In[7]:
+# In[6]:
 
 
 tbdata_xshoot = asc.read(os.path.join(XSHOOT_DIR, 'ASASSN15oz_VLT_20150921_Combined2.txt'), names=['wave', 'flux', 'err'])
@@ -78,7 +78,7 @@ tbdata_xshoot = asc.read(os.path.join(XSHOOT_DIR, 'ASASSN15oz_VLT_20150921_Combi
 
  
  
-# In[8]:
+# In[7]:
 
 
 import matplotlib as mpl
@@ -92,7 +92,7 @@ print(mpl.rcParams['font.monospace'][6:])
 
  
  
-# In[9]:
+# In[8]:
 
 
 spec_sofi1_blue = spec.spectrum1d(spec.apply_redshift(tbdata_sofi1_blue['WAVE'][0],z), 
@@ -117,7 +117,7 @@ spec_xshoot = spec.spectrum1d(spec.apply_redshift(tbdata_xshoot['wave'], z),
 
  
  
-# In[10]:
+# In[9]:
 
 
 scale_sofi1_blue = spec.scale_spectra(spec_sofi1_blue, spec_sofi1_blue, wlmin=15000, wlmax=16000)
@@ -130,7 +130,7 @@ scale_xshoot = spec.scale_spectra(spec_xshoot, spec_sofi1_blue,         wlmin=15
 
  
  
-# In[12]:
+# In[10]:
 
 
 def plot_ir_spec(spectrum, telluric_blue, telluric_red,  ax_ir, offset=0,color=None):
@@ -198,7 +198,7 @@ for key in annotation_dict_red.keys():
     ax_ir.text(x, y+yoffset+textoffset, key, rotation='vertical', ha='center', va='bottom', 
         fontproperties=font)
 ax_ir.set_ylabel(r'log(Flux)+ offset')
-ax_ir.set_xlabel(r'Wavelength ($\rm \AA$)')
+ax_ir.set_xlabel(r'Rest wavelength ($\rm \AA$)')
 ax_ir.set_yticks([])
 ax_ir.set_ylim(-19.5, -14)
 
