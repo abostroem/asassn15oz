@@ -153,9 +153,8 @@ $\rm{^{22}}$ The Observatories of the Carnegie Institution for Science, 813 Sant
 \maketitle
 % Abstract of the paper
 \begin{abstract}
-Hydrogen-rich, core-collapse supernovae are typically divided into four classes: IIP, IIL, IIn, and IIb. In general, interaction with circumstellar material is only considered for Type IIn supernovae. However, recent hydrodynamic modeling of IIP and IIL supernovae requires circumstellar material to reproduce their early light curves. In this scenario, IIL supernovae experience large amounts of mass loss before exploding.
-We test this hypothesis on ASASSN-15oz, a Type IIL supernova. With extensive follow-up in the X-ray, UV, optical, IR, and radio we present our search for signs of interaction, and the mass-loss history indicated by their detection. We find evidence of short-lived intense mass-loss just prior to explosion from light curve modeling, amounting in 1.5 M$\rm{_{\odot}}$ of material within 1800 R$\rm{_{\odot}}$ of the progenitor. We also detect the supernova in the radio, indicating mass-loss rates of $\rm{10^{-6}}$ -10$\rm{^{-6}}$ M$\rm{_{\odot}}$ yr$\rm{^{-1}}$ prior to the extreme mass-loss period. Our failure to detect the supernova in the X-ray and the lack of narrow emission lines in the UV, optical, and NIR do not contradict this picture and place an upper limit on the mass-loss rate outside the extreme period of $\rm{<10^{-4}}$ M$\rm{_{\odot}}$yr$\rm{^{-1}}$. 
-\textbf{This paper highlights the importance gathering comprehensive data on more Type II supernovae to enable detailed modeling of the progenitor and supernova which can elucidate their mass-loss histories and envelope structures and thus inform stellar evolution models.}
+\textbf{Hydrogen-rich, core-collapse supernovae are typically divided into four classes: IIP, IIL, IIn, and IIb. In general, interaction with circumstellar material is only considered for Type IIn supernovae. However, recent hydrodynamic modeling of IIP and IIL supernovae requires circumstellar material to reproduce their early light curves. In this scenario, IIL supernovae experience large amounts of mass loss before exploding.
+We test this hypothesis on ASASSN-15oz, a Type IIL supernova. With extensive follow-up in the X-ray, UV, optical, IR, and radio we present our search for signs of interaction, and the mass-loss history indicated by their detection. We find evidence of short-lived intense mass-loss just prior to explosion from light curve modeling, amounting in 1.5 M$\rm{_{\odot}}$ of material within 1800 R$\rm{_{\odot}}$ of the progenitor. We also detect the supernova in the radio, indicating mass-loss rates of $\rm{10^{-6}}$ -10$\rm{^{-7}}$ M$\rm{_{\odot}}$ yr$\rm{^{-1}}$ prior to the extreme mass-loss period. Our failure to detect the supernova in the X-ray and the lack of narrow emission lines in the UV, optical, and NIR do not contradict this picture and place an upper limit on the mass-loss rate outside the extreme period of $\rm{<10^{-4}}$ M$\rm{_{\odot}}$yr$\rm{^{-1}}$. This paper highlights the importance gathering comprehensive data on more Type II supernovae to enable detailed modeling of the progenitor and supernova which can elucidate their mass-loss histories and envelope structures and thus inform stellar evolution models.}
 %While individually each observation probes a single location/time in the mass-loss history of the progenitor star, ASASSN-15oz highlights the importance of frequent, multi-wavelength observations to capture the complete history and inform models of stellar evolution.
 \end{abstract}
 % Select between one and six entries from the list of approved keywords.
@@ -316,11 +315,9 @@ The lack of narrow line emission indicates a lack of strong interaction.}
 \end{figure}
 %-----------------------------------------
 
-Aperture photometry was performed on the X-ray observations using the  {\tt HEAsoft} packages {\tt xselect} \citep{blackburn_1995} and {\tt xspec}; \citep{arnaud_1996}.
-The background was selected as a region with no x-ray sources in the image.
-The source was extracted using an 18\arcsec aperture.
-Count rates were converted to a luminosity using PIMMS \citep{mukai_1993} assuming a power-law model with a photon index of two.
-Integrating over all available SWIFT/XRT epochs, no significant detection was made after background subtraction.
+\textbf{X-ray upper limits were calculated using the {\tt SOSTA} command in the {\tt HEAsoft} package {\tt ximage}.
+Count rates were converted to flux units using PIMMS \citep{mukai_1993} assuming a power-law model with a photon index of two for an input and output energy range of 0.5-8 keV.
+There were no X-ray detections at any epoch.}
 %%%%%%%%%%%%%%%%% 
 \subsection{NIR Observations}
 ASASSN-15oz was observed in the NIR with the SOFI instrument on the NTT telescope through the PESSTO collaboration, the SpeX instrument \citep{2003rayner} on the 3.0-m NASA Infrared Telescope Facility (IRTF), and the NIR arm of the X-Shooter spectrograph. 
@@ -603,16 +600,15 @@ The different epochs and wavelengths probe different periods of mass-loss allowi
 In this section we analyze the evidence for interaction at different wavelengths.
 We note that we cannot search for flash ionization features as there are no spectroscopic observations until near maximum.
 %%%%%%%%%%%%%%%%
-\subsection{UV and X-Ray}
+\subsection{UV and X-ray}
 ASASSN-15oz is not detected in any of the \textit{Swift} X-ray observations. 
-To determine an upper limit on the X-ray luminosity, we sum all observations and find a limiting count rate of  $\rm{5.775\times10^{-4}}$ counts $\rm{s^{-1]}}$ (0.4-5 keV).
-Assuming Galactic absorption of 6.18x$\rm{10^{20}}$ cm$\rm{^{-2}}$ \citep{2005kalberla}, this corresponds to an unabsorbed flux of $\rm{1.647\times10^{-14}}$ erg cm$\rm{^{-2}}$ $\rm{s^{-1}}$ and adopting a distance of 28.83 Mpc, a luminosity upper limit of $\rm{2.56 \times10^{39}}$erg $\rm{s^{-1}}$.
+The flux limits were converted to luminosity limits assuming Galactic absorption of 6.18x$\rm{10^{20}}$ cm$\rm{^{-2}}$ \citep{2005kalberla} and a distance of 28.83 Mpc.
 
-We compare this upper limit to the model of SN 1999em \citep{2007chugai} which has similar progenitor and explosion parameters. 
+We compare these upper limits to the model of SN 1999em \citep{2007chugai} which has similar progenitor and explosion parameters. 
 They model the interaction as an infinitely thin double-shock structure \citep{1982chevalier, 1985nadyozhin} composed of a forward shock propagating into the surrounding gas and reverse shock propagating backwards into the SN ejecta, towards its core. 
 \citet{2007chugai} find that the reverse shock dominates the X-ray observations for a pre-explosion mass loss rate of $\rm{10^{-6}}$ \msunperiod $\rm{yr^{-1}}$ and a wind velocity of $\rm{10}$ km $\rm{s^{-1}}$ producing luminosities between $\rm{10^{38}}$ and $\rm{10^{39}}$ erg $\rm{s^{-1}}$. 
 The forward shock produces luminosities comparable to the reverse shock in the first 10 days and decreasing to below $\rm{10^{34}}$ erg $\rm{s^{-1}}$ by day 100.  
-Our non-detection is at the upper limit of this range, making it plausible that if there is X-ray emission, it is below our detection limits.
+Our non-detections are above the upper limit of this range, making it plausible that if there is X-ray emission, it is below our detection limits.
 
 We use SYN++ to model and tentatively identify absorption features from Fe II, Ti II, and Mg II features in the first {\it Swift} UV grism spectrum (see Figure \ref{fig:SwiftSpectrum}). 
 This spectrum shows no sign of the narrow emission lines typically associated with strong interaction ( $\rm{\dot{M}>10^{-4}}$ g $\rm{cm^{-1}}$; \citealt{2012kiewe})
@@ -686,7 +682,7 @@ Although the asymmetry is visible in all of the spectra, it is most prominent in
 \subsection{Radio}\label{sec:RadioInteraction}
 The origin of radio emission from SNe can be explained by the interaction of the SN ejecta with the CSM. 
 This interaction leads to a shockwave traveling via the CSM that in turn accelerates electrons and enhances magnetic fields and thus synchrotron emission ensues \citep{1982chevalier,1998chevalier, 2002weiler, 2006chevalier}. 
-\textbf{It has been shown over the last decade that in most observed SNe, the optically thick part of the observed radio spectrum can be modeled by a synchrotron self absorption (SSA; e.g. \citealt{2012soderberg, 2013horesh}).}
+\textbf{It has been shown over the last decade that in most observed SNe, the optically thick part of the observed radio spectrum can be modeled by synchrotron self absorption (SSA; e.g. \citealt{2012soderberg, 2013horesh}).}
 We use the \citet{1998chevalier} SSA formalism to model the radio measurements of ASASSN-15oz.
 In such a model the radio emission peaks at a frequency below which the emission is strongly absorbed by SSA. 
 Above that frequency the emission becomes optically thin. 
@@ -695,7 +691,7 @@ We use Equation 1 from \citet{1998chevalier} to model the radio dataset \textbf{
 \textbf{We use the standard equipartition assumption and set the microphysical parameters, $\rm{\epsilon_{e} = \epsilon_{B}  = 0.1}$ \citep{2006chevalier}. 
 We also set the electron power-law distribution to $\rm{p=3}$, leaving the CSM density and shockwave velocity as free parameters.}  
 We find the shockwave velocity (assuming constant velocity) is $\rm{\sim 1.4\times10^{4}}$ km $\rm{s^{-1}}$ (which is the typical average value observed in SNe; e.g. \citealt{2006chevalier}).
-Assuming CSM surrounding the SN is created by a stellar wind from the progenitor prior to explosion, we model the density profile of the CSM as:
+Assuming the CSM surrounding the SN is created by a stellar wind from the progenitor prior to explosion, we model the density profile of the CSM as:
 \begin{equation} \label{eqn:density}
 \rho(r) = \frac{\dot{M}}{4\pi r^{2}v_{wind}} = \frac{K}{r^{2}}
 \end{equation}
@@ -873,7 +869,7 @@ While this provides a better agreement with the observations, the model velocity
 \textbf{According to the classical model by \citet{1982chevalier}, the interaction of the SN ejecta with the surrounding wind leads to the formation of a cool dense shell between the forward and the reverse propagating shock waves. 
 This shell is responsible for the X-ray emission from Type II SNe, and it may explain the broad base of the narrow emission lines seen in some interacting SNe \citep{2001chugai}. 
 In our SNEC model, the CSM density is too high and the density drop between the envelope and the CSM is not sufficient to form a significantly overdense shell. 
-This is supported by Figure \ref{fig:CDS}, where the interface between the RSG envelope and the CSM corresponds to the velocity coordinate of $\approx 4900\,{\rm km}\,{\rm s}^{-1}$. 
+This is supported by Figure \ref{fig:CDS}, where the interface between the RSG envelope and the CSM corresponds to the velocity coordinate of $\approx 4200\,{\rm km}\,{\rm s}^{-1}$. 
 In this model, the forward shock wave sweeps the CSM almost entirely before the breakout.}
 
 \textbf{On the other hand, if we were to consider a three component model, consisting of a RSG, a dense CSM and a regular low density stellar wind, like in \citet{2018morozova}, the thin cool dense shell would be formed at the interface between the dense CSM and the wind. 
@@ -885,8 +881,8 @@ Such low density wind would not have any significant influence on the optical li
 \begin{center}
 \includegraphics[width=\columnwidth]{log_rho} %from Viktoriya
 \caption{\textbf{Density as a function of velocity in our best fit SNEC model at the free expansion stage (numbers in the plot indicate the time since explosion in days). 
-The interface between the RSG envelope and the CSM corresponds to the velocity value of $\approx 4900\,{\rm km}\,{\rm s}^{-1}$. 
-Mild increase in density at $\approx 3500\,{\rm km}\,{\rm s}^{-1}$ is a result of the reverse shock wave reflected from this interface.}}
+The interface between the RSG envelope and the CSM corresponds to the velocity value of $\approx 4200\,{\rm km}\,{\rm s}^{-1}$. 
+Mild increase in density at $\approx 2300\,{\rm km}\,{\rm s}^{-1}$ is a result of the reverse shock wave reflected from this interface.}}
 \label{fig:CDS}
 \end{center}
 \end{figure}
@@ -995,15 +991,15 @@ Based on this data, there is no relationship between UV excess and slope.}
 %X-ray
 Like the UV excess, X-rays from strongly interacting SNe are frequently observed.
 To gain more insight into the X-ray upper limit, we compare the upper limit of ASASSN-15oz with published X-ray observations of IIP/IIL SNe found in the SNaX database \citep{2017ross} (see Figure \ref{fig:xray}).
-We find our upper limit is above some other detections and upper limits of IIP/IIL SNe in the database.
+\textbf{We find our upper limits are above all of the detections and upper limits of IIP/IIL SNe in the database.}
 This further suggests that deeper observations could be needed to detect the X-ray flux of ASASSN-15oz.
 %=======================
 \begin{figure}
 \begin{center}
 \includegraphics[width=\columnwidth]{xray_comp} %created by make_xray_comparison.ipynb
 \caption{The X-ray luminosity of all published SNe found in the SNaX database. 
-IIP-like SNe are shown with diamond symbols while IIL-like SNe are shown with circular symbols and the upper limit of ASASSN-15oz is marked with a square.
-Many detections from IIP/IIL SNe are below the upper limit derived in this paper, implying that deeper observations would be required to detect its X-ray flux.}
+IIP-like SNe are shown with diamond symbols while IIL-like SNe are shown with square symbols and the upper limits as circles.
+All of the detections from IIP/IIL SNe are below the upper limits derived in this paper, implying that deeper observations would be required to detect its X-ray flux.}
 \label{fig:xray}
 \end{center}
 \end{figure}
@@ -1030,7 +1026,7 @@ For this reason we identify the cachito feature as Si II ($\rm{\lambda 6355}$) r
 \item No narrow emission lines are detected in the optical and UV photospheric spectroscopy, implying a mass-loss rate of $\rm{< 10^{-4}}$ \msunperiod $\rm{yr^{-1}}$.
 \item The H $\rm{\alpha}$ emission line profile in the nebular spectra is asymmetric, which could be the result of interaction with CSM.
 \item No UV excess is detected in the first 40 days of observations.
-\item No X-ray signal is detected in the sum of all photospheric observations, implying $\rm{L_{xray}<2.56 \times10^{39}}$ erg $\rm{s^{-1}}$.
+\item No X-ray signal is detected in any of the photospheric observations.
 \end{itemize}
 Taking all of these results together, we find the progenitor of ASASSN-15oz underwent standard RSG mass-loss for most of its evolution, with a short period of extreme mass-loss just before explosion. 
 It is possible that early optical spectroscopy would have shown narrow emission lines as the shock illuminated the edge of the dense shell of material.
