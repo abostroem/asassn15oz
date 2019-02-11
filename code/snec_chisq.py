@@ -355,7 +355,7 @@ def calc_color_chisq():
     ofile_write.close()
     make_EM_plots(chisq_color, 'color', best_color_model)
     make_KR_plots(chisq_color, 'color', best_color_model)
-    
+
 if __name__ == "__main__":
     #filters_1 = ['U', 'B', 'V', 'R', 'I']
     #filters_2 = ['V', 'R', 'I']
@@ -396,5 +396,6 @@ if __name__ == "__main__":
     obs_data_filename = '../data/bolometric.txt'
     calculate_bolometric_chisq(obs_data_filename, end_plateau, log=False)
     end = datetime.datetime.now()
-    print('Bolo luminosity calc took {}'.format(end-start))
+
+    print('Bolo luminosity calc took {}'.format(((end-start)*u.second).to(u.minute)))
     
