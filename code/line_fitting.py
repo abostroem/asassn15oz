@@ -4,23 +4,26 @@ import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 
-from astropy.io import fits
+from astropy.io import fits, ascii as asc
 from astropy.time import Time
 from astropy.table import Table, Column
 import yaml
 
-from spectroscopy import calc_wavelength
+from utilities_az import spectroscopy as spec
 from fit_spectral_lines import define_feature
 import line_analysis_BSNIP
 
 
 SPEC_DIR_LCO = '../data/spectra/lco'
 SPEC_DIR_EFOSC = '../data/spectra/EFOSC'
+SPEC_DIR_XSHOOT = '../data/spectra/xshooter'
 FIG_DIR = '../figures'
 OUTPUT_DIR = '../data/line_info'
 
-append = False
-
+append = True  #Setting this to False breaks the saving of the input. Be sure to delete the yaml file if you want to overwrite it
+'''
+If interactive is False, then the input file will be used
+'''
 # line_list = {'FeII_multi':{'num_components':2, 
 #                            'file_indx': np.int_(np.arange(3,14))},
 #              'HA-cachito':{'num_components':2,
@@ -28,14 +31,21 @@ append = False
 #              'HB':{'num_components':1,
 #                             'file_indx': np.int_(np.arange(0,14))},
 #              'NaI':{'num_components':1,
-#                             'file_indx': np.int_(np.arange(9,14))}, 
-#              'OI':{'num_components': 1,
-#                             'file_indx': np.int_(np.arange(5,14))}
-#              } 
-line_list = {'HA':{'num_components':1,
-                            'file_indx': np.int_(np.arange(0,14))},
-             'cachito':{'num_components':1,
-                            'file_indx': np.int_(np.arange(0,14))}}
+#                             'file_indx': np.int_(np.arange(9,14))}}
+
+#Plots for OI were corrupted. Yaml keys have changed since input file created; make a new one
+line_list = {'OI':{'num_components': 1,
+                   'file_indx': [10, 11, 12, 13]}} 
+
+#line_list used for Cachito fitting and plots
+#line_list = {'HA':{'num_components':1,
+#                            'file_indx': np.int_(np.arange(0,14))},
+#             'cachito':{'num_components':1,
+#                            'file_indx': np.int_(np.arange(0,14))}}
+
+#line_list used for reanalysis of FeII 5169 feature
+#line_list = {'FeII_5169':{'num_components':1, 
+#                            'file_indx': np.int_(np.arange(3,14))}}
                              
 spectrum_filelist = ['asassn15oz_20150904_redblu_122216.314.fits', #0
                      'asassn-15oz_20150906_redblu_105042.698a.fits', #1 The other spectrum from this night is with a worse sensitivity function --> lower S/N
@@ -50,7 +60,8 @@ spectrum_filelist = ['asassn15oz_20150904_redblu_122216.314.fits', #0
                      'asassn15oz_20151014_redblu_112918.305.fits', #10
                      'asassn-15oz_20151025_redblu_102221.833.fits', #11
                      'tASAS-SN_15oz_20151107_Gr13_Free_slit1.5_57723_1_e.fits', #12
-                     'tASAS-SN_15oz_20151118_Gr13_Free_slit1.0_57723_1_e.fits'] #13
+                     'tASAS-SN_15oz_20151118_Gr13_Free_slit1.0_57723_1_e.fits', #13
+                     'ASASSN15oz_VLT_20150921.txt'] #14
 
 for iline in line_list.keys():
     with PdfPages(os.path.join(FIG_DIR, '{}_analysis.pdf'.format(iline))) as pdf:
@@ -67,10 +78,17 @@ for iline in line_list.keys():
             if os.path.exists(os.path.join(SPEC_DIR_LCO, spectrum_filename)):
                 filename = os.path.join(SPEC_DIR_LCO, spectrum_filename)
                 binsize=20
+                spectrum = line_analysis_BSNIP.read_iraf_spectrum(filename)
+            elif os.path.exists(os.path.join(SPEC_DIR_XSHOOT, spectrum_filename)):
+                filename = os.path.join(SPEC_DIR_XSHOOT, spectrum_filename)
+                binsize=1
+                tbdata = asc.read(filename, names=['wave', 'flux', 'err'])
+                wl = spec.apply_redshift(tbdata['wave'], 0.0069)
+                spectrum = spec.spectrum1d(tbdata['wave'], tbdata['flux'], error=tbdata['err'])
             else:
                 filename = os.path.join(SPEC_DIR_EFOSC,spectrum_filename)
                 binsize=5
-            spectrum = line_analysis_BSNIP.read_iraf_spectrum(filename)
+                spectrum = line_analysis_BSNIP.read_iraf_spectrum(filename)
             spectrum.__setattr__('filename', os.path.basename(filename))
             if iline == 'HA-cachito':
                 similar_widths=False
@@ -82,11 +100,12 @@ for iline in line_list.keys():
                                                      absorption=True, 
                                                      similar_widths=similar_widths, 
                                                      search_range=search_range,
-                                                     input_filename=os.path.join(OUTPUT_DIR, '{}_input.yaml'.format(iline)))
+                                                     input_filename=os.path.join(OUTPUT_DIR, '{}_input.yaml'.format(iline)),
+                                                     interactive = True)
             if filename.endswith('.fits'):
                 date = fits.getval(filename, 'date-obs', 0)
             else:
-                date = input('enter date for file: {}'.format(ifile))
+                date = input('enter date for file: {}'.format(spectrum_filename))
 
             irow = [iline, date]
             for imin_component, ipew_component in zip(min_list, pew_list):

@@ -1,52 +1,10 @@
-OI:
+tASAS-SN_15oz_20151118_Gr13_Free_slit1.0_57723_1_e.fits:
   continuum:
-    left: !!python/tuple
-    - !!python/object/apply:numpy.core.multiarray.scalar
-      - &id001 !!python/object/apply:numpy.dtype
-        args: [f8, 0, 1]
-        state: !!python/tuple [3, <, null, null, null, -1, -1, 0]
-      - !!binary |
-        NtvAHNMJvUA=
-    - !!python/object/apply:numpy.core.multiarray.scalar
-      - *id001
-      - !!binary |
-        Qsspi7FK4Tw=
-    right: !!python/tuple
-    - !!python/object/apply:numpy.core.multiarray.scalar
-      - *id001
-      - !!binary |
-        O4MmMDMRvkA=
-    - !!python/object/apply:numpy.core.multiarray.scalar
-      - *id001
-      - !!binary |
-        Qsspi7FK4Tw=
+    left: [7702.213476247661, 1.9810964344410144e-15]
+    right: [7384.866157157859, 1.9495033635902338e-15]
   feature:
     center:
-    - !!python/tuple
-      - !!python/object/apply:numpy.core.multiarray.scalar
-        - *id001
-        - !!binary |
-          8Wd/SFiqvUA=
-      - !!python/object/apply:numpy.core.multiarray.scalar
-        - *id001
-        - !!binary |
-          oUWWNWkd4z8=
-    l_edge: !!python/tuple
-    - !!python/object/apply:numpy.core.multiarray.scalar
-      - *id001
-      - !!binary |
-        +lWLL6gNvkA=
-    - !!python/object/apply:numpy.core.multiarray.scalar
-      - *id001
-      - !!binary |
-        Hff/7SC57z8=
-    r_edge: !!python/tuple
-    - !!python/object/apply:numpy.core.multiarray.scalar
-      - *id001
-      - !!binary |
-        Ri653pYgvUA=
-    - !!python/object/apply:numpy.core.multiarray.scalar
-      - *id001
-      - !!binary |
-        8jtPIQ0o7j8=
+    - [7611.3109413580705, 0.6221226743820585]
+    l_edge: [7569.113826006651, 0.7637822193903502]
+    r_edge: [7701.459324154285, 0.9897629221416726]
   fit: Gaussian1D
