@@ -11,7 +11,7 @@ The code in this repository depends on the following third-party packages:
 * utilities_az: https://github.com/abostroem/utilities (run setup.py)
      - side note: I turned this into a package late in the game, so if there is an import for spectroscopy,
      visualization, or supernova that isn't working, try importing it from utilities\_az
-* line\_fitting: https://github.com/abostroem/line\_fitting (not yet a package :(  )
+* line\_fitting: https://github.com/abostroem/line_fitting (not yet a package :(  )
 
 
 ## Approximate format of repository:
