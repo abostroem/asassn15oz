@@ -5,7 +5,7 @@
 #     * example_fits.pdf
 
  
-# In[1]:
+# In[2]:
 
 
 import os
@@ -19,7 +19,7 @@ import fit_spectral_lines
 
  
  
-# In[2]:
+# In[3]:
 
 
 plt.style.use(['seaborn-paper','az-paper-twocol'])
@@ -27,7 +27,7 @@ plt.style.use(['seaborn-paper','az-paper-twocol'])
 
  
  
-# In[3]:
+# In[4]:
 
 
 FIG_DIR = '.'
@@ -38,7 +38,7 @@ input_file_Ca = os.path.join(OUTPUT_DIR, 'CaII_input.yaml')
 
  
  
-# In[4]:
+# In[5]:
 
 
 filename_Ca = 'asassn-15oz_20150924_redblu_123847.580.fits'
@@ -50,7 +50,7 @@ dir_Sc = dir_Ca
 
  
  
-# In[5]:
+# In[6]:
 
 
 spectrum_Ca = line_analysis_BSNIP.read_iraf_spectrum(os.path.join(dir_Ca, filename_Ca))
@@ -84,7 +84,7 @@ plt.close()
 
  
  
-# In[6]:
+# In[7]:
 
 
 iline = 'ScII5662'
@@ -172,7 +172,7 @@ ax_Sc.set_xlabel(r'Wavelength ($\rm\AA$)')
 
 ax_Ca.legend([l1[0], l2[0], l3[0], l4[0],l0],[l1[0].get_label(), l2[0].get_label(), l3[0].get_label(), l4[0].get_label(),l0.get_label()],  
              loc='best', fontsize='small', framealpha=1.0,
-             bbox_to_anchor=(0.6, -0.04, 0.2, .43))
+             bbox_to_anchor=(0.6, -0.04, 0.2, .43), frameon=True)
 ax_Sc.legend(loc='best', fontsize='small', framealpha=1.0,
              bbox_to_anchor=(0.56, -0.05, 0.2, .43))
 plt.savefig('example_fits.pdf')

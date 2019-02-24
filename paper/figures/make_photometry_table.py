@@ -5,7 +5,7 @@
 # * lc_obs.tex
 
  
-# In[2]:
+# In[1]:
 
 
 import numpy as np
@@ -18,7 +18,7 @@ from utilities_az import supernova, connect_to_sndavis
 
  
  
-# In[3]:
+# In[2]:
 
 
 db, cursor = connect_to_sndavis.get_cursor()
@@ -26,7 +26,7 @@ db, cursor = connect_to_sndavis.get_cursor()
 
  
  
-# In[4]:
+# In[3]:
 
 
 sn15oz = supernova.LightCurve2('asassn-15oz')
@@ -34,7 +34,7 @@ sn15oz = supernova.LightCurve2('asassn-15oz')
 
  
  
-# In[5]:
+# In[4]:
 
 
 query_str = '''
@@ -46,7 +46,7 @@ ORDER BY jd'''
 
  
  
-# In[6]:
+# In[5]:
 
 
 cursor.execute(query_str)
@@ -55,7 +55,7 @@ results = cursor.fetchall()
 
  
  
-# In[7]:
+# In[6]:
 
 
 loc_dict = {
@@ -76,7 +76,7 @@ loc_dict = {
 
  
  
-# In[8]:
+# In[7]:
 
 
 band = []
@@ -115,22 +115,22 @@ tbdata.sort(keys=['JD', 'Filter'])
 
  
  
+# In[8]:
+
+
+#tbdata.write('../lc_obs.tex', format='aastex', 
+#             formats={'JD':'%8.2f', 
+#                      'Phase (Day)':'%4.2f',
+#                      'Apparent Magnitude':'%2.2f',
+#                      'Apparent Magnitude Error': '%1.2f'}, overwrite=True,
+#            latexdict={'preamble':r'\centering',
+#                       'caption':r'Imaging Observations of ASASSN-15oz.\label{tab:LcObs}',
+#                       'data_start':r'\hline'})
+
+
+ 
+ 
 # In[9]:
-
-
-tbdata.write('../lc_obs.tex', format='aastex', 
-             formats={'JD':'%8.2f', 
-                      'Phase (Day)':'%4.2f',
-                      'Apparent Magnitude':'%2.2f',
-                      'Apparent Magnitude Error': '%1.2f'}, overwrite=True,
-            latexdict={'preamble':r'\centering',
-                       'caption':r'Imaging Observations of ASASSN-15oz.\label{tab:LcObs}',
-                       'data_start':r'\hline'})
-
-
- 
- 
-# In[11]:
 
 
 tbdata_short = tbdata[0:5].copy()
@@ -142,16 +142,44 @@ tbdata_short.write('../lc_obs_short.tex', format='latex',
             latexdict={'preamble':r'\centering',
                        'caption':r'Sample of Imaging Observations of ASASSN-15oz. Full table available on-line.\label{tab:LcObs}',
                        'data_start':r'\hline',
+                       'data_end':r'\hline',
+                       'header_start':r'\hline',
                        'tabletype': 'table*'})
 
 
  
  
-# In[12]:
+# In[10]:
 
 
-tbdata.write('../lc_obs.dat',  overwrite=True, format='ascii')
-ofile = open('../lc_obs.dat', 'r')
+#tbdata.write('../lc_obs.dat',  overwrite=True, format='ascii')
+#ofile = open('../lc_obs.dat', 'r')
+#all_lines = ofile.readlines()
+#ofile.close()
+#header = '''#Photometric observations of ASASSN-15oz.
+##Columns:
+##Date-Obs: (str) Human readable date of observation
+##JD: (float) Julian Date of observation
+##Phase: (float) Days since explosion, where explosion is defined as {}
+##Apparent Magnitude: (float)
+##Apparent Magntidue Error: (float)
+##Filter: (str) Filter used for observation
+##Source: (str) Observatory used to take the data. OGG, COJ, LSC,  ELP, and CPT are Las Cumbres Observatory Telescopes.\n
+#'''.format(sn15oz.jdexpl)
+#ofile = open('../asassn15oz_lc_obs.dat', 'w')
+#ofile.write(header)
+#for iline in all_lines[1:]:
+#    ofile.write(iline)
+#ofile.close()
+
+
+ 
+ 
+# In[11]:
+
+
+tbdata.write('../lc_obs.csv',  overwrite=True)
+ofile = open('../lc_obs.csv', 'r')
 all_lines = ofile.readlines()
 ofile.close()
 header = '''#Photometric observations of ASASSN-15oz.
@@ -164,7 +192,7 @@ header = '''#Photometric observations of ASASSN-15oz.
 #Filter: (str) Filter used for observation
 #Source: (str) Observatory used to take the data. OGG, COJ, LSC,  ELP, and CPT are Las Cumbres Observatory Telescopes.\n
 '''.format(sn15oz.jdexpl)
-ofile = open('../asassn15oz_lc_obs.dat', 'w')
+ofile = open('../asassn15oz_lc_obs.csv', 'w')
 ofile.write(header)
 for iline in all_lines[1:]:
     ofile.write(iline)

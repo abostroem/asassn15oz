@@ -57,7 +57,7 @@ radio_tbdata = asc.read(os.path.join(RADIO_DIR, '15oz_fit_lines.txt'),names=['x1
 fig = plt.figure()
 fig.subplotpars.update(left=0.23)
 ax = fig.add_subplot(1,1,1)
-l1,a,b = ax.errorbar(high_freq_22[0], high_freq_22[1], high_freq_22[1]*0.2, uplims=True, label= '22 GHz detection')
+l1,a,b = ax.errorbar(high_freq_22[0], high_freq_22[1], high_freq_22[1]*0.2, uplims=True, label= '22 GHz limit')
 l2, = ax.loglog(high_freq_15[0], high_freq_15[1], 's', label= '15 GHz detection')
 l3, = ax.loglog(low_freq_4_8[0], low_freq_4_8[1], 'o', label='4.8 GHz detection')
 
@@ -69,8 +69,17 @@ ax.set_xlim(0.8, 100)
 ax.set_xlabel('Time (day)')
 ax.set_ylabel(r'$\rm F_{\nu}$ (mJy)')
 #plt.legend(ncol=2, loc='lower right', framealpha=1)
-plt.legend(bbox_to_anchor=[0.04, 0.48, 0.5, 0.5], framealpha=0)
+plt.legend([l1,l2,l3,l4,l5,l6], ['22 GHz limit',l2.get_label(),l3.get_label(),l4.get_label(),l5.get_label(),l6.get_label()], 
+           bbox_to_anchor=[0.04, 0.48, 0.5, 0.5], framealpha=0)
 plt.savefig('radio_fig.pdf')
+
+
+ 
+ 
+# In[20]:
+
+
+
 
 
  

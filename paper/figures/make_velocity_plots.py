@@ -314,7 +314,7 @@ for i, feature in enumerate(plot_list):
 
 plt.legend(loc='best', ncol=2, bbox_to_anchor=[0.52, 0.55, 0.5, 0.5])
 plt.xlabel('Phase (day)')
-plt.ylabel(r'Velocity (1000 $\rm km\,s^{-1}$)')
+plt.ylabel(r'Velocity (1000 km $\rms^{-1}$)')
 plt.savefig(os.path.join(FIG_DIR,'line_velocity.pdf'))
 
 
@@ -467,7 +467,7 @@ l1, = ax1.plot((dates_halpha-sn15oz.jdexpl).value, np.abs(v_halpha.value)/1000,
                   marker=markers['HA-cachito'], label=r'H-$\alpha$', zorder=10)
 ax1.set_xlim(0, 120)
 ax1.set_title(r'H $\alpha$')
-ax1.set_ylabel(r'Velocity (1000 $\rm km s^{-1}$)')
+ax1.set_ylabel(r'Velocity (1000 km $\rm s^{-1}$)')
 #ax1.set_ylim(0, 2.5)
 
 dates_hbeta = Time(tbdata_HB['date'])
@@ -680,7 +680,7 @@ ax.set_xlim(0, 100)
 
 ax.plot(())
 ax.set_xlabel('Phase (day)')
-ax.set_ylabel(r'Velocity (1000 $\rm km\,s^{-1}$)')
+ax.set_ylabel(r'Velocity (1000  km $\rm s^{-1}$)')
 ax.legend(bbox_to_anchor=[0.15, 0.2, 0.4, 0.2])
 fig.savefig('snec_velocity_comp.pdf')
 

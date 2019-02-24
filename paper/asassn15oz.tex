@@ -51,6 +51,13 @@
 \usepackage{cancel}
 \usepackage{multicolumn}
 
+%Magic to make references split across pages without error
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\@combinedblfloats{\box\@outputbox}{\unvbox\@outputbox}{}{%
+  \errmessage{\noexpand\@combinedblfloats could not be patched}%
+}%
+\makeatother
 \makeatletter
 \def\@to{to}
 \makeatother
@@ -126,7 +133,7 @@ $\rm{^{4}}$Mullard Space Science Laboratory, University College London, Holmbury
 $\rm{^{5}}$Department of Astronomy/Steward Observatory, 933 North Cherry Avenue, Rm. N204, Tucson, AZ 85721-0065, USA \\ %Michael Lundquist, Dave, Sam
 $\rm{^{6}}$Max-Planck Institut f{\"u}r Astrophysik, Karl-Schwarzschild Str. 1, D-85748 Garching, Germany \\ %Anders
 $\rm{^{7}}$School of Physics and Astronomy, University of Southampton, Southampton, SO17 1BJ, UK\\ %Mark Sullivan, Mat Smith, Claudia
-$\rm{^{8}}$Harvard-Smithsonian Center for Astrohysics,  60 Garden Street,  Cambridge, MA 02138 \\ %Griffin
+$\rm{^{8}}$Harvard-Smithsonian Center for Astrophysics,  60 Garden Street,  Cambridge, MA 02138 \\ %Griffin
 $\rm{^{9}}$The Raymond and Beverly Sackler School of Physics and Astronomy, Tel Aviv University, Tel Aviv 69978, Israel \\ % Iair
 $\rm{^{10}}$School of Physics, O'Brien Centre for Science North, University College Dublin, Belfield, Dublin 4, Ireland \\ %Emma
 $\rm{^{11}}$Cerro Tololo Inter-American Observatory, National Optical Astronomy Observatory, Casilla 603, La Serena, Chile \\ %Regis Carier
@@ -158,7 +165,7 @@ $\rm{^{23}}$ The Observatories of the Carnegie Institution for Science, 813 Sant
 \begin{abstract}
 Hydrogen-rich, core-collapse supernovae are typically divided into four classes: IIP, IIL, IIn, and IIb. 
 Recent hydrodynamic modeling shows that circumstellar material is required to produce the early light curves of most IIP/IIL supernovae. In this scenario, IIL supernovae experience large amounts of mass loss before exploding.
-We test this hypothesis on ASASSN-15oz, a Type IIL supernova. With extensive follow-up in the X-ray, UV, optical, IR, and radio we present our search for signs of interaction, and the mass-loss history indicated by their detection. We find evidence of short-lived intense mass-loss just prior to explosion from light curve modeling, amounting in 1.5 M$\rm{_{\odot}}$ of material within 1800 R$\rm{_{\odot}}$ of the progenitor. We also detect the supernova in the radio, indicating mass-loss rates of $\rm{10^{-6}}$ -10$\rm{^{-7}}$ M$\rm{_{\odot}}$ yr$\rm{^{-1}}$ prior to the extreme mass-loss period. Our failure to detect the supernova in the X-ray and the lack of narrow emission lines in the UV, optical, and NIR do not contradict this picture and place an upper limit on the mass-loss rate outside the extreme period of $\rm{<10^{-4}}$ M$\rm{_{\odot}}$yr$\rm{^{-1}}$. This paper highlights the importance gathering comprehensive data on more Type II supernovae to enable detailed modeling of the progenitor and supernova which can elucidate their mass-loss histories and envelope structures and thus inform stellar evolution models.
+We test this hypothesis on ASASSN-15oz, a Type IIL supernova. With extensive follow-up in the X-ray, UV, optical, IR, and radio, we present our search for signs of interaction and the mass-loss history indicated by their detection. We find evidence of short-lived intense mass-loss just prior to explosion from light curve modeling, amounting in 1.5 M$\rm{_{\odot}}$ of material within 1800 R$\rm{_{\odot}}$ of the progenitor. We also detect the supernova in the radio, indicating mass-loss rates of $\rm{10^{-6}}$ -10$\rm{^{-7}}$ M$\rm{_{\odot}}$ yr$\rm{^{-1}}$ prior to the extreme mass-loss period. Our failure to detect the supernova in the X-ray and the lack of narrow emission lines in the UV, optical, and NIR do not contradict this picture and place an upper limit on the mass-loss rate outside the extreme period of $\rm{<10^{-4}}$ M$\rm{_{\odot}}$yr$\rm{^{-1}}$. This paper highlights the importance gathering comprehensive data on more Type II supernovae to enable detailed modeling of the progenitor and supernova which can elucidate their mass-loss histories and envelope structures and thus inform stellar evolution models.
 
 \end{abstract}
 % Select between one and six entries from the list of approved keywords.
@@ -185,8 +192,7 @@ However, the recent analysis of large samples of SNe by \citet{2014anderson, 201
 Given the continuum of light curves observed, we will use IIP-like to denote SNe at the IIP end of the spectrum and IIL-like to denote SNe at the IIL end of the spectrum.
 
 From high resolution imaging prior to the SNe explosion, the progenitors of IIP/IIL SNe are found to be red supergiants (RSG) with masses $\rm{<}$ 17  \msun (\citealt{2015smartt} and references there in).
-Successful modeling of IIP-like SNe with RSG progenitors has shown that the initial period of decline is due to adiabatic cooling during the expansion of the ejecta 
-\\(e.g. \citealt{1971grassberg,1977falk,1993blinnikov,2009kasen}).  %new line added to prevent breaking citation across 2 pages
+Successful modeling of IIP-like SNe with RSG progenitors has shown that the initial period of decline is due to adiabatic cooling during the expansion of the ejecta (e.g. \citealt{1971grassberg,1977falk,1993blinnikov,2009kasen}).  
 When the photosphere reaches $\rm{\sim}$ 6000K, hydrogen recombination commences, moving the photosphere inward, against the outwardly expanding ejecta. 
 The rate of the expansion of the ejecta matches the rate of the recession of the recombination front, which itself is at the constant temperature of recombination, leading to the almost constant brightness that define the IIP-like class.
 When the photosphere passes completely through the hydrogen dominated layer of the ejecta, the ejecta continues to expand and cool, as layers rapidly become optically thin until the light curve is powered by the radioactive decay of $\rm{{}^{56}Ni \rightarrow {}^{56}Co \rightarrow {}^{56}Fe}$.
@@ -215,7 +221,7 @@ Flash ionization features, the narrow emission lines in Type IIP/IIL SNe that di
 These features can be produced either by episodic high mass-loss rates in single stars (\citealt{2014gal-yam}, e.g. \citealt{ 2017yaron}) or by lower mass-loss rates in a binary system \citep{2018kochanek}.
 Additional evidence of the importance of mass-loss comes from rare X-ray and radio observations of IIP/IIL SNe, some of which detect signs of interaction (e.g. \citealt{2014dwarkadas} and references there in, \citealt{2018morozova2}).
 
-Although interaction is seen in some historical IIL-like SNe (e.g. 1979C,1980K, 1998S), as more IIL-like SNe are discovered, it has become clear that these interacting events are at the edge of the IIL-like distribution with bright absolute magnitudes and steep decline rates. 
+Although interaction is seen in some historical IIL-like SNe (e.g. 1979C, 1980K, 1998S), as more IIL-like SNe are discovered, it has become clear that these interacting events are at the edge of the IIL-like distribution with bright absolute magnitudes and steep decline rates. 
 Furthermore, a large number of IIL-like SNe, more central to the distribution, lack strong signs of interaction.
 Here, we search for interaction in one of these central IIL-like SN, discovered by the All-Sky Automated Survey for SuperNovae (ASAS-SN), ASASSN-15oz.
 With our extensive set of data, ranging from X-ray to radio wavelengths, we examine different indicators of interaction with CSM to form a coherent history of mass-loss.
@@ -235,7 +241,7 @@ The photometric and spectroscopic data reduction is described in this section.
 A table of spectroscopic observations is presented in Table \ref{tab:SpecObs}.
 A complete list of photometric observations is given in the Supplemental Material. 
 Table \ref{tab:LcObs} gives an example of the photometric observation table format.  
-All photometric data can be obtained from the SNDAVIS database\footnote{http://dark.physics.ucdavis.edu/sndavis/transient} and all spectroscopic data can be found on WISeREP\footnote{https://wiserep.weizmann.ac.il}.
+All photometric data can be obtained from the SNDAVIS database\footnote{\hyperlink{http://dark.physics.ucdavis.edu/sndavis/transient}{http://dark.physics.ucdavis.edu/sndavis/transient}} and all spectroscopic data can be found on WISeREP\footnote{\hyperlink{https://wiserep.weizmann.ac.il}{https://wiserep.weizmann.ac.il}}.
 %%%%%%%%%%%%%%%%% 
 \subsection{Optical \label{subsec:optical}}
 The optical light curve was closely monitored by the LCO from discovery through day 400 in the filters {\it B, V, g, r,} and $i$. 
@@ -243,7 +249,7 @@ Unfortunately, the SN passed behind the sun around day 80, leaving a gap in the 
 Figure \ref{fig:LC} shows the complete multi-band light curve.
 LCO observations were reduced with the LCO imaging pipeline, {\tt lcogtsnpipe} \citep{2016valenti}. 
 This pipeline employs PSF photometry, removing background contamination by fitting a low order polynomial to the host galaxy.
-Instrumental magnitudes were converted to apparent magnitudes using stars in the the APASS\footnote{https://www.aavso.org/apass}, Sloan, and Landolt catalogs.
+Instrumental magnitudes were converted to apparent magnitudes using stars in the the APASS\footnote{\hyperlink{https://www.aavso.org/apass}{https://www.aavso.org/apass}}, Sloan, and Landolt catalogs.
 Apparent magnitudes for the {\it U, B, V, R,} and {\it I} filters are given in the Vega magnitude system and apparent magnitudes for  the {\it g, r,} and {\it i} filters are given in the AB magnitude system.
 %=======================
 \begin{figure}
@@ -348,7 +354,7 @@ The spectral evolution in the IR mirrors the optical evolution, with broad hydro
 The first spectrum (black) taken eight days post-explosion shows broad hydrogen features.
 The later spectra at day 38 (indigo) and 43 (yellow) reveal the development metal lines.
 Although contaminated with narrow telluric features, the high resolution X-Shooter spectrum (pink) shows an intermediate phase.
-Regions of severe sky contamination are marked with grey boxes and are masked out of the specta.}
+Regions of severe sky contamination are marked with grey boxes and are masked out of the spectra.}
 \label{fig:IRmontage}
 \end{center}
 \end{figure*}
@@ -360,7 +366,6 @@ We observed ASASSN-15oz using the NSF's Karl G. Jansky Very Large Array (VLA) (V
 In both of the observations we used J1924-2914 and 3C48 as a phase calibrator and a flux calibrator, respectively. 
 We used the Common Astronomy Software Applications (CASA) standard packages and pipelines to perform the data calibration and imaging. 
 The SN was detected in both observation with the following flux measurements: September 24: $\rm{120\pm 23\,\mu}$Jy at $\rm{4.8}$\,GHz (C-band) and a $\rm{3\,\sigma}$ non-detection limit at $\rm{22}$\,GHz (K-band); October 08:  $\rm{210\pm 21\,\mu}$Jy at $\rm{4.8}$\,GHz (C-band) and a $\rm{80\pm 17\,\mu}$Jy at $\rm{15}$\,GHz (KU-band). 
-%\clearpage
 %%%%%%%%%%%%%%%%% SN PARAMETERS %%%%%%%%%%%%%%%%%%
 \section{Supernova Parameters} \label{15ozIntro}
 ASASSN-15oz was discovered by the ASAS-SN team on 2015 Aug 31.09 (JD 2457265.59; V = 14.6 mag; RA = 19:19:33.55, Dec=-33:46:01.2) and announced on 2015 Sep 03 (JD 2457268; \citealt{2015brown}). 
@@ -375,7 +380,7 @@ This is in agreement with the value used in \citet{2018gutierrez}.\\
 This method relies on the existence of a template SN that is similar in both phase and type to the object being fit.
 ASASSN-15oz is a IIL-like SN. 
 SNID has very few templates for IIL-like SNe, even after adding the new templates provided by \citet{2017gutierrez}. 
-Therefore, in addition to the \citet{2017gutierrez} templates, we add templates for two well observed supernovae with well constrained explosion epochs: SN 2012A \citep{2013tomasella}, and SN 2013ej \citep{2016childress,2016dhungana,2014valenti,2015smartt}.
+Therefore, in addition to the \citet{2017gutierrez} templates, we add templates for two well observed supernovae with well constrained explosion epochs: SN 2012A \citep{2013tomasella}, and SN 2013ej \citep{2016childress,2016dhungana,2014valenti,2015smartt} \footnote{SNID templates for SN 2012A and SN 2013ej can be found at \hyperlink{https://github.com/abostroem/snid\_templates}{https://github.com/abostroem/snid\_templates}}.
 With these templates, we confirm our explosion epoch by fitting the first spectrum (2015 Sep 04) using SNID v. 5.0.
 The five best fit spectra imply an explosion epoch of  2015 Aug 22$\rm{\pm}$4.9 (JD 2457256.5), consistent with the range we propose based on non-detections.
 Interestingly, the hydrodynamic light curve modeling also places the best fit explosion epoch earlier than 2016 Aug 27 (see Section \ref{sec:LCEvolve}).
@@ -414,12 +419,12 @@ The light curve of ASASSN-15oz reaches peak brightness in the {\it V}-band 8.25 
 The early light curve rises until around day 20 in the redder filters, flattening in the {\it V}-band and falling in the blue bands during this same period. 
 It then falls in all bands for the remainder of the observations, changing slope around day 40 and again sometime after day 85, as it enters the radioactive decay phase, following the fall from plateau. 
 Following \citet{2014anderson}, we use the {\it V}-band light curve to fit a slope to the first steep initial decline after maximum ($\rm{s_1}$) and to the second shallower slope prior to the fall from plateau ($\rm{s_2}$). 
-We also fit a global decline rate, $\rm{s_{50v}}$ from soon after maximum to prior to the fall from plateau.
+We also fit a global decline rate, $\rm{s_{50V}}$ from soon after maximum to prior to the fall from plateau.
 During the nebular phase we fit a slope to the radioactive decay tail ($\rm{s_{tail}}$\footnote{this is equivalent to $\rm{s_{3}}$ in \citet{2014anderson}}). 
 The slopes we fit as well as the details of the fit are summarized in Table \ref{tab:slope} and plotted on top of the {\it V}-band light curve in Figure \ref{fig:slopes}.
 Both the high slopes and bright maximum luminosity of ASASSN15oz are similar to those of other IIL-like SNe. 
 %=======================
-\input{slopes}%created by light curve_characteristics.ipynb
+\input{slopes}%created by light_curve_characteristics.ipynb
 %-----------------------------------------
 The slope of the radioactive decay tail is steeper than expected from the radioactive decay of $\rm{{}^{56}Ni \rightarrow {}^{56}Co \rightarrow {}^{56}Fe}$ implying that the ejecta is not fully trapping and reprocessing the gamma rays produced by the radioactive decay.
 %=======================
@@ -435,7 +440,7 @@ Although errors in the apparent magnitude are plotted, in many cases these are s
 %-----------------------------------------
 \indent The pseudo-bolometric luminosity is computed following \citet{2008valenti}.
 To summarize the method, the apparent magnitudes are corrected for galactic extinction.
-We use  the {\it U, B, g, V, r, R, i,} and {\it I}-bands to calculate the psuedo-bolometric luminosity at the {\it V}-band cadence.
+We use  the {\it U, B, g, V, r, R, i,} and {\it I}-bands to calculate the pseudo-bolometric luminosity at the {\it V}-band cadence.
 The flux density is calculated from the apparent magnitude at the effective wavelength of each filter and integrated using Simpson's Rule. 
 Finally, the flux is converted to a luminosity using the distance modulus. 
 When {\it V}-band observations extended either earlier or later than a filter, we use the color with the neighboring filter to extrapolate the flux.
@@ -456,10 +461,10 @@ Unfortunately, for ASASSN-15oz, there is not complete trapping for any part of t
 We therefore consider the maximum and minimum $\rm{{}^{56}Ni}$ mass allowed by the observations, under the assumption that there is complete trapping immediately following the fall from plateau. 
 For both cases we also assume that the fall from plateau takes 20 days, based on light curve fits presented in \citet{2016valenti}. 
 An upper limit on the $\rm{{}^{56}Ni}$ mass is obtained by assuming ASASSN-15oz fell from plateau immediately after the last photospheric point  (see upper panel of Figure \ref{fig:Ni}).
-Scaling the psuedo-bolometric luminosity of SN1987A at 102 days to that of ASASSN-15oz at the same time, we calculate a $\rm{{}^{56}Ni}$ mass of 0.11 \msunperiod.
+Scaling the pseudo-bolometric luminosity of SN1987A at 102 days to that of ASASSN-15oz at the same time, we calculate a $\rm{{}^{56}Ni}$ mass of 0.11 \msunperiod.
 To find the lower limit, we estimate a conservative value of the time to the middle of the fall from plateau ($\rm{t_{pt}}$) to be 125 days using Figure 5a in \citet{2016valenti}.
 Using this $\rm{t_{pt}}$ we calculate the fall from plateau to end 135 days after explosion and extrapolate the tail fit to this phase (see lower panel of Figure \ref{fig:Ni}). 
-We compute a $\rm{{}^{56}Ni}$ mass of 0.08 \msun by scaling the psuedo-bolometric luminosities at 135 days.
+We compute a $\rm{{}^{56}Ni}$ mass of 0.08 \msun by scaling the pseudo-bolometric luminosities at 135 days.
 In both panels of Figure \ref{fig:Ni}, the observations are represented with black circles, the $\rm{s_{2}}$ slope with a pink line, the fall from plateau with a indigo line, the tail slope with a yellow line, and the expected tail slope from complete trapping is marked with a dashed green line. 
 The time that is used to scale SN 1987A to ASASSN-15oz is marked with a cyan star.
 %=======================
@@ -500,7 +505,7 @@ The H $\rm{\beta}$ fit is used in the combined spectrum in the top panel.}
 %-----------------------------------------
 
 We use two methods to find the velocity of lines for which individual components can be resolved, one for blended features, and one for individual features.
-For lines that are not blended or that are dominated by the absorption of one ion (e.g. Sc II ($\rm{\lambda}$ 5526, 5662, 6262)), we employ the method presented in \citet{2012silverman}. 
+For lines that are not blended or that are dominated by the absorption of one ion (e.g. Sc II $\rm{\lambda}$ 5526, 5662, 6262), we employ the method presented in \citet{2012silverman}. 
 For blended features we fit a multi-component gaussian to the feature.
 We use this method to fit H $\rm{\alpha}$ ($\rm{\lambda}$ 6561), O I ($\rm{\lambda}$ 7774), FeII ($\rm{\lambda}$ 5169), and Ca II ($\rm{\lambda\lambda\lambda}$ 8498, 8542, 8662). 
 Details of both fitting procedures are given in Appendix \ref{AppLineFit}.
@@ -579,7 +584,7 @@ The fact that several IIP/IIL SNe do not have complete trapping (see Section \re
 \caption{The nebular spectra of ASASSN-15oz from day 228 (2016 Apr 11; top), day 288 (2016 Jun 10; middle), and day 342 (2016 Aug 03; day 340; bottom) plotted with the scaled models of \citet{2014jerkstrand} for $\rm{M_{ZAMS}}$ = 12, 15, 19, and 25 M$\rm{_{\odot}}$. 
 Most features in the observed spectra are well matched by the models. 
 The inset shows the [O I] ($\rm{\lambda\lambda6300, 6334}$) doublet, the strength of which increases monotonically with progenitor mass. 
-The [O I] flux falls between the 15 and 19 M$\rm{_{\odot}}$ models, consistent with the 18 M$\rm{_{\odot}}$ progenitor mass found using light curve modeling in Section \ref{sec:LCmodeling}.}
+The [O I] flux falls between the 15 and 19 M$\rm{_{\odot}}$ models, consistent with the 17 M$\rm{_{\odot}}$ progenitor mass found using light curve modeling in Section \ref{sec:LCmodeling}.}
 \label{fig:neb}
 \end{center}
 \end{figure}
@@ -593,9 +598,9 @@ While the mass-loss of stars with dense CSM (e.g. IIn SNe) that show strong evid
 
 In IIP-like SNe, the plateau is the result of the recession of the photosphere due to hydrogen recombination matching the expansion of the SN ejecta. 
 The linear decline of the light curves of IIL-like SNe is then explained by the photosphere receding faster than the ejecta's expansion. 
-\textbf{The photosphere's recession is governed by the hydrogen density profile. 
+The photosphere's recession is governed by the hydrogen density profile. 
 Although there are a number of ways to alter the density profile (e.g. mixing of the H and He envelopes; \citealt{2017utrobin}), one possibility is that mass-loss during the last stage of stellar evolution produces a shallow density profile. 
-In this scenario IIL-like SNe should undergo more mass-loss than IIP-like SNe.} 
+In this scenario IIL-like SNe should undergo more mass-loss than IIP-like SNe. 
 ASASSN-15oz, a IIL-like SN with photometric and spectroscopic observations from the X-ray through the radio is the ideal SN on which to study the importance of mass-loss for IIP-like and IIL-like SNe.
 The different epochs and wavelengths probe different periods of mass-loss allowing for the characterization of the mass-loss history of the progenitor.
 In this section we analyze the evidence for interaction at different wavelengths.
@@ -622,7 +627,7 @@ They do however, predict absorption in He I $\rm{\lambda10830}$ 20-60 days post 
 
 A feature blueward of H $\rm{\alpha}$ is often present in Type II SNe, however, it is unclear if this feature is due to high velocity hydrogen or to Si II ($\rm{\lambda}$6355)
 and it has thus been named the cachito feature to avoid association with a particular species \citep{2017gutierrez}.
-Building on a the analysis of smaller samples (e.g. \citealt{2001leonard}, \citet{2013inserra}, \citealt{2014valenti}), \citet{2017gutierrez} searched for this feature in 122 IIP/IIL SNe. 
+Building on the analysis of smaller samples (e.g. \citealt{2001leonard}, \citet{2013inserra}, \citealt{2014valenti}), \citet{2017gutierrez} searched for this feature in 122 IIP/IIL SNe. 
 They find the cachito feature in 70 SNe in their sample and divide the detections in early phase detections (phase < 40 days) and late phase detections (phase > 40 days).
 The velocities of the cachito feature observed in the early sample are most often well matched to the Fe II velocity if interpreted as Si II. 
 For this reason, they interpret the cachito feature in the early sample as Si II and at late times as high velocity hydrogen.
@@ -640,7 +645,7 @@ The He I feature is fully blended with C I ($\rm{\lambda 10691}$) and Paschen-$\
 \includegraphics[width=\columnwidth]{cachito_evolution}
 \caption{The evolution of the cachito feature (left panel; dashed line) over time. 
 The feature is visible bluewards of H $\rm{\alpha}$ (left panel; dotted line)  in the first spectrum, eight days post explosion.
-It further increase in strength for the next 10 days, then decreases until it is barely visible at 60 days post explosion.
+It increases in strength for the next 10 days, then decreases until it is barely visible at 60 days post explosion.
 This evolution is counter to the evolution described in \citet{2007chugai} in which the high velocity hydrogen feature becomes visible around day 40, making it unlikely that it is high velocity hydrogen.
 There is no evidence of a high velocity hydrogen feature in H $\rm{\beta}$ (center panel; H $\rm{\beta}$ marked with dotted line; cachito velocity marked with dashed line) although this is not surprising given the low opacities predicted by \citet{2007chugai}.
 The high velocity He I ($\rm{\lambda=10830}$) feature (right panel) also predicted by the models of \citet{2007chugai} is too heavily blended with the Paschen-$\rm{\gamma}$ and C I lines to be identifiable.}
@@ -674,7 +679,7 @@ Asymmetric H $\rm{\alpha}$ emission has been seen in a few IIP/IIL SNe (e.g. 199
 \caption{The asymmetric H $\rm{\alpha}$ emission in the nebular spectra of ASASSN-15oz. 
 The spectrum shows H $\rm{\alpha}$ emission at rest (solid gray line), blueshifted by 2200 km $\rm{s^{-1}}$ and redshifted by 800 km $\rm{s^{-1}}$ (dashed gray lines).
 Although the asymmetry is visible in all of the spectra, it is most prominent in the earliest nebular spectrum on day 228 (2016 Apr 11) and could be a sign of interaction with CSM.
-\textbf{However such strong asymmetry would required an high level of interaction not visible by other probes.}
+However such strong asymmetry would required an high level of interaction not visible by other probes.
 }
 \label{fig:nebHa}
 \end{center}
@@ -700,11 +705,6 @@ Assuming the CSM surrounding the SN is created by a stellar wind from the progen
 where $\rm{\dot{M}}$ is the wind mass-loss rate and $\rm{v_{wind}}$ is the wind velocity.
 We find $\rm{K = 4.51\times 10^{11}}$ g $\rm{cm^{-1}}$.
 With a wind velocity between 10-100 km $\rm{s^{-1}}$, this implies a mass-loss rate between $\rm{\dot{M}}$ $\rm{\approx 0.9-9\times 10^{-7}}$ \msunperiod $\rm{yr^{-1}}$.
-%However, note that if the system deviates from equipartition (as has been observed in some past cases; e.g. \citealt{2012soderberg,2013horesh}), then the derived values of the velocity will change by $v \propto \left(\frac{\epsilon_{e}}{\epsilon_{B}}\right)^{\frac{1}{19}}$ and the mass-loss rate by 
-%\begin{equation}
-%\dot{M} \propto \frac{\left(  \frac{\epsilon_{e}}{\epsilon_{B}}\right)^{\frac{\rho}{19}}} {\epsilon_{B}}
-%\end{equation}
-%where $\rm{\rho}$ is the CSM density.
 %=======================
 \begin{figure}
 \begin{center}
@@ -731,10 +731,10 @@ The presence of this CSM is corroborated by other observations of IIP/IIL SNe (e
 For the progenitor models, we use a set of non-rotating solar metallicity RSGs parameterized by the $\rm{M_{ZAMS}}$, evolved with the {\it Kepler} code and described in \citet{2016sukhbold}.
 Note that the stellar evolution calculations made with {\it Kepler} take into account the regular steady winds observed in RSGs, in the way prescribed by \citet{1990nieuwenhuijzen} and \citet{1999wellstein}.
 For this reason, the final pre-SN masses of the models may be up to several $\rm{M_{\odot}}$ smaller than their initial $\rm{M_{ZAMS}}$.
-Both the $\rm{M_{ZAMS}}$s and pre-SN masses of the models used are given in Table \ref{tb:param}.
+Both the $\rm{M_{ZAMS}}$s and pre-SN masses of the models used are given in Table \ref{tp:param}.
 However, for the typical mass loss rates of $\rm{\lesssim10^{-6}}$ \msunperiod $\rm{yr^{-1}}$,  the density in these regular steady winds is too low to have any noticeable effect on the post-explosion optical light curves, and these winds are not included in the progenitor profiles. 
 
-We explore variations in CSM due to this enhanced mass-loss by adding a steady-state wind above the RSG models with the density profile expressed in Equation \ref{eqn:density}.
+We explore variations in CSM due to enhanced mass-loss by adding a steady-state wind above the RSG models with the density profile expressed in Equation \ref{eqn:density}.
 This approximation allows us to parameterize the CSM with two parameters, K and $\rm{R_{ext}}$, the radial extent of the CSM.
 In reality, the late enhanced mass loss does not have to be in the form of a steady wind with constant $\rm{\dot{M}}$ and may instead represent one or several eruptive outbursts. However, in our experience, the early optical light curve depends weakly on the exact slope of the CSM profile, being more sensitive to the total CSM mass.
 
@@ -783,7 +783,7 @@ Then, fixing the explosion energy and progenitor mass, they explore the CSM para
 This is computationally less intensive than modeling the full parameter space and allows them to explore a finer grid of parameters.
 Given the complexity of the parameter space, we choose to model the best light curve with CSM, exploring the full set of parameters simultaneously. 
 
-For ease of comparison with observations, SNEC uses the photospheric temperature at each time step to compute a blackbody spectrum, which it combines with different filter throughputs to output a light curve in Sloan filters {\it u, g, r,} and {\it i}, Bessell filters {\it U, B, V, R,} and {\it I} and PanSTARRS filter {\it z}. 
+For ease of comparison with observations, SNEC uses the photospheric temperature at each time step to compute a blackbody spectrum, which it combines with different filter throughputs to output a light curve in Sloan filters {\it u, g, r,} and {\it i}, Bessel filters {\it U, B, V, R,} and {\it I} and PanSTARRS filter {\it z}. 
 During the rise and plateau phase, a blackbody should be a good approximation to the longer wavelengths. 
 However, line blanketing may cause the bluer filters to be a poor representation of the observed spectrum \citep{2009kasen,2005dessart}.
 For this reason the best fit model is determined using the {\it g, r,} and {\it i} filters. 
@@ -796,7 +796,7 @@ Integrating the CSM density over it radial extent, we find a total CSM mass of 1
 %=======================
 \begin{table*}
 \centering
-\caption{The best fit SNEC model parameters for the simultaneous fits to {\it g,r,} and {\it i}-bands and to the bolometric luminosity with and without CSM.}
+\caption{The best fit SNEC model parameters for the simultaneous fits to {\it g, r,} and {\it i}-bands and to the bolometric luminosity with and without CSM.}
 \label{tab:BestModel}
 \begin{tabular}{l|c|c|c|c|}
 \hline
@@ -809,7 +809,7 @@ Final Pre-SN Mass ( \msunperiod)                          &   14.301            
 Pre-SN Radius (100 R$\rm{_{\odot}}$)                   &  9.1                    &      9.7                  &       9.7       &9.1\\
 Explosion Energy ($\rm{E_{exp}}$; 10$\rm{^{51}}$ ergs)    &    1.4                 &     2.0                 &     1.4             &2.0 \\
 CSM Density (K; 10$\rm{^{17}}$ g $\rm{cm^{-1}}$)             &     40                  &     0                    &       60           &0 \\
-CSM Extent ($\rm{R_{ext}}$; 100 R$\rm{_{\odot}}$)            &     \textbf{18}              &     0                     &      15       &0 \\
+CSM Extent ($\rm{R_{ext}}$; 100 R$\rm{_{\odot}}$)            &     18              &     0                     &      15       &0 \\
 Ni Mass (\msunperiod)                                                         &     0.083               &    0.083              &    0.083       &0.083\\
 Total CSM Mass (\msunperiod)                                            & 1.5                      &          0               &    1.4            &   0 \\
 \hline
@@ -817,7 +817,7 @@ Total CSM Mass (\msunperiod)                                            & 1.5   
 \end{table*}
 %-----------------------------------------
 
-As a sanity check, we derive the bolometric luminosity by fitting a black body to the photometric observations and find the best fit SNEC model with and without CSM. 
+As a sanity check, we derive the bolometric luminosity by fitting a blackbody to the photometric observations and find the best fit SNEC model with and without CSM. 
 The parameters for these models are given in Table \ref{tab:BestModel} and are plotted over the bolometric luminosity in the bottom panel of Figure \ref{fig:snecLC}.
 The explosion energy and ejecta masses are similar to those derived from a simultaneous fit of the {\it g, r,} and {\it i} bands. 
 Although the individual CSM parameters vary, these are highly degenerate and the total CSM mass, which our model is a better measure of, is very similar.
@@ -844,7 +844,7 @@ The high velocity derived from the spectroscopy is consistent with the large mas
 It is also compatible with the incomplete gamma ray trapping, which is expected in SNe with high core velocities \citep{2011jerkstrand}.
 Figure \ref{fig:SNECVelocityCompare} shows a comparison of the photospheric velocity of the best fit SNEC model to the observed photospheric velocity of ASASSN-15oz.
 Following \citet{2014faran}, we define the photospheric velocity as that of Fe II ($\rm{\lambda}$5169). 
-We use cachtio feature, now identified as Si II ($\rm{\lambda}$ 6355), to trace the photosphere at early times.
+We use cachito feature, now identified as Si II ($\rm{\lambda}$ 6355), to trace the photosphere at early times.
 We note that while the Fe II ($\rm{\lambda}$5169) is often used to characterize the photospheric velocity, it is not well understood where in the atmosphere line is being formed. 
 \citet{2018paxton} find that the Fe II ($\rm{\lambda}$5169) line is originating above the photosphere at a specific value of Sobolev optical depth ($\rm{\tau_{sob}}$) (they find $\rm{\tau_{sob} \sim1}$ fits the observations well).
 However, \citet{2001hamuy}, in comparing the velocity derived from the Fe II ($\rm{\lambda}$5169) line to the photospheric velocity in the Type II SN atmospheric models of \citet{1996eastman}, find a systematic offset for individual objects that is in different directions for different objects, leading to no average offset. 
@@ -869,10 +869,10 @@ While this provides a better agreement with the observations, the model velocity
 %CDS analysis
 According to the classical model by \citet{1982chevalier}, the interaction of the SN ejecta with the surrounding wind leads to the formation of a cool dense shell between the forward and the reverse propagating shock waves. 
 This shell is responsible for the X-ray emission from Type II SNe. 
-\textbf{In addition, an opaque shell can be formed in front of the forward shock wave, which may serve as an explanation of the narrow emission lines with broad wings seen in some interacting SNe \citep{2001chugai}. 
-In our SNEC model, the CSM density is too high and the density drop between the envelope and the CSM is not sufficient to form a significantly overdense shell between the forward and reverse shock waves. 
+In addition, an opaque shell can be formed in front of the forward shock wave, which may serve as an explanation of the narrow emission lines with broad wings seen in some interacting SNe \citep{2001chugai}. 
+In our SNEC model, the CSM density is too high and the density drop between the envelope and the CSM is not sufficient to form a significantly over-dense shell between the forward and reverse shock waves. 
 This is supported by  Figure \ref{fig:CDS}, where the interface between the RSG envelope and the CSM corresponds to the velocity coordinate of $\approx 4200\,{\rm km}\,{\rm s}^{-1}$. 
-In this model, the forward shock wave sweeps the CSM almost entirely before the breakout, and the opaque circumstellar shell ahead of the shock wave is not formed either.}
+In this model, the forward shock wave sweeps the CSM almost entirely before the breakout, and the opaque circumstellar shell ahead of the shock wave is not formed either.
 
 On the other hand, if we were to consider a three component model, consisting of a RSG, a dense CSM and a regular low density stellar wind, like in \citet{2018morozova}, the thin cool dense shell would be formed at the interface between the dense CSM and the wind. 
 In this scenario, the forward shock wave keeps propagating into the low density wind and generates radio emission. Since SNEC is not yet capable of handling the low density stellar wind, we have omitted it in our current simulations. 
@@ -881,11 +881,11 @@ Such low density wind would not have any significant influence on the optical li
 %=======================
 \begin{figure}
 \begin{center}
-\includegraphics[width=\columnwidth]{log_rho} %from Viktoriya
-\caption{Density as a function of velocity in our best fit SNEC model at the free expansion stage (numbers in the plot indicate the time since explosion in days). 
+\includegraphics[width=\columnwidth]{log_rho} %created by make_log_rho_snec.ipynb
+\caption{Density as a function of velocity in our best fit SNEC model at the free expansion stage. 
 The interface between the RSG envelope and the CSM corresponds to the velocity value of $\approx 4200\,{\rm km}\,{\rm s}^{-1}$. 
-\textbf{The kink in the velocity evolution at ~5000 km/s is related to the fact that we do not attempt to artificially smoothen the density step at the interface between the RSG model and the attached CSM. 
-In reality, this interface will likely be smooth, but its exact shape will depend on the formation mechanism of the CSM, which is currently unknown.}
+The kink in the velocity evolution at ~5000 km $\rm{s^{-1}}$ is related to the fact that we do not attempt to artificially smooth the density step at the interface between the RSG model and the attached CSM. 
+In reality, this interface will likely be smooth, but its exact shape will depend on the formation mechanism of the CSM, which is currently unknown.
 The mild increase in density at $\approx 2300\,{\rm km}\,{\rm s}^{-1}$ is a result of the reverse shock wave reflected from this interface.}
 \label{fig:CDS}
 \end{center}
@@ -908,7 +908,7 @@ As a bright IIL-like SN, ASASSN-15oz is consistent with the sample correlation.
 %=======================
 \begin{figure*}
 \begin{center}
-\includegraphics[width=\textwidth]{lc_comp_abs_slope} %created by light curve_characteristics.ipynb
+\includegraphics[width=\textwidth]{lc_comp_abs_slope} %created by light_curve_characteristics.ipynb
 \caption{Left: the absolute {\it V}-band magnitude of ASASSN-15oz and nine well studied SNe that span the IIP/IIL like decline rates 
 (1979C:  \citet{1980balinskaia,1981devaucouleurs,1982barbon},
 1980K: \citet{1982barbon,1982buta,1983tsvetkov},
@@ -945,7 +945,7 @@ This correlation was presented in \citet{2014anderson} and is supported here wit
 %=======================
 \begin{figure}
 \begin{center}
-\includegraphics[width=\columnwidth]{slope_compare} %created by light curve_characteristics.ipynb
+\includegraphics[width=\columnwidth]{slope_compare} %created by light_curve_characteristics.ipynb
 \caption{Center: the slope of the light curve at late times, during the radioactive decay phase compared to $\rm{s_{50V}}$ for a sample of publicly available SN light curves.
 ASASSN-15oz is plotted in pink.
 Top (Right): A histogram of the radioactive decay (photometric) phase slopes. All measured slopes from this phase are included in the hatched sample.
@@ -973,7 +973,7 @@ Our observations can then be explained by a long period of average mass-loss, fo
 
 %UV Excess
 With this model in mind, we examine our UV and X-ray observations, in the context of other IIP/IIL SNe.
-Strongly interacting SNe remain UV bright throughout their interaction, implying that perhaps a UV excess would be observed for IIP/IIL SNe during the first 30 days, when the CSM has the greatest affect on the light curve.
+Strongly interacting SNe remain UV bright throughout their interaction, implying that perhaps a UV excess would be observed for IIP/IIL SNe during the first 30 days, when the CSM has the greatest effect on the light curve.
 Furthermore, if in fact, the diversity in light curve shapes is due to mass-loss and the interaction is strong enough to produce a UV excess, then those SNe with a steeper slope, should have lost more mass, and therefore should be more UV bright.
 We explore this by plotting {\it Swift} UV color, UVW2 - V, over the first 30 days of evolution for eight SNe in our database with {\it Swift} UVW2 and {\it V}-band photometry and $\rm{s_{50V}}$ measurements (Figure \ref{fig:UVColor}). 
 The symbols for each SN are colored by the {\it V}-band slope at 50 days. 
@@ -1011,10 +1011,10 @@ All of the detections from IIP/IIL SNe are below the upper limits derived in thi
 
 %%%%%%%%%%%%%%%%
 \section{Conclusions}\label{sec:conclude}
-We present extensive multi-wavelength observations of the type IIL-like SN, ASASSN-15oz, including two epochs of radio observations, four epochs of NIR spectroscopy, three epochs of NIR photometry, a 400 day dense multi-band optical light curve, dense optical spectroscopy during the photospheric phase, three epochs of nebular optical spectroscopy,  one epoch of UV spectroscopy, and 60 day UV and X-ray light curve.
+We present extensive multi-wavelength observations of the Type IIL-like SN, ASASSN-15oz, including two epochs of radio observations, four epochs of NIR spectroscopy, three epochs of NIR photometry, a 400 day dense multi-band optical light curve, dense optical spectroscopy during the photospheric phase, three epochs of nebular optical spectroscopy,  one epoch of UV spectroscopy, and 60 day UV and X-ray light curve.
 
 Optical and NIR observations from the photospheric phase show ASASSN-15oz to be a typical IIL-like SN, with a linearly declining light curve and above average photospheric velocities. 
-We find that in the explosion of ASASSN-15oz 0.08 -0.11 \msun of $\rm{{}^{56}Ni}$ was synthesized. 
+We find that in the explosion of ASASSN-15oz, 0.08 -0.11 \msun of $\rm{{}^{56}Ni}$ was synthesized. 
 However, since both the light curve modeling and the nebular spectra point towards the lower limit, we consider the lower limit most likely.
 Its bright peak magnitude is consistent with the trend of increasing brightness with increasing photospheric slope. 
 The steep decline of the late time light curve is also congruous with the direct correlation found between $\rm{s_{50V}}$ and radioactive tail slopes.
@@ -1028,20 +1028,24 @@ Although there is a feature bluewards of H $\rm{\alpha}$, no corresponding featu
 For this reason we identify the cachito feature as Si II ($\rm{\lambda 6355}$) rather than high velocity hydrogen.
 \item To accurately model the early optical light curve with an evolutionary progenitor, we require CSM around the RSG progenitor with a density of $\rm{4\times10^{18}}$ g $\rm{cm^{-1}}$ and radial extent of 1800 $\rm{R_{\odot}}$, implying a short period of extreme mass-loss.
 \item No narrow emission lines are detected in the optical and UV photospheric spectroscopy, implying a mass-loss rate of $\rm{< 10^{-4}}$ \msunperiod $\rm{yr^{-1}}$.
-\item \textbf{Although the H $\rm{\alpha}$ emission line profile in the nebular spectra is asymmetric, we do not interpret this as interaction with CSM.}
+\item Although the H $\rm{\alpha}$ emission line profile in the nebular spectra is asymmetric, we do not interpret this as interaction with CSM.
 \item No UV excess is detected in the first 40 days of observations.
 \item No X-ray signal is detected in any of the photospheric observations.
 \end{itemize}
 Taking all of these results together, we find the progenitor of ASASSN-15oz underwent standard RSG mass-loss for most of its evolution, with a short period of extreme mass-loss just before explosion. 
 It is possible that early optical spectroscopy would have shown narrow emission lines as the shock illuminated the edge of the dense shell of material.
 Additionally, an X-ray detection may have been made with deeper observations. 
-A dense shell of material surrounded by a lower density CSM has now been used to model the observations of a handful of objects (e.g. 1998S: \citealt{2001chugai}, 2013fs: \citealt{2017yaron}; 2013ej: \citealt{2018morozova2}).
-As the best model to explain the observations of a IIP-like SN (2013fs), a transition SN (2013ej), and now to a IIL-like SN (ASASSN-15oz) it may be applicable to a broad range of progenitors.
+A dense shell of material surrounded by a lower density CSM has now been used to model the observations of a handful of objects (e.g. SN 1998S: \citealt{2001chugai}, SN 2013fs: \citealt{2017yaron}; SN 2013ej: \citealt{2018morozova2}).
+As the best model to explain the observations of a IIP-like SN (SN 2013fs), a transition SN (SN 2013ej), and now to a IIL-like SN (ASASSN-15oz) it may be applicable to a broad range of progenitors.
 
 %%%%%%%%%%%%%%%%
 \section*{Acknowlegments}
 %People
+All scripted parts of this analysis, including the paper can be found at \hyperlink{https://github.com/abostroem/asassn15oz}{https://github.com/abostroem/asassn15oz}.
+
+We would like to thank Dr Nikolai Chugai for his insightful comments.
 %Grants
+
 This work was supported by the {\it Swift} Guest Observers Program through grant NNX16AE90G.
 This work is based (in part) on observations collected at the European Organization for Astronomical Research in the Southern Hemisphere, Chile as part of PESSTO, (the Public ESO Spectroscopic Survey for Transient Objects Survey) ESO program 188.D-3003, 191.D-0935, 197.D-1075.
 Based on observations collected at the European Organization for Astronomical Research in the Southern Hemisphere under ESO program 095.A-0316(A). 
@@ -1053,11 +1057,13 @@ O.R. acknowledge support by projects IC120009 ``Millennium Institute of Astrophy
 DJS is a visiting astronomer at the Infrared Telescope Facility, which is operated by the University of Hawaii under contract NNH14CK55B with the National Aeronautics and Space Administration.
 Research by DJS is supported by NSF grants AST-1821967, 1821987, 1813708 and 1813466.
 %Facilities
+
 This research has made use of the NASA/IPAC Extragalactic Database (NED), which is operated by the Jet Propulsion Laboratory, California Institute of Technology, under contract with the National Aeronautics and Space Administration.
 This work uses the National Radio Astronomy Observatory which is a facility of the National Science Foundation operated under cooperative agreement by Associated Universities, Inc.
 This work makes use of observations from the LCO network. 
 This work was partly supported by the UK Space Agency.
 Based on observations obtained at the Gemini Observatory through proposal GS-2016A-Q-75-25, acquired through the Gemini Observatory Archive, and processed using the Gemini IRAF package, which is operated by the Association of Universities for Research in Astronomy, Inc., under a cooperative agreement with the NSF on behalf of the Gemini partnership: the National Science Foundation (United States), the National Research Council (Canada), CONICYT (Chile), Ministerio de Ciencia, Tecnolog\'{i}a e Innovaci\'{o}n Productiva (Argentina), and Minist\'{e}rio da Ci\^{e}ncia, Tecnologia e Inova\c{c}\~{a}o (Brazil).
+
 %Software
 This research made use of Astropy,\footnote{http://www.astropy.org} a community-developed core Python package for Astronomy \citep{astropy:2013, astropy:2018}
 Support for G.P. is provided by the Ministry of Economy, Development, and Tourism's Millennium Science Initiative through grant IC120009, awarded to The Millennium Institute of Astrophysics, MAS.\\
@@ -1085,7 +1091,7 @@ Support for G.P. is provided by the Ministry of Economy, Development, and Touris
 \caption{The best parameters for the SYN++ fit. 
 The Sobolev optical depth $\rm{\tau}$ is modeled with an exponential profile with e-folding length, aux, minimum velocity, $\rm{v_{min}}$, and maximum velocity, $\rm{v_{max}}$. 
 The temperature column is the Boltzmann excitation temperature.
-SYN++ models pure reasonance scattering which is a poor approximation for the H $\rm{\alpha}$. 
+SYN++ models pure resonance scattering which is a poor approximation for the H $\rm{\alpha}$. 
 For this reason we use the H $\rm{\beta}$ line to determine the hydrogen contribution to the fit.
 A separate fit is performed for H $\rm{\alpha}$ and is listed separately in the table.
 We emphasize that this fit is used for line identification and not to derive ejecta properties.}
@@ -1111,7 +1117,7 @@ Ion & log($\rm{\tau}$) & $\rm{v_{min}(kkm}$ $\rm{s^{-1})}$ & $\rm{v_{max}(kkm/s)
 \end{table*}
 %-----------------------------------------
 
-For lines that are blended (but still showed partially isolated absorption troughs for some features) we define the continuum as a straight line from the lowest side of the feature. 
+For lines that are blended (but still showed partially isolated absorption troughs) we define the continuum as a straight line from the lowest side of the feature. 
 After dividing by the continuum, we then simultaneously fit multiple 1D Gaussian profiles to the continuum normalized spectra. 
 For blended features originating in the same part of the ejecta, we require that each component has the same width.
 We define the velocity of a feature as the minimum (mean) of the individual Gaussian profiles corresponding to that ion and the error as the standard deviation of the fit, representing the range of velocities present in the photosphere. 
@@ -1135,10 +1141,10 @@ An example of a feature with the continuum and spline fit is shown in the right 
 \caption{An example of a fit to the multi-component Ca II NIR triplet (left) using multiple Gaussians and a single line fit (following \citealt{2012silverman}, right) to the Sc II ($\rm{\lambda}$5662) line.
 The observed spectrum is plotted in black.
 The continuum edges are marked with a cyan circle and the cyan dashed line connecting these points is used as the continuum. 
-The Ca II NIR triplet fit is found by simultaneously fitting 3 Gaussians with the same standard deviation and mean offsets corresponding to the expected wavelength separation of the triplet. 
+The Ca II NIR triplet fit is found by simultaneously fitting three Gaussians with the same standard deviation and mean offsets corresponding to the expected wavelength separation of the triplet. 
 The individual Gaussians are plotting at as dotted lines and the combined fit is plotted as a solid green line. 
 The minima of the individual Gaussians is used to find the velocity of each component.
-The Sc II feature is fit with a cubic spliine. 
+The Sc II feature is fit with a cubic spline. 
 The minimum of the spline is used to find the Sc II velocity.
 \label{fig:VelocityFit}}
 \end{center}

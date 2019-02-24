@@ -2,7 +2,7 @@
 # coding: utf-8
 
  
-# In[3]:
+# In[1]:
 
 
 import os
@@ -16,7 +16,7 @@ from astropy.io import ascii as asc
 
  
  
-# In[4]:
+# In[2]:
 
 
 plt.style.use(['seaborn-paper','az-paper-onecol'])
@@ -24,7 +24,7 @@ plt.style.use(['seaborn-paper','az-paper-onecol'])
 
  
  
-# In[5]:
+# In[3]:
 
 
 DATA_DIR = '../../data/rho_snapshots/'
@@ -33,7 +33,7 @@ FIG_DIR = '.'
 
  
  
-# In[8]:
+# In[4]:
 
 
 flist = [ '../../data/rho_snapshots/rho_14d.csv', 
@@ -44,7 +44,7 @@ flist = [ '../../data/rho_snapshots/rho_14d.csv',
 
  
  
-# In[10]:
+# In[6]:
 
 
 fig = plt.figure()
@@ -56,7 +56,7 @@ for ifile in flist:
     ax.plot(tbdata['velocity'][:-5], tbdata['logrho'][:-5], label='{} days'.format(label))
 ax.set_xlim(1500, 10000)
 ax.set_ylim(-17.25, -9.75)
-ax.set_xlabel(r'v (km$\rm s^{-1}$)')
+ax.set_xlabel(r'Velocity (km $\rm s^{-1}$)')
 ax.set_ylabel(r'log$\rm _{10}(\rho)$ (g $\rm cm^{-3}$)')
 ax.legend()
 plt.savefig(os.path.join(FIG_DIR, 'log_rho.pdf'))

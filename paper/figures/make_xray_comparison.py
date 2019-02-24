@@ -86,7 +86,7 @@ sn15oz_phase = Time(['2015-09-05', '2015-11-18']) - Time(sn15oz.jdexpl, format='
 
  
  
-# In[6]:
+# In[11]:
 
 
 fig = plt.figure()
@@ -130,7 +130,7 @@ ax.set_xlim(0,160)
 #ax.set_ylim(-10, 20)
 ax.set_xlabel('Phase (day)')
 ax.set_ylabel(r'Luminosity (x10$^{39}$ erg $\rm s^{-1}$)', position=(1,0.38))
-ax.legend(leg_lines, leg_labels, bbox_to_anchor=[0.55, 0.65, 0.4, 0.4], framealpha=1.0)
+leg = ax.legend(leg_lines, leg_labels, bbox_to_anchor=[0.55, 0.65, 0.4, 0.4], framealpha=1.0, frameon=True)
 plt.savefig('xray_comp.pdf')
 
 

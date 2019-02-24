@@ -5,7 +5,7 @@
 #     * cachito_evolution.pdf
 
  
-# In[1]:
+# In[17]:
 
 
 import os
@@ -28,7 +28,7 @@ from utilities_az import spectroscopy as spec, visualization, supernova
 
  
  
-# In[2]:
+# In[18]:
 
 
 plt.style.use(['seaborn-paper','az-paper-onecol'])
@@ -36,7 +36,7 @@ plt.style.use(['seaborn-paper','az-paper-onecol'])
 
  
  
-# In[3]:
+# In[19]:
 
 
 cm_rainbow = visualization.make_rainbow_cm()
@@ -46,7 +46,7 @@ cm_rainbow = visualization.make_rainbow_cm()
 # # Plot HA, Hb evolution Series
 
  
-# In[4]:
+# In[20]:
 
 
 sn15oz = supernova.LightCurve2('asassn-15oz')
@@ -54,7 +54,7 @@ sn15oz = supernova.LightCurve2('asassn-15oz')
 
  
  
-# In[5]:
+# In[21]:
 
 
 def read_iraf_spectrum(filename):
@@ -67,7 +67,7 @@ def read_iraf_spectrum(filename):
 
  
  
-# In[6]:
+# In[22]:
 
 
 def calc_velocity(obs_wl, rest_wl):
@@ -77,7 +77,7 @@ def calc_velocity(obs_wl, rest_wl):
 
  
  
-# In[7]:
+# In[23]:
 
 
 def calc_obs_wave(velocity, rest_wl):
@@ -87,7 +87,7 @@ def calc_obs_wave(velocity, rest_wl):
 
  
  
-# In[8]:
+# In[24]:
 
 
 VEL_DATA_DIR =   '../../data/line_info/'
@@ -102,7 +102,7 @@ HBETA_DIR = '../../data/line_info'
 
  
  
-# In[9]:
+# In[25]:
 
 
 z = 0.0069 #15oz redshift
@@ -118,7 +118,7 @@ IR_dates = Time(['2015-09-05','2015-10-05', '2015-10-10'])
 
  
  
-# In[10]:
+# In[26]:
 
 
 spectra_files = [
@@ -143,7 +143,7 @@ spectra_files = [
 
  
  
-# In[11]:
+# In[27]:
 
 
 tbdata_sofi1_blue = fits.getdata(os.path.join(SOFI_DIR, 'asassn15oz_20150905_2457270.58657_1.fits'), 1) #wave, flux, err, skyback
@@ -154,7 +154,7 @@ tbdata_irtf = asc.read(os.path.join(IRTF_DIR, 'A15oz_merge.txt'), names=['wave',
 
  
  
-# In[12]:
+# In[28]:
 
 
 spec_sofi1 = spec.spectrum1d(spec.apply_redshift(tbdata_sofi1_blue['WAVE'][0], z), tbdata_sofi1_blue['flux'][0], tbdata_sofi1_blue['err'])
@@ -164,7 +164,7 @@ spec_irtf = spec.spectrum1d(spec.apply_redshift(tbdata_irtf['wave']*10**4, z), t
 
  
  
-# In[13]:
+# In[29]:
 
 
 new_fit_cachito = asc.read(os.path.join(TEST_FILE_DIR, 'cachito.tab'))
@@ -178,7 +178,7 @@ power_fit_cachito = fitter_power(power_model, phase_cachito, velocity_cachito)
 
  
  
-# In[14]:
+# In[30]:
 
 
 new_fit_ha = asc.read(os.path.join(TEST_FILE_DIR, 'Ha.tab'))
@@ -189,7 +189,7 @@ power_fit_ha = fitter_power(power_model, phase_ha, velocity_ha)
 
  
  
-# In[15]:
+# In[31]:
 
 
 new_fit_hb = asc.read(os.path.join(HBETA_DIR, 'Hbeta.tab'))
@@ -200,7 +200,7 @@ power_fit_hb = fitter_power(power_fit_ha, phase_hb, velocity_hb)
 
  
  
-# In[17]:
+# In[33]:
 
 
 plt.close()
@@ -317,7 +317,7 @@ ax1.set_title(r'H $\rm \alpha$')
 
 ax2.set_ylim(hb_scale*ylimits)
 ax2.set_yticks([])
-ax2.set_xlabel('Velocity (1000 km/s)')
+ax2.set_xlabel(r'Velocity (1000 km $\rm s^{-1}$)')
 ax2.set_title(r'H $\rm \beta$')
 
 ax3.set_yticks([])
