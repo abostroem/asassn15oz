@@ -1,0 +1,24 @@
+Oh, I did notice that there was a slight offset on the flux between the R400 and B600 gratings.  Can you check how that fits with your other data?
+
+Azalee [11:09 AM]
+sure, I can scale them individually to the photometry
+
+Michael Lundquist [11:10 AM]
+awesome, that's why I only combined the individual dates
+
+Azalee [11:14 AM]
+It is curious to me that there are two nights of data. Looking at the archive, the third exposure on the first night is labeled unusable and the second nights total exposure time for red matches the total exposure time for blue. I wonder if they repeated the whole program on the second night
+
+Michael Lundquist [11:20 AM]
+I'd have to see the program in the OT.  On 20160609 the red part was getting observed.  Two 900s exposures were taken, then a third exposure was taken, but the counts dropped before it finished and they paused for a while and then read out early before abandoning.  The exposure time is listed at 2123s, but this includes the pause and it is really only like 630s.  I reduced it anyway.
+On 20160610, it does look like they just repeated the first night.
+
+Azalee [11:22 AM]
+I think you made the right call. Thanks, I’ll send you a figure as soon as I get it made
+
+What are the units in this spectrum? In the header it says BUNIT   = ‘erg/cm2/s/A’ but the values range from 0 - 0.15 which is way to high to be a flux unit. Is there a scale factor hidden somewhere?
+
+
+Michael Lundquist [11:34 AM]
+Yes, it's scaled by 10^15.
+
